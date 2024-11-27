@@ -21,6 +21,8 @@ df1 = conn.query('select nuri,fuente,titulo,detalle from novedades order by nuri
 
 st.write(df1[0])
 
+show(df1[0], search={"regex": True, "caseInsensitive": True, "search": "s.ain"})
+
 t = interactive_table(df1[0], **it_args )
 
 
