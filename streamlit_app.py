@@ -13,7 +13,8 @@ buttons = st.sidebar.multiselect(
 
 it_args = {}
 it_args["buttons"] = buttons
-
+it_args["select"] = True
+it_args["selected_rows"] = [0, 1, 2, 100, 207]
 
 
 
