@@ -28,5 +28,5 @@ t = interactive_table(df1[0], **it_args )
 
 
 
-st.write(t)
+
 
