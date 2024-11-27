@@ -27,9 +27,6 @@ st.write(df1[0])
 t = interactive_table(df1[0], **it_args )
 
 st.header("Table state")
-st.markdown(
-    """The value returned by `interactive_table` is
-  a dict that contains the index of the selected rows:"""
-)
+
 st.write(t)
 
