@@ -12,20 +12,10 @@ buttons = st.sidebar.multiselect(
 
 
 it_args = {}
-if select:
-    it_args["select"] = True
-    it_args["selected_rows"] = [0, 1, 2, 100, 207]
-if classes != it_opt.classes.split(" "):
-    it_args["classes"] = classes
-if style != it_opt.style:
-    it_args["style"] = style
-
-if buttons:
-    it_args["buttons"] = buttons
+it_args["buttons"] = buttons
 
 
-if caption:
-    it_args = {"caption": caption, **it_args}
+
 
 
 
