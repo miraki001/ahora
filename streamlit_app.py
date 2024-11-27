@@ -4,11 +4,6 @@ import numpy as np
 import itables.options as it_op
 from itables.streamlit import interactive_table
 
-buttons = st.sidebar.multiselect(
-    "Buttons",
-    options=["pageLength", "copyHtml5", "csvHtml5", "excelHtml5", "colvis"],
-    default=["copyHtml5", "csvHtml5", "excelHtml5", "colvis"],
-)
 
 
 it_args = {}
