@@ -9,7 +9,7 @@ st.write(
 
 
 conn = st.connection("postgresql", type="sql")
-df1 = conn.query('select nuri,fuente,titulo,detalle order by nuri desc limit 100;', ttl="0"),
+df1 = conn.query('select nuri,fuente,titulo,detalle from novedades order by nuri desc limit 100;', ttl="0"),
 
 event = st.dataframe(
     df1,
