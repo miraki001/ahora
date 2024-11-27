@@ -4,10 +4,10 @@ import numpy as np
 import itables.options as it_op
 from itables.streamlit import interactive_table
 
-
+default=["copyHtml5", "csvHtml5", "excelHtml5", "colvis"],
 
 it_args = {}
-it_args["buttons"] = buttons
+it_args["buttons"] = default
 it_args["select"] = True
 
 
