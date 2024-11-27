@@ -12,5 +12,5 @@ df1 = conn.query('select nuri,fuente,titulo,detalle from novedades order by nuri
 with col1[0]:
   st.write(df1[0])
 
-  t = interactive_table(df )
+  t = interactive_table(df1[0] )
 
