@@ -21,15 +21,15 @@ it_args["buttons"] = buttons
 
 conn = st.connection("postgresql", type="sql")
 df1 = conn.query('select nuri,fuente,titulo,detalle from novedades order by nuri desc limit 100;', ttl="0"),
-with col1[0]:
-  st.write(df1[0])
 
-  t = interactive_table(df1[0], **it_args )
+st.write(df1[0])
 
-  st.header("Table state")
-  st.markdown(
-      """The value returned by `interactive_table` is
+t = interactive_table(df1[0], **it_args )
+
+st.header("Table state")
+st.markdown(
+    """The value returned by `interactive_table` is
   a dict that contains the index of the selected rows:"""
-  )
-  st.write(t)
+)
+st.write(t)
 
