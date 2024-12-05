@@ -5,6 +5,7 @@ import itables.options as it_op
 from itables.streamlit import interactive_table
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
+from stop_words import get_stop_words
 
 
 
