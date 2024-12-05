@@ -52,6 +52,19 @@ plt.show()
 st.pyplot(fig1)
 
 fig2 = plt.figure()
+
+text = df['ticulo'].to_list()
+
+# Create and generate a word cloud image:
+wordcloud = WordCloud().generate(text)
+
+# Display the generated image:
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis("off")
+plt.show()
+st.pyplot()
+
+
 #stopwords = set(open('stopwords.txt').read().split(','))
 #stopwords = get_stop_words('english')
 stop_words = get_stop_words('english')
