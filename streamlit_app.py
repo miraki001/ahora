@@ -56,6 +56,17 @@ st.pyplot(fig1)
 fig2 = plt.figure()
 nltk.download('stopwords')
 stop_words = stopwords.words('english')
+
+def cleaning(df, stop_words):
+    df['titulo'] = df['clean_comment'].apply(lambda x:' '.join(x.lower() for x in x.split()))
+    # Replacing the digits/numbers
+    df['titulo'] = df['clean_comment'].str.replace('^\d+\s|\s\d+\s|\s\d+$', '')
+    # Removing stop words
+    df['titulo'] = df['clean_comment'].apply(lambda x:' '.join(x for x in x.split() if x not in stop_words))
+    # Lemmatization
+    df['titulo'] = df['clean_comment'].apply(lambda x:' '.join([Word(x).lemmatize() for x in x.split()]))
+    return df
+
 data_v1 = cleaning(df, stop_words)
 data_v1.head()
 
