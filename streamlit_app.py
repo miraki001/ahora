@@ -64,7 +64,7 @@ def cleaning(df, stop_words):
     # Removing stop words
     df['titulo'] = df['titulo'].apply(lambda x:' '.join(x for x in x.split() if x not in stop_words))
     # Lemmatization
-    df['titulo'] = df['titulo'].apply(lambda x:' '.join([Word(x).lemmatize() for x in x.split()]))
+#    df['titulo'] = df['titulo'].apply(lambda x:' '.join([Word(x).lemmatize() for x in x.split()]))
     return df
 
 data_v1 = cleaning(df, stop_words)
