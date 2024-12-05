@@ -4,6 +4,7 @@ import numpy as np
 import itables.options as it_op
 from itables.streamlit import interactive_table
 import matplotlib.pyplot as plt
+from wordcloud import WordCloud
 
 
 
@@ -48,6 +49,15 @@ months = ['JAN',  'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT',
 ax.set(xlabel='Month', ylabel='Number of Articles', title="Articles Published Every Month")
 plt.show()
 st.pyplot(fig1)
+
+fig2 = plt.figure()
+stopwords = set(open('stopwords.txt').read().split(','))
+wc = WordCloud(stopwords=stopwords)
+wordcloud = wc.generate(' '.join(df[df.date=='2009-09-02']['title'].apply(str)))
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis('off')
+plt.show()
+st.pyplot(fig2)
 
 
 
