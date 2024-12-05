@@ -37,7 +37,8 @@ df = df[pd.notnull(df['titulo'])]
 df['fecha'] = pd.to_datetime(df.fecha, format='%Y-%m-%d')
 ax = df.groupby(df.fecha.dt.year)['titulo'].count().plot(kind='bar', figsize=(12, 6))
 ax.set(xlabel='Año', ylabel='Number of Articles', title="Articles Published Every Year")
-st.pyplot(plt.show())
+fig = plt.figure()
+st.pyplot(fig)
 
 
 
