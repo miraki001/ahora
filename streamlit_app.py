@@ -53,7 +53,7 @@ st.pyplot(fig1)
 
 fig2 = plt.figure()
 #stopwords = set(open('stopwords.txt').read().split(','))
-stop_words = get_stop_words('english')
+stopwords = get_stop_words('english')
 wc = WordCloud(stopwords=stopwords)
 wordcloud = wc.generate(' '.join(df['titulo'].apply(str)))
 plt.imshow(wordcloud, interpolation='bilinear')
