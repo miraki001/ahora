@@ -53,7 +53,7 @@ st.pyplot(fig1)
 
 fig2 = plt.figure()
 #stopwords = set(open('stopwords.txt').read().split(','))
-stopwords = get_stop_words('english')
+#stopwords = get_stop_words('english')
 stop_words = get_stop_words('english')
 
 concat_quotes = ' '.join(
