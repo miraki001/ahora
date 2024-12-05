@@ -17,7 +17,7 @@ it_args["select"] = True
 
 
 conn = st.connection("postgresql", type="sql")
-df1 = conn.query('select nuri,fuente,titulo,detalle from novedades order by nuri desc limit 100;', ttl="0"),
+df1 = conn.query('select nuri,fuente,fecha,titulo,detalle from novedades order by nuri desc limit 100;', ttl="0"),
 
 st.write(df1[0])
 
@@ -29,7 +29,7 @@ interactive_table(df1[0],
 
 t = interactive_table(df1[0], **it_args )
 
-df1['date'] = pd.to_datetime(df1.date, format='%Y-%m-%d')
+df1['fecha'] = pd.to_datetime(df1.fecha, format='%Y-%m-%d')
 
 
 
