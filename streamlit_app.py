@@ -3,6 +3,8 @@ import pandas as pd
 import numpy as np
 import itables.options as it_op
 from itables.streamlit import interactive_table
+import matplotlib.pyplot as plt
+
 
 #default=["copyHtml5", "csvHtml5", "excelHtml5", "colvis"],
 default=["copyHtml5", "csvHtml5", "excelHtml5"],
