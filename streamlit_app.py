@@ -29,6 +29,8 @@ interactive_table(df1[0],
 
 t = interactive_table(df1[0], **it_args )
 
+df1.head()
+
 
 
 
