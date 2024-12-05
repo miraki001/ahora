@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import nltk
 import itables.options as it_op
 from itables.streamlit import interactive_table
 import matplotlib.pyplot as plt
