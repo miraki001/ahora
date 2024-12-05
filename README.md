@@ -2,7 +2,7 @@
 
 A simple Streamlit app template for you to modify!
 
-[![Open in Streamlit](https://ahora-6s2g2ycm5.streamlit.app/)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ahora-6s2g2ycm5.streamlit.app/)
 
 ### How to run it on your own machine
 
