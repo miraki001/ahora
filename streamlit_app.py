@@ -29,7 +29,7 @@ interactive_table(df1[0],
 
 t = interactive_table(df1[0], **it_args )
 
-df1 = df1[pd.notnull(df['titulo'])]
+df1 = df1[pd.notnull(df1['titulo'])]
 
 
 
