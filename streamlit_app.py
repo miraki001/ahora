@@ -56,7 +56,9 @@ st.pyplot(fig1)
 
 fig2 = plt.figure()
 nltk.download('stopwords')
-stop_words = stopwords.words('english', 'spanish')
+stop_words = stopwords.words('english')
+stopword_es = nltk.corpus.stopwords.words('spanish')
+stop_words = stop_words + stopword_es
 
 def cleaning(df, stop_words):
     df['titulo'] = df['titulo'].apply(lambda x:' '.join(x.lower() for x in x.split()))
