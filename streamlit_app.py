@@ -53,7 +53,7 @@ st.pyplot(fig1)
 
 fig2 = plt.figure()
 
-text = df['titulo'].to_list()
+text = df['titulo']
 st.write(text)
 
 # Create and generate a word cloud image:
