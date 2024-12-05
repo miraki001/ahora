@@ -29,7 +29,7 @@ interactive_table(df1[0],
 
 t = interactive_table(df1[0], **it_args )
 
-df1.head()
+df1['date'] = pd.to_datetime(df1.date, format='%Y-%m-%d')
 
 
 
