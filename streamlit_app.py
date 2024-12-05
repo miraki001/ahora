@@ -54,6 +54,29 @@ st.pyplot(fig1)
 fig2 = plt.figure()
 #stopwords = set(open('stopwords.txt').read().split(','))
 stopwords = get_stop_words('english')
+stop_words = get_stop_words('english')
+
+concat_quotes = ' '.join(
+
+        [i for i in df.text_without_stopwords.astype(str)])
+
+t=stylecloud.gen_stylecloud(  # file_path='SJ-Speech.txt',
+
+                                text=concat_quotes,
+
+                                icon_name='fas fa-apple-alt',
+
+                                background_color='black',
+
+                                output_name='apple.png',
+
+                                collocations=False,
+
+                                custom_stopwords=stop_words)
+st.write(t)
+
+
+
 wc = WordCloud(stopwords=stopwords)
 wordcloud = wc.generate(' '.join(df['titulo'].apply(str)))
 plt.imshow(wordcloud, interpolation='bilinear')
