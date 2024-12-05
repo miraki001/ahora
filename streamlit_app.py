@@ -44,7 +44,7 @@ st.pyplot(fig)
 fig1 = plt.figure()
 ax = df.groupby(df.fecha.dt.month)['titulo'].count().plot(kind='bar')
 months = ['JAN',  'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
-ax.set_xticklabels(months)
+#ax.set_xticklabels(months)
 ax.set(xlabel='Month', ylabel='Number of Articles', title="Articles Published Every Month")
 plt.show()
 st.pyplot(fig1)
