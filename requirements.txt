@@ -2,3 +2,4 @@ streamlit
 psycopg2-binary
 sqlalchemy
 itables>=2.2.1
+matplotlib
