@@ -72,7 +72,18 @@ data_v1.head()
 
 
 # Create and generate a word cloud image:
-wordcloud = WordCloud().generate(text)
+#wordcloud = WordCloud().generate(text)
+
+common_words=''
+for i in data_v1.titulo:  
+    i = str(i)
+    tokens = i.split()
+    common_words += " ".join(tokens)+" "
+wordcloud = wordcloud.WordCloud().generate(common_words)
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis("off")
+plt.show()
+st.pyplot()
 
 # Display the generated image:
 plt.imshow(wordcloud, interpolation='bilinear')
