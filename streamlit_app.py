@@ -18,7 +18,7 @@ it_args["select"] = True
 
 conn = st.connection("postgresql", type="sql")
 df1 = conn.query('select nuri,fuente,fecha,titulo,detalle from novedades order by nuri desc limit 100;', ttl="0"),
-
+df = df1[0]
 st.write(df1[0])
 
 interactive_table(df1[0],
@@ -29,7 +29,7 @@ interactive_table(df1[0],
 
 t = interactive_table(df1[0], **it_args )
 
-df1 = df1[pd.notnull(df1['titulo'])]
+df = df[pd.notnull(df['titulo'])]
 
 
 
