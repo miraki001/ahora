@@ -53,8 +53,10 @@ st.pyplot(fig1)
 
 fig2 = plt.figure()
 
-text = df['titulo']
-st.write(text)
+stop_words = stopwords.words('english')
+data_v1 = cleaning(df, stop_words)
+data_v1.head()
+
 
 # Create and generate a word cloud image:
 wordcloud = WordCloud().generate(text)
