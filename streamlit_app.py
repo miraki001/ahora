@@ -31,6 +31,7 @@ t = interactive_table(df1[0], **it_args )
 
 df = df[pd.notnull(df['titulo'])]
 
+df['fecha'] = pd.to_datetime(df.fecha, format='%Y-%m-%d')
 ax = df.groupby(df.fecha.dt.year)['titulo'].count().plot(kind='bar', figsize=(12, 6))
 ax.set(xlabel='Year', ylabel='Number of Articles', title="Articles Published Every Year")
 plt.show()
