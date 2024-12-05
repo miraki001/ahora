@@ -54,7 +54,7 @@ plt.show()
 st.pyplot(fig1)
 
 fig2 = plt.figure()
-
+nltk.download('stopwords')
 stop_words = stopwords.words('english')
 data_v1 = cleaning(df, stop_words)
 data_v1.head()
