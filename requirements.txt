@@ -5,5 +5,5 @@ itables>=2.2.1
 matplotlib
 wordcloud 
 nltk
-gensim
+
 
