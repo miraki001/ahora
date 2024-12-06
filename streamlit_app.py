@@ -8,6 +8,8 @@ from itables.streamlit import interactive_table
 import matplotlib.pyplot as plt
 #from wordcloud import WordCloud
 from nltk.corpus import stopwords
+from nltk.stem.porter import * 
+stemmer = PorterStemmer()  
 
 
 
