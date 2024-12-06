@@ -10,7 +10,6 @@ import matplotlib.pyplot as plt
 from nltk.corpus import stopwords
 from nltk.stem.porter import * 
 from gensim.models import word2vec 
-from sklearn.manifold import TSNE 
 stemmer = PorterStemmer()  
 
 
