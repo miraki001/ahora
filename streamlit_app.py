@@ -99,12 +99,6 @@ st.pyplot()
 
 
 
-wc = WordCloud(stopwords=stop_words)
-wordcloud = wc.generate(' '.join(df['titulo'].apply(str)))
-plt.imshow(wordcloud, interpolation='bilinear')
-plt.axis('off')
-plt.show()
-st.pyplot(fig2)
 
 
 
