@@ -127,7 +127,7 @@ def tsne_plot(model):
         labels.append(word)
     
     tsne_model = TSNE(perplexity=40, n_components=2, init='pca', n_iter=2500, random_state=23)
-    st.write(TOKEN)
+    st.write(tokens)
     new_values = tsne_model.fit_transform(tokens)
 
     x = []
