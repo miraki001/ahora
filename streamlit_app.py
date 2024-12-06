@@ -130,7 +130,8 @@ def tsne_plot(model):
     
     tsne_model = TSNE(perplexity=40, n_components=2, init='pca', n_iter=2500, random_state=23)
     st.write(labels)
-    new_values = tsne_model.fit_transform(tokens)
+    #new_values = tsne_model.fit_transform(tokens)
+    new_values = tsne_model.fit(tokens,labels)
 
     x = []
     y = []
