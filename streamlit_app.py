@@ -90,7 +90,27 @@ plt.show()
 st.pyplot()
 
 
+def review_to_words(raw_review):  
+	letters_only = re.sub("[^a-zA-Z]", " ", raw_review)   
+	words = letters_only.lower().split()  
+	stops = set(stopwords.words("english"))   
+	meaningful_words = [w for w in words if not w in stops] #returns a list   
+	singles = [stemmer.stem(word) for word in meaningful_words]  
+	return( " ".join( singles ))
 
+processed_wmn = [ review_to_words(text) for text in df.titulo]  
+
+def build_corpus(data):
+        corpus = []
+        for sentence in data:
+                word_list = sentence.split(" ")
+                corpus.append(word_list)   
+        return corpus  
+  
+corpus = build_corpus(processed_wmn)
+
+
+model = word2vec.Word2Vec(corpus, vector_size=100, window=5, min_count=10, workers=4)
 
 
 
