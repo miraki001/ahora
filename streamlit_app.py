@@ -9,7 +9,9 @@ import matplotlib.pyplot as plt
 #from wordcloud import WordCloud
 from nltk.corpus import stopwords
 from nltk.stem.porter import * 
+from gensim.models import word2vec 
 stemmer = PorterStemmer()  
+
 
 
 
