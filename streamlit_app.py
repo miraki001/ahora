@@ -42,12 +42,12 @@ df = df1[0]
 
 col = st.columns((1.5, 4.5, 2), gap='medium')
 
-    with col[0]:
-        st.button("Editar", type="primary")
-    with col[1]:
-        st.button("Seleccionar", type="primary")
-    with col[2]:
-        st.button("QuitarSeleccion", type="primary")
+with col[0]:
+    st.button("Editar", type="primary")
+with col[1]:
+    st.button("Seleccionar", type="primary")
+with col[2]:
+    st.button("QuitarSeleccion", type="primary")
 
 
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
