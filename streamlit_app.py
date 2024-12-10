@@ -55,7 +55,7 @@ div.stButton > button:hover {
     }
 </style>""", unsafe_allow_html=True)
 
-def page_2():
+def informers():
     st.title("Page 2")
 
 with col[0]:
@@ -66,7 +66,7 @@ with col[2]:
     st.button("Quitar Seleccion", type="primary")
 with col[3]:
     st.button("Informes", type="primary")
-    pg = st.navigation([st.Page("informers.py"), st.Page(page_2)])
+    pg = st.navigation([st.Page("informers.py"), st.Page(informers)])
     pg.run()
 
 
