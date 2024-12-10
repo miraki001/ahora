@@ -40,7 +40,7 @@ df1 = conn.query('select nuri,fuente,select_web selec,fecha,titulo,detalle,image
 df = df1[0]
 #st.write(df1[0])
 
-col = st.columns((1.5, 4.5, 2), gap='medium')
+col = st.columns((1.5, 4.5, 2,2), gap='medium')
 
 with col[0]:
     st.button("Editar", type="primary")
