@@ -38,7 +38,7 @@ colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 config = {
     'nuri' : st.column_config.NumberColumn('nuri', required=True),
     'fuente' : st.column_config.TextColumn('fuente', width='large' ),
-    'selec' : st.column_config.Checkboxolumn('selec'),
+    'selec' : st.column_config.CheckboxColumn('selec'),
     'titulo' : st.column_config.TextColumn('titulo',  width='large'),
     'detalle' : st.column_config.TextColumn('detalle', width='large')
     
