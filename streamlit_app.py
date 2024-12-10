@@ -34,6 +34,9 @@ df1 = conn.query('select nuri,fuente,select_web selec,fecha,titulo,detalle,image
 df = df1[0]
 #st.write(df1[0])
 
+st.button("Editar", type="primary")
+st.button("Seleccionar", type="primary")
+
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 config = {
     'nuri' : st.column_config.NumberColumn('nuri', required=True),
