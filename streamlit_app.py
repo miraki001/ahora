@@ -50,7 +50,7 @@ div.stButton > button:first-child {
     color:#e69d87;
 }
 div.stButton > button:hover {
-    background-color:#759aa0;
+    background-color:#f49f42;
     color:#8dc1a9;
     }
 </style>""", unsafe_allow_html=True)
