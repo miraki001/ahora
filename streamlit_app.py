@@ -15,7 +15,12 @@ from sklearn.manifold import TSNE
 from nltk.tokenize import word_tokenize
 stemmer = PorterStemmer()  
 
-
+st.set_page_config(
+    page_title="Miraki",
+    page_icon="📈",
+    layout="wide",
+    initial_sidebar_state="expanded")
+st.title("Miraki")
 
 #default=["copyHtml5", "csvHtml5", "excelHtml5", "colvis"],
 default=["copyHtml5", "csvHtml5", "excelHtml5"],
