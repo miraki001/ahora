@@ -30,7 +30,7 @@ it_args["select"] = True
 
 
 conn = st.connection("postgresql", type="sql")
-df1 = conn.query('select nuri,fuente,fecha,titulo,detalle from novedades order by nuri desc limit 2000;', ttl="0"),
+df1 = conn.query('select nuri,fuente,select_web selec,fecha,titulo,detalle from novedades order by nuri desc limit 2000;', ttl="0"),
 df = df1[0]
 #st.write(df1[0])
 
@@ -38,6 +38,7 @@ colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 config = {
     'nuri' : st.column_config.NumberColumn('nuri', required=True),
     'fuente' : st.column_config.TextColumn('fuente', width='large' ),
+    'selec' : st.column_config.Checkboxolumn('selec'),
     'titulo' : st.column_config.TextColumn('titulo',  width='large'),
     'detalle' : st.column_config.TextColumn('detalle', width='large')
     
