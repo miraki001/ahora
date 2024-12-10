@@ -36,10 +36,10 @@ df = df1[0]
 
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 config = {
-    'nuri' : st.column_config.NumberColumn('nuri', width='large', required=True),
-    'fuente' : st.column_config.NumberColumn('fuente', min_value=0, max_value=22),
-    'titulo' : st.column_config.NumberColumn('titulo', min_value=0, max_value=122),
-    'detalle' : st.column_config.NumberColumn('detalle', min_value=0, max_value=122)
+    'nuri' : st.column_config.NumberColumn('nuri', min_value=0, max_value=22, required=True),
+    'fuente' : st.column_config.TextColumn('fuente', min_value=0, max_value=22),
+    'titulo' : st.column_config.TextColumn('titulo', min_value=0, max_value=122),
+    'detalle' : st.column_config.TextColumn('detalle', min_value=0, max_value=122)
     
 }
 result = st.data_editor(df, column_config = config, num_rows='dynamic')
