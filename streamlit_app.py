@@ -43,8 +43,20 @@ df = df1[0]
 
 col = st.columns((1.5, 4.5, 2,2), gap='medium')
 
+m = st.markdown("""
+<style>
+div.stButton > button:first-child {
+    background-color: #0099ff;
+    color:#ffffff;
+}
+div.stButton > button:hover {
+    background-color: #00ff00;
+    color:#ff0000;
+    }
+</style>""", unsafe_allow_html=True)
+
 with col[0]:
-    st.button("Editar", type="primary" ,style="background-color: #DD3300; color:#eeffee; border-radius: 0.75rem;" )
+    st.button("Editar", type="primary" )
 with col[1]:
     st.button("Seleccionar", type="primary")
 with col[2]:
