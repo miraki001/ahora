@@ -66,7 +66,7 @@ with col[2]:
     st.button("Quitar Seleccion", type="primary")
 with col[3]:
     st.button("Informes", type="primary")
-    pg = st.navigation([st.Page("informes.py"), st.Page(page_2)])
+    pg = st.navigation([st.Page("informers.py"), st.Page(page_2)])
     pg.run()
 
 
