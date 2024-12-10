@@ -32,7 +32,10 @@ it_args["select"] = True
 conn = st.connection("postgresql", type="sql")
 df1 = conn.query('select nuri,fuente,fecha,titulo,detalle from novedades order by nuri desc limit 2000;', ttl="0"),
 df = df1[0]
-st.write(df1[0])
+#st.write(df1[0])
+
+edited_df = st.data_editor(df) # 👈 An editable dataframe
+
 
 interactive_table(df1[0],
                   caption='Countries',
