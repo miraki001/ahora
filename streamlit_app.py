@@ -41,7 +41,7 @@ config = {
     'selec' : st.column_config.CheckboxColumn('selec'),
     'titulo' : st.column_config.TextColumn('titulo',  width='large'),
     'detalle' : st.column_config.TextColumn('detalle', width='large'),
-    'imagen' : st.column_config.ImagenColumn('imagen'),
+    'imagen' : st.column_config.ImageColumn('imagen'),
     
 }
 result = st.data_editor(df, column_config = config, num_rows='dynamic')
