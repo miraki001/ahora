@@ -48,7 +48,7 @@ with col[1]:
     st.button("Seleccionar", type="primary")
 with col[2]:
     st.button("Quitar Seleccion", type="primary")
-with col[2]:
+with col[3]:
     st.button("Informes", type="primary")
 
 
