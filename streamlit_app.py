@@ -34,6 +34,15 @@ df1 = conn.query('select nuri,fuente,fecha,titulo,detalle from novedades order b
 df = df1[0]
 #st.write(df1[0])
 
+colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+config = {
+    'nuri' : st.column_config.NumberColumn('nuri', width='large', required=True),
+    'fuente' : st.column_config.NumberColumn('fuente', min_value=0, max_value=22),
+    'titulo' : st.column_config.NumberColumn('titulo', min_value=0, max_value=122),
+    'detalle' : st.column_config.NumberColumn('detalle', min_value=0, max_value=122)
+    
+}
+result = st.data_editor(df, column_config = config, num_rows='dynamic')
 edited_df = st.data_editor(df) # 👈 An editable dataframe
 
 
