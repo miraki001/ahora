@@ -55,6 +55,9 @@ div.stButton > button:hover {
     }
 </style>""", unsafe_allow_html=True)
 
+def page_2():
+    st.title("Page 2")
+
 with col[0]:
     st.button("Editar", type="primary" )
 with col[1]:
@@ -63,6 +66,8 @@ with col[2]:
     st.button("Quitar Seleccion", type="primary")
 with col[3]:
     st.button("Informes", type="primary")
+    pg = st.navigation([st.Page("informes.py"), st.Page(page_2)])
+    pg.run()
 
 
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
