@@ -37,7 +37,7 @@ df = df1[0]
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 config = {
     'nuri' : st.column_config.NumberColumn('nuri', required=True),
-    'fuente' : st.column_config.TextColumn('fuente', width='large' ),
+    'fuente' : st.column_config.TextColumn('fuente'),
     'selec' : st.column_config.CheckboxColumn('selec'),
     'titulo' : st.column_config.TextColumn('titulo',  width='large'),
     'detalle' : st.column_config.TextColumn('detalle', width='large')
