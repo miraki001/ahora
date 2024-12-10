@@ -46,7 +46,7 @@ col = st.columns((1.5, 4.5, 2,2), gap='medium')
 m = st.markdown("""
 <style>
 div.stButton > button:first-child {
-    background-color:#dd6b66;
+    background-color:#eedd78;
     color:#e69d87;
 }
 div.stButton > button:hover {
