@@ -44,7 +44,7 @@ df = df1[0]
 col = st.columns((1.5, 4.5, 2,2), gap='medium')
 
 with col[0]:
-    st.button("Editar", type="primary")
+    st.button("Editar", type="primary" ,style="background-color: #DD3300; color:#eeffee )
 with col[1]:
     st.button("Seleccionar", type="primary")
 with col[2]:
