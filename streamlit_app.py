@@ -22,7 +22,7 @@ st.set_page_config(
     initial_sidebar_state="expanded")
 st.title("Miraki")
 st.subheader("Plataforma de Vigilancia Tecnólogica e Inteligencia Competitiva")
-st.image("sunrise.jpg")
+st.image("ic_launcher44.png")
 
 #default=["copyHtml5", "csvHtml5", "excelHtml5", "colvis"],
 default=["copyHtml5", "csvHtml5", "excelHtml5"],
