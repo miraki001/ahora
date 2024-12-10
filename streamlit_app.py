@@ -21,6 +21,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded")
 st.title("Miraki")
+st.subheader("Plataforma de Vigilancia Tecnólogica e Inteligencia Competitiva")
 
 #default=["copyHtml5", "csvHtml5", "excelHtml5", "colvis"],
 default=["copyHtml5", "csvHtml5", "excelHtml5"],
@@ -39,8 +40,15 @@ df1 = conn.query('select nuri,fuente,select_web selec,fecha,titulo,detalle,image
 df = df1[0]
 #st.write(df1[0])
 
-st.button("Editar", type="primary")
-st.button("Seleccionar", type="primary")
+col = st.columns((1.5, 4.5, 2), gap='medium')
+
+    with col[0]:
+        st.button("Editar", type="primary")
+    with col[1]:
+        st.button("Seleccionar", type="primary")
+    with col[2]:
+        st.button("QuitarSeleccion", type="primary")
+
 
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 config = {
