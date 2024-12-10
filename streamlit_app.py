@@ -47,7 +47,9 @@ with col[0]:
 with col[1]:
     st.button("Seleccionar", type="primary")
 with col[2]:
-    st.button("QuitarSeleccion", type="primary")
+    st.button("Quitar Seleccion", type="primary")
+with col[2]:
+    st.button("Informes", type="primary")
 
 
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
