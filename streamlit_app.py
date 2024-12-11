@@ -56,7 +56,7 @@ menu_data = [
 # we can override any part of the primary colors of the menu
 #over_theme = {'txc_inactive': '#FFFFFF','menu_background':'red','txc_active':'yellow','option_active':'blue'}
 over_theme = {'txc_inactive': '#FFFFFF'}
-menu_id = hc.nav_bar(menu_definition=menu_data,home_name='Home',override_theme=over_theme)
+menu_id = hc.nav_bar(menu_definition=menu_data,home_name='streamlit_app',override_theme=over_theme)
 
 
 
