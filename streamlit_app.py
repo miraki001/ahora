@@ -24,7 +24,7 @@ st.set_page_config(initial_sidebar_state="collapsed")
 
 pages = ["Install", "User Guide", "API", "Examples", "Community", "GitHub"]
 parent_dir = os.path.dirname(os.path.abspath(__file__))
-logo_path = os.path.join(parent_dir, "cubes.svg")
+logo_path = os.path.join(parent_dir, "/data/logo.png")
 urls = {"GitHub": "https://github.com/gabrieltempass/streamlit-navigation-bar"}
 styles = {
     "nav": {
