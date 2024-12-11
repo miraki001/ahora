@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 import nltk
 import wordcloud
-import os
 import pages as pg
 import itables.options as it_op
 from itables.streamlit import interactive_table
@@ -23,9 +22,9 @@ from streamlit_navigation_bar import st_navbar
 st.set_page_config(initial_sidebar_state="collapsed")
 
 pages = ["Install", "User Guide", "API", "Examples", "Community", "GitHub"]
-parent_dir = os.path.dirname(os.path.abspath(__file__))
-logo_path = os.path.join(parent_dir, "/data/logo.png")
-urls = {"GitHub": "https://github.com/gabrieltempass/streamlit-navigation-bar"}
+#parent_dir = os.path.dirname(os.path.abspath(__file__))
+#logo_path = os.path.join(parent_dir, "/data/logo.png")
+#urls = {"GitHub": "https://github.com/gabrieltempass/streamlit-navigation-bar"}
 styles = {
     "nav": {
         "background-color": "royalblue",
