@@ -10,60 +10,14 @@ st.set_page_config(initial_sidebar_state="expanded")
 
 
 
-app = hy.HydraApp(title='Simple Multi-Page App')
+col1, col2, col3 = st.columns(3)
 
-@app.addapp()
-def my_home():
- hy.info('Hello from app1')
-
-@app.addapp()
-def app2():
- hy.info('Hello from app 2')
-
-
-#Run the whole lot, we get navbar, state management and app isolation, all with this tiny amount of work.
-app.run() 
-
-
-app = hy.HydraApp(title='Data Sorting App',hide_streamlit_markers=True,use_navbar=True, navbar_sticky=True)
-
-# define what option labels and icons to display
-option_data = [
-   {'label':"editar"},
-   {'label':"seleccionar"},
-   {'label':"informes"},
-]
-
-# override the theme, else it will use the Streamlit applied theme
-over_theme = {'txc_inactive': 'white','menu_background':'purple','txc_active':'yellow','option_active':'blue'}
-font_fmt = {'font-class':'h2','font-size':'150%'}
-
-# display a horizontal version of the option bar
-op = hc.option_bar(option_definition=option_data,title='Miraki',key='PrimaryOption',override_theme=over_theme,font_styling=font_fmt,horizontal_orientation=True)
-
-# display a version version of the option bar
-#op2 = hc.option_bar(option_definition=option_data,title='Feedback Response',key='PrimaryOption',override_theme=over_theme,font_styling=font_fmt,horizontal_orientation=False)
-
-menu_data = [
-        {'icon': "far fa-copy", 'label':"Left End"},
-        {'id':'Copy','icon':"🐙",'label':"editar"},
-        {'icon': "far fa-chart-bar", 'label':"Chart"},#no tooltip message
-        {'icon': "far fa-address-book", 'label':"Book"},
-        {'id':' Crazy return value 💀','icon': "💀", 'label':"Calendar"},
-        {'icon': "far fa-clone", 'label':"Component"},
-        {'icon': "fas fa-tachometer-alt", 'label':"Dashboard",'ttip':"I'm the Dashboard tooltip!"}, #can add a tooltip message
-        {'icon': "far fa-copy", 'label':"Right End"},
-]
-# we can override any part of the primary colors of the menu
-#over_theme = {'txc_inactive': '#FFFFFF','menu_background':'red','txc_active':'yellow','option_active':'blue'}
-over_theme = {'txc_inactive': '#FFFFFF'}
-menu_id = hc.nav_bar(menu_definition=menu_data,home_name='streamlit_app',override_theme=over_theme)
-
-
-
-st.info(f"{menu_id=}")
-
-
+if col1.button("Home"):
+    st.switch_page("streamlit_app.py")
+if col2.button("Page 1"):
+    st.switch_page("pages/editar.py")
+if col3.button("Page 2"):
+    st.switch_page("pages/seleccionar.py"
 
 #default=["copyHtml5", "csvHtml5", "excelHtml5", "colvis"],
 #default=["copyHtml5", "csvHtml5", "excelHtml5"],
