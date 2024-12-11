@@ -10,7 +10,8 @@ st.set_page_config(initial_sidebar_state="expanded")
 
 
 
-
+page = st_navbar(["Home", "Documentation", "Examples", "Community", "About"])
+st.write(page)
 
 
 
