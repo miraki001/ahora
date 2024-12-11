@@ -21,6 +21,9 @@ from streamlit_navigation_bar import st_navbar
 
 st.set_page_config(initial_sidebar_state="collapsed")
 
+page = st_navbar(["Home", "Documentation", "Examples", "Community", "About"])
+st.write(page)
+
 pages = ["Home", "editar", "seleccionar", "informes", "Download"]
 styles = {
     "nav": {
