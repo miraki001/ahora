@@ -8,4 +8,5 @@ nltk
 gensim 
 scikit-learn
 hydralit_components
+hydralit 
 
