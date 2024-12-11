@@ -15,9 +15,9 @@ col1, col2, col3 = st.columns(3)
 if col1.button("Home"):
     st.switch_page("streamlit_app.py")
 if col2.button("Page 1"):
-    st.switch_page("pages/editar.py")
+    st.switch_page("./pages/editar.py")
 if col3.button("Page 2"):
-    st.switch_page("pages/seleccionar.py"
+    st.switch_page("./pages/seleccionar.py"
 
 #default=["copyHtml5", "csvHtml5", "excelHtml5", "colvis"],
 #default=["copyHtml5", "csvHtml5", "excelHtml5"],
