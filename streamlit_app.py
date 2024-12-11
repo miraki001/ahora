@@ -57,17 +57,7 @@ page = st_navbar(
     options=options,
 )
 
-functions = {
-    "Home": pg.show_informers,
-    "Install": pg.show_informers,
-    "User Guide": pg.show_informers,
-    "API": pg.show_informers,
-    "Examples": pg.show_informers,
-    "Community": pg.show_informers,
-}
-go_to = functions.get(page)
-if go_to:
-    go_to()
+
 
 
 
