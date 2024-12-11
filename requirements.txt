@@ -7,5 +7,5 @@ wordcloud
 nltk
 gensim 
 scikit-learn
-streamlit-pages
+hydralit_components
 
