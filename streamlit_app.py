@@ -18,8 +18,7 @@ from streamlit_navigation_bar import st_navbar
 
 
 
-page = st_navbar(["Home", "Documentation", "Examples", "Community", "About"])
-st.write(page)
+
 
 st.set_page_config(
     page_title="Miraki",
