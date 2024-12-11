@@ -14,9 +14,9 @@ st.set_page_config(initial_sidebar_state="expanded")
 
 # define what option labels and icons to display
 option_data = [
-   {'label':"Editar"},
-   {'label':"Seleccionar"},
-   {'label':"Informes"},
+   {'label':"editar"},
+   {'label':"seleccionar"},
+   {'label':"informes"},
 ]
 
 # override the theme, else it will use the Streamlit applied theme
@@ -24,7 +24,7 @@ over_theme = {'txc_inactive': 'white','menu_background':'purple','txc_active':'y
 font_fmt = {'font-class':'h2','font-size':'150%'}
 
 # display a horizontal version of the option bar
-op = hc.option_bar(option_definition=option_data,title='Feedback Response',key='PrimaryOption',override_theme=over_theme,font_styling=font_fmt,horizontal_orientation=True)
+op = hc.option_bar(option_definition=option_data,title='Miraki',key='PrimaryOption',override_theme=over_theme,font_styling=font_fmt,horizontal_orientation=True)
 
 # display a version version of the option bar
 #op2 = hc.option_bar(option_definition=option_data,title='Feedback Response',key='PrimaryOption',override_theme=over_theme,font_styling=font_fmt,horizontal_orientation=False)
