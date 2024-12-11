@@ -18,6 +18,9 @@ from streamlit_navigation_bar import st_navbar
 
 
 
+page = st_navbar(["Home", "Documentation", "Examples", "Community", "About"])
+st.write(page)
+
 st.set_page_config(
     page_title="Miraki",
     page_icon="📈",
@@ -31,8 +34,7 @@ st.image("ic_launcher44.png", width=100,)
 default=["copyHtml5", "csvHtml5", "excelHtml5"],
 
 
-page = st_navbar(["Home", "Documentation", "Examples", "Community", "About"])
-st.write(page)
+
 
 it_args = {}
 it_args["buttons"] = default
