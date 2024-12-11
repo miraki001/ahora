@@ -27,7 +27,7 @@ st.set_page_config(
     initial_sidebar_state="expanded")
 st.title("Miraki")
 st.subheader("Plataforma de Vigilancia Tecnólogica e Inteligencia Competitiva")
-page = st_navbar(["Home", "Documentation", "Examples", "Community", "About"] options = {
+page = st_navbar(["Home", "Documentation", "Examples", "Community", "About"], options = {
     "use_padding": True
 })
 st.write(page)
