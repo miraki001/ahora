@@ -61,8 +61,8 @@ config = {
     'link' : st.column_config.LinkColumn('link'),
     
 }
-#result = st.data_editor(df, column_config = config, num_rows='dynamic')
-edited_df = st.data_editor(df) # 👈 An editable dataframe
+result = st.data_editor(df, column_config = config, num_rows='dynamic')
+#edited_df = st.data_editor(df) # 👈 An editable dataframe
 
 
 
