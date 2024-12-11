@@ -36,32 +36,6 @@ df1 = conn.query('select nuri,fuente,select_web selec,fecha,titulo,detalle,image
 df = df1[0]
 #st.write(df1[0])
 
-col = st.columns((1.5, 4.5, 2,2), gap='medium')
-
-m = st.markdown("""
-<style>
-div.stButton > button:first-child {
-    background-color:#73a37;
-    color:#e69d87;
-}
-div.stButton > button:hover {
-    background-color:#759aa0;
-    color:#8dc1a9;
-    }
-</style>""", unsafe_allow_html=True)
-
-def informers():
-    st.title("Page 2")
-
-with col[0]:
-    st.button("Editar", type="primary" )
-with col[1]:
-    st.button("Seleccionar", type="primary")
-with col[2]:
-    st.button("Quitar Seleccion", type="primary")
-with col[3]:
-    st.button("Informes", type="primary")
-
 
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 config = {
