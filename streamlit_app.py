@@ -15,14 +15,19 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"
     }
 )
-col1, col2, col3 = st.columns(3)
+col1, col2, col3,col4,col5 = st.columns(5)
 
 if col1.button("Home"):
     st.switch_page("streamlit_app.py")
-if col2.button("Page 1"):
+if col2.button("Editar"):
     st.switch_page("./pages/editar.py")
-if col3.button("Page 2"):
+if col3.button("Seleccionar"):
     st.switch_page("./pages/seleccionar.py")
+if col4.button("Desmarcar"):
+    st.switch_page("./pages/seleccionar.py")
+if col5.button("Informes"):
+    st.switch_page("./pages/informes.py")
+ 
 
 #default=["copyHtml5", "csvHtml5", "excelHtml5", "colvis"],
 #default=["copyHtml5", "csvHtml5", "excelHtml5"],
