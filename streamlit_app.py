@@ -21,7 +21,9 @@ def app2():
 
 
 #Run the whole lot, we get navbar, state management and app isolation, all with this tiny amount of work.
-app.run()
+app.run() 
+
+
 
 
 # define what option labels and icons to display
