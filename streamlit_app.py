@@ -18,7 +18,7 @@ stemmer = PorterStemmer()
 from streamlit_navigation_bar import st_navbar
  
 
-#st.set_page_config(initial_sidebar_state="collapsed")
+#st.set_page_config(initial_sidebar_state="expanded")
 
 
 page = st_navbar(["Inicio", "informes", "seleccionar", "editar", "acerca de"])
