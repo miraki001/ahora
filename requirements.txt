@@ -7,3 +7,4 @@ wordcloud
 nltk
 gensim 
 scikit-learn
+streamlit-navigation-bar
