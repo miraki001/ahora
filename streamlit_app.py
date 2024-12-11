@@ -1,4 +1,4 @@
-import streamlit as st
+itaimport streamlit as st
 import pandas as pd
 import itables.options as it_op
 from itables.streamlit import interactive_table
@@ -45,7 +45,7 @@ op = hc.option_bar(option_definition=option_data,title='Miraki',key='PrimaryOpti
 
 menu_data = [
         {'icon': "far fa-copy", 'label':"Left End"},
-        {'id':'Copy','icon':"🐙",'label':"Copy"},
+        {'id':'Copy','icon':"🐙",'label':"editar"},
         {'icon': "far fa-chart-bar", 'label':"Chart"},#no tooltip message
         {'icon': "far fa-address-book", 'label':"Book"},
         {'id':' Crazy return value 💀','icon': "💀", 'label':"Calendar"},
