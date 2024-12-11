@@ -24,7 +24,7 @@ def app2():
 app.run() 
 
 
-
+app = hy.HydraApp(title='Data Sorting App',hide_streamlit_markers=True,use_navbar=True, navbar_sticky=True)
 
 # define what option labels and icons to display
 option_data = [
