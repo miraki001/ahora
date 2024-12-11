@@ -14,9 +14,9 @@ st.set_page_config(initial_sidebar_state="expanded")
 
 # define what option labels and icons to display
 option_data = [
-   {'icon': "bi bi-hand-thumbs-up", 'label':"Agree"},
-   {'icon':"fa fa-question-circle",'label':"Unsure"},
-   {'icon': "bi bi-hand-thumbs-down", 'label':"Disagree"},
+   {'label':"Editar"},
+   {'label':"Seleccionar"},
+   {'label':"Informes"},
 ]
 
 # override the theme, else it will use the Streamlit applied theme
@@ -27,7 +27,7 @@ font_fmt = {'font-class':'h2','font-size':'150%'}
 op = hc.option_bar(option_definition=option_data,title='Feedback Response',key='PrimaryOption',override_theme=over_theme,font_styling=font_fmt,horizontal_orientation=True)
 
 # display a version version of the option bar
-op2 = hc.option_bar(option_definition=option_data,title='Feedback Response',key='PrimaryOption',override_theme=over_theme,font_styling=font_fmt,horizontal_orientation=False)
+#op2 = hc.option_bar(option_definition=option_data,title='Feedback Response',key='PrimaryOption',override_theme=over_theme,font_styling=font_fmt,horizontal_orientation=False)
 
 
 
