@@ -3,8 +3,6 @@ import pandas as pd
 import itables.options as it_op
 from itables.streamlit import interactive_table
 import re
-import hydralit_components as hc
-import hydralit as hy
  
 st.set_page_config(
     page_title="Ex-stream-ly Cool App",
