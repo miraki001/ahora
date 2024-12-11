@@ -8,4 +8,5 @@ nltk
 gensim 
 scikit-learn
 streamlit-navigation-bar==3.3.0
+streamlit-pages
 
