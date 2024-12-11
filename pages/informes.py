@@ -15,15 +15,6 @@ from sklearn.manifold import TSNE
 from nltk.tokenize import word_tokenize
 stemmer = PorterStemmer()  
 
-st.set_page_config(
-    page_title="Miraki",
-    page_icon="📈",
-    layout="wide",
-    initial_sidebar_state="expanded")
-st.title("Miraki")
-st.subheader("Plataforma de Vigilancia Tecnólogica e Inteligencia Competitiva")
-st.image("ic_launcher44.png", width=100,)
-
 col1, col2, col3,col4,col5 = st.columns(5)
 
 if col1.button("Home"):
@@ -36,6 +27,17 @@ if col4.button("Desmarcar"):
     st.switch_page("./pages/seleccionar.py")
 if col5.button("Informes"):
     st.switch_page("./pages/informes.py")
+
+st.set_page_config(
+    page_title="Miraki",
+    page_icon="📈",
+    layout="wide",
+    initial_sidebar_state="expanded")
+st.title("Miraki")
+st.subheader("Plataforma de Vigilancia Tecnólogica e Inteligencia Competitiva")
+st.image("ic_launcher44.png", width=100,)
+
+
 
 
 conn = st.connection("postgresql", type="sql")
