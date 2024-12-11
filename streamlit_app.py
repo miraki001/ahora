@@ -4,12 +4,25 @@ import itables.options as it_op
 from itables.streamlit import interactive_table
 import re
 import hydralit_components as hc
+import hydralit as hy
  
 
 st.set_page_config(initial_sidebar_state="expanded")
 
 
+app = hy.HydraApp(title='Simple Multi-Page App')
 
+@app.addapp()
+def my_home():
+ hy.info('Hello from app1')
+
+@app.addapp()
+def app2():
+ hy.info('Hello from app 2')
+
+
+#Run the whole lot, we get navbar, state management and app isolation, all with this tiny amount of work.
+app.run()
 
 
 # define what option labels and icons to display
