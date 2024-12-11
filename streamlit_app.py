@@ -5,7 +5,7 @@ from itables.streamlit import interactive_table
 import re
  
 st.set_page_config(
-    page_title="Ex-stream-ly Cool App",
+    page_title="Miraki",
     page_icon="🧊",
     layout="wide",
     initial_sidebar_state="expanded",
