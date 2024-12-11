@@ -3,37 +3,11 @@ import pandas as pd
 import itables.options as it_op
 from itables.streamlit import interactive_table
 import re
-from streamlit_pages.streamlit_pages import MultiPage
-#from streamlit_navigation_bar import st_navbar
+import hydralit_components as hc
  
 
 st.set_page_config(initial_sidebar_state="expanded")
 
-def home():
-    st.write("Welcome to home page")
-    if st.button("Click Home"):
-        st.write("Welcome to home page")
-
-
-def about():
-    st.write("Welcome to about page")
-    if st.button("Click about"):
-        st.write("Welcome to About page")
-
-
-def contact():
-    st.write("Welcome to contact page")
-    if st.button("Click Contact"):
-        st.write("Welcome to contact page")
-
-
-# call app class object
-app = MultiPage()
-# Add pages
-app.add_page("Home",home)
-app.add_page("About",about)
-app.add_page("Contact",contact)
-app.run()
 
 
 
