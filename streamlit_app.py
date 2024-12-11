@@ -21,7 +21,7 @@ from streamlit_navigation_bar import st_navbar
 
 st.set_page_config(initial_sidebar_state="collapsed")
 
-pages = ["Home", "Library", "Tutorials", "Development", "Download"]
+pages = ["Home", "editar", "seleccionar", "informes", "Download"]
 styles = {
     "nav": {
         "background-color": "rgb(123, 209, 146)",
