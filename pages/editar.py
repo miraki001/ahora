@@ -88,8 +88,8 @@ account_page = st.Page(account, title="Account", icon=":material/account_circle:
 settings_page = st.Page(settings, title="Settings", icon=":material/settings:")
 dashboard = st.Page("./pages/seleccionar.py", title="Dashboard", default=True)
 bugs = st.Page("./pages/seleccionar.py", title="Bug reports", )
-alerts = st.Page("./pages/selecionar.py", title="System alerts",)
-search = st.Page("./pages/seleccionarpy", title="Search",)
+alerts = st.Page("./pages/seleccionar.py", title="System alerts",)
+search = st.Page("./pages/seleccionar.py", title="Search",)
 history = st.Page("./pages/seleccionar.py", title="History",)
 
 # Streamlit Navigation
