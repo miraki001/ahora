@@ -24,33 +24,6 @@ st.set_page_config(initial_sidebar_state="collapsed")
 page = st_navbar(["Home", "Documentation", "Examples", "Community", "About"])
 st.write(page)
 
-pages = ["Home", "editar", "seleccionar", "informes", "Download"]
-styles = {
-    "nav": {
-        "background-color": "rgb(123, 209, 146)",
-    },
-    "div": {
-        "max-width": "32rem",
-    },
-    "span": {
-        "border-radius": "0.5rem",
-        "color": "rgb(49, 51, 63)",
-        "margin": "0 0.125rem",
-        "padding": "0.4375rem 0.625rem",
-    },
-    "active": {
-        "background-color": "rgba(255, 255, 255, 0.25)",
-    },
-    "hover": {
-        "background-color": "rgba(255, 255, 255, 0.35)",
-    },
-}
-
-page = st_navbar(pages, styles=styles)
-st.write(page)
-
-with st.sidebar:
-    st.write("Sidebar")
 
 
 
