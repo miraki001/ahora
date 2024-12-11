@@ -28,7 +28,7 @@ st.set_page_config(
 st.title("Miraki")
 st.subheader("Plataforma de Vigilancia Tecnólogica e Inteligencia Competitiva")
 page = st_navbar(["Home", "Documentation", "Examples", "Community", "About"], options = {
-    "use_padding": True
+    "use_padding": False
 })
 st.write(page)
 
