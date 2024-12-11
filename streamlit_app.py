@@ -9,6 +9,7 @@ import hydralit as hy
 st.set_page_config(initial_sidebar_state="expanded")
 
 
+
 app = hy.HydraApp(title='Simple Multi-Page App')
 
 @app.addapp()
