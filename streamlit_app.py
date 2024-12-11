@@ -30,6 +30,10 @@ st.image("ic_launcher44.png", width=100,)
 #default=["copyHtml5", "csvHtml5", "excelHtml5", "colvis"],
 default=["copyHtml5", "csvHtml5", "excelHtml5"],
 
+
+page = st_navbar(["Home", "Documentation", "Examples", "Community", "About"])
+st.write(page)
+
 it_args = {}
 it_args["buttons"] = default
 it_args["select"] = True
