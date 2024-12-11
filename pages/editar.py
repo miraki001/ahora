@@ -86,11 +86,11 @@ st.logo(
 login_page = st.Page(login, title="Log in", icon=":material/login:")
 account_page = st.Page(account, title="Account", icon=":material/account_circle:")
 settings_page = st.Page(settings, title="Settings", icon=":material/settings:")
-dashboard = st.Page("./pages/selecionar.py", title="Dashboard", default=True)
-bugs = st.Page("./pages/selecionar.py", title="Bug reports", )
+dashboard = st.Page("./pages/seleccionar.py", title="Dashboard", default=True)
+bugs = st.Page("./pages/seleccionar.py", title="Bug reports", )
 alerts = st.Page("./pages/selecionar.py", title="System alerts",)
-search = st.Page("./pages/selecionarpy", title="Search",)
-history = st.Page("./pages/selecionar.py", title="History",)
+search = st.Page("./pages/seleccionarpy", title="Search",)
+history = st.Page("./pages/seleccionar.py", title="History",)
 
 # Streamlit Navigation
 if st.session_state.logged_in:
