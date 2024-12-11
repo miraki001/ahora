@@ -6,3 +6,4 @@ st_navbar(
     pages=["Home", "Library", "Tutorials", "Development", "Download"],
     options={"use_padding": False}
 )
+st.write(pages)
