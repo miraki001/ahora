@@ -63,5 +63,7 @@ config = {
 }
 result = st.data_editor(df, column_config = config, num_rows='dynamic')
 edited_df = st.data_editor(df) # 👈 An editable dataframe
+favorite_command = edited_df.titulo[edited_df["rating"].idxmax()]["command"]
+st.markdown(f"Your favorite command is **{favorite_command}** 🎈")
 
 
