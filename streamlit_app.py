@@ -9,20 +9,15 @@ from streamlit_navigation_bar import st_navbar
 st.set_page_config(initial_sidebar_state="expanded")
 
 
-
-
-
-
-
 #default=["copyHtml5", "csvHtml5", "excelHtml5", "colvis"],
-default=["copyHtml5", "csvHtml5", "excelHtml5"],
+#default=["copyHtml5", "csvHtml5", "excelHtml5"],
 
 
 
 
-it_args = {}
-it_args["buttons"] = default
-it_args["select"] = True
+#it_args = {}
+#it_args["buttons"] = default
+#it_args["select"] = True
 
   
 
