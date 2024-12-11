@@ -6,8 +6,9 @@ import re
 import hydralit_components as hc
 import hydralit as hy
  
-st.set_page_config(initial_sidebar_state="colapsed",
-                  layaut="wide")
+st.set_page_config(
+     initial_sidebar_state="collapsed",
+     layaut="wide")
 
 
 
