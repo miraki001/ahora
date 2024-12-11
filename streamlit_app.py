@@ -7,11 +7,16 @@ import hydralit_components as hc
 import hydralit as hy
  
 st.set_page_config(
-     initial_sidebar_state="collapsed",
-     layaut="wide")
-
-
-
+    page_title="Ex-stream-ly Cool App",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    }
+)
 col1, col2, col3 = st.columns(3)
 
 if col1.button("Home"):
