@@ -14,6 +14,10 @@ from gensim.models import word2vec
 from sklearn.manifold import TSNE 
 from nltk.tokenize import word_tokenize
 stemmer = PorterStemmer()  
+from streamlit_navigation_bar import st_navbar
+
+page = st_navbar(["Home", "Documentation", "Examples", "Community", "About"])
+st.write(page)
 
 st.set_page_config(
     page_title="Miraki",
