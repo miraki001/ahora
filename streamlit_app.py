@@ -33,7 +33,7 @@ app = MultiPage()
 app.add_page("Home",home)
 app.add_page("About",about)
 app.add_page("Contact",contact)
-
+app.run()
 
 
 
