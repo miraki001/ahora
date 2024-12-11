@@ -24,6 +24,20 @@ st.title("Miraki")
 st.subheader("Plataforma de Vigilancia Tecnólogica e Inteligencia Competitiva")
 st.image("ic_launcher44.png", width=100,)
 
+col1, col2, col3,col4,col5 = st.columns(5)
+
+if col1.button("Home"):
+    st.switch_page("streamlit_app.py")
+if col2.button("Editar"):
+    st.switch_page("./pages/editar.py")
+if col3.button("Seleccionar"):
+    st.switch_page("./pages/seleccionar.py")
+if col4.button("Desmarcar"):
+    st.switch_page("./pages/seleccionar.py")
+if col5.button("Informes"):
+    st.switch_page("./pages/informes.py")
+
+
 conn = st.connection("postgresql", type="sql")
 df1 = conn.query('select nuri,fuente,select_web selec,fecha,titulo,detalle,imagen,link from novedades order by nuri desc limit 2000;', ttl="0"),
 df = df1[0]
