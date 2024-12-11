@@ -18,24 +18,59 @@ from streamlit_navigation_bar import st_navbar
 
 
 
+st.set_page_config(initial_sidebar_state="collapsed")
 
+pages = ["Install", "User Guide", "API", "Examples", "Community", "GitHub"]
+parent_dir = os.path.dirname(os.path.abspath(__file__))
+logo_path = os.path.join(parent_dir, "cubes.svg")
+urls = {"GitHub": "https://github.com/gabrieltempass/streamlit-navigation-bar"}
+styles = {
+    "nav": {
+        "background-color": "royalblue",
+        "justify-content": "left",
+    },
+    "img": {
+        "padding-right": "14px",
+    },
+    "span": {
+        "color": "white",
+        "padding": "14px",
+    },
+    "active": {
+        "background-color": "white",
+        "color": "var(--text-color)",
+        "font-weight": "normal",
+        "padding": "14px",
+    }
+}
+options = {
+    "show_menu": False,
+    "show_sidebar": False,
+}
 
-st.set_page_config(
-    page_title="Miraki",
-    initial_sidebar_state="collapsed",
-    page_icon="📈",
-    layout="wide",
-#    initial_sidebar_state="expanded"
+page = st_navbar(
+    pages,
+    logo_path=logo_path,
+    urls=urls,
+    styles=styles,
+    options=options,
 )
-st.title("Miraki")
-st.subheader("Plataforma de Vigilancia Tecnólogica e Inteligencia Competitiva")
-page = st_navbar(["Home", "Documentation", "Examples", "Community", "About"], options = {
-    "use_padding": False
-})
-st.write(page)
+
+functions = {
+    "Home": pg.show_home,
+    "Install": pg.show_install,
+    "User Guide": pg.show_user_guide,
+    "API": pg.show_api,
+    "Examples": pg.show_examples,
+    "Community": pg.show_community,
+}
+go_to = functions.get(page)
+if go_to:
+    go_to()
 
 
-st.image("ic_launcher44.png", width=100,)
+
+
 
 #default=["copyHtml5", "csvHtml5", "excelHtml5", "colvis"],
 default=["copyHtml5", "csvHtml5", "excelHtml5"],
@@ -82,8 +117,6 @@ with col[2]:
     st.button("Quitar Seleccion", type="primary")
 with col[3]:
     st.button("Informes", type="primary")
-    pg = st.navigation([st.Page("./pages/informers.py"), st.Page(informers)])
-    pg.run()
 
 
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
