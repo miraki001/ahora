@@ -17,6 +17,8 @@ PASSWORD = "admin"
 
 positions = ["top", "under", "side"]
 
+positions = ["top", "under", "side"]
+
 def my_sidebar():
     with st.sidebar:
         st.write("Logged in:", st.session_state.logged_in)
@@ -83,9 +85,9 @@ st.logo(
     icon_image="https://streamlit.io/images/brand/streamlit-mark-color.png"
 )
 
-login_page = st.Page(login, title="Log in", icon=":material/login:")
-account_page = st.Page(account, title="Account", icon=":material/account_circle:")
-settings_page = st.Page(settings, title="Settings", icon=":material/settings:")
+login_page = st.Page(login, title="Log in")
+account_page = st.Page(account, title="Account",)
+settings_page = st.Page(settings, title="Settings",)
 dashboard = st.Page("./pages/seleccionar.py", title="Dashboard", default=True)
 bugs = st.Page("./pages/seleccionar.py", title="Bug reports", )
 alerts = st.Page("./pages/seleccionar.py", title="System alerts",)
