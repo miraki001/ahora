@@ -57,7 +57,11 @@ page = st_navbar(
     options=options,
 )
 
+#page = st_navbar(pages, styles=styles)
+st.write(page)
 
+with st.sidebar:
+    st.write("Sidebar")
 
 
 
