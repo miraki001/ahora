@@ -54,7 +54,7 @@ colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 config = {
     'nuri' : st.column_config.NumberColumn('nuri', required=True),
     'fuente' : st.column_config.TextColumn('fuente'),
-    'selec' : st.column_config.CheckboxColumn('selec'),
+#    'selec' : st.column_config.CheckboxColumn('selec'),
     'titulo' : st.column_config.TextColumn('titulo',  width='large'),
     'detalle' : st.column_config.TextColumn('detalle', width='large'),
     'imagen' : st.column_config.ImageColumn('imagen'),
@@ -64,7 +64,7 @@ config = {
 #result = st.data_editor(df, column_config = config, num_rows='dynamic')
 def dataframe_with_selections(df):
                     df_with_selections = df.copy()
-                    df_with_selections.insert(0, "Select", False)
+                    df_with_selections.insert(0, "Selec", False)
                     # Get dataframe row-selections from user with st.data_editor
                     edited_df = st.data_editor(
                         df_with_selections,
