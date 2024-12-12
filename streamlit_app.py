@@ -45,7 +45,7 @@ if col5.button("Informes"):
 
 
 conn = st.connection("postgresql", type="sql")
-df1 = conn.query('select nuri,fuente,select_web selec,fecha,titulo,detalle,imagen,link from novedades order by nuri desc limit 2000;', ttl="0"),
+df1 = conn.query('select nuri,fuente,fecha,titulo,detalle,imagen,link from novedades order by nuri desc limit 2000;', ttl="0"),
 df = df1[0]
 #st.write(df1[0])
 
