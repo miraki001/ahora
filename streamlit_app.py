@@ -62,12 +62,25 @@ config = {
     
 }
 result = st.data_editor(df, column_config = config, num_rows='dynamic')
-#edited_df = st.data_editor(df) # 👈 An editable dataframe
-#selected_indices = st.multiselect('Select rows:', df.nuri)
-selected_rows = df.loc[nuri]
+def dataframe_with_selections(df):
+                    df_with_selections = df.copy()
+                    df_with_selections.insert(0, "Select", False)
+                    # Get dataframe row-selections from user with st.data_editor
+                    edited_df = st.data_editor(
+                        df_with_selections,
+                        hide_index=True,
+                        column_config={"Select": st.column_config.CheckboxColumn(required=True)},
+                        disabled=df.columns,
+                        num_rows="dynamic",
+                    )
 
-# Display the selected data
-st.write('Selected Rows:')
-st.dataframe(selected_rows)
+                    # Filter the dataframe using the temporary column, then drop the column
+                    selected_rows = edited_df[edited_df.Select]
+                    return selected_rows.drop('Select', axis=1)
+                  
+selection = dataframe_with_selections(df)
+st.write("Your selection:")
+st.write(selection)
+
 
 
