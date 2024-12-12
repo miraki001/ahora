@@ -69,7 +69,11 @@ def dataframe_with_selections(df):
                     edited_df = st.data_editor(
                         df_with_selections,
                         hide_index=True,
-                        column_config={"Select": st.column_config.CheckboxColumn(required=True)},
+                        column_config=
+                        {"Select": st.column_config.CheckboxColumn(required=True),
+                        'imagen' : st.column_config.ImageColumn('imagen'),
+                        'link' : st.column_config.LinkColumn('link'),                        
+                        },
                         disabled=df.columns,
 #                        num_rows="dynamic",
                     )
