@@ -71,7 +71,7 @@ def dataframe_with_selections(df):
                         hide_index=True,
                         column_config={"Select": st.column_config.CheckboxColumn(required=True)},
                         disabled=df.columns,
-                        num_rows="dynamic",
+#                        num_rows="dynamic",
                     )
 
                     # Filter the dataframe using the temporary column, then drop the column
