@@ -61,7 +61,7 @@ config = {
     'link' : st.column_config.LinkColumn('link'),
     
 }
-#result = st.data_editor(df, column_config = config, num_rows='dynamic')
+result = st.data_editor(df, column_config = config, num_rows='dynamic')
 def dataframe_with_selections(df):
                     df_with_selections = df.copy()
                     df_with_selections.insert(0, "Selec", False)
