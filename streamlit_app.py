@@ -64,7 +64,7 @@ config = {
 result = st.data_editor(df, column_config = config, num_rows='dynamic')
 #edited_df = st.data_editor(df) # 👈 An editable dataframe
 #selected_indices = st.multiselect('Select rows:', df.nuri)
-selected_rows = df.loc['nuri']
+selected_rows = df.loc[nuri]
 
 # Display the selected data
 st.write('Selected Rows:')
