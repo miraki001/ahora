@@ -97,6 +97,11 @@ vnuri= selection['nuri']
 st.query_params["nuri"] = vnuri
 st.query_params.from_dict({"bar": "foo"})
 
+if 'vnuri' not in st.session_state:
+    st.session_state['vnuri'] = 100 #or whatever default
+vnuri1 = st.session_state['vnuri']
+st.write(vnuri)
+
 
 def input_page(st, **state):
   MultiPage.save({"nuri": selection['nuri'] , "titulo": selection['titulo'] }, namespaces=["Input Page"])
