@@ -2,4 +2,5 @@ import streamlit as st
 
 
 st.set_page_config(layout="wide")
-st.write(id)
+vnuri  = int(st.query_params.get("nuri", value))
+st.write(vnuri)
