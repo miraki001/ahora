@@ -55,7 +55,7 @@ if col5.button("Informes"):
 
 
 conn = st.connection("postgresql", type="sql")
-df1 = conn.query('select nuri,fuente,fecha,titulo,detalle,imagen,link from novedades order by nuri desc limit 2000;', ttl="0"),
+df1 = conn.query('select nuri,fuente,fecha,titulo,detalle,imagen,link from novedades order by nuri desc limit 50;', ttl="0"),
 df = df1[0]
 #st.write(df1[0])
 
@@ -96,6 +96,7 @@ selection = dataframe_with_selections(df)
 
 st.dataframe(selection, use_container_width=False)
 st.dataframe(selection, hide_index=True)
+st.dataframe(selection.style.hide(axis="index"))
 st.write("Your selection:")
 st.write(selection)
 #st.write(f'selected row index: {selection.selected_row_index}')
