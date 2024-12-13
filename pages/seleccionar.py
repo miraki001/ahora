@@ -8,7 +8,7 @@ actualizar = 'update novedades set select_web = :estado,nro_reporte = 0 where nu
 st.write(actualizar)
 with conn.cursor() as cur:
         cur.execute(actualizar, params={"estado": "S"} )
-        return cur.fetchall()
+        
 
 
 #df1 = conn.execute(actualizar, ttl="0",params={"estado": "S"} ),
