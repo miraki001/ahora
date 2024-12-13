@@ -90,13 +90,13 @@ def dataframe_with_selections(df):
 
                     # Filter the dataframe using the temporary column, then drop the column
                     selected_rows = edited_df[edited_df.Selec]
-                    return selected_rows.drop('Selec', axis=1)
+                    return selected_rows.drop('Selec', axis=0)
                   
 selection = dataframe_with_selections(df)
 st.write("Your selection:")
 st.write(selection)
-st.write(f'selected row index: {selection.selected_row_index}')
-st.write(f'car name: {selection.df.at[selection.selected_row_index, "nuri"]}')
+#st.write(f'selected row index: {selection.selected_row_index}')
+#st.write(f'car name: {selection.df.at[selection.selected_row_index, "nuri"]}')
 #st.write(selection[0])
 st.write(selection['nuri'])
 vnuri= selection['nuri']
