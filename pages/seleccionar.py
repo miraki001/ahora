@@ -15,6 +15,7 @@ try:
     st.write('antes')
     conn.commit()
 except Exception as e:
+    st.write('antes')
     print(e)
 finally:
     st.write("Yessss!!")
