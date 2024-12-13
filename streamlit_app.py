@@ -95,6 +95,8 @@ st.write(selection)
 st.write(selection['nuri'])
 vnuri= selection['nuri']
 st.query_params["nuri"] = vnuri
+st.query_params.from_dict({"bar": "foo"})
+
 
 def input_page(st, **state):
   MultiPage.save({"nuri": selection['nuri'] , "titulo": selection['titulo'] }, namespaces=["Input Page"])
