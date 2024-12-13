@@ -27,7 +27,7 @@ vtitulo= ''
 if col1.button("Home"):
     st.switch_page("streamlit_app.py")
 if col2.button("Editar"):
-    st.switch_page("./pages/editar.py",'id=343')
+    st.switch_page("./pages/editar.py")
 if col3.button("Seleccionar"):
     st.switch_page("./pages/seleccionar.py")
 if col4.button("Desmarcar"):
