@@ -86,6 +86,8 @@ selection = dataframe_with_selections(df)
 st.write("Your selection:")
 st.write(selection)
 st.write(selection['nuri'] )
+MultiPage.save({"nuri": selection['nuri'] , "titulo": selection['titulo'] }, namespaces=["Input Page"])
+
 
 
 
