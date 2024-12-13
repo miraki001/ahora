@@ -12,7 +12,7 @@ st.write(actualizar)
 
 try:
     conn.query(f"UPDATE novedades SET select_web = '{new}' WHERE nuri='{nuri}'")
-
+    st.write('antes')
     conn.commit()
 except Exception as e:
     print(e)
