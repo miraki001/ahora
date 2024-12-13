@@ -18,10 +18,14 @@ st.set_page_config(
 )
 col1, col2, col3,col4,col5 = st.columns(5)
 
+vnuri = 0
+vtitulo= ''
+
+
 if col1.button("Home"):
     st.switch_page("streamlit_app.py")
 if col2.button("Editar"):
-    st.switch_page("./pages/editar.py")
+    st.switch_page("./pages/editar.py",vnuri)
 if col3.button("Seleccionar"):
     st.switch_page("./pages/seleccionar.py")
 if col4.button("Desmarcar"):
@@ -87,6 +91,7 @@ selection = dataframe_with_selections(df)
 st.write("Your selection:")
 st.write(selection)
 st.write(selection['nuri'])
+vnuri= selection['nuri']
 def input_page(st, **state):
   MultiPage.save({"nuri": selection['nuri'] , "titulo": selection['titulo'] }, namespaces=["Input Page"])
 
