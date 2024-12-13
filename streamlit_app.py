@@ -95,6 +95,7 @@ def dataframe_with_selections(df):
 selection = dataframe_with_selections(df)
 st.write("Your selection:")
 st.write(selection)
+st.write(selection[0])
 st.write(selection['nuri'])
 vnuri= selection['nuri']
 st.write('vnuri valor')
