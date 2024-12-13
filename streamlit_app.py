@@ -94,6 +94,8 @@ st.write("Your selection:")
 st.write(selection)
 st.write(selection['nuri'])
 vnuri= selection['nuri']
+st.query_params["nuri"] = vnuri
+
 def input_page(st, **state):
   MultiPage.save({"nuri": selection['nuri'] , "titulo": selection['titulo'] }, namespaces=["Input Page"])
 
