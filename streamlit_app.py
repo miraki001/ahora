@@ -108,18 +108,18 @@ st.write(selection)
 #st.write(f'car name: {selection.df.at[selection.selected_row_index, "nuri"]}')
 #st.write(selection[0])
 st.write(selection['nuri'])
-vnuri= selection['nuri']
+vnuri= selection.to_string(columns=['nuri'], header=False, index=False)
 st.write('vnuri valor')
 st.write(selection.nuri)
-st.write(selection.to_string(columns=['nuri','nuri'], header=False, index=False))
-st.write(selection.to_string(columns=['titulo','titulo'], header=False, index=False))
+st.write(selection.to_string(columns=['nuri'], header=False, index=False))
+st.write(selection.to_string(columns=['titulo'], header=False, index=False))
 st.write(vnuri[0])
 st.session_state['user_select_value'] = vnuri
 st.session_state['vnuri'] = vnuri
-st.session_state['vtitulo'] = selection['titulo']
-st.session_state['vdetalle'] = selection['detalle']
-st.session_state['vlin'] = selection['link']
-st.session_state['vimagen'] = selection['imagen']
+st.session_state['vtitulo'] = selection.to_string(columns=['titulo'], header=False, index=False)
+st.session_state['vdetalle'] = selection.to_string(columns=['detalle'], header=False, index=False)
+st.session_state['vlin'] = selection.to_string(columns=['link'], header=False, index=False)
+st.session_state['vimagen'] = selection.to_string(columns=['images'], header=False, index=False)
 
 """
 if 'user_select_value' not in st.session_state:
