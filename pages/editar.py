@@ -2,6 +2,9 @@ import streamlit as st
 
 st.set_page_config(layout="wide")
 
+
+col1, col2, col3,col4,col5 = st.columns(5)
+
 if col1.button("Home"):
     st.switch_page("streamlit_app.py")
 if col2.button("Editar"):
