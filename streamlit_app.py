@@ -95,6 +95,7 @@ def dataframe_with_selections(df):
 selection = dataframe_with_selections(df)
 
 st.dataframe(selection, use_container_width=False)
+st.dataframe(selection, hide_index=True)
 st.write("Your selection:")
 st.write(selection)
 #st.write(f'selected row index: {selection.selected_row_index}')
