@@ -22,3 +22,5 @@ if col5.button("Informes"):
 #value  = int(st.query_params.get("nuri", vnuri))
 st.write(st.session_state['vnuri'])
 st.write(st.session_state['vtitulo'])
+
+vtitle = st.text_input(vtitulo)
