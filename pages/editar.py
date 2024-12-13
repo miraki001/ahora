@@ -4,8 +4,6 @@ st.set_page_config(layout="wide")
 
 vtitulo = st.session_state['vtitulo']
 vtitulo1 = "eeeeee"
-st.write(vtitulo1)
-st.write(vtitulo)
 col1, col2, col3,col4,col5 = st.columns(5)
 
 if col1.button("Home"):
@@ -23,7 +21,7 @@ if col5.button("Informes"):
 #st.write('session')
 #st.write(st.session_state)
 #value  = int(st.query_params.get("nuri", vnuri))
-st.write(st.session_state['vnuri'])
-st.write(st.session_state['vtitulo'])
+#st.write(st.session_state['vnuri'])
+#st.write(st.session_state['vtitulo'])
 title = st.text_input("Movie title", "Life of Brian")
-vtitle = st.text_input("titulo", vtitulo1)
+vtitle = st.text_input("Titulo", vtitulo)
