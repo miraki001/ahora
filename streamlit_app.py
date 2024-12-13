@@ -95,7 +95,7 @@ def dataframe_with_selections(df):
 selection = dataframe_with_selections(df)
 
 #st.dataframe(selection, use_container_width=False)
-selection.drop(df.columns[0],axis=1, inplace = True)
+selection.drop(df.columns[-1],axis=1, inplace = True)
 #selection.drop(columns=[1], axis=1) 
 ss = st.dataframe(selection, hide_index=True)
 #st.write(ss)
