@@ -111,7 +111,7 @@ st.write(selection['nuri'])
 vnuri= selection['nuri']
 st.write('vnuri valor')
 st.write(selection.nuri)
-st.write(selection.to_string(columns=['Text','titulo'], header=False, index=False))
+st.write(selection.to_string(columns=['titulo','titulo'], header=False, index=False))
 st.write(vnuri[0])
 st.session_state['user_select_value'] = vnuri
 st.session_state['vnuri'] = vnuri
