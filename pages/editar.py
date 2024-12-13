@@ -21,4 +21,4 @@ if col5.button("Informes"):
 #st.write(st.session_state)
 #value  = int(st.query_params.get("nuri", vnuri))
 st.write(st.session_state['vnuri'])
-st.write(st.session_state['titulo'])
+st.write(st.session_state['vtitulo'])
