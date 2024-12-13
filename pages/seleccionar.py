@@ -6,9 +6,9 @@ conn = st.connection("postgresql", type="sql")
 actualizar = 'update novedades set select_web = :estado,nro_reporte = 0 where nuri = ' + tnuri + ';'
 
 st.write(actualizar)
-with conn.cursor() as cur:
-        cur.execute(actualizar, params={"estado": "S"} )
-        
+
+cursor = conn.cursor()
+cursor.execute(actualizar)
 
 
 #df1 = conn.execute(actualizar, ttl="0",params={"estado": "S"} ),
