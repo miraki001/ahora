@@ -20,7 +20,7 @@ st.set_page_config(
 )
 col1, col2, col3,col4,col5 = st.columns(5)
 
-vnuri = 0
+vnuri = 500
 vtitulo= ''
 
 st.query_params.from_dict({"foo": "bar", "baz": [1, 2, 3]})
