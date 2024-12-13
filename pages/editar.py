@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(layout="wide")
 
-vtitulo = st.session_state['vtitulo']
+vtitulo = st.session_state['vtitulo'].value
 vtitulo1 = "eeeeee"
 st.write(vtitulo1)
 st.write(vtitulo)
