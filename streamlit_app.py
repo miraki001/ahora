@@ -98,7 +98,7 @@ st.query_params["nuri"] = vnuri
 st.query_params.from_dict({"bar": "foo"})
 
 if 'user_select_value' not in st.session_state:
-    st.session_state['user_select_value'] = 0 #or whatever default
+    st.session_state['user_select_value'] = 1000 #or whatever default
 user_select_value = st.session_state['user_select_value']
 
 if st.button('Save Filters'):
