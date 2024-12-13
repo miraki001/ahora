@@ -96,8 +96,8 @@ st.write(selection['nuri'])
 vnuri= selection['nuri']
 st.write('vnuri valor')
 st.write(vnuri)
-st.query_params["nuri"] = vnuri
-st.query_params.from_dict({"bar": "foo"})
+#st.query_params["nuri"] = vnuri
+#st.query_params.from_dict({"bar": "foo"})
 
 if 'user_select_value' not in st.session_state:
     st.session_state['user_select_value'] = 5000 #or whatever default
@@ -112,8 +112,8 @@ if st.button('Clear page Filters'):
         st.session_state['user_select_value'] = 0 # or default value
 st.write(user_select_value)
 
-def input_page(st, **state):
-  MultiPage.save({"nuri": selection['nuri'] , "titulo": selection['titulo'] }, namespaces=["Input Page"])
+#def input_page(st, **state):
+#  MultiPage.save({"nuri": selection['nuri'] , "titulo": selection['titulo'] }, namespaces=["Input Page"])
 
 
 
