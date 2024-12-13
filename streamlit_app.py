@@ -94,11 +94,13 @@ st.write("Your selection:")
 st.write(selection)
 st.write(selection['nuri'])
 vnuri= selection['nuri']
+st.write('vnuri valor')
+st.write(vnuri)
 st.query_params["nuri"] = vnuri
 st.query_params.from_dict({"bar": "foo"})
 
 if 'user_select_value' not in st.session_state:
-    st.session_state['user_select_value'] = 1000 #or whatever default
+    st.session_state['user_select_value'] = 5000 #or whatever default
 user_select_value = st.session_state['user_select_value']
 
 if st.button('Save Filters'):
