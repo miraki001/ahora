@@ -96,8 +96,10 @@ st.write(selection['nuri'])
 vnuri= selection['nuri']
 st.write('vnuri valor')
 st.write(vnuri)
-#st.query_params["nuri"] = vnuri
-#st.query_params.from_dict({"bar": "foo"})
+st.session_state['user_select_value'] = vnuri
+st.session_state['vnuri'] = vnuri
+st.session_state['vtitulo'] = selection['titulo']
+
 
 if 'user_select_value' not in st.session_state:
     st.session_state['user_select_value'] = 5000 #or whatever default
