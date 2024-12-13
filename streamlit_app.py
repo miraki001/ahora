@@ -22,6 +22,9 @@ col1, col2, col3,col4,col5 = st.columns(5)
 
 vnuri = 500
 vtitulo= ''
+vdetalle = ''
+vlink = ''
+vimagen = ''
 
 st.query_params.from_dict({"foo": "bar", "baz": [1, 2, 3]})
 if col1.button("Home"):
@@ -99,6 +102,9 @@ st.write(vnuri)
 st.session_state['user_select_value'] = vnuri
 st.session_state['vnuri'] = vnuri
 st.session_state['vtitulo'] = selection['titulo']
+st.session_state['vdetalle'] = selection['detalle']
+st.session_state['vlin'] = selection['link']
+st.session_state['vimagen'] = selection['imagen']
 
 
 if 'user_select_value' not in st.session_state:
