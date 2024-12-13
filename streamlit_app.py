@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import itables.options as it_op
 from itables.streamlit import interactive_table
+from streamlit_multipage import MultiPage
 import re
  
 st.set_page_config(
