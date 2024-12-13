@@ -96,6 +96,7 @@ selection = dataframe_with_selections(df)
 
 #st.dataframe(selection, use_container_width=False)
 ss = st.dataframe(selection, hide_index=True)
+st.write(ss)
 #st.dataframe(selection.style.hide(axis="index"))
 st.write("Your selection:")
 st.write(ss[nuri])
