@@ -23,7 +23,7 @@ col1, col2, col3,col4,col5 = st.columns(5)
 vnuri = 0
 vtitulo= ''
 
-
+st.query_params.from_dict({"foo": "bar", "baz": [1, 2, 3]})
 if col1.button("Home"):
     st.switch_page("streamlit_app.py")
 if col2.button("Editar"):
