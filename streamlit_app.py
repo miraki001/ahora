@@ -96,7 +96,7 @@ selection = dataframe_with_selections(df)
 st.write("Your selection:")
 st.write(selection)
 st.write(f'selected row index: {selection.selected_row_index}')
-st.write(f'car name: {selection.df.at[selection.selected_row_index, "nuri]}')
+st.write(f'car name: {selection.df.at[selection.selected_row_index, "nuri"]}')
 #st.write(selection[0])
 st.write(selection['nuri'])
 vnuri= selection['nuri']
