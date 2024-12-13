@@ -86,8 +86,10 @@ def dataframe_with_selections(df):
 selection = dataframe_with_selections(df)
 st.write("Your selection:")
 st.write(selection)
-st.write(selection['nuri'] )
-MultiPage.save({"nuri": selection['nuri'] , "titulo": selection['titulo'] }, namespaces=["Input Page"])
+st.write(selection['nuri'])
+def input_page(st, **state):
+  MultiPage.save({"nuri": selection['nuri'] , "titulo": selection['titulo'] }, namespaces=["Input Page"])
+
 
 
 
