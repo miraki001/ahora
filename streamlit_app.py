@@ -106,7 +106,7 @@ st.session_state['vdetalle'] = selection['detalle']
 st.session_state['vlin'] = selection['link']
 st.session_state['vimagen'] = selection['imagen']
 
-
+"""
 if 'user_select_value' not in st.session_state:
     st.session_state['user_select_value'] = 5000 #or whatever default
 user_select_value = st.session_state['user_select_value']
@@ -119,7 +119,7 @@ if st.button('Save Filters'):
 if st.button('Clear page Filters'):
         st.session_state['user_select_value'] = 0 # or default value
 st.write(user_select_value)
-
+"""
 #def input_page(st, **state):
 #  MultiPage.save({"nuri": selection['nuri'] , "titulo": selection['titulo'] }, namespaces=["Input Page"])
 
