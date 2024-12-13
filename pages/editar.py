@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(layout="wide")
 
-vtitulo = st.session_state['vtitulo']
+#vtitulo = st.session_state['vtitulo']
 vtitulo = "eeeeee"
 st.write(vtitulo)
 col1, col2, col3,col4,col5 = st.columns(5)
