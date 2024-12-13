@@ -9,4 +9,5 @@ gensim
 scikit-learn
 hydralit_components
 hydralit 
+streamlit_multipage 
 
