@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(layout="wide")
 
-
+vtitulo = st.session_state['vtitulo']
 col1, col2, col3,col4,col5 = st.columns(5)
 
 if col1.button("Home"):
@@ -23,4 +23,4 @@ if col5.button("Informes"):
 st.write(st.session_state['vnuri'])
 st.write(st.session_state['vtitulo'])
 title = st.text_input("Movie title", "Life of Brian")
-vtitle = st.text_input("titulo", st.session_state['vtitulo'])
+vtitle = st.text_input("titulo", vtitulo)
