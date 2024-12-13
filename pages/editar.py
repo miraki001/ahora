@@ -23,4 +23,4 @@ if col5.button("Informes"):
 st.write(st.session_state['vnuri'])
 st.write(st.session_state['vtitulo'])
 title = st.text_input("Movie title", "Life of Brian")
-vtitle = st.text_input('titulo', vtitulo)
+vtitle = st.text_input("titulo", vtitulo)
