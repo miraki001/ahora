@@ -100,6 +100,7 @@ st.write(selection['nuri'])
 vnuri= selection['nuri']
 st.write('vnuri valor')
 st.write(vnuri)
+st.write(vnuri[0])
 st.session_state['user_select_value'] = vnuri
 st.session_state['vnuri'] = vnuri
 st.session_state['vtitulo'] = selection['titulo']
