@@ -95,10 +95,10 @@ def dataframe_with_selections(df):
 selection = dataframe_with_selections(df)
 
 #st.dataframe(selection, use_container_width=False)
-tnuri = st.dataframe(selection[nuri], hide_index=True)
+ss = st.dataframe(selection, hide_index=True)
 #st.dataframe(selection.style.hide(axis="index"))
 st.write("Your selection:")
-st.write(tnuri)
+st.write(ss[nuri])
 st.write(selection)
 #st.write(f'selected row index: {selection.selected_row_index}')
 #st.write(f'car name: {selection.df.at[selection.selected_row_index, "nuri"]}')
