@@ -5,7 +5,7 @@ from itables.streamlit import interactive_table
 from streamlit_multipage import MultiPage
 import re
 
-def switch_page(page: str, query_params: str)
+
  
 st.set_page_config(
     page_title="Miraki",
