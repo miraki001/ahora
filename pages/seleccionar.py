@@ -1,5 +1,6 @@
 import streamlit as st
 import psycopg2
+from sqlalchemy import text
 
 tnuri = st.session_state['vnuri']
 st.write(tnuri)
