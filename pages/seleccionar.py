@@ -14,6 +14,7 @@ try:
     conn.query(f"UPDATE novedades SET select_web = '{new}' WHERE nuri='{nuri}'")
     st.write('antes')
     conn.commit()
+    com.close()
 except Exception as e:
     st.write('antes eee   ')
     st.write(e)
