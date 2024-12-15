@@ -10,6 +10,11 @@ nuri = tnuri
 new = 'S'
 st.write(actualizar)
 
+with conn.session as session:
+    session.execute(f"UPDATE novedades SET select_web = '{new}' WHERE nuri='{nuri}'")
+    session.commit()
+    st.success("Data sent")
+
 try:
     conn.query(f"UPDATE novedades SET select_web = '{new}' WHERE nuri='{nuri}'")
     st.write('antes')
