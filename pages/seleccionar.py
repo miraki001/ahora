@@ -11,7 +11,8 @@ new = 'S'
 st.write(actualizar)
 
 with conn.session as session:
-    session.execute(f"UPDATE novedades SET select_web = '{new}' WHERE nuri='{nuri}'")
+    #session.execute(f"UPDATE novedades SET select_web = '{new}' WHERE nuri='{nuri}'")
+    session.execute('UPDATE novedades SET select_web = ''s'' WHERE nuri= 458184')
     session.commit()
     st.success("Data sent")
 
