@@ -28,3 +28,4 @@ if col5.button("Informes"):
 #st.write(st.session_state['vtitulo'])
 #title = st.text_input("Movie title", "Life of Brian")
 vtitle = st.text_input("Titulo", ttitulo)
+vtitle = st.text_input("Titulo en Castellano ", st.session_state['vtitulo_es'])
