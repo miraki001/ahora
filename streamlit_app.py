@@ -34,7 +34,7 @@ if col2.button("Editar"):
 if col3.button("Seleccionar"):
     st.switch_page("./pages/seleccionar.py")
 if col4.button("Desmarcar"):
-    st.switch_page("./pages/seleccionar.py")
+    st.switch_page("./pages/desmarcar.py")
 if col5.button("Informes"):
     st.switch_page("./pages/informes.py")
  
