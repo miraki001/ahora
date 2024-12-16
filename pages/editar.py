@@ -41,8 +41,8 @@ vimg = st.text_input("Imagen ", st.session_state['vimagen'])
 #st.markdown("This text is :red[colored red], and this is **:blue[colored]** and bold.")
 
 col10, col20 = st.columns(2)
-if col10.button("Grabar"):
+if col10.button(":red[Grabar]"):
     st.switch_page("streamlit_app.py")
 if col20.button("Cancelar"):
-    st.switch_page("./pages/editar.py")
+    st.switch_page("streamlit_app.py")
 
