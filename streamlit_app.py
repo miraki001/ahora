@@ -58,7 +58,7 @@ conn = st.connection("postgresql", type="sql")
 df1 = conn.query('select nuri,fuente,fecha,titulo,select_web as sel,detalle,imagen,link,titulo_es,detalle_es from novedades order by nuri desc limit 50;', ttl="0"),
 df = df1[0]
 #st.write(df1[0])
-
+st.dataframe(df, hide_index=True, column_config={"titulo_es": None}
 
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 config = {
@@ -69,7 +69,7 @@ config = {
     'detalle' : st.column_config.TextColumn('detalle', width='large'),
     'imagen' : st.column_config.ImageColumn('imagen'),
     'link' : st.column_config.LinkColumn('link'),
-    'titulo_es' : st.column_config.TextColumn('',  width=None, disabled= True, required=None,visibility=False),
+    'titulo_es' : st.column_config.TextColumn('',  width=None, disabled= True, required=None),
     'detalle_es' : st.column_config.TextColumn('detalle_es', width='large'),
     
 }
