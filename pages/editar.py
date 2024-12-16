@@ -43,6 +43,6 @@ vimg = st.text_input("Imagen ", st.session_state['vimagen'])
 col10, col20 = st.columns(2)
 if col10.button("Grabar"):
     st.switch_page("streamlit_app.py")
-if col2.button("Cancelar"):
+if col20.button("Cancelar"):
     st.switch_page("./pages/editar.py")
 
