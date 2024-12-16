@@ -69,7 +69,7 @@ config = {
     'detalle' : st.column_config.TextColumn('detalle', width='large'),
     'imagen' : st.column_config.ImageColumn('imagen'),
     'link' : st.column_config.LinkColumn('link'),
-    'titulo_es' : st.column_config.TextColumn('',  width=None, disabled= True, required=None),
+    'titulo_es' : st.column_config.TextColumn('',  width=None, disabled= True, required=None,visibility=False),
     'detalle_es' : st.column_config.TextColumn('detalle_es', width='large'),
     
 }
