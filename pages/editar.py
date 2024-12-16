@@ -7,7 +7,7 @@ vtitulo1 = "eeeeee"
 col1, col2, col3,col4,col5 = st.columns(5)
 
 tnuri = st.session_state['vnuri']
-ttitulo = st.session_state['titulo']
+ttitulo = st.session_state['vtitulo']
 
 if col1.button("Home"):
     st.switch_page("streamlit_app.py")
