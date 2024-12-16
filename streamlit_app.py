@@ -55,7 +55,7 @@ if col5.button("Informes"):
 
 
 conn = st.connection("postgresql", type="sql")
-df1 = conn.query('select nuri,fuente,fecha,titulo,select_web as sel,detalle,imagen,link,titulo_es,detalle_es from novedades order by nuri desc limit 50;', ttl="0"),
+df1 = conn.query('select nuri,fuente,fecha,titulo,select_web as sel,detalle,imagen,link,titulo_es,detalle_es,eje_nuri from novedades order by nuri desc limit 50;', ttl="0"),
 df = df1[0]
 #st.write(df1[0])
 #st.dataframe(df, hide_index=True, column_config={"titulo_es": None})
@@ -86,7 +86,8 @@ def dataframe_with_selections(df):
                         'imagen' : st.column_config.ImageColumn('imagen'),
                         'link' : st.column_config.LinkColumn('link'),      
                         'titulo_es' : None,                        
-                         
+                        'detalle_es' : None,    
+                        'eje_nuri' : None,    
                         },
                         disabled=df.columns,
 #                        num_rows="dynamic",
@@ -123,8 +124,10 @@ st.session_state['user_select_value'] = vnuri
 st.session_state['vnuri'] = vnuri
 st.session_state['vtitulo'] = selection.to_string(columns=['titulo'], header=False, index=False)
 st.session_state['vdetalle'] = selection.to_string(columns=['detalle'], header=False, index=False)
-st.session_state['vlin'] = selection.to_string(columns=['link'], header=False, index=False)
+st.session_state['vlink'] = selection.to_string(columns=['link'], header=False, index=False)
 st.session_state['vimagen'] = selection.to_string(columns=['imagen'], header=False, index=False)
+st.session_state['vtitulo_es'] = selection.to_string(columns=['titulo_es'], header=False, index=False)
+st.session_state['vdetalle_es'] = selection.to_string(columns=['detalle_es'], header=False, index=False)
 
 
 
