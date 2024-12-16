@@ -44,7 +44,7 @@ if col5.button("Informes"):
 #title = st.text_input("Movie title", "Life of Brian")
 st.header(":blue[titulo]")
 
-vtitle = st.text_input("**Titulo**", ttitulo)
+vtitle = st.text_input("Titulo", ttitulo)
 vtitle_es = st.text_input("**Titulo en Castellano** ", st.session_state['vtitulo_es'])
 
 vdet= st.text_input("**Destalle**", st.session_state['vdetalle'])
