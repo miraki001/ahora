@@ -18,4 +18,6 @@ with conn.session as session:
                         
     session.commit()
     st.success("Data sent")
+    
+st.switch_page("streamlit_app.py")
 
