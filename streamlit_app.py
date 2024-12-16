@@ -114,32 +114,13 @@ st.write(selection.nuri)
 st.write(selection.to_string(columns=['nuri'], header=False, index=False))
 st.write(selection.to_string(columns=['titulo'], header=False, index=False))
 st.write(selection.to_string(columns=['detalle'], header=False, index=False))
-st.write(vnuri[0])
+
 st.session_state['user_select_value'] = vnuri
 st.session_state['vnuri'] = vnuri
 st.session_state['vtitulo'] = selection.to_string(columns=['titulo'], header=False, index=False)
 st.session_state['vdetalle'] = selection.to_string(columns=['detalle'], header=False, index=False)
 st.session_state['vlin'] = selection.to_string(columns=['link'], header=False, index=False)
 st.session_state['vimagen'] = selection.to_string(columns=['imagen'], header=False, index=False)
-
-"""
-if 'user_select_value' not in st.session_state:
-    st.session_state['user_select_value'] = 5000 #or whatever default
-user_select_value = st.session_state['user_select_value']
-
-if st.button('Save Filters'):
-        st.session_state['user_select_value'] = vnuri
-        st.session_state['vnuri'] = vnuri
-        st.session_state['vtitulo'] = selection['titulo']
-
-if st.button('Clear page Filters'):
-        st.session_state['user_select_value'] = 0 # or default value
-st.write(user_select_value)
-"""
-#def input_page(st, **state):
-#  MultiPage.save({"nuri": selection['nuri'] , "titulo": selection['titulo'] }, namespaces=["Input Page"])
-
-
 
 
 
