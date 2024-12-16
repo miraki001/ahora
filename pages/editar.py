@@ -37,7 +37,12 @@ vdet_es = st.text_input(":red[Detalle en Castellano] ", st.session_state['vdetal
 
 vlink = st.text_input("Link ", st.session_state['vlink'])
 vimg = st.text_input("Imagen ", st.session_state['vimagen'])
-st.write("This is :blue[test]")
-st.markdown("This text is :red[colored red], and this is **:blue[colored]** and bold.")
+#st.write("This is :blue[test]")
+#st.markdown("This text is :red[colored red], and this is **:blue[colored]** and bold.")
 
+col10, col20 = st.columns(2)
+if col10.button("Grabar"):
+    st.switch_page("streamlit_app.py")
+if col2.button("Cancelar"):
+    st.switch_page("./pages/editar.py")
 
