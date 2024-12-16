@@ -9,6 +9,20 @@ col1, col2, col3,col4,col5 = st.columns(5)
 tnuri = st.session_state['vnuri']
 ttitulo = st.session_state['vtitulo']
 
+st.markdown("""
+<style>
+    .stTextInput input[aria-label="test color"] {
+        background-color: #0066cc;
+        color: #33ff33;
+    }
+    .stTextInput input[aria-label="test color2"] {
+        background-color: #cc0066;
+        color: #ffff33;
+    }
+</style>
+""", unsafe_allow_html=True)
+
+
 if col1.button("Home"):
     st.switch_page("streamlit_app.py")
 if col2.button("Editar"):
