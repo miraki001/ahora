@@ -11,7 +11,7 @@ ttitulo = st.session_state['vtitulo']
 
 st.markdown("""
 <style>
-    .stTextInput input[aria-label="titulo"] {
+    .stTextInput input[aria-label="Titulo"] {
         background-color: #0066cc;
         color: #33ff33;
     }
