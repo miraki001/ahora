@@ -58,8 +58,8 @@ conn = st.connection("postgresql", type="sql")
 df1 = conn.query('select nuri,fuente,fecha,titulo,select_web as sel,detalle,imagen,link,titulo_es,detalle_es from novedades order by nuri desc limit 50;', ttl="0"),
 df = df1[0]
 #st.write(df1[0])
-st.dataframe(df, hide_index=True, column_config={"titulo_es": None})
-st.dataframe(df, hide_index=True, column_config={"detalle_es": None})
+#st.dataframe(df, hide_index=True, column_config={"titulo_es": None})
+#st.dataframe(df, hide_index=True, column_config={"detalle_es": None})
 
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 config = {
