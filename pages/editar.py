@@ -6,6 +6,9 @@ vtitulo = st.session_state['vtitulo']
 vtitulo1 = "eeeeee"
 col1, col2, col3,col4,col5 = st.columns(5)
 
+tnuri = st.session_state['vnuri']
+ttitulo = st.session_state['titulo']
+
 if col1.button("Home"):
     st.switch_page("streamlit_app.py")
 if col2.button("Editar"):
@@ -23,5 +26,5 @@ if col5.button("Informes"):
 #value  = int(st.query_params.get("nuri", vnuri))
 #st.write(st.session_state['vnuri'])
 #st.write(st.session_state['vtitulo'])
-title = st.text_input("Movie title", "Life of Brian")
-vtitle = st.text_input("Titulo", vtitulo)
+#title = st.text_input("Movie title", "Life of Brian")
+vtitle = st.text_input("Titulo", ttitulo)
