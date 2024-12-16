@@ -11,7 +11,7 @@ ttitulo = st.session_state['vtitulo']
 
 st.markdown("""
 <style>
-    .stTextInput input[aria-label="test color"] {
+    .stTextInput input[aria-label="titulo"] {
         background-color: #0066cc;
         color: #33ff33;
     }
@@ -21,7 +21,7 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
-st.text_input("test color")
+#st.text_input("test color")
 st.text_input("test color2")
 
 if col1.button("Home"):
