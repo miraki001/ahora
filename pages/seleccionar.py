@@ -19,20 +19,7 @@ with conn.session as session:
     session.commit()
     st.success("Data sent")
 
-try:
-    conn.query(f"UPDATE novedades SET select_web = '{new}' WHERE nuri='{nuri}'")
-    st.write('antes')
-    conn.commit()
-    com.close()
-except Exception as e:
-    st.write('antes eee   ')
-    st.write(e)
-    print(e)
-finally:
-    st.write("Yessss!!")
 
-#cursor = conn.cursor()
-#cursor.execute(actualizar, "S")
 
 
 #df1 = conn.execute(actualizar, ttl="0",params={"estado": "S"} ),
