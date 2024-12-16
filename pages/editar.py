@@ -27,6 +27,8 @@ if col5.button("Informes"):
 #st.write(st.session_state['vnuri'])
 #st.write(st.session_state['vtitulo'])
 #title = st.text_input("Movie title", "Life of Brian")
+st.header("This is :blue[test]")
+
 vtitle = st.text_input("Titulo", ttitulo)
 vtitle_es = st.text_input("Titulo en Castellano ", st.session_state['vtitulo_es'])
 
