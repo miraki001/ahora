@@ -21,7 +21,8 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
-
+st.text_input("test color")
+st.text_input("test color2")
 
 if col1.button("Home"):
     st.switch_page("streamlit_app.py")
