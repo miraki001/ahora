@@ -69,6 +69,8 @@ config = {
     'detalle' : st.column_config.TextColumn('detalle', width='large'),
     'imagen' : st.column_config.ImageColumn('imagen'),
     'link' : st.column_config.LinkColumn('link'),
+    'titulo_es' : st.column_config.TextColumn('titulo_es',  width='large', visible= False),
+    'detalle_es' : st.column_config.TextColumn('detalle_es', width='large'),
     
 }
 #result = st.data_editor(df, column_config = config, num_rows='dynamic')
