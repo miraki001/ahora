@@ -36,6 +36,6 @@ vdet_es = st.text_input("Detalle en Castellano ", st.session_state['vdetalle_es'
 vlink = st.text_input("Link ", st.session_state['vlink'])
 vimg = st.text_input("Imagen ", st.session_state['vimagen'])
 
-st.write(f"temprature: :blue[{temperature}]")
+st.markdown("This text is :red[colored red], and this is **:blue[colored]** and bold.")
 
 
