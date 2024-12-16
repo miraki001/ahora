@@ -28,4 +28,12 @@ if col5.button("Informes"):
 #st.write(st.session_state['vtitulo'])
 #title = st.text_input("Movie title", "Life of Brian")
 vtitle = st.text_input("Titulo", ttitulo)
-vtitle = st.text_input("Titulo en Castellano ", st.session_state['vtitulo_es'])
+vtitle_es = st.text_input("Titulo en Castellano ", st.session_state['vtitulo_es'])
+
+vdet= st.text_input("Destalle", st.session_state['vdetalle'])
+vdet_es = st.text_input("Detalle en Castellano ", st.session_state['vdetalle_es'])
+
+vlink = st.text_input("Link ", st.session_state['vlink'])
+vimg = st.text_input("Imagen ", st.session_state['vimagen'])
+
+
