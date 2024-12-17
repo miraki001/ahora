@@ -13,3 +13,4 @@ streamlit_multipage
 selenium 
 webdriver_manager
 streamlit_extras
+streamlit_echarts 
