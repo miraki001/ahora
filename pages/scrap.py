@@ -39,7 +39,7 @@ else:
 if boton_ejecutar:
 
     # Configuración del driver de Selenium
-    chrome_path = '/chromedriver'
+    chrome_path = 'C:\webcraw1\chromedriver.exe'
     opts = webdriver.ChromeOptions()
     service = Service(chrome_path)
     driver = webdriver.Chrome(service=service, options=opts)
