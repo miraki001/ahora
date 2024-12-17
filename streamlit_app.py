@@ -18,7 +18,7 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"
     }
 )
-col1, col2, col3,col4,col5 = st.columns(5)
+col1, col2, col3,col4,col5,col6 = st.columns(6)
 
 vnuri = 500
 vtitulo= ''
@@ -37,6 +37,8 @@ if col4.button("Desmarcar"):
     st.switch_page("./pages/desmarcar.py")
 if col5.button("Informes"):
     st.switch_page("./pages/informes.py")
+ if col6.button("Scrap"):
+    st.switch_page("./pages/scrap.py")
  
 
 #default=["copyHtml5", "csvHtml5", "excelHtml5", "colvis"],
