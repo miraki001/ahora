@@ -14,3 +14,4 @@ selenium==4.11.2
 webdriver-manager
 streamlit_extras
 streamlit_echarts 
+psutil
