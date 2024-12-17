@@ -10,7 +10,7 @@ scikit-learn
 hydralit_components
 hydralit 
 streamlit_multipage 
-selenium 
-webdriver_manager
+selenium==4.11.2
+webdriver-manager
 streamlit_extras
 streamlit_echarts 
