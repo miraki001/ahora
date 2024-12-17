@@ -11,6 +11,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from os.path import exists
 
+
+
 def get_driver():
     options = webdriver.ChromeOptions()
     
