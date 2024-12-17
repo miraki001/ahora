@@ -37,7 +37,7 @@ if col4.button("Desmarcar"):
     st.switch_page("./pages/desmarcar.py")
 if col5.button("Informes"):
     st.switch_page("./pages/informes.py")
- if col6.button("Scrap"):
+if col6.button("Scrap"):
     st.switch_page("./pages/scrap.py")
  
 
