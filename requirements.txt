@@ -14,4 +14,3 @@ selenium
 webdriver_manager
 streamlit_extras
 streamlit_echarts 
-webdriver
