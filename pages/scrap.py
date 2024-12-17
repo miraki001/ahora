@@ -8,7 +8,16 @@ from selenium.webdriver.chrome.service import Service
 from os.path import exists
 
 def get_driver():
-    return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+    options = webdriver.ChromeOptions()
+    
+    options.add_argument('--disable-gpu')
+    options.add_argument('--headless')
+    options.add_argument(f"--window-size={width}x{height}")
+    
+    service = Service()
+    driver = webdriver.Chrome(service=service, options=options)
+    
+    return webdriver.Chrome(service=service, options=options)
 
 options = Options()
 options.add_argument('--disable-gpu')
