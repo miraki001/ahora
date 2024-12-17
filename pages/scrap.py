@@ -1,24 +1,30 @@
 import streamlit as st
-
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as ECfrom             
+selenium.webdriver.chrome.options import Options
+chrome_options = Options()
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--no-sandbox")
+chrome_options.add_argument("--disable-dev-shm-usage")
+chrome_options.add_argument("--disable-gpu")
 
-options = Options() 
-options.add_argument("--headless=new")
-options.add_argument('--disable-gpu')
 
-driver = webdriver.Chrome(options=options)
+    #Open new browser window
+driver = webdriver.Chrome(options=chrome_options)
 
-options = Options()
-options.add_argument('--disable-gpu')
-options.add_argument('--headless')
+    #Browser goes to auth_url
+driver.get(auth_url)
 
-#driver = get_driver()
+    #Sets up waiting until the second url to copy the new url
+wait = WebDriverWait(driver, 170)
+wait.until(EC.url_contains("code="))
+url = driver.current_url
+
+    #closes window
+#driver.close()
+
 driver.get('http://example.com')
 
 st.code(driver.page_source)
