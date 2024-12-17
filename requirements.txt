@@ -11,4 +11,4 @@ hydralit_components
 hydralit 
 streamlit_multipage 
 selenium 
-
+webdriver_manager
