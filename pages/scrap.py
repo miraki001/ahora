@@ -31,8 +31,20 @@ options.add_argument('--headless')
 driver = get_driver()
 driver.get("http://www.scrapingbee.com")
 all_img = driver.find_elements(By.XPATH, "//img")
+first_h1 = driver.find_element(By.XPATH, "//h1")
 
-st.write(all_img)
+# Get text of h1 tag
+first_h1_text = first_h1.text
+
+# Get count of all_img and all_btn
+all_img_count = len(all_img)
+all_btn_count = len(all_btn)
+
+print(first_h1_text)
+print(all_img_count)
+print(all_btn_count)
+Related 
+
 
 driver.get('https://www.observatoriova.com/')
 all_img = driver.find_elements(By.XPATH, "//h3")
