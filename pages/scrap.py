@@ -41,6 +41,14 @@ driver = get_driver()
 
 driver.get('https://www.observatoriova.com/')
 driver.implicitly_wait(10) 
+WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, "//button | //a | //div"))
+)
+accept_text_variations = [
+            "accept", "agree", "allow", "consent", "continue", "ok", "I agree", "got it"
+    ]
+        
+
 sleep(1)
 all_img = driver.find_element(By.XPATH, '//h1')
 st.write(all_img.text)
