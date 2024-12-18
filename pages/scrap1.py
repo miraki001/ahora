@@ -4,7 +4,7 @@ import numpy as np
 import csv
 import subprocess
 import sys
-from st_aggrid import AgGrid
+#from st_aggrid import AgGrid
 import os
 
 from array import array
