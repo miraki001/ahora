@@ -40,8 +40,8 @@ first_h1_text = first_h1.text
 all_img_count = len(all_img)
 
 
-print(first_h1_text)
-print(all_img_count)
+st.write(first_h1_text)
+st.write(all_img_count)
 
 
 driver.get('https://www.observatoriova.com/')
