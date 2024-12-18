@@ -33,8 +33,11 @@ driver.get("http://www.scrapingbee.com")
 all_img = driver.find_elements(By.XPATH, "//img")
 first_h1 = driver.find_elements(By.XPATH, "//h1")
 st.write(len(first_h1))
-for pp in len(first_h1):
-    st.write(first_h1[pp].text)
+all_img_count = len(all_img)
+st.write(all_img_count)
+
+for pp in len(all_img):
+    st.write(all_img[pp].text)
 
 # Get text of h1 tag
 #first_h1_text = first_h1.text
