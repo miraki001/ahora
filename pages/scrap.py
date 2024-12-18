@@ -40,6 +40,7 @@ driver = get_driver()
 
 
 driver.get('https://www.observatoriova.com/')
+driver.implicitly_wait(10) 
 sleep(1)
 all_img = driver.find_elements(By.XPATH, "//h1").text
 st.write(all_img)
