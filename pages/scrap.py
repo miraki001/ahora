@@ -1,7 +1,6 @@
 import streamlit as st
 import os
 import sys
-import time
 import psutil
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -10,6 +9,14 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from os.path import exists
+import csv
+from time import sleep
+import pandas as pd
+import re
+from streamlit_extras.image_in_tables import table_with_images
+import streamlit.components.v1 as components
+from streamlit_echarts import st_echarts
+import base64
 
 
 def get_driver():
@@ -29,29 +36,11 @@ options.add_argument('--disable-gpu')
 options.add_argument('--headless')
 
 driver = get_driver()
-driver.get("http://www.scrapingbee.com")
-all_img = driver.find_element(By.XPATH, "//img")
-first_h1 = driver.find_elements(By.XPATH, "//h1")
-st.write(len(first_h1))
-#all_img_count = len(all_img)
-#st.write(all_img_count)
-st.write(all_img[0].text)
-st.write(all_img[1].text)
 
-
-# Get text of h1 tag
-#first_h1_text = first_h1.text
-
-# Get count of all_img and all_btn
-all_img_count = len(all_img)
-
-
-st.write(first_h1_text)
-st.write(all_img_count)
 
 
 driver.get('https://www.observatoriova.com/')
-all_img = driver.find_elements(By.XPATH, "//h3")
+all_img = driver.find_elements(By.XPATH, "//h3").text
 st.write(all_img)
-titulo = driver.find_elements(By.XPATH, '//h1[contains(@class, "ob-card-body")]')[0]
+titulo = driver.find_elements(By.XPATH, '//h1[contains(@class, "ob-card-body")]').text
 st.code(titulo)
