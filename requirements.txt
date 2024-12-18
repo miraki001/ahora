@@ -15,4 +15,4 @@ webdriver-manager
 streamlit_extras
 streamlit_echarts 
 psutil
-st_aggrid 
+AgGrid
