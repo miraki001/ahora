@@ -64,6 +64,7 @@ if boton_ejecutar:
     
     # URL SEMILLA
     url_busqueda = f"https://listado.mercadolibre.com.ar/{producto.replace(' ', '-')}/"
+    url_busqueda = "https://listado.mercadolibre.com.ar/arie-acondicionado-split#D[A:arie%20acondicionado%20split]"
     driver.get(url_busqueda)
     sleep(1)
 
