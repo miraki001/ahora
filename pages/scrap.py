@@ -30,7 +30,7 @@ options.add_argument('--headless')
 
 driver = get_driver()
 driver.get('https://www.observatoriova.com/')
-all_img = driver.find_elements(By.XPATH, "//img").text
+all_img = driver.find_elements(By.XPATH, "//img")
 st.write(all_img)
 titulo = driver.find_element(By.XPATH, '//h1[contains(@class, "ob-card-body")]')[0]
 st.code(titulo)
