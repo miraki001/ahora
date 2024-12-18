@@ -40,7 +40,8 @@ driver = get_driver()
 
 
 driver.get('https://www.observatoriova.com/')
-all_img = driver.find_elements(By.XPATH, "//h3").text
+sleep(1)
+all_img = driver.find_elements(By.XPATH, "//h1").text
 st.write(all_img)
 titulo = driver.find_elements(By.XPATH, '//h1[contains(@class, "ob-card-body")]').text
 st.code(titulo)
