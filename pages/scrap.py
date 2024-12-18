@@ -31,7 +31,7 @@ options.add_argument('--headless')
 driver = get_driver()
 driver.get("http://www.scrapingbee.com")
 all_img = driver.find_elements(By.XPATH, "//img")
-first_h1 = driver.find_element(By.XPATH, "//h1")
+first_h1 = driver.find_elements(By.XPATH, "//h1")
 
 # Get text of h1 tag
 first_h1_text = first_h1.text
