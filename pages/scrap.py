@@ -43,6 +43,6 @@ driver.get('https://www.observatoriova.com/')
 driver.implicitly_wait(10) 
 sleep(1)
 all_img = driver.find_elements(By.XPATH, '//h1')
-st.write(all_img)
+st.write(all_img.text)
 titulo = driver.find_elements(By.XPATH, '//h1[contains(@class, "ob-card-body")]').text
 st.code(titulo)
