@@ -38,10 +38,14 @@ else:
 
 if boton_ejecutar:
 
+
+
+    
+
     # Configuración del driver de Selenium
-    chrome_path = '/chromedriver'
+    #chrome_path = '/chromedriver'
     opts = webdriver.ChromeOptions()
-    service = Service(chrome_path)
+    service = Service()
     driver = webdriver.Chrome(service=service, options=opts)
     
     # URL SEMILLA
