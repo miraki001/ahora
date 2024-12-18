@@ -38,15 +38,29 @@ else:
 
 if boton_ejecutar:
 
-
+    #options = webdriver.ChromeOptions()
+    
+    #options.add_argument('--disable-gpu')
+    #options.add_argument('--headless')
+    #options.add_argument(f"--window-size={width}x{height}")
+    
+    #service = Service()
+    #driver = webdriver.Chrome(service=service, options=options)
+    
+    #return webdriver.Chrome(service=service, options=options)
 
     
 
     # Configuración del driver de Selenium
     #chrome_path = '/chromedriver'
     opts = webdriver.ChromeOptions()
+    options = webdriver.ChromeOptions()
+    options.add_argument('--disable-gpu')
+    options.add_argument('--headless')
+
+    
     service = Service()
-    driver = webdriver.Chrome(service=service, options=opts)
+    driver = webdriver.Chrome(service=service, options=options)
     
     # URL SEMILLA
     url_busqueda = f"https://listado.mercadolibre.com.ar/{producto.replace(' ', '-')}/"
