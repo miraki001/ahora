@@ -38,12 +38,10 @@ first_h1_text = first_h1.text
 
 # Get count of all_img and all_btn
 all_img_count = len(all_img)
-all_btn_count = len(all_btn)
+
 
 print(first_h1_text)
 print(all_img_count)
-print(all_btn_count)
-Related 
 
 
 driver.get('https://www.observatoriova.com/')
