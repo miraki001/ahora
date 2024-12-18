@@ -29,6 +29,6 @@ options.add_argument('--disable-gpu')
 options.add_argument('--headless')
 
 driver = get_driver()
-driver.get('https://www.observatoriova.com/')
-titulo = driver.find_element(By.XPATH, "//h1[contains(@class, 'ob-card-body')]")
+pag = driver.get('https://www.observatoriova.com/')
+titulo = pag.find_element(By.XPATH, "//h1[contains(@class, 'ob-card-body')]")
 st.code(titulo)
