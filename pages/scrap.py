@@ -31,5 +31,5 @@ options.add_argument('--headless')
 driver = get_driver()
 driver.get('https://www.observatoriova.com/')
 
-titulo = driver.find_element(By.XPATH, '//h1[contains(@class, "ob-card-body")]').text
+titulo = driver.find_element(By.XPATH, '//h1[contains(@class, "ob-card-body")]')[0]
 st.code(titulo)
