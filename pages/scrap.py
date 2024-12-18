@@ -35,6 +35,7 @@ first_h1 = driver.find_elements(By.XPATH, "//h1")
 st.write(len(first_h1))
 all_img_count = len(all_img)
 st.write(all_img_count)
+st.write(all_img[0].text)
 
 for pp in len(all_img):
     st.write(all_img[pp].text)
