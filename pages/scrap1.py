@@ -1,59 +1,75 @@
 import streamlit as st
 import pandas as pd
-from subprocess import call
+import numpy as np
+import csv
+import subprocess
+import sys
+from st_aggrid import AgGrid
+import os
 
-def start_scrapping(course, page):
-    #run scrapping spyder using subprocess
+from array import array
+import pandas as pd
+from IPython.display import display
+from datetime import datetime
+
+# Import selenium webdriver
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
+from selenium.webdriver.common.by import By
+
+# Waiting
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+
+options = webdriver.ChromeOptions()
+options.add_experimental_option("excludeSwitches", ["enable-automation"])
+options.add_experimental_option("useAutomationExtension", False)
+service = ChromeService(executable_path = r'./Driver/chromedriver')
+
+url = "https://www.bayut.com/for-sale/property/abu-dhabi/"
+
+header = st.container()
+cont_url = st.container()
+cont_properties = st.container()
+
+@st.cache(suppress_st_warning=True)
+def get_urls(filename):
+    driver = webdriver.Chrome(service=service, options=options)
+    wait = WebDriverWait(driver, 1)
+    st.write("Cache miss: Hey Arjun, Function ran even though @st.cache is defined.")
+# try:    
+    driver.get(url)
+    driver.maximize_window() # For maximizing window
     
-    call(["scrapy", "crawl", "coursera_data", "-a", f"course='{course}'", "-a" f"page={page}"])
-    
-    return "success"
+    wait.until(EC.presence_of_element_located((By.CLASS_NAME, "f1ab04e0"))).find_element(By.CLASS_NAME, "_44977ec6").click()
 
-def download_file(dataframe):
-    def convert_df(df):
-     
-        return df.to_csv().encode('utf-8')
+    locations = []
 
-    csv = convert_df(dataframe)
+    listings = wait.until(EC.presence_of_element_located((By.CLASS_NAME , "b7a55500"))).find_elements(By.CLASS_NAME, "_1c4ffff0") # works
+    for listing in listings:
 
-    return csv
+        wait.until(EC.presence_of_element_located((By.CLASS_NAME, '_7afabd84')))
 
-def clear_data(df):
-    #columns = ['course_title','course_by','course_link','skills_you_gain','course_ratings','course_reviews','course_level']
-    empty_df = df.iloc[0:0]
-    empty_df.to_csv("output.csv", index=False)
-    
-    return empty_df
+        List_dict={
+        'Name':listing.find_element(By.CLASS_NAME, '_9878d019').text,
+        'URL':listing.find_element(By.CLASS_NAME, '_9878d019').get_attribute("href"),
+        'Properties':listing.find_element(By.CLASS_NAME, '_1f6ed510').text
+        }
 
-st.title('Coursera Data Scraping')
-st.caption('This app will scraping courses data from coursera')
+        locations.append(List_dict)
 
-with st.form(key = 'user_info'):
-    course = st.text_input('What course you want to scrap ? (i.e. data engineer)')
-    page = st.number_input('How many page you want to scrap ?', 1, 100)
-    
-    submit_form = st.form_submit_button(label="Submit", help="Click to start scraping")
-    if submit_form:
-        start_scrapping(course, page)
+    url_list = pd.DataFrame(locations, columns=['Name', 'URL', 'Properties'])
+    url_list.to_csv(filename, mode='w', index=False, header=True)
+    driver.close()
+    driver.quit()
+    return url_list # this is the addition for the streamlit app.
 
-df = pd.read_csv("output.csv")
+with cont_url:
+    st.title('Properties for sale')
 
-colmn1, colmn2 = st.columns([1,1])
-with colmn1:
-    clear_button = st.button('Clear Data', type="primary")
-        
-with colmn2:    
-    csv = download_file(df)
-    st.download_button(
-        label="Download data as CSV",
-        data=csv,
-        file_name='output.csv',
-        mime='text/csv',
-        type="secondary"
-    )
-
-if clear_button:
-    df = clear_data(df)
-    st.dataframe(df)
-else:
-    st.dataframe(df)
+    url_list = get_urls('Location_URLs_.csv')
+    st.write("Calling Arjun's get_urls() function.")
+    option = st.selectbox('Select your asset:', url_list) 
+    st.write('You selected:', option)
+    st.table(url_list) # to see what the url_list is returning.
