@@ -3,6 +3,7 @@ import psycopg2
 from sqlalchemy import text
 
 st.set_page_config(layout="wide")
+conn = st.connection("postgresql", type="sql")
 
 #vtitulo = st.session_state['vtitulo']
 vtitulo1 = "eeeeee"
