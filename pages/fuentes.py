@@ -1,3 +1,7 @@
+import streamlit as st
+import psycopg2
+from sqlalchemy import text
+
 col1, col2, col3,col4,col5 = st.columns(5)
 
 vnuri = 500
