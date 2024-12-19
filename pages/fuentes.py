@@ -36,9 +36,18 @@ if col4.button("Borrar"):
 if col5.button("Scrap"):
     st.switch_page("./pages/fuente_scrap.py")
 
+
+
 conn = st.connection("postgresql", type="sql")
 df1 = conn.query('select nuri,fuente as url,activa,fecha_act,descrip as fuente,pais from fuentes_py where proyecto_nuri = 1  ;', ttl="0"),
 df = df1[0]
+
+agree = st.checkbox("Solo Activas")
+
+if agree:
+    df['activa'] = 'S'
+
+
 #st.write(df1[0])
 #st.dataframe(df, hide_index=True, column_config={"titulo_es": None})
 #st.dataframe(df, hide_index=True, column_config={"detalle_es": None})
