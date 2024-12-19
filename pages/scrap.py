@@ -56,9 +56,9 @@ all_img = driver.find_elements(By.XPATH, '//h1')
 #st.write(all_img)
 
 titulo = driver.find_elements(By.XPATH, '//div[@class="ob-card-body"]')
-link = driver.find_elements(By.XPATH, '//div[@class="d-flex flex-column justify-content-between h-100"]')
-#link = driver.find_elements(By.XPATH, '//*[@id="main"]/div/section[1]/div/div[3]/div/div[1]/div[2]/a')
-st.write(link)
+link = driver.find_elements(By.XPATH, '//div[@class="d-flex flex-column justify-content-between h-100"]/a')
+link2 = driver.find_elements(By.XPATH, '//*[@id="main"]/div/section[1]/div/div[3]/div/div[1]/div[2]/a')
+st.write(link2)
 element_list = [] 
 
 for i in range(len(titulo)): 
