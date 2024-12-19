@@ -1,11 +1,14 @@
 st.set_page_config(layout="wide")
 
-vtitulo = st.session_state['vtitulo']
+#vtitulo = st.session_state['vtitulo']
 vtitulo1 = "eeeeee"
 
+fuente = st.session_state['vdescrip'] 
+pais = st.session_state['vpais'] 
+activa = st.session_state['vactiva'] 
 
 tnuri = st.session_state['vnuri']
-tfuente = st.session_state['vfuente']
+url = st.session_state['vfuente']
 
 st.markdown("""
 <style>
@@ -31,11 +34,11 @@ st.text_input("test color2")
 #st.write(st.session_state['vnuri'])
 #st.write(st.session_state['vtitulo'])
 #title = st.text_input("Movie title", "Life of Brian")
-st.header(":blue[tfuente]")
+st.header(":blue[fuente]")
 
-vtitle = st.text_input("fuente", tfuente)
-vtitle_es = st.text_input("**Titulo en Castellano** ", st.session_state['vtitulo_es'])
+vtitle = st.text_input("fuente", fuente)
+vutl = st.text_input("url ", url)
 
-vdet= st.text_input("**Destalle**", st.session_state['vdetalle'])
-vdet_es = st.text_input(":red[Detalle en Castellano] ", st.session_state['vdetalle_es'])
+pais  st.text_input("pais", st.session_state['vpais'])
+activa = st.text_input("Activa", st.session_state['vactiva'])
 
