@@ -106,12 +106,12 @@ driver.implicitly_wait(10)
 WebDriverWait(driver, 20).until(
             EC.presence_of_element_located((By.XPATH, "//button | //a | //div"))
 )
-"""
+
 accept_text_variations = [
             "accept", "agree", "allow", "consent", "continue", "ok", "I agree", "got it"
     ]
         
-
+"""
 sleep(1)
 
 noticias = driver.find_elements(By.XPATH, '//div[@class="docsum-content"]')
