@@ -38,7 +38,7 @@ st.markdown("""
 st.header(":blue[fuente]")
 
 vtitle = st.text_input("fuente", fuente)
-vutl = st.text_input("url ", url)
+vurl = st.text_input("url ", url)
 
 pais =  st.text_input("pais", st.session_state['vpais'])
 activa = st.text_input("Activa", st.session_state['vactiva'])
@@ -50,6 +50,13 @@ xpath_link = st.text_input("xpath link", st.session_state['vlink'])
 
 col10, col20 = st.columns(2)
 if col10.button(":red[**Grabar**]"):
-    st.switch_page("streamlit_app.py")
+    with conn.session as session:
+        #session.execute(f"UPDATE novedades SET select_web = '{new}' WHERE nuri='{nuri}'")
+        session.execute(text("UPDATE fuentes_py SET fuente = :url, activa = :activa,xpath_titulo = :tit  WHERE nuri= :nuri"), {"url": vurl,"activa": activa,"tit": xpath_tit})
+                        
+        session.commit()
+        st.success("Data sent")
+
+    st.switch_page("fuentes.py"
 if col20.button(":red[**Cancelar**]"):
     st.switch_page("streamlit_app.py")
