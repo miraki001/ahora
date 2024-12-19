@@ -68,7 +68,7 @@ for i in range(len(titulo)):
 
 element_list = [] 
 
-for i in range(len(link)): 
-    element_list.append(link.get_attribute("href"))
+for i in range(len(titulo)): 
+    element_list.append(titulo.get_attribute("href"))
 
 st.write(element_list)
