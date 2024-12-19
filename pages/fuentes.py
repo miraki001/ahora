@@ -86,13 +86,13 @@ def dataframe_with_selections(df):
                   
 selection = dataframe_with_selections(df)
 
-st.write(len(selection))
+cnt = len(selection)
 #st.write(f'selected row index: {selection.selected_row_index}')
 
 vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
 st.write(vnuri)
 tnuri = vnuri
-if  selection['nuri'] is not None:
+if  cnt>0:
     vquery = 'select * from fuentes_py where nuri = ' + vnuri + ';'
     df2 = conn.query(vquery, ttl="0"),
     df3 = df2[0]
