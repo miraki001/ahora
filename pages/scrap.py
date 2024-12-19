@@ -90,11 +90,11 @@ noticias = driver.find_elements(By.XPATH, '//div[@class="article-content"]')
 st.write(noticias)
 for noticias in noticias:
     #name = noticias.find_element(By.XPATH, ".//@").text
-    #img = noticias.find_element(By.XPATH, ".//img").get_attribute("src")
+    img = noticias.find_element(By.XPATH, ".//img").get_attribute("src")
     link = noticias.find_element(By.XPATH, ".//a").get_attribute("href")
     #link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("href")
     #st.write(name)
-    #st.write(img)
+    st.write(img)
     st.write(link)
     #st.write(link1)
 
