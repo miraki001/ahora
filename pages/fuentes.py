@@ -37,7 +37,7 @@ if col5.button("Scrap"):
     st.switch_page("./pages/fuente_scrap.py")
 
 conn = st.connection("postgresql", type="sql")
-df1 = conn.query('select nuri,fuente,activa,fecha_act,descrip,pais from fuentes_py where proyecto_nuri = 1  ;', ttl="0"),
+df1 = conn.query('select nuri,fuente as url,activa,fecha_act,descrip as fuente,pais from fuentes_py where proyecto_nuri = 1  ;', ttl="0"),
 df = df1[0]
 #st.write(df1[0])
 #st.dataframe(df, hide_index=True, column_config={"titulo_es": None})
@@ -46,9 +46,9 @@ df = df1[0]
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 config = {
     'nuri' : st.column_config.NumberColumn('nuri', required=True),
-    'url' : st.column_config.LinkColumn('fuente'),
+    'url' : st.column_config.LinkColumn('url'),
 #    'selec' : st.column_config.CheckboxColumn('selec'),
-    'fuente' : st.column_config.TextColumn('descrip',),
+    'fuente' : st.column_config.TextColumn('fuente',),
     'fecha_act' : st.column_config.TextColumn('fecha_act',),
     'activa' : st.column_config.TextColumn('activa'),
     'pais' : st.column_config.TextColumn('pais',  width='large'),
