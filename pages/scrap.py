@@ -86,8 +86,8 @@ accept_text_variations = [
 
 sleep(1)
 
-noticias = driver.find_elements(By.XPATH, '//div[@class="article-icons"]')
-
+noticias = driver.find_elements(By.XPATH, '//div[@class="article-content"]')
+st.write(noticias)
 for noticias in noticias:
     #name = noticias.find_element(By.XPATH, ".//@").text
     #img = noticias.find_element(By.XPATH, ".//img").get_attribute("src")
