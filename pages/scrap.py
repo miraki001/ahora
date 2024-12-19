@@ -69,8 +69,8 @@ list_link = []
 list_img = []
 for i in range(len(noticias)): 
     element_list.append([noticias[i].text])
-    list_link.append(noticias[i]get_attribute("href"))
-    list_img.append(noticias[i]get_attribute("src"))
+    list_link.append(noticias[i].get_attribute("href"))
+    list_img.append(noticias[i].get_attribute("src"))
 
 
 #st.write(link)
