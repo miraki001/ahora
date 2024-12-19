@@ -51,20 +51,20 @@ accept_text_variations = [
 
 sleep(1)
 all_img = driver.find_element(By.XPATH, '//h1')
-st.write(all_img.text)
+#st.write(all_img.text)
 all_img = driver.find_elements(By.XPATH, '//h1')
-st.write(all_img)
+#st.write(all_img)
 
 titulo = driver.find_elements(By.XPATH, '//div[@class="ob-card-body"]')
 link = driver.find_elements(By.XPATH, '//div[@class="ob-card-body"]/a')
 #link = driver.find_elements(By.XPATH, '//*[@id="main"]/div/section[1]/div/div[3]/div/div[1]/div[2]/a')
-st.code(link)
+st.write(link)
 element_list = [] 
 
 for i in range(len(titulo)): 
     element_list.append([titulo[i].text])
 
-st.write(element_list)
+#st.write(element_list)
 
 element_list = [] 
 
