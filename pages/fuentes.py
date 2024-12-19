@@ -16,7 +16,7 @@ st.set_page_config(
 
 col1, col2, col3,col4,col5 = st.columns(5)
 
-#vnuri = 500
+tnuri = 0
 vtitulo= ''
 vdetalle = ''
 vlink = ''
@@ -87,8 +87,8 @@ def dataframe_with_selections(df):
 selection = dataframe_with_selections(df)
 vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
 st.write(vnuri)
-
-if vnuri is not None:
+tnuri = vnnuri
+if tnuri >0:
     vquery = 'select * from fuentes_py where nuri = ' + vnuri + ';'
     df2 = conn.query(vquery, ttl="0"),
     df3 = df2[0]
