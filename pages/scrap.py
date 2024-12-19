@@ -114,7 +114,7 @@ accept_text_variations = [
 """
 sleep(1)
 
-noticias = driver.find_elements(By.XPATH, '//div[@class="docsum-content"]')
+noticias = driver.find_elements(By.XPATH, '//div[@class="docsum-wrap"]')
 st.write(noticias)
 for noticias in noticias:
     name = noticias.find_element(By.XPATH, './/a[@class="docsum-title"]').text
