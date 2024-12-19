@@ -46,7 +46,7 @@ df = df1[0]
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 config = {
     'nuri' : st.column_config.NumberColumn('nuri', required=True),
-    'fuente' : st.column_config.LinkColumn('fuente'),
+    'url' : st.column_config.LinkColumn('fuente'),
 #    'selec' : st.column_config.CheckboxColumn('selec'),
     'descrip' : st.column_config.TextColumn('Fuente',),
     'fecha_act' : st.column_config.TextColumn('fecha_act',),
