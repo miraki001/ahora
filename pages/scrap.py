@@ -60,6 +60,7 @@ link = driver.find_elements(By.XPATH, '//div[@class="ob-card-informe --mercado"]
 link2 = driver.find_elements(By.XPATH, '//*[@id="main"]/div/section[1]/div/div[3]/div/div[1]/div[2]/a')
 st.write(link2[0].get_attribute("href"))
 element_list = [] 
+st.write(link)
 
 for i in range(len(titulo)): 
     element_list.append([titulo[i].text])
