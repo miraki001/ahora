@@ -62,6 +62,14 @@ link2 = driver.find_elements(By.XPATH, '//*[@id="main"]/div/section[1]/div/div[3
 imagen = driver.find_elements(By.XPATH, '/div[@class="icon-header"]')
 noticias = driver.find_elements(By.XPATH, '//div[@class="d-flex flex-column justify-content-between h-100"]')
 
+for noticias in noticias:
+    name = noticias.find_element(By.XPATH, ".//h3").text
+    img = noticias.find_element(By.XPATH, ".//img").get_attribute("src")
+    link = noticias.find_element(By.XPATH, ".//a").get_attribute("href")
+    st.write(name)
+    st.write(img)
+    st.write(link)
+
 
 st.write(link2[0].get_attribute("href"))
 element_list = [] 
