@@ -58,6 +58,10 @@ all_img = driver.find_elements(By.XPATH, '//h1')
 titulo = driver.find_elements(By.XPATH, '//div[@class="ob-card-body"]')
 link = driver.find_elements(By.XPATH, '//div[@class="ob-card-footer"]/a')
 link2 = driver.find_elements(By.XPATH, '//*[@id="main"]/div/section[1]/div/div[3]/div/div[1]/div[2]/a')
+
+imagen = driver.find_elements(By.XPATH, '//div[@class="icon-header"]')
+
+
 st.write(link2[0].get_attribute("href"))
 element_list = [] 
 st.write(link)
@@ -82,5 +86,11 @@ st.write(element_list)
 element_list = [] 
 for i in range(len(link2)): 
     element_list.append(link2[i].get_attribute("href"))
+
+st.write(element_list)
+
+element_list = [] 
+for i in range(len(imagen)): 
+    element_list.append(imagen[i].get_attribute("img"))
 
 st.write(element_list)
