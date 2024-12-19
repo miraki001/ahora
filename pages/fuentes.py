@@ -48,7 +48,7 @@ config = {
     'nuri' : st.column_config.NumberColumn('nuri', required=True),
     'url' : st.column_config.LinkColumn('fuente'),
 #    'selec' : st.column_config.CheckboxColumn('selec'),
-    'descrip' : st.column_config.TextColumn('Fuente',),
+    'fuente' : st.column_config.TextColumn('descrip',),
     'fecha_act' : st.column_config.TextColumn('fecha_act',),
     'activa' : st.column_config.TextColumn('activa'),
     'pais' : st.column_config.TextColumn('pais',  width='large'),
