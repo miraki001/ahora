@@ -39,7 +39,7 @@ st.header(":blue[fuente]")
 vtitle = st.text_input("fuente", fuente)
 vutl = st.text_input("url ", url)
 
-pais  st.text_input("pais", st.session_state['vpais'])
+pais =  st.text_input("pais", st.session_state['vpais'])
 activa = st.text_input("Activa", st.session_state['vactiva'])
 separador = st.text_input("Separado", st.session_state['vsepa'])
 xpath_tit = st.text_input("xpath titulo", st.session_state['vtit'])
