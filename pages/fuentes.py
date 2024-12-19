@@ -86,7 +86,7 @@ def dataframe_with_selections(df):
                   
 selection = dataframe_with_selections(df)
 
-st.write(f'selected row index: {selection.selected_row_index}')
+#st.write(f'selected row index: {selection.selected_row_index}')
 
 vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
 st.write(vnuri)
