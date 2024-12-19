@@ -57,7 +57,7 @@ st.write(all_img)
 
 titulo = driver.find_elements(By.XPATH, '//div[@class="ob-card-body"]')
 #titulo = driver.find_elements(By.XPATH, '//h1[contains(@class, "ob-card-body")]/a')
-link = driver.find_element(By.XPATH, '//div[(@class, "ob-card-body")]')
+link = driver.find_elements(By.XPATH, '//div[(@class="ob-card-body"]/a')
 st.code(link)
 element_list = [] 
 
