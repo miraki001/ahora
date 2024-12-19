@@ -97,12 +97,10 @@ st.write(df3)
 st.session_state['vfuente'] = selection.to_string(columns=['url'], header=False, index=False)
 st.session_state['vdescrip'] = selection.to_string(columns=['fuente'], header=False, index=False)
 st.session_state['vnuri'] = selection.to_string(columns=['nuri'], header=False, index=False)
-st.session_state['vimagen'] = selection.to_string(columns=['imagen'], header=False, index=False)
-st.session_state['vtitulo_es'] = selection.to_string(columns=['titulo_es'], header=False, index=False)
-st.session_state['vdetalle_es'] = selection.to_string(columns=['detalle_es'], header=False, index=False)
+st.session_state['vpais'] = selection.to_string(columns=['pasi'], header=False, index=False)
+st.session_state['vactiva'] = selection.to_string(columns=['vactiva'], header=False, index=False)
 
 
 
-df1 = conn.query('select nuri,fuente as url,activa,fecha_act,descrip as fuente,pais from fuentes_py where proyecto_nuri = 1  ;', ttl="0"),
-df = df1[0]
+
 
