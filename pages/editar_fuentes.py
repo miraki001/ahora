@@ -60,6 +60,6 @@ if col10.button(":red[**Grabar**]"):
         session.commit()
         st.success("Data sent")
 
-    st.switch_page("fuentes.py")
+    st.switch_page("./pages/fuentes.py")
 if col20.button(":red[**Cancelar**]"):
     st.switch_page("streamlit_app.py")
