@@ -64,7 +64,7 @@ element_list = []
 for i in range(len(titulo)): 
     element_list.append([titulo[i].text])
 
-#st.write(element_list)
+st.write(element_list)
 
 element_list = [] 
 
