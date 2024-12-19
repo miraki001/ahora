@@ -38,7 +38,7 @@ options.add_argument('--headless')
 driver = get_driver()
 
 
-
+"""
 driver.get('https://www.observatoriova.com/')
 driver.implicitly_wait(10) 
 WebDriverWait(driver, 10).until(
@@ -72,7 +72,7 @@ for noticias in noticias:
     st.write(link)
     st.write(link1)
 
-
+"""
 
 driver.get('https://www.mdpi.com/search?q=enology&year_from=2024&year_to=2024&page_count=50&sort=pubdate&view=default')
 driver.implicitly_wait(10) 
@@ -89,7 +89,7 @@ sleep(1)
 noticias = driver.find_elements(By.XPATH, '//div[@class="article-icons"]')
 
 for noticias in noticias:
-    name = noticias.find_element(By.XPATH, './/a[@class="title-link"]').text
+    name = noticias.find_element(By.XPATH, './/[@class="title-link"]').text
     img = noticias.find_element(By.XPATH, ".//img").get_attribute("src")
     link = noticias.find_element(By.XPATH, ".//a").get_attribute("href")
     link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("href")
