@@ -85,6 +85,19 @@ def dataframe_with_selections(df):
                     return selected_rows.drop('Selec', axis=1)
                   
 selection = dataframe_with_selections(df)
+vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
+st.write(vnuri)
+df2 = conn.query('select nuri,fuente as url,activa,fecha_act,descrip as fuente,pais from fuentes_py where proyecto_nuri = 1  ;', ttl="0"),
+df3 = df2[0]
+
+
+st.session_state['vfuente'] = selection.to_string(columns=['url'], header=False, index=False)
+st.session_state['vdescrip'] = selection.to_string(columns=['fuente'], header=False, index=False)
+st.session_state['vnuri'] = selection.to_string(columns=['nuri'], header=False, index=False)
+st.session_state['vimagen'] = selection.to_string(columns=['imagen'], header=False, index=False)
+st.session_state['vtitulo_es'] = selection.to_string(columns=['titulo_es'], header=False, index=False)
+st.session_state['vdetalle_es'] = selection.to_string(columns=['detalle_es'], header=False, index=False)
+
 
 
 df1 = conn.query('select nuri,fuente as url,activa,fecha_act,descrip as fuente,pais from fuentes_py where proyecto_nuri = 1  ;', ttl="0"),
