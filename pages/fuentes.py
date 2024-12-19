@@ -51,7 +51,7 @@ config = {
     'descrip' : st.column_config.TextColumn('Fuente',),
     'fecha_act' : st.column_config.TextColumn('fecha_act',),
     'activa' : st.column_config.TextColumn('activa'),
-    'paso' : st.column_config.TextColumn('pais'),
+    'pais' : st.column_config.TextColumn('pais',  width='large'),
 
     
 }
