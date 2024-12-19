@@ -59,3 +59,9 @@ titulo = driver.find_elements(By.XPATH, '//div[@class="ob-card-body"]')
 #titulo = driver.find_elements(By.XPATH, '//h1[contains(@class, "ob-card-body")]')
 #titulo = driver.find_element(By.XPATH, '//h1[contains(@class, "ob-card-body")]')
 st.code(titulo)
+element_list = [] 
+
+for i in range(len(titulo)): 
+    element_list.append([titulo[i].text])
+
+st.write(element_list)
