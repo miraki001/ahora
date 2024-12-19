@@ -98,7 +98,7 @@ st.session_state['vfuente'] = selection.to_string(columns=['url'], header=False,
 st.session_state['vdescrip'] = selection.to_string(columns=['fuente'], header=False, index=False)
 st.session_state['vnuri'] = selection.to_string(columns=['nuri'], header=False, index=False)
 st.session_state['vpais'] = selection.to_string(columns=['pais'], header=False, index=False)
-st.session_state['vactiva'] = selection.to_string(columns=['vactiva'], header=False, index=False)
+st.session_state['vactiva'] = selection.to_string(columns=['activa'], header=False, index=False)
 
 
 
