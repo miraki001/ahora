@@ -74,7 +74,7 @@ for noticias in noticias:
 
 
 
-driver.get(https://www.mdpi.com/search?q=enology&year_from=2024&year_to=2024&page_count=50&sort=pubdate&view=default')
+driver.get('https://www.mdpi.com/search?q=enology&year_from=2024&year_to=2024&page_count=50&sort=pubdate&view=default')
 driver.implicitly_wait(10) 
 WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.XPATH, "//button | //a | //div"))
