@@ -2,6 +2,18 @@ import streamlit as st
 import psycopg2
 from sqlalchemy import text
 
+st.set_page_config(
+    page_title="Miraki",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    }
+)
+
 col1, col2, col3,col4,col5 = st.columns(5)
 
 vnuri = 500
