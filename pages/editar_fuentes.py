@@ -5,7 +5,7 @@ vtitulo1 = "eeeeee"
 
 
 tnuri = st.session_state['vnuri']
-ttitulo = st.session_state['vtitulo']
+tfuente = st.session_state['vfuente']
 
 st.markdown("""
 <style>
@@ -31,9 +31,9 @@ st.text_input("test color2")
 #st.write(st.session_state['vnuri'])
 #st.write(st.session_state['vtitulo'])
 #title = st.text_input("Movie title", "Life of Brian")
-st.header(":blue[titulo]")
+st.header(":blue[tfuente]")
 
-vtitle = st.text_input("**Titulo**", ttitulo)
+vtitle = st.text_input("fuente", tfuente)
 vtitle_es = st.text_input("**Titulo en Castellano** ", st.session_state['vtitulo_es'])
 
 vdet= st.text_input("**Destalle**", st.session_state['vdetalle'])
