@@ -97,7 +97,10 @@ if  cnt>0:
     df2 = conn.query(vquery, ttl="0"),
     df3 = df2[0]
     st.write(df3)
-    st.session_state['vsepa'] = df3['separador']  
+    st.session_state['vsepa'] = df3.to_string(columns=['separador'], header=False, index=False)
+    st.session_state['vtit'] = df3.to_string(columns=['xpath_titulo'], header=False, index=False)
+    st.session_state['vdet'] = df3.to_string(columns=['xpath_detalle'], header=False, index=False)
+    st.session_state['vlink'] = df3.to_string(columns=['xpath_link'], header=False, index=False)
     st.write(df3.to_string(columns=['separador'], header=False, index=False))
 
 st.session_state['vfuente'] = selection.to_string(columns=['url'], header=False, index=False)
