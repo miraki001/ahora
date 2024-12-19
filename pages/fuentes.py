@@ -14,7 +14,7 @@ if col2.button("Insertar"):
 if col3.button("Editar"):
     st.switch_page("./pages/editar_fuente.py")
 if col4.button("Borrar"):
-    #st.switch_page("./pages/desmarcar.py")
+    st.switch_page("./pages/desmarcar.py")
 if col5.button("Scrap"):
     st.switch_page("./pages/fuente_scrap.py")
 
