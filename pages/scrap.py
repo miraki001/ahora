@@ -73,6 +73,33 @@ for noticias in noticias:
     st.write(link1)
 
 
+
+driver.get(https://www.mdpi.com/search?q=enology&year_from=2024&year_to=2024&page_count=50&sort=pubdate&view=default')
+driver.implicitly_wait(10) 
+WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, "//button | //a | //div"))
+)
+accept_text_variations = [
+            "accept", "agree", "allow", "consent", "continue", "ok", "I agree", "got it"
+    ]
+        
+
+sleep(1)
+
+noticias = driver.find_elements(By.XPATH, '//div[@class="article-icons]')
+
+for noticias in noticias:
+    name = noticias.find_element(By.XPATH, ".//a").text
+    img = noticias.find_element(By.XPATH, ".//img").get_attribute("src")
+    link = noticias.find_element(By.XPATH, ".//a").get_attribute("href")
+    link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("href")
+    st.write(name)
+    st.write(img)
+    st.write(link)
+    st.write(link1)
+
+
+"""
 st.write(link2[0].get_attribute("href"))
 element_list = [] 
 list_link = []
@@ -116,3 +143,4 @@ for i in range(len(imagen)):
     element_list.append(imagen[i].get_attribute("img"))
 
 st.write(element_list)
+"""
