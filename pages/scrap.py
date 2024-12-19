@@ -65,7 +65,7 @@ noticias = driver.find_elements(By.XPATH, '//div[@class="d-flex flex-column just
 for noticias in noticias:
     name = noticias.find_element(By.XPATH, ".//h3").text
     img = noticias.find_element(By.XPATH, ".//img").get_attribute("src")
-    link = noticias.find_element(By.XPATH, ".//a[2]").get_attribute("href")
+    link = noticias.find_element(By.XPATH, ".//a/a").get_attribute("href")
     st.write(name)
     st.write(img)
     st.write(link)
