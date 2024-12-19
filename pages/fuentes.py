@@ -87,7 +87,7 @@ def dataframe_with_selections(df):
 selection = dataframe_with_selections(df)
 vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
 st.write(vnuri)
-tnuri = vnnuri
+tnuri = vnuri
 if tnuri >0:
     vquery = 'select * from fuentes_py where nuri = ' + vnuri + ';'
     df2 = conn.query(vquery, ttl="0"),
