@@ -24,7 +24,7 @@ if col5.button("Scrap"):
     st.switch_page("./pages/fuente_scrap.py")
 
 conn = st.connection("postgresql", type="sql")
-df1 = conn.query('select nuri,fuente,activa,fecha_act,descrip,pais from fuentes_py order where proyecto_nuri = 1 by nuri desc ;', ttl="0"),
+df1 = conn.query('select nuri,fuente,activa,fecha_act,descrip,pais from fuentes_py where proyecto_nuri = 1  ;', ttl="0"),
 df = df1[0]
 #st.write(df1[0])
 #st.dataframe(df, hide_index=True, column_config={"titulo_es": None})
