@@ -39,8 +39,8 @@ if col5.button("Informes"):
     st.switch_page("./pages/informes.py")
 if col6.button("Scrap"):
     st.switch_page("./pages/scrap.py")
-if col7.button("Scrap1"):
-    st.switch_page("./pages/scrap1.py")
+if col7.button("Fuentes"):
+    st.switch_page("./pages/fuentes.py")
  
 
 #default=["copyHtml5", "csvHtml5", "excelHtml5", "colvis"],
