@@ -65,7 +65,7 @@ def dataframe_with_selections(df):
                         hide_index=True,
                         column_config=
                         {"Select": st.column_config.CheckboxColumn(required=True),
-                        'fuente' : st.column_config.LinkColumn('fuente'),      
+                        'url' : st.column_config.LinkColumn('fuente'),      
                         },
                         disabled=df.columns,
 #                        num_rows="dynamic",
