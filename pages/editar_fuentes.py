@@ -41,4 +41,8 @@ vutl = st.text_input("url ", url)
 
 pais  st.text_input("pais", st.session_state['vpais'])
 activa = st.text_input("Activa", st.session_state['vactiva'])
+separador = st.text_input("Separado", st.session_state['vsepa'])
+xpath_tit = st.text_input("xpath titulo", st.session_state['vtit'])
+xpath_det = st.text_input("xpath detalle", st.session_state['vdet'])
+xpath_link = st.text_input("xpath link", st.session_state['vlink'])
 
