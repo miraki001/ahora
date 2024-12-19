@@ -46,3 +46,9 @@ xpath_tit = st.text_input("xpath titulo", st.session_state['vtit'])
 xpath_det = st.text_input("xpath detalle", st.session_state['vdet'])
 xpath_link = st.text_input("xpath link", st.session_state['vlink'])
 
+
+col10, col20 = st.columns(2)
+if col10.button(":red[**Grabar**]"):
+    st.switch_page("streamlit_app.py")
+if col20.button(":red[**Cancelar**]"):
+    st.switch_page("streamlit_app.py")
