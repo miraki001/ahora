@@ -88,11 +88,11 @@ selection = dataframe_with_selections(df)
 vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
 st.write(vnuri)
 
-vquery = 'select * from fuentes_py where nuri = ' + vnuri + ';'
-
-df2 = conn.query(vquery, ttl="0"),
-df3 = df2[0]
-st.write(df3)
+if vnuri is not None:
+    vquery = 'select * from fuentes_py where nuri = ' + vnuri + ';'
+    df2 = conn.query(vquery, ttl="0"),
+    df3 = df2[0]
+    st.write(df3)
 
 st.session_state['vfuente'] = selection.to_string(columns=['url'], header=False, index=False)
 st.session_state['vdescrip'] = selection.to_string(columns=['fuente'], header=False, index=False)
