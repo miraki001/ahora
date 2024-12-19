@@ -18,6 +18,8 @@ import streamlit.components.v1 as components
 from streamlit_echarts import st_echarts
 import base64
 
+my_user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+
 
 def get_driver():
     options = webdriver.ChromeOptions()
@@ -25,6 +27,7 @@ def get_driver():
     options.add_argument('--disable-gpu')
     options.add_argument('--headless')
     #options.add_argument(f"--window-size={width}x{height}")
+    options.add_argument(f"--user-agent={my_user_agent}")
     
     service = Service()
     driver = webdriver.Chrome(service=service, options=options)
