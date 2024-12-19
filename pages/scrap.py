@@ -89,14 +89,14 @@ sleep(1)
 noticias = driver.find_elements(By.XPATH, '//div[@class="article-icons"]')
 
 for noticias in noticias:
-    name = noticias.find_element(By.XPATH, ".//@").text
+    #name = noticias.find_element(By.XPATH, ".//@").text
     img = noticias.find_element(By.XPATH, ".//img").get_attribute("src")
     link = noticias.find_element(By.XPATH, ".//a").get_attribute("href")
-    link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("href")
-    st.write(name)
+    #link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("href")
+    #st.write(name)
     st.write(img)
     st.write(link)
-    st.write(link1)
+    #st.write(link1)
 
 
 """
