@@ -10,6 +10,7 @@ vdetalle = ''
 vlink = ''
 vimagen = ''
 
+
 #st.query_params.from_dict({"foo": "bar", "baz": [1, 2, 3]})
 
 if col1.button("Home"):
