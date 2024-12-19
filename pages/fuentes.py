@@ -85,3 +85,8 @@ def dataframe_with_selections(df):
                     return selected_rows.drop('Selec', axis=1)
                   
 selection = dataframe_with_selections(df)
+
+
+df1 = conn.query('select nuri,fuente as url,activa,fecha_act,descrip as fuente,pais from fuentes_py where proyecto_nuri = 1  ;', ttl="0"),
+df = df1[0]
+
