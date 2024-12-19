@@ -101,7 +101,7 @@ for noticias in noticias:
 
 driver.get('https://pubmed.ncbi.nlm.nih.gov/?term=wine&sort=date')
 driver.implicitly_wait(10) 
-WebDriverWait(driver, 10).until(
+WebDriverWait(driver, 20).until(
             EC.presence_of_element_located((By.XPATH, "//button | //a | //div"))
 )
 accept_text_variations = [
