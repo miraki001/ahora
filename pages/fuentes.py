@@ -30,7 +30,7 @@ if col1.button("Home"):
 if col2.button("Insertar"):
     st.switch_page("./pages/insertar_fuente.py")
 if col3.button("Editar"):
-    st.switch_page("./pages/editar_fuente.py")
+    st.switch_page("./pages/editar_fuentes.py")
 if col4.button("Borrar"):
     st.switch_page("./pages/desmarcar.py")
 if col5.button("Scrap"):
