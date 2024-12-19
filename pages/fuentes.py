@@ -19,7 +19,7 @@ if col5.button("Probar Scrap"):
     st.switch_page("./pages/fuente_scrap.py")
 
 conn = st.connection("postgresql", type="sql")
-df1 = conn.query('select nuri,fuente,fecha,titulo,select_web as sel,detalle,imagen,link,titulo_es,detalle_es,eje_nuri from novedades order by nuri desc limit 50;', ttl="0"),
+df1 = conn.query('select nuri,fuente,activa,fecha_act,descrip,pais from fuentes_py order where proyecto_nuri = 1 by nuri desc ;', ttl="0"),
 df = df1[0]
 #st.write(df1[0])
 #st.dataframe(df, hide_index=True, column_config={"titulo_es": None})
@@ -28,12 +28,12 @@ df = df1[0]
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 config = {
     'nuri' : st.column_config.NumberColumn('nuri', required=True),
-    'fuente' : st.column_config.TextColumn('fuente'),
+    'fuente' : st.column_config.LinkColumn('fuente'),
 #    'selec' : st.column_config.CheckboxColumn('selec'),
-    'titulo' : st.column_config.TextColumn('titulo',  width='large'),
-    'detalle' : st.column_config.TextColumn('detalle', width='large'),
-    'imagen' : st.column_config.ImageColumn('imagen'),
-    'link' : st.column_config.LinkColumn('link'),
+    'descrip' : st.column_config.TextColumn('Fuente',),
+    'fecha_act' : st.column_config.TextColumn('fecha_act',),
+    'activa' : st.column_config.TextColumn('activa'),
+    'paso' : st.column_config.TextColumn('pais'),
 
     
 }
@@ -47,11 +47,7 @@ def dataframe_with_selections(df):
                         hide_index=True,
                         column_config=
                         {"Select": st.column_config.CheckboxColumn(required=True),
-                        'imagen' : st.column_config.ImageColumn('imagen'),
-                        'link' : st.column_config.LinkColumn('link'),      
-                        'titulo_es' : None,                        
-                        'detalle_es' : None,    
-                        'eje_nuri' : None,    
+                        'fuente' : st.column_config.LinkColumn('fuente'),      
                         },
                         disabled=df.columns,
 #                        num_rows="dynamic",
