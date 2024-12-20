@@ -51,7 +51,7 @@ with col[0]:
     xpath_tit = st.text_input("xpath titulo", st.session_state['vtit'])
     xpath_det = st.text_input("xpath detalle", st.session_state['vdet'])
     xpath_link = st.text_input("xpath link", st.session_state['vlink'])
-    xpath_image = st.text_input("xpath imagen", st.session_state['vlink'])
+    xpath_image = st.text_input("xpath imagen", st.session_state['vimagen'])
 with col[1]:
     pais =  st.text_input("pais", st.session_state['vpais'])
     activa = st.text_input("Activa", st.session_state['vactiva'])
