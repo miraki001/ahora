@@ -145,7 +145,7 @@ accept_text_variations = [
 """
 sleep(1)
 
-sepa = '//div[@class="mb-30"]'
+sepa = '//article[@class="col-xl-3 col-md-6 mb-15 mt-15 wow fadeIn animated"]'
 
 noticias = driver.find_elements(By.XPATH, sepa)
 st.write(noticias)
