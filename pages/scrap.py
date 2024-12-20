@@ -130,6 +130,35 @@ for noticias in noticias:
     st.write(link1)
 
 
+driver.get('https://enolife.com.ar/es/category/fincas/')
+driver.implicitly_wait(10) 
+
+"""
+WebDriverWait(driver, 20).until(
+            EC.presence_of_element_located((By.XPATH, "//button | //a | //div"))
+)
+
+accept_text_variations = [
+            "accept", "agree", "allow", "consent", "continue", "ok", "I agree", "got it"
+    ]
+        
+"""
+sleep(1)
+
+noticias = driver.find_elements(By.XPATH, '//li[@class="list-post"]')
+st.write(noticias)
+for noticias in noticias:
+    name = noticias.find_element(By.XPATH, './/h2').text
+    #img = noticias.find_element(By.XPATH, ".//a").get_attribute("src")
+    link = noticias.find_element(By.XPATH, ".//a").get_attribute("href")
+    #link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("href")
+    st.write(name)
+    #st.write(img)
+    st.write(link)
+    #st.write(link1)
+
+
+
 """
 st.write(link2[0].get_attribute("href"))
 element_list = [] 
