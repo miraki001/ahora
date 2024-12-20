@@ -64,9 +64,10 @@ with col[1]:
 col10, col20 = st.columns(2)
 if col10.button(":red[**Grabar**]"):
     with conn.session as session:
-        actualiza = 'UPDATE fuentes_py SET fuente = :url, activa = :activa,'
-        actualiza = actualiza + 'xpath_titulo = :tit'
-        actualiza = actualiza + 'WHERE nuri= :nuri'
+        actualiza = "UPDATE fuentes_py SET fuente = :url, activa = :activa,"
+
+        actualiza = actualiza + "xpath_titulo = :tit"
+        actualiza = actualiza + " WHERE nuri= :nuri"
         session.execute(text(actualiza), {"url": vurl,"activa": activa,"tit": xpath_tit,"nuri": tnuri})
         #session.execute(text("UPDATE fuentes_py SET fuente = :url, activa = :activa, xpath_titulo = :tit    WHERE nuri= :nuri"), {"url": vurl,"activa": activa,"tit": xpath_tit,"nuri": tnuri})
                         
