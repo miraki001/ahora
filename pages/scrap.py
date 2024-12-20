@@ -155,11 +155,14 @@ for noticias in noticias:
     link = noticias.find_element(By.XPATH, ".//a").get_attribute("href")
     det = noticias.find_element(By.XPATH, './/*[@class="excerpt mt-2"]').text
     link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("text")
+    name1 = noticias.find_element(By.XPATH, './/h6[@class="post-title font-weight-bold mb-10"]').get_attribute("text"
     st.write('Nombre ' + name)
     st.write('imagen '+  img)
     st.write('link ' + link)
     st.write('link 1 ' + link1)
     st.write(det)
+    st.write(name1)
+                                                                                                               
 
 
 driver.close()
