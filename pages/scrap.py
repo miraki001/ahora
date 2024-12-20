@@ -150,7 +150,7 @@ sepa = '//figure[@class="mb-15"]'
 noticias = driver.find_elements(By.XPATH, sepa)
 st.write(noticias)
 for noticias in noticias:
-    name = noticias.find_element(By.XPATH, './/h6[@class="post-title font-weight-bold mb-10"]').text
+    name = noticias.find_element(By.XPATH, './/h[@class="post-title font-weight-bold mb-10"]').text
     img = noticias.find_element(By.XPATH, ".//img").get_attribute("src")
     link = noticias.find_element(By.XPATH, ".//a").get_attribute("href")
     #link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("href")
