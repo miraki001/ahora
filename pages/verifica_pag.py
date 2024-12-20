@@ -67,15 +67,16 @@ accept_text_variations = [
 
 sleep(1)
 
-noticias = driver.find_elements(By.XPATH, '//div[@class="d-flex flex-column justify-content-between h-100"]')
+noticias = driver.find_elements(By.XPATH, separador)
 
 for noticias in noticias:
-    name = noticias.find_element(By.XPATH, ".//h3").text
-    img = noticias.find_element(By.XPATH, ".//img").get_attribute("src")
-    link = noticias.find_element(By.XPATH, ".//a").get_attribute("href")
-    link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("href")
+    name = noticias.find_element(By.XPATH, xtitulo).text
+    img = noticias.find_element(By.XPATH, ximage).get_attribute("src")
+    link = noticias.find_element(By.XPATH, xlink).get_attribute("href")
+    detalle = noticias.find_element(By.XPATH, xdetalle).get_attribute("href")
+    #link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("href")
     st.write(name)
     st.write(img)
     st.write(link)
-    st.write(link1)
+    st.write(detalle)
 
