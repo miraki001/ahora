@@ -38,6 +38,7 @@ xtitulo = st.session_state['vtit']
 xlink = st.session_state['vlink'] 
 ximage = st.session_state['vimagen'] 
 xdetalle = st.session_state['vdet'] 
+pag = st.session_state['vdet'] 
 
 tnuri = st.session_state['vnuri']
 url = st.session_state['vfuente']
