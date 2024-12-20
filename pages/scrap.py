@@ -105,7 +105,7 @@ for noticias in noticias:
 driver.get('https://pubmed.ncbi.nlm.nih.gov/?term=wine&sort=date')
 driver.implicitly_wait(10) 
 
-"""
+
 WebDriverWait(driver, 20).until(
             EC.presence_of_element_located((By.XPATH, "//button | //a | //div"))
 )
@@ -114,7 +114,7 @@ accept_text_variations = [
             "accept", "agree", "allow", "consent", "continue", "ok", "I agree", "got it"
     ]
         
-"""
+
 sleep(1)
 
 noticias = driver.find_elements(By.XPATH, '//div[@class="docsum-wrap"]')
@@ -128,7 +128,7 @@ for noticias in noticias:
     #st.write(img)
     st.write(link)
     st.write(link1)
-
+"""
 
 driver.get('https://mundoagro.cl/noticias/')
 driver.implicitly_wait(10) 
@@ -145,7 +145,7 @@ accept_text_variations = [
 """
 sleep(1)
 
-st.code(driver.page_source)
+#st.code(driver.page_source)
 
 sepa = '//article[@class="col-xl-3 col-md-6 mb-15 mt-15 wow fadeIn animated"]'
 
@@ -161,13 +161,13 @@ for noticias in noticias:
     link = noticias.find_element(By.XPATH, ".//a").get_attribute("href")
     det = noticias.find_element(By.XPATH, './/p').get_attribute("text")
     link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("text")
-    name1 = noticias.find_element(By.CLASS_NAME, "excerpt mt-2").text
+    #name1 = noticias.find_element(By.CLASS_NAME, "excerpt mt-2").text
     st.write('Nombre ' + name)
     st.write('imagen '+  img)
     st.write('link ' + link)
     st.write('link 1 ' + link1)
     st.write(det)
-    st.write(name1)
+    #st.write(name1)
                                                                                                                
 
 
