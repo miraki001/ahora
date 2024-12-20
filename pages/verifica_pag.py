@@ -38,7 +38,7 @@ xtitulo = st.session_state['vtit']
 xlink = st.session_state['vlink'] 
 ximage = st.session_state['vimagen'] 
 xdetalle = st.session_state['vdet'] 
-pag = st.session_state['vdet'] 
+pag = st.session_state['vfuente'] 
 
 tnuri = st.session_state['vnuri']
 url = st.session_state['vfuente']
@@ -66,7 +66,7 @@ driver = get_driver()
 
 
 
-driver.get('https://www.observatoriova.com/')
+driver.get(url)
 driver.implicitly_wait(2) 
 """
 WebDriverWait(driver, 2).until(
