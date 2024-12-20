@@ -24,6 +24,7 @@ my_user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (K
 
 
 separador = st.session_state['vsepa'] 
+st.write(separador)
 xtitulo = st.session_state['vtit'] 
 xlink = st.session_state['vlink'] 
 ximage = st.session_state['vimagen'] 
