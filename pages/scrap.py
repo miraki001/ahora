@@ -145,6 +145,8 @@ accept_text_variations = [
 """
 sleep(1)
 
+st.code(driver.page_source)
+
 sepa = '//article[@class="col-xl-3 col-md-6 mb-15 mt-15 wow fadeIn animated"]'
 
 all_img = driver.find_elements(By.XPATH, './/p')
