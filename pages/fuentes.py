@@ -33,8 +33,8 @@ if col3.button("Editar"):
     st.switch_page("./pages/editar_fuentes.py")
 if col4.button("Borrar"):
     st.switch_page("./pages/desmarcar.py")
-if col5.button("Scrap"):
-    st.switch_page("./pages/fuente_scrap.py")
+if col5.button("Verificar"):
+    st.switch_page("./pages/verifica_pag.py")
 
 
 
