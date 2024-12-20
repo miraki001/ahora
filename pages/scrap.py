@@ -133,7 +133,7 @@ for noticias in noticias:
 driver.get('https://mundoagro.cl/noticias/')
 driver.implicitly_wait(10) 
 
-"""
+
 WebDriverWait(driver, 20).until(
             EC.presence_of_element_located((By.XPATH, "//button | //a | //div"))
 )
@@ -142,16 +142,14 @@ accept_text_variations = [
             "accept", "agree", "allow", "consent", "continue", "ok", "I agree", "got it"
     ]
         
-"""
+
 sleep(1)
 
 #st.code(driver.page_source)
 
 sepa = '//article[@class="col-xl-3 col-md-6 mb-15 mt-15 wow fadeIn animated"]'
 
-all_img = driver.find_elements(By.XPATH, './/p')
-for all_img in all_img:
-    st.write(all_img.text)
+
 
 noticias = driver.find_elements(By.XPATH, sepa)
 st.write(noticias)
