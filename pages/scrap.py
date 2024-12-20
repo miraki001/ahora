@@ -159,7 +159,7 @@ for noticias in noticias:
     st.write('imagen '+  img)
     st.write('link ' + link)
     st.write('link 1 ' + link1)
-    st.write('det  ' + det)
+    st.write('det ' + det)
 
 
 driver.close()
