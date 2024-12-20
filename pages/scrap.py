@@ -147,7 +147,7 @@ sleep(1)
 
 sepa = '//article[@class="col-xl-3 col-md-6 mb-15 mt-15 wow fadeIn animated"]'
 
-all_img = driver.find_elements(By.XPATH, '//h6')
+all_img = driver.find_elements(By.XPATH, './/h6')
 for all_img in all_img:
     st.write(all_img.text)
 
