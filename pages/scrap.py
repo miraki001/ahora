@@ -153,14 +153,14 @@ for noticias in noticias:
     name = noticias.find_element(By.XPATH, ".//a/following::a").text
     img = noticias.find_element(By.XPATH, ".//img").get_attribute("src")
     link = noticias.find_element(By.XPATH, ".//a").get_attribute("href")
-    link1 = noticias.find_element(By.XPATH, ".//a/following::a").text
+    link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("name")
     st.write('Nombre ' + name)
     st.write('imagen '+  img)
     st.write('link ' + link)
     st.write('link 1' + link1)
 
 
-
+driver.close()
 """
 st.write(link2[0].get_attribute("href"))
 element_list = [] 
