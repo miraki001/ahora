@@ -66,7 +66,8 @@ driver = get_driver()
 
 
 driver.get('https://www.observatoriova.com/')
-driver.implicitly_wait(10) 
+driver.implicitly_wait(2) 
+"""
 WebDriverWait(driver, 2).until(
             EC.presence_of_element_located((By.XPATH, "//button | //a | //div"))
 )
@@ -74,7 +75,7 @@ accept_text_variations = [
             "accept", "agree", "allow", "consent", "continue", "ok", "I agree", "got it"
     ]
         
-
+"""
 sleep(1)
 
 noticias = driver.find_elements(By.XPATH, separador)
