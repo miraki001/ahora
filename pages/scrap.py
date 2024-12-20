@@ -157,7 +157,7 @@ for noticias in noticias:
     st.write('Nombre ' + name)
     st.write('imagen '+  img)
     st.write('link ' + link)
-    st.write(link1)
+    st.write('link 1' + link1)
 
 
 
