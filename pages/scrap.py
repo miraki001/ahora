@@ -145,7 +145,7 @@ accept_text_variations = [
 """
 sleep(1)
 
-sepa = '//div[@class="row vertical-divider"]'
+sepa = '//div[@class="mb-30"]'
 
 noticias = driver.find_elements(By.XPATH, sepa)
 st.write(noticias)
