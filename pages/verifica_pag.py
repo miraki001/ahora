@@ -20,6 +20,16 @@ import base64
 
 my_user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
 
+separador = st.session_state['vdescrip'] 
+xtitulo = st.session_state['vpais'] 
+xlink = st.session_state['vactiva'] 
+ximage = st.session_state['vactiva'] 
+xdetalle = st.session_state['vactiva'] 
+
+tnuri = st.session_state['vnuri']
+url = st.session_state['vfuente']
+
+
 
 def get_driver():
     options = webdriver.ChromeOptions()
