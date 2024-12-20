@@ -145,7 +145,9 @@ accept_text_variations = [
 """
 sleep(1)
 
-noticias = driver.find_elements(By.XPATH, '//li[@class="list-post"]')
+sepa = '//li[@class="list-post"]'
+
+noticias = driver.find_elements(By.XPATH, sepa)
 st.write(noticias)
 for noticias in noticias:
     name = noticias.find_element(By.XPATH, './/h2').text
