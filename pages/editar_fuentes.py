@@ -44,7 +44,7 @@ vtitle = st.text_input("fuente", fuente)
 vurl = st.text_input("url ", url)
 observaa = st.text_input("Observaciones ",  st.session_state['vobserva'])
 
-col = st.columns((1.5, 4.5, 2), gap='medium')
+col = st.columns((6.5, 4.5, 2), gap='medium')
 
 with col[0]:
     pais =  st.text_input("pais", st.session_state['vpais'])
