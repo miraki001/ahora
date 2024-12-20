@@ -147,6 +147,9 @@ sleep(1)
 
 sepa = '//article[@class="col-xl-3 col-md-6 mb-15 mt-15 wow fadeIn animated"]'
 
+all_img = driver.find_elements(By.XPATH, '//h6')
+st.write(all_img)
+
 noticias = driver.find_elements(By.XPATH, sepa)
 st.write(noticias)
 for noticias in noticias:
