@@ -100,7 +100,7 @@ for noticias in noticias:
     #st.write(img)
     st.write(link)
     st.write(link1)
-"""
+
 
 driver.get('https://pubmed.ncbi.nlm.nih.gov/?term=wine&sort=date')
 driver.implicitly_wait(10) 
