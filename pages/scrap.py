@@ -130,7 +130,7 @@ for noticias in noticias:
     st.write(link1)
 
 
-driver.get('https://enolife.com.ar/es/category/fincas/')
+driver.get('https://mundoagro.cl/noticias/')
 driver.implicitly_wait(10) 
 
 """
@@ -145,17 +145,17 @@ accept_text_variations = [
 """
 sleep(1)
 
-sepa = '//li[@class="list-post"]'
+sepa = '//figure[@class="mb-15"]'
 
 noticias = driver.find_elements(By.XPATH, sepa)
 st.write(noticias)
 for noticias in noticias:
-    name = noticias.find_element(By.XPATH, './/h2').text
-    #img = noticias.find_element(By.XPATH, ".//a").get_attribute("src")
+    name = noticias.find_element(By.XPATH, './/h6').text
+    img = noticias.find_element(By.XPATH, ".//img").get_attribute("src")
     link = noticias.find_element(By.XPATH, ".//a").get_attribute("href")
     #link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("href")
     st.write(name)
-    #st.write(img)
+    st.write(img)
     st.write(link)
     #st.write(link1)
 
