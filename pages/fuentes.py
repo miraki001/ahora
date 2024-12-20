@@ -102,6 +102,12 @@ if  cnt>0:
     st.session_state['vdet'] = df3.to_string(columns=['xpath_detalle'], header=False, index=False)
     st.session_state['vlink'] = df3.to_string(columns=['xpath_link'], header=False, index=False)
     st.write(df3.to_string(columns=['separador'], header=False, index=False))
+    st.session_state['vtipo'] = df3.to_string(columns=['tipo'], header=False, index=False)
+    st.session_state['vbus'] = df3.to_string(columns=['busqueda_pers'], header=False, index=False)
+    st.session_state['vidioma'] = df3.to_string(columns=['idioma'], header=False, index=False)
+    st.session_state['vcod'] = df3.to_string(columns=['cod_pais'], header=False, index=False)
+    st.session_state['vobserva'] = df3.to_string(columns=['observa'], header=False, index=False)
+
 
 st.session_state['vfuente'] = selection.to_string(columns=['url'], header=False, index=False)
 st.session_state['vdescrip'] = selection.to_string(columns=['fuente'], header=False, index=False)
