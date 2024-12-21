@@ -29,7 +29,7 @@ from selenium.webdriver.support import expected_conditions as EC
 response = requests.get('https://www.vinetur.com/marketing/')
 soup = BeautifulSoup(response.text, 'html.parser')
 #data = soup.find('div').text
-data = soup.find_all(string=re.compile("background:url"))
+data = soup.find_all('div style')
 st.write(data)
 st.write('despues')
 
