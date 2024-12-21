@@ -130,7 +130,7 @@ for noticias in noticias:
     st.write(link1)
 """
 
-driver.get('https://mundoagro.cl/noticias/')
+driver.get('https://www.vinetur.com/marketing/')
 driver.implicitly_wait(10) 
 
 
@@ -147,23 +147,23 @@ sleep(1)
 
 #st.code(driver.page_source)
 
-sepa = '//article[@class="col-xl-3 col-md-6 mb-15 mt-15 wow fadeIn animated"]'
+sepa = '//li'
 
 
 
 noticias = driver.find_elements(By.XPATH, sepa)
 st.write(noticias)
 for noticias in noticias:
-    name = noticias.find_element(By.XPATH, './/h6').text
+    name = noticias.find_element(By.XPATH, './/a').text
     img = noticias.find_element(By.XPATH, ".//img").get_attribute("src")
     link = noticias.find_element(By.XPATH, ".//a").get_attribute("href")
-    det = noticias.find_element(By.XPATH, './/p').get_attribute("text")
-    link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("text")
+    det = noticias.find_element(By.XPATH, './/a').get_attribute("text")
+    #link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("text")
     #name1 = noticias.find_element(By.CLASS_NAME, "excerpt mt-2").text
     st.write('Nombre ' + name)
     st.write('imagen '+  img)
     st.write('link ' + link)
-    st.write('link 1 ' + link1)
+    #st.write('link 1 ' + link1)
     st.write(det)
     #st.write(name1)
                                                                                                                
