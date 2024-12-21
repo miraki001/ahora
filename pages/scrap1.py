@@ -6,6 +6,8 @@ import subprocess
 import sys
 #from st_aggrid import AgGrid
 import os
+from bs4 import BeautifulSoup
+import requests
 
 from array import array
 import pandas as pd
@@ -20,6 +22,10 @@ from selenium.webdriver.common.by import By
 # Waiting
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+
+
+response = requests.get(url)
+
 
 
 options = webdriver.ChromeOptions()
