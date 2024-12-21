@@ -28,6 +28,11 @@ def get_driver():
     options.add_argument('--headless')
     #options.add_argument(f"--window-size={width}x{height}")
     options.add_argument(f"--user-agent={my_user_agent}")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--disable-features=NetworkService")
+    options.add_argument("--window-size=1920x1080")
+    options.add_argument("--disable-features=VizDisplayCompositor")
     
     service = Service()
     driver = webdriver.Chrome(service=service, options=options)
