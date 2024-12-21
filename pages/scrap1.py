@@ -26,7 +26,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 response = requests.get('https://www.vinetur.com/marketing/')
 soup = BeautifulSoup(response.text, 'html.parser')
-data = soup.find('div', class_='background').text
+data = soup.find('li').text
 st.write(data)
 
 
