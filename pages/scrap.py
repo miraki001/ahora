@@ -160,13 +160,13 @@ noticias = driver.find_elements(By.XPATH, sepa)
 st.write(noticias)
 for noticias in noticias:
     name = noticias.find_element(By.XPATH, './/a').text
-    img = noticias.find_element(By.XPATH, ".//img").get_attribute("src")
+    #img = noticias.find_element(By.XPATH, ".//img").get_attribute("src")
     link = noticias.find_element(By.XPATH, ".//a").get_attribute("href")
     det = noticias.find_element(By.XPATH, './/a').get_attribute("text")
     #link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("text")
     #name1 = noticias.find_element(By.CLASS_NAME, "excerpt mt-2").text
     st.write('Nombre ' + name)
-    st.write('imagen '+  img)
+    #st.write('imagen '+  img)
     st.write('link ' + link)
     #st.write('link 1 ' + link1)
     st.write(det)
