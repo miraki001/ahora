@@ -16,5 +16,5 @@ streamlit_extras
 streamlit_echarts 
 psutil
 requests
-BeautifulSoup
+
 
