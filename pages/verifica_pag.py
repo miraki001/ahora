@@ -89,7 +89,7 @@ sleep(1)
 noticias = driver.find_elements(By.XPATH, separador)
 st.write(noticias)
 for noticias in noticias:
-    name = noticias.find_element(By.XPATH, xtitulo).text
+    #name = noticias.find_element(By.XPATH, xtitulo).text
     name = noticias.find_element(By.XPATH, xtitulo).get_attribute("text")
 
     #img = noticias.find_element(By.XPATH, ximage).get_attribute("src")
