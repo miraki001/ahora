@@ -28,6 +28,7 @@ response = requests.get('https://www.vinetur.com/marketing/')
 soup = BeautifulSoup(response.text, 'html.parser')
 data = soup.find('a').text
 st.write(data)
+st.write('despues')
 
 
 
