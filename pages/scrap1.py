@@ -83,8 +83,7 @@ for datos in datos:
         link = datos.find_element(By.XPATH, ".//a").get_attribute("href")
         st.write(name)
         st.write(link)
-    except e:
-        st.write('none')
+
     
 
 st.write('hasta aca')    
