@@ -31,7 +31,7 @@ soup = BeautifulSoup(response.text, 'html.parser')
 #data = soup.find('div').text
 
 
-products = soup.find_elements(By.XPATH, "/html/body/div[1]/div[2]/div[1]/div/ul")
+products = soup.find_elements(By.XPATH, "/html/body/div[1]/div[2]/div[1]/div/ul/li")
 st.write(products)
 data = soup.find_all('a', 'li')
 
