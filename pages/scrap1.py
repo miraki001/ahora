@@ -56,8 +56,21 @@ options.add_argument('--disable-gpu')
 options.add_argument('--headless')
 
 driver = get_driver()
+driver.get('https://www.vinetur.com/marketing/')
+driver.implicitly_wait(10) 
+WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, "//button | //a | //div"))
+)
+accept_text_variations = [
+            "accept", "agree", "allow", "consent", "continue", "ok", "I agree", "got it"
+    ]
+        
 
+sleep(1)
 
+all_img = driver.find_elements(By.XPATH, '/html/body/div[1]/div[2]/div[1]/div/ul/li')
+
+st.write(all_img)
 
 
 
