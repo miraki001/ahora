@@ -72,7 +72,7 @@ accept_text_variations = [
     ]
         
 
-sleep(1)
+#sleep(1)
 
 all_img = driver.find_elements(By.XPATH, '/html/body/div[1]/div[2]/div[1]/div/ul/li')
 
