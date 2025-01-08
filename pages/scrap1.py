@@ -30,7 +30,7 @@ response = requests.get('https://www.vinetur.com/marketing/')
 soup = BeautifulSoup(response.text, 'html.parser')
 #data = soup.find('div').text
 
-data = soup.find_all('a', style_='background')
+data = soup.find_all('a', 'li')
 
 #data = soup.find('a')
 st.write(data)
