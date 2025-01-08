@@ -29,7 +29,10 @@ from selenium.webdriver.support import expected_conditions as EC
 response = requests.get('https://www.vinetur.com/marketing/')
 soup = BeautifulSoup(response.text, 'html.parser')
 #data = soup.find('div').text
-data = soup.find('a')
+
+data = soup.find_all('a', style_='background')
+
+#data = soup.find('a')
 st.write(data)
 for link in soup.find_all('a'):
     st.write(link.get('href'))
