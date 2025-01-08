@@ -17,5 +17,5 @@ streamlit_echarts
 psutil
 requests
 beautifulsoup4==4.9.0
-puppeteer
+
 
