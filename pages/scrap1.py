@@ -74,9 +74,13 @@ accept_text_variations = [
 
 #sleep(1)
 
-all_img = driver.find_elements(By.XPATH, '/html/body/div[1]/div[2]/div[1]/div/ul/li')
+datos = driver.find_elements(By.XPATH, '/html/body/div[1]/div[2]/div[1]/div/ul/li')
 
-st.write(all_img.text)
+st.write(datos)
+for datos in datos:
+    name = datos.find_element(By.XPATH, './/a').text
+    st.write(name)
+    
 
 
 
