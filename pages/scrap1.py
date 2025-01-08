@@ -78,7 +78,7 @@ datos = driver.find_elements(By.XPATH, '/html/body/div[1]/div[2]/div[1]/div/ul/l
 
 st.write(datos)
 for datos in datos:
-    name = datos.find_element(By.XPATH, './/a').text
+    name = datos.find_element(By.XPATH, './a').text
     st.write(name)
 
     
