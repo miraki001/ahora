@@ -74,7 +74,7 @@ accept_text_variations = [
 
 #sleep(1)
 
-datos = driver.find_elements(By.XPATH, '/html/body/div[1]/div[2]/div[1]/div/ul/li and //li[contains(@spa)]')
+datos = driver.find_elements(By.XPATH, "/html/body/div[1]/div[2]/div[1]/div/ul/li and //div[contains(text(), 'background')]")
 
 st.write(datos)
 for datos in datos:
