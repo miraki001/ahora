@@ -75,7 +75,7 @@ accept_text_variations = [
 #sleep(1)
 
 datos = driver.find_elements(By.XPATH, "/html/body/div[1]/div[2]/div[1]/div/ul/li and li[contains(text(), 'background')]")
-#datos = driver.find_elements(By.XPATH, ".//li[contains(text(), 'background')]")
+#datos = driver.find_elements(By.XPATH, "[contains(text(), 'background')]")
 #datos =  driver.find_elements(By.tagName ,"li")
 
 
