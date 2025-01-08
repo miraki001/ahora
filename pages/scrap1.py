@@ -80,6 +80,7 @@ st.write(datos)
 for datos in datos:
     name = datos.find_element(By.XPATH, './/a').text
     st.write(name)
+
     
 
 
