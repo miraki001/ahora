@@ -76,7 +76,7 @@ accept_text_variations = [
 
 all_img = driver.find_elements(By.XPATH, '/html/body/div[1]/div[2]/div[1]/div/ul/li')
 
-st.write(all_img)
+st.write(all_img.text)
 
 
 
