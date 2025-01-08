@@ -30,6 +30,9 @@ response = requests.get('https://www.vinetur.com/marketing/')
 soup = BeautifulSoup(response.text, 'html.parser')
 #data = soup.find('div').text
 
+
+products = driver.find_elements(By.XPATH, "/html/body/div[1]/div[2]/div[1]/div/ul/li")
+st.write(products)
 data = soup.find_all('a', 'li')
 
 #data = soup.find('a')
