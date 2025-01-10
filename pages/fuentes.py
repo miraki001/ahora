@@ -14,7 +14,7 @@ st.set_page_config(
     }
 )
 
-col1, col2, col3,col4,col5 = st.columns(5)
+col1, col2, col3,col4,col5,col6 = st.columns(6)
 
 tnuri = 0
 vtitulo= ''
@@ -35,6 +35,8 @@ if col4.button("Borrar"):
     st.switch_page("./pages/desmarcar.py")
 if col5.button("Verificar"):
     st.switch_page("./pages/verifica_pag.py")
+if col5.button("neuvo"):
+    st.switch_page("./pages/nuevoscra.py")
 
 
 
