@@ -18,5 +18,5 @@ psutil
 requests
 beautifulsoup4==4.9.0
 langchain
-
+langchain_ollama
 
