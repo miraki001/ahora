@@ -3,10 +3,8 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
-from langchain.llms import LlamaLLM
-from langchain.chains import LLChain
-from langchain.prompts import ChatPromptTemplate
-
+from langchain_ollama import OllamaLLM
+from langchain_core.prompts import ChatPromptTemplate
 MODEL_NAME = "llama3.2"
 
 def parse_with_olama(dom_chunks, parse_description):
