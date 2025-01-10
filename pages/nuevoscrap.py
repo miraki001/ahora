@@ -17,10 +17,20 @@ def parse_with_olama(dom_chunks, parse_description):
     return chain.run_chain()
 
 def scrape_website(url):
-    chrome_options = Options()
-    chrome_driver_path = "./chromedriver"  # Update this path based on your OS
-    service = Service(chrome_driver_path)
-    driver = webdriver.Chrome(service=service, options=chrome_options)
+    options = webdriver.ChromeOptions()
+    
+    options.add_argument('--disable-gpu')
+    options.add_argument('--headless')
+    #options.add_argument(f"--window-size={width}x{height}")
+    options.add_argument(f"--user-agent={my_user_agent}")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--disable-features=NetworkService")
+    options.add_argument("--window-size=1920x1080")
+    options.add_argument("--disable-features=VizDisplayCompositor")
+    
+    service = Service()
+    driver = webdriver.Chrome(service=service, options=options)
 
     driver.get(url)
     page_source = driver.page_source
