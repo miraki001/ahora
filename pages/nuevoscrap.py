@@ -94,5 +94,5 @@ if st.button("Scrape Site"):
         st.write('aca')
         dom_chunks = [cleaned_content[i:i+6000] for i in range(0, len(cleaned_content), 6000)]
         st.write('aca1 ')
-        result = parseUsingOllama(dom_chunks, parse_description)
+        result = parse_with_olama(dom_chunks, parse_description)
         st.write(result)
