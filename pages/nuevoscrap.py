@@ -9,6 +9,15 @@ MODEL_NAME = "llama3"
 model = OllamaLLM(model="llama3")
 my_user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
 
+template = (
+    "You are tasked with extracting specific information from the following text content: {dom_content}. "
+    "Please follow these instructions carefully: \n\n"
+    "1. **Extract Information:** Only extract the information that directly matches the provided description: {parseDescription}. "
+    "2. **No Extra Content:** Do not include any additional text, comments, or explanations in your response. "
+    "3. **Empty Response:** If no information matches the description, return an empty string ('')."
+    "4. **Direct Data Only:** Your output should contain only the data that is explicitly requested, with no other text."
+)
+
 def parseUsingOllama (domChunks , parseDescription) :
     prompt = ChatPromptTemplate.from_template(template)
     chain = prompt | model
@@ -81,7 +90,7 @@ if st.button("Scrape Site"):
 
     parse_description = st.text_area("Describe what you want to parse:")
 
-    if st.button("Parse Content"):
+    if st.button("Parsear Contenido"):
         st.write('aca')
         dom_chunks = [cleaned_content[i:i+6000] for i in range(0, len(cleaned_content), 6000)]
         st.write('aca1 ')
