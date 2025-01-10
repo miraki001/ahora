@@ -6,8 +6,21 @@ from bs4 import BeautifulSoup
 from langchain_ollama import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
 MODEL_NAME = "llama3"
-
+model = OllamaLLM(model="llama3")
 my_user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+
+def parseUsingOllama (domChunks , parseDescription) :
+    prompt = ChatPromptTemplate.from_template(template)
+    chain = prompt | model
+    finalResult = []
+    for counter , chunk in enumerate (domChunks , start=1) :
+        result = chain.invoke(
+                                {"dom_content": chunk , "parseDescription": parseDescription}
+                              )
+        print(f"Parsed Batch {counter} of {len(domChunks)}")
+        finalResult.append(result)
+    return "\n".join(finalResult)
+
 
 def parse_with_olama(dom_chunks, parse_description):
     llama = LlamaLLM(model_name=MODEL_NAME) if MODEL_NAME else None
@@ -70,5 +83,5 @@ if st.button("Scrape Site"):
 
     if st.button("Parse Content"):
         dom_chunks = [cleaned_content[i:i+6000] for i in range(0, len(cleaned_content), 6000)]
-        result = parse_with_olama(dom_chunks, parse_description)
+        result = parseUsingOllama(dom_chunks, parse_description)
         st.write(result)
