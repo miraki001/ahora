@@ -82,7 +82,8 @@ if st.button("Scrape Site"):
     parse_description = st.text_area("Describe what you want to parse:")
 
     if st.button("Parse Content"):
-        dom_chunks = [cleaned_content[i:i+6000] for i in range(0, len(cleaned_content), 6000)]
         st.write('aca')
+        dom_chunks = [cleaned_content[i:i+6000] for i in range(0, len(cleaned_content), 6000)]
+        st.write('aca1 ')
         result = parseUsingOllama(dom_chunks, parse_description)
         st.write(result)
