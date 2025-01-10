@@ -7,7 +7,7 @@ from langchain.llms import LlamaLLM
 from langchain.chains import LLChain
 from langchain.prompts import ChatPromptTemplate
 
-MODEL_NAME = "your_model"
+MODEL_NAME = "llama3.2"
 
 def parse_with_olama(dom_chunks, parse_description):
     llama = LlamaLLM(model_name=MODEL_NAME) if MODEL_NAME else None
