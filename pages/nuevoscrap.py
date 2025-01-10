@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 from langchain_ollama import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
-MODEL_NAME = "llama3.2"
+MODEL_NAME = "llama3"
 
 my_user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
 
