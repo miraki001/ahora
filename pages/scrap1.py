@@ -83,13 +83,13 @@ datos = driver.find_elements(By.XPATH, "//li/div")
 
 st.write(datos)
 for datos in datos:
-    try:
+#    try:
         name = datos.find_element(By.XPATH, ".//a").text
         link = datos.find_element(By.XPATH, ".//a").get_attribute("href")
         st.write(name)
         st.write(link)
-    finally:
-        st.write('none')
+#    finally:
+#        st.write('none')
 
     
 
