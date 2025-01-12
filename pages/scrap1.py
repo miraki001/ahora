@@ -87,14 +87,14 @@ for datos in datos:
         name = datos.find_element(By.XPATH, ".//a").text
         link = datos.find_element(By.XPATH, ".//a").get_attribute("href")
         image_url = getCssValue('background')
-#        img = datos.find_element(By.XPATH, ".//background").get_attribute("src")
+        img = datos.find_element(By.cssSelector,"background")text
 #        soup = BeautifulSoup(datos)
 #        div_style = soup.find('div')['style']
 #        style = cssutils.parseStyle(div_style)
         url = ['background-image']
         st.write(name)
         st.write(link)
-        st.write(image_url)
+        st.write(img)
 #    finally:
 #        st.write('none')
 
