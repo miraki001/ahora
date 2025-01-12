@@ -86,7 +86,7 @@ for datos in datos:
 #    try:
         name = datos.find_element(By.XPATH, ".//a").text
         link = datos.find_element(By.XPATH, ".//a").get_attribute("href")
-        img = datos.find_element(By.XPATH, "./li").value_of_css_property("background")
+        img = datos.find_element(By.XPATH, "li").value_of_css_property("background")
 #        image_url = getCssValue('background')
 #        img = datos.find_elements(By.CSS_SELECTOR, "background").value_of_css_property("background")
 #        soup = BeautifulSoup(datos)
