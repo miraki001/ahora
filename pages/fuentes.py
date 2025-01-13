@@ -57,9 +57,6 @@ if st.button("Aplicar"):
         #qq = 'select nuri,fuente as url,activa,fecha_act,descrip as fuente,pais from fuentes_py where proyecto_nuri = 1  and ;'
         #df1 = conn.query(qq , ttl="0"),
 
-if agree:
-    df['activa'] = 'S'
-    df['fuente'] = fuente
 
 
 #st.write(df1[0])
