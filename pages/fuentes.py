@@ -32,7 +32,12 @@ if col2.button("Insertar"):
 if col3.button("Editar"):
     st.switch_page("./pages/editar_fuentes.py")
 if col4.button("Borrar"):
-    st.switch_page("./pages/desmarcar.py")
+    with conn.session as session:
+        actualiza = "delete from fuentes_py where nuri = " +  tnuri
+        session.execute(text(actualiza) )
+        session.commit()
+
+    
 if col5.button("Verificar"):
     st.switch_page("./pages/verifica_pag.py")
 if col6.button("neuvo"):
@@ -134,6 +139,7 @@ st.session_state['vdescrip'] = selection.to_string(columns=['fuente'], header=Fa
 st.session_state['vnuri'] = selection.to_string(columns=['nuri'], header=False, index=False)
 st.session_state['vpais'] = selection.to_string(columns=['pais'], header=False, index=False)
 st.session_state['vactiva'] = selection.to_string(columns=['activa'], header=False, index=False)
+tnuri = st.session_state['vnuri']
 
 
 
