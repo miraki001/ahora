@@ -64,8 +64,8 @@ options.add_argument('--headless')
 
 driver = get_driver()
 driver.get('https://www.vinetur.com/marketing/')
-driver.implicitly_wait(30) 
-WebDriverWait(driver, 30).until(
+driver.implicitly_wait(40) 
+WebDriverWait(driver, 40).until(
             EC.presence_of_element_located((By.XPATH, "//button | //a | //div"))
 )
 accept_text_variations = [
