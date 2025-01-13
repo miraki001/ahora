@@ -119,7 +119,7 @@ for datos in datos:
         name = datos.find_element(By.XPATH, ".//h2/a").text
         link = datos.find_element(By.XPATH, ".//a").get_attribute("href")
         #img = datos.find_element(By.XPATH, "//a[@style, '<image url>']").text
-        img = datos.find_elements(By.CSS_SELECTOR, "background").text
+        img = datos.find_elements(By.CSS_SELECTOR, "background")
         
         #img = datos.value_of_css_property("background-image: url")
         st.write(img)
