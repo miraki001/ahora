@@ -32,7 +32,7 @@ if col2.button("Insertar"):
 if col3.button("Editar"):
     st.switch_page("./pages/editar_fuentes.py")
 if col4.button("Borrar"):
-    st.switch_page("borrarfuente.py")   
+    st.switch_page("./pages/borrarfuente.py")   
 if col5.button("Verificar"):
     st.switch_page("./pages/verifica_pag.py")
 if col6.button("neuvo"):
