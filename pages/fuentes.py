@@ -57,9 +57,9 @@ if st.button("Aplicar"):
     #df[(df.activa == pactiva) & (df.fuente == pfuente)]
     st.write(pactiva)
     st.write(pfuente)
-    qq = "select nuri,fuente as url,activa,fecha_act,descrip as fuente,pais from fuentes_py where proyecto_nuri = 1 and activa = '" + pactiva + "' and fuente = '" + pfuente + "' ;"
-    #df1 = conn.query(qq, ttl="0",params={"activa": pactiva, "fuente": pfuente} )
-    df1 = conn.query(qq, ttl="0")
+    qq = 'select nuri,fuente as url,activa,fecha_act,descrip as fuente,pais from fuentes_py where proyecto_nuri = 1 and activa =   :pactiva  and fuente = :pfuente  ;'
+    df1 = conn.query(qq, ttl="0",params={"activa": pactiva, "fuente": pfuente} )
+    #df1 = conn.query(qq, ttl="0")
     st.write(df1)    
     df = df1[0]
 
