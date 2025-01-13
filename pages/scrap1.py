@@ -94,6 +94,8 @@ for datos in datos:
         img = re.split('[()]',img)[3]
 #        image_url = getCssValue('background')
 #        img = datos.find_elements(By.CSS_SELECTOR, "background").value_of_css_property("background")
+         img = datos.find_element(By.XPATH, ximage).get_attribute("src")
+
 #        soup = BeautifulSoup(datos)
 #        div_style = soup.find('div')['style']
 #        style = cssutils.parseStyle(div_style)
@@ -116,6 +118,7 @@ st.write(datos)
 for datos in datos:
         name = datos.find_element(By.XPATH, ".//a").text
         link = datos.find_element(By.XPATH, ".//a").get_attribute("href")
+        img = datos.find_element(By.XPATH, "//image").get_attribute("src")
         
         #img = datos.value_of_css_property("background")
         #st.write(img)
