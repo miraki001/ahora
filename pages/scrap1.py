@@ -33,8 +33,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-response = requests.get('https://www.vinetur.com/marketing/')
-soup = BeautifulSoup(response.text, 'html.parser')
+#response = requests.get('https://www.vinetur.com/marketing/')
+#soup = BeautifulSoup(response.text, 'html.parser')
 #data = soup.find('div').text
 
 my_user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
@@ -74,7 +74,7 @@ accept_text_variations = [
         
 
 #sleep(1)
-
+"""
 #datos = driver.find_elements(By.XPATH, "/html/body/div[1]/div[2]/div[1]/div/ul/li [not(contains(class, 'adsbygoogle'))]")
 datos = driver.find_elements(By.XPATH, "//li/div")
 #not [@class='adsbygoogle']")
@@ -107,8 +107,20 @@ for datos in datos:
     
 
 st.write('hasta aca')    
+"""
 
 
+driver.get('https://enolife.com.ar/es/category/fincas/')
+datos = driver.find_elements(By.XPATH, "//li[@class='grid-style grid-2-style']")
+for datos in datos:
+        name = datos.find_element(By.XPATH, ".//h2").text
+        link = datos.find_element(By.XPATH, ".//a").get_attribute("href")
+        
+        #img = datos.value_of_css_property("background")
+        #st.write(img)
+        #img = re.split('[()]',img)[3]
+        st.write(name)
+        st.write(link)
 
 
 st.write('despues')
