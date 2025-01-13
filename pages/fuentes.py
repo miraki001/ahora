@@ -49,7 +49,7 @@ agree = st.checkbox("Solo Activas")
 
 fuente = st.text_input("ingrese el nombre de la fuente")
 
-if st.button("Aplicar")
+if st.button("Aplicar"):
     if agree:    
         df[df.activa.isin('S')]
         df[df.fuente.isin(fuente)]
