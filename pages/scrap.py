@@ -20,6 +20,10 @@ import base64
 
 my_user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
 
+fuente = st.session_state['vdescrip'] 
+pais = st.session_state['vpais'] 
+activa = st.session_state['vactiva'] 
+sepa = st.session_state['vsepa'] 
 
 def get_driver():
     options = webdriver.ChromeOptions()
@@ -46,8 +50,10 @@ options.add_argument('--headless')
 driver = get_driver()
 
 
-"""
+
 driver.get('https://www.observatoriova.com/')
+
+
 driver.implicitly_wait(10) 
 WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.XPATH, "//button | //a | //div"))
@@ -58,108 +64,12 @@ accept_text_variations = [
         
 
 sleep(1)
-all_img = driver.find_element(By.XPATH, '//h1')
-#st.write(all_img.text)
-all_img = driver.find_elements(By.XPATH, '//h1')
-#st.write(all_img)
-
-titulo = driver.find_elements(By.XPATH, '//div[@class="ob-card-body"]')
-link = driver.find_elements(By.XPATH, '/div[@class="ob-card-footer"]/a')
-link2 = driver.find_elements(By.XPATH, '//*[@id="main"]/div/section[1]/div/div[3]/div/div[1]/div[2]/a')
-
-imagen = driver.find_elements(By.XPATH, '/div[@class="icon-header"]')
-noticias = driver.find_elements(By.XPATH, '//div[@class="d-flex flex-column justify-content-between h-100"]')
-
-for noticias in noticias:
-    name = noticias.find_element(By.XPATH, ".//h3").text
-    img = noticias.find_element(By.XPATH, ".//img").get_attribute("src")
-    link = noticias.find_element(By.XPATH, ".//a").get_attribute("href")
-    link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("href")
-    st.write(name)
-    st.write(img)
-    st.write(link)
-    st.write(link1)
-
-
-
-driver.get('https://www.mdpi.com/search?q=enology&year_from=2024&year_to=2024&page_count=50&sort=pubdate&view=default')
-driver.implicitly_wait(10) 
-WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.XPATH, "//button | //a | //div"))
-)
-accept_text_variations = [
-            "accept", "agree", "allow", "consent", "continue", "ok", "I agree", "got it"
-    ]
-        
-
-sleep(1)
-
-noticias = driver.find_elements(By.XPATH, '//div[@class="article-content"]')
-st.write(noticias)
-for noticias in noticias:
-    name = noticias.find_element(By.XPATH, './/a[@class="title-link"]').text
-    #img = noticias.find_element(By.XPATH, ".//img").get_attribute("src")
-    link = noticias.find_element(By.XPATH, ".//a").get_attribute("href")
-    link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("href")
-    st.write(name)
-    #st.write(img)
-    st.write(link)
-    st.write(link1)
-
-
-driver.get('https://pubmed.ncbi.nlm.nih.gov/?term=wine&sort=date')
-driver.implicitly_wait(10) 
-
-
-WebDriverWait(driver, 20).until(
-            EC.presence_of_element_located((By.XPATH, "//button | //a | //div"))
-)
-
-accept_text_variations = [
-            "accept", "agree", "allow", "consent", "continue", "ok", "I agree", "got it"
-    ]
-        
-
-sleep(1)
-
-noticias = driver.find_elements(By.XPATH, '//div[@class="docsum-wrap"]')
-st.write(noticias)
-for noticias in noticias:
-    name = noticias.find_element(By.XPATH, './/a[@class="docsum-title"]').text
-    #img = noticias.find_element(By.XPATH, ".//img").get_attribute("src")
-    link = noticias.find_element(By.XPATH, ".//a").get_attribute("href")
-    link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("href")
-    st.write(name)
-    #st.write(img)
-    st.write(link)
-    st.write(link1)
-"""
-
-driver.get('https://www.vinetur.com/marketing/')
-driver.implicitly_wait(10) 
-
-
-WebDriverWait(driver, 20).until(
-            EC.presence_of_element_located((By.XPATH, "//button | //a | //div"))
-)
-
-accept_text_variations = [
-            "accept", "agree", "allow", "consent", "continue", "ok", "I agree", "got it"
-    ]
-        
-
-sleep(1)
-
-#st.code(driver.page_source)
-
-sepa = '//li'
-
 
 
 noticias = driver.find_elements(By.XPATH, sepa)
 st.write(noticias)
 for noticias in noticias:
-    name = noticias.find_element(By.XPATH, './/a').text
+    name = noticias.find_element(By.XPATH, vtitu).text
     #img = noticias.find_element(By.XPATH, ".//img").get_attribute("src")
     link = noticias.find_element(By.XPATH, ".//a").get_attribute("href")
     det = noticias.find_element(By.XPATH, './/a').get_attribute("text")
@@ -174,49 +84,3 @@ for noticias in noticias:
                                                                                                                
 
 
-driver.close()
-"""
-st.write(link2[0].get_attribute("href"))
-element_list = [] 
-list_link = []
-list_img = []
-for i in range(len(noticias)): 
-    element_list.append([noticias[i].text])
-    list_link.append(noticias[i].get_attribute("href"))
-    list_img.append(noticias[i].get_attribute("src"))
-
-
-#st.write(link)
-st.write(element_list)
-st.write(list_link)
-st.write(list_img)
-
-for i in range(len(titulo)): 
-    element_list.append([titulo[i].text])
-
-st.write(element_list)
-
-element_list = [] 
-
-for i in range(len(link)): 
-    element_list.append(link[i].get_attribute("href"))
-
-st.write(element_list)
-element_list = [] 
-for i in range(len(link)): 
-    element_list.append([link[i].text])
-
-st.write(element_list)
-
-element_list = [] 
-for i in range(len(link2)): 
-    element_list.append(link2[i].get_attribute("href"))
-
-st.write(element_list)
-
-element_list = [] 
-for i in range(len(imagen)): 
-    element_list.append(imagen[i].get_attribute("img"))
-
-st.write(element_list)
-"""
