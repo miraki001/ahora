@@ -32,14 +32,7 @@ if col2.button("Insertar"):
 if col3.button("Editar"):
     st.switch_page("./pages/editar_fuentes.py")
 if col4.button("Borrar"):
-    st.write(vnuri)
-    conn = st.connection("postgresql", type="sql")
-    with conn.session as session:
-        actualiza = 'delete from fuentes_py where nuri = ' +  vnuri
-        session.execute(text(actualiza) )
-        session.commit()
-
-    
+    st.switch_page("borrarfuente.py")   
 if col5.button("Verificar"):
     st.switch_page("./pages/verifica_pag.py")
 if col6.button("neuvo"):
