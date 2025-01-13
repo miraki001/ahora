@@ -113,6 +113,7 @@ st.write('hasta aca')
 
 
 driver.get('https://enolife.com.ar/es/category/fincas/')
+driver.set_script_timeout(30)
 datos = driver.find_elements(By.XPATH, "//ul/li/article[@class='item']")
 st.write(datos)   
 for datos in datos:
