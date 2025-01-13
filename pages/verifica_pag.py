@@ -43,6 +43,7 @@ pag = st.session_state['vfuente']
 tnuri = st.session_state['vnuri']
 url = st.session_state['vfuente']
 st.write(url)
+st.write(ximage)
 
 
 
