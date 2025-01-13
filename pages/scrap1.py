@@ -125,7 +125,7 @@ for datos in datos:
         #img = re.split('[()]',img)[3]
         st.write(name)
         st.write(link)
-
+        st.write(img)
 
 st.write('despues')
 driver.close()
