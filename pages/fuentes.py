@@ -46,6 +46,8 @@ df = df1[0]
 
 agree = st.checkbox("Solo Activas")
 
+fuente = st.text_input("ingrese el nombre de la fuente")
+
 if agree:
     df['activa'] = 'S'
 
