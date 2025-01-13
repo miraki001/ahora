@@ -112,17 +112,17 @@ st.write('hasta aca')
 
 
 
-driver.get('https://www.abc.net.au/news/topic/viticulture')
-datos = driver.find_elements(By.XPATH, "//*[@class='GenericCard_layout__RVmyo CardLayout_flex__QnHKw CardLayout_tabletColumn__8f7vO CardLayout_desktopColumn__JY3rV']")
+driver.get('https://enolife.com.ar/es/category/fincas/')
+datos = driver.find_elements(By.XPATH, "//ul/li/article[@class='item']")
 st.write(datos)   
 for datos in datos:
-        name = datos.find_element(By.XPATH, ".//a").text
+        name = datos.find_element(By.XPATH, ".//h2/a").text
         link = datos.find_element(By.XPATH, ".//a").get_attribute("href")
-        img = datos.find_element(By.XPATH, "//img").get_attribute("src")
+        #img = datos.find_element(By.XPATH, "//img").get_attribute("src")
         
-        #img = datos.value_of_css_property("background")
-        #st.write(img)
-        #img = re.split('[()]',img)[3]
+        img = datos.value_of_css_property("background-image")
+        st.write(img)
+        #img = re.split('[()]',img)[2]
         st.write(name)
         st.write(link)
         st.write(img)
