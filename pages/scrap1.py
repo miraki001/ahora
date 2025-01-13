@@ -120,7 +120,7 @@ for datos in datos:
         link = datos.find_element(By.XPATH, ".//a").get_attribute("href")
         #img = datos.find_element(By.XPATH, "//a[@style, '<image url>']").text
         #img = datos.find_elements(By.CSS_SELECTOR, "background")
-        soup = BeautifulSoup(datos)
+        soup = BeautifulSoup(datos, 'html.parser')
         div_style = soup.find('div')['style']
         style = cssutils.parseStyle(div_style)
         url = style['background-image']    
