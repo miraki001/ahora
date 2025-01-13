@@ -24,6 +24,11 @@ fuente = st.session_state['vdescrip']
 pais = st.session_state['vpais'] 
 activa = st.session_state['vactiva'] 
 sepa = st.session_state['vsepa'] 
+vtitu = st.session_state['vtit'] 
+vdet  = st.session_state['vdet'] 
+vlink = st.session_state['vlink'] 
+
+
 
 def get_driver():
     options = webdriver.ChromeOptions()
@@ -71,8 +76,8 @@ st.write(noticias)
 for noticias in noticias:
     name = noticias.find_element(By.XPATH, vtitu).text
     #img = noticias.find_element(By.XPATH, ".//img").get_attribute("src")
-    link = noticias.find_element(By.XPATH, ".//a").get_attribute("href")
-    det = noticias.find_element(By.XPATH, './/a').get_attribute("text")
+    link = noticias.find_element(By.XPATH, vlink).get_attribute("href")
+    det = noticias.find_element(By.XPATH, 'vdet).get_attribute("text")
     #link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("text")
     #name1 = noticias.find_element(By.CLASS_NAME, "excerpt mt-2").text
     st.write('Nombre ' + name)
