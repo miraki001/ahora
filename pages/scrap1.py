@@ -120,7 +120,7 @@ for datos in datos:
         link = datos.find_element(By.XPATH, ".//a").get_attribute("href")
         #img = datos.find_element(By.XPATH, "//img").get_attribute("src")
         
-        img = datos.getPropertyValue(("background-image")
+        img = datos.getPropertyValue("background-image")
         st.write(img)
         #img = re.split('[()]',img)[2]
         st.write(name)
