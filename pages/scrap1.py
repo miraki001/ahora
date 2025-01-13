@@ -114,7 +114,7 @@ driver.get('https://enolife.com.ar/es/category/fincas/')
 datos = driver.find_elements(By.XPATH, ".//ul/li")
 st.write(datos)   
 for datos in datos:
-        name = datos.find_element(By.XPATH, ".//h2").text
+        name = datos.find_element(By.XPATH, ".//h2/a").text
         link = datos.find_element(By.XPATH, ".//a").get_attribute("href")
         
         #img = datos.value_of_css_property("background")
