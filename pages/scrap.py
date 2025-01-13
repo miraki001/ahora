@@ -28,7 +28,7 @@ vtitu = st.session_state['vtit']
 vdet  = st.session_state['vdet'] 
 vlink = st.session_state['vlink'] 
 
-
+st.write(vdet)
 
 def get_driver():
     options = webdriver.ChromeOptions()
@@ -72,7 +72,7 @@ sleep(1)
 
 
 noticias = driver.find_elements(By.XPATH, sepa)
-st.write(noticias)
+#st.write(noticias)
 for noticias in noticias:
     name = noticias.find_element(By.XPATH, vtitu).text
     #img = noticias.find_element(By.XPATH, ".//img").get_attribute("src")
