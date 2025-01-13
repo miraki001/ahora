@@ -51,8 +51,10 @@ fuente = st.text_input("ingrese el nombre de la fuente")
 
 if st.button("Aplicar")
     if agree:    
-        qq = 'select nuri,fuente as url,activa,fecha_act,descrip as fuente,pais from fuentes_py where proyecto_nuri = 1  and ;'
-        df1 = conn.query(qq , ttl="0"),
+        df[df.activa.isin('S')]
+        df[df.fuente.isin(fuente)]
+        #qq = 'select nuri,fuente as url,activa,fecha_act,descrip as fuente,pais from fuentes_py where proyecto_nuri = 1  and ;'
+        #df1 = conn.query(qq , ttl="0"),
 
 if agree:
     df['activa'] = 'S'
