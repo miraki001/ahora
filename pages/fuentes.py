@@ -51,9 +51,9 @@ pfuente = st.text_input("ingrese el nombre de la fuente")
 
 if st.button("Aplicar"):
     if agree:    
-       pactiva == 'S'
+       pactiva = 'S'
     else:
-        pactiva == 'N'
+        pactiva = 'N'
     df[(df.activa == pactiva) & (df.fuente == pfuente)]
 
 
