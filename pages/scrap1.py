@@ -74,7 +74,7 @@ accept_text_variations = [
         
 
 #sleep(1)
-"""
+
 #datos = driver.find_elements(By.XPATH, "/html/body/div[1]/div[2]/div[1]/div/ul/li [not(contains(class, 'adsbygoogle'))]")
 datos = driver.find_elements(By.XPATH, "//li/div")
 #not [@class='adsbygoogle']")
@@ -107,7 +107,7 @@ for datos in datos:
 #        st.write('none')
 
     
-"""
+
 st.write('hasta aca')    
 
 
