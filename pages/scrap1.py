@@ -82,7 +82,7 @@ datos = driver.find_elements(By.XPATH, "//li/div")
 #datos =  driver.find_elements(By.tagName ,"li")
 
 
-st.write(datos)
+#st.write(datos)
 for datos in datos:
 #    try:
         name = datos.find_element(By.XPATH, ".//a").text
@@ -110,18 +110,10 @@ st.write('hasta aca')
 
 
 
-products = soup.find_elements(By.XPATH, "/html/body/div[1]/div[2]/div[1]/div/ul/li")
-st.write(products)
-data = soup.find_all('a', 'li')
-
-#data = soup.find('a')
-st.write(data)
-for link in soup.find_all('a'):
-    st.write(link.get('href'))
 
 st.write('despues')
 
-
+"""
 
 options = webdriver.ChromeOptions()
 options.add_experimental_option("excludeSwitches", ["enable-automation"])
@@ -174,3 +166,4 @@ with cont_url:
     option = st.selectbox('Select your asset:', url_list) 
     st.write('You selected:', option)
     st.table(url_list) # to see what the url_list is returning.
+"""
