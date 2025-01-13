@@ -11,3 +11,4 @@ with conn.session as session:
   actualiza = 'delete from fuentes_py where nuri = ' +  tnuri
   session.execute(text(actualiza) )
   session.commit()
+st.switch_page("./pages/fuentes.py")
