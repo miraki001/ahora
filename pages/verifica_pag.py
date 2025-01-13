@@ -96,7 +96,7 @@ for noticias in noticias:
         img = noticias.find_element(By.XPATH, ximage).get_attribute("src")
         st.write(img)
 
-    if ximage == 'background'
+    if ximage == 'background':
         img = datos.value_of_css_property("background") 
         img = re.split('[()]',img)[3]
         st.write(img)
