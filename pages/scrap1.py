@@ -125,4 +125,5 @@ for datos in datos:
 
 
 st.write('despues')
+driver.close()
 
