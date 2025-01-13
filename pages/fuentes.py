@@ -32,10 +32,10 @@ if col2.button("Insertar"):
 if col3.button("Editar"):
     st.switch_page("./pages/editar_fuentes.py")
 if col4.button("Borrar"):
-    st.write(tnuri)
+    st.write(vnuri)
     conn = st.connection("postgresql", type="sql")
     with conn.session as session:
-        actualiza = 'delete from fuentes_py where nuri = ' +  tnuri
+        actualiza = 'delete from fuentes_py where nuri = ' +  vnuri
         session.execute(text(actualiza) )
         session.commit()
 
@@ -141,7 +141,9 @@ st.session_state['vdescrip'] = selection.to_string(columns=['fuente'], header=Fa
 st.session_state['vnuri'] = selection.to_string(columns=['nuri'], header=False, index=False)
 st.session_state['vpais'] = selection.to_string(columns=['pais'], header=False, index=False)
 st.session_state['vactiva'] = selection.to_string(columns=['activa'], header=False, index=False)
+
 tnuri = st.session_state['vnuri']
+st.write(tnuri)
 
 
 
