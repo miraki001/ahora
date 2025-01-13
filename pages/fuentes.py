@@ -47,15 +47,14 @@ df = df1[0]
 
 agree = st.checkbox("Solo Activas")
 
-fuente = st.text_input("ingrese el nombre de la fuente")
+pfuente = st.text_input("ingrese el nombre de la fuente")
 
 if st.button("Aplicar"):
     if agree:    
-        df[(df.activa == 'S') & (df.fuente == fuente)]
-        #df[df.activa.isin('S')]
-        #df[df.fuente.isin(fuente)]
-        #qq = 'select nuri,fuente as url,activa,fecha_act,descrip as fuente,pais from fuentes_py where proyecto_nuri = 1  and ;'
-        #df1 = conn.query(qq , ttl="0"),
+       pactiva == 'S'
+    else:
+        pactiva == 'N'
+    df[(df.activa == pactiva) & (df.fuente == pfuente)]
 
 
 
