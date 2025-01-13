@@ -118,7 +118,7 @@ st.write(datos)
 for datos in datos:
         name = datos.find_element(By.XPATH, ".//a").text
         link = datos.find_element(By.XPATH, ".//a").get_attribute("href")
-        img = datos.find_element(By.XPATH, "//image").get_attribute("src")
+        img = datos.find_element(By.XPATH, "//alt").get_attribute("src")
         
         #img = datos.value_of_css_property("background")
         #st.write(img)
