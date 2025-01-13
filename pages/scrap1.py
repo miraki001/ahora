@@ -111,7 +111,7 @@ st.write('hasta aca')
 
 
 driver.get('https://enolife.com.ar/es/category/fincas/')
-datos = driver.find_elements(By.XPATH, ".//ul/li")
+datos = driver.find_elements(By.XPATH, "//*[@class='item']")
 st.write(datos)   
 for datos in datos:
         #name = datos.find_element(By.XPATH, ".//h2/a").text
