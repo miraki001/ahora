@@ -41,12 +41,18 @@ if col6.button("neuvo"):
 
 
 conn = st.connection("postgresql", type="sql")
-df1 = conn.query('select nuri,fuente as url,activa,fecha_act,descrip as fuente,pais from fuentes_py where proyecto_nuri = 1  ;', ttl="0"),
+qq = 'select nuri,fuente as url,activa,fecha_act,descrip as fuente,pais from fuentes_py where proyecto_nuri = 1  ;'
+df1 = conn.query(qq, ttl="0"),
 df = df1[0]
 
 agree = st.checkbox("Solo Activas")
 
 fuente = st.text_input("ingrese el nombre de la fuente")
+
+if st.button("Aplicar")
+    if agree:    
+        qq = 'select nuri,fuente as url,activa,fecha_act,descrip as fuente,pais from fuentes_py where proyecto_nuri = 1  and ;'
+        df1 = conn.query(qq , ttl="0"),
 
 if agree:
     df['activa'] = 'S'
