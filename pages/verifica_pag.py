@@ -94,7 +94,7 @@ for noticias in noticias:
 
     #img = noticias.find_element(By.XPATH, ximage).get_attribute("src")
     link = noticias.find_element(By.XPATH, xlink).get_attribute("href")
-    detalle = noticias.find_element(By.XPATH, xdetalle).get_attribute("href")
+    detalle = noticias.find_element(By.XPATH, xdetalle).get_attribute("text")
     #link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("href")
     st.write(name)
     #st.write(img)
