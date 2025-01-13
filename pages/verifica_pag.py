@@ -97,7 +97,9 @@ for noticias in noticias:
         st.write(img)
 
     if ximage == 'background'
-        img = datos.value_of_css_property("background")    
+        img = datos.value_of_css_property("background") 
+        img = re.split('[()]',img)[3]
+        st.write(img)
     link = noticias.find_element(By.XPATH, xlink).get_attribute("href")
     detalle = noticias.find_element(By.XPATH, xdetalle).text
     #link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("href")
