@@ -50,6 +50,7 @@ fuente = st.text_input("ingrese el nombre de la fuente")
 
 if agree:
     df['activa'] = 'S'
+    df['fuente'] = fuente
 
 
 #st.write(df1[0])
