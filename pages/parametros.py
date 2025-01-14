@@ -48,7 +48,7 @@ if col3.button("Excluidas"):
 if col4.button("Sectores"):
     st.switch_page("./pages/sectores.py")   
 if col5.button("Ejes"):
-    st.switch_page("./pages/verifica_pag.py")
+    st.switch_page("./pages/ejes.py")
 if col6.button("Palabras por Sector"):
     st.switch_page("./pages/scraptodo.py")
 if col7.button("Proyectos"):
