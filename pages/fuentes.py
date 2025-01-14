@@ -29,7 +29,7 @@ st.markdown("""
             <style>
             div.stButton {text-align:center}
             div.stButton > button:first-child {
-                background-color: #ffa500;
+                background-color: #b579c2;
                 color:#000000;
                 font-weight: bold;
             }
