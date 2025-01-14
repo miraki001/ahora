@@ -57,7 +57,7 @@ with stylable_container(
 
     }""",
 ):
-
+   button2_clicked = st.button("Button 2", key="button2")
 
 #st.query_params.from_dict({"foo": "bar", "baz": [1, 2, 3]})
 
