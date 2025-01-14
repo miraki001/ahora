@@ -16,6 +16,8 @@ st.set_page_config(
 )
 
 st.title("Miraki")
+st.subheader("Plataforma de Vigilancia Tecnólogica e Inteligencia Competitiva")
+st.image("ic_launcher44.png", width=60,)
 
 col1, col2, col3,col4,col5,col6 = st.columns(6)
 
