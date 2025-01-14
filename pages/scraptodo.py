@@ -47,7 +47,7 @@ def scrap():
     options.add_argument('--headless')
 
     driver = get_driver()
-    driver.get('https://www.observatoriova.com/')
+    driver.get(vfuente)
 
 
     driver.implicitly_wait(10) 
@@ -58,6 +58,21 @@ def scrap():
             "accept", "agree", "allow", "consent", "continue", "ok", "I agree", "got it"
     ]
     sleep(1)
+    noticias = driver.find_elements(By.XPATH, vsepa)
+    #st.write(noticias)
+    for noticias in noticias:
+        name = noticias.find_element(By.XPATH, vtitu).text
+        #img = noticias.find_element(By.XPATH, ".//img").get_attribute("src")
+        link = noticias.find_element(By.XPATH, vlink).get_attribute("href")
+        det = noticias.find_element(By.XPATH, 'vdeta).text
+        #link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("text")
+        #name1 = noticias.find_element(By.CLASS_NAME, "excerpt mt-2").text
+        st.write('Nombre ' + name)
+        #st.write('imagen '+  img)
+        st.write('link ' + link)
+        #st.write('link 1 ' + link1)
+        st.write(det)
+        #st.write(name1)
 
 
 
@@ -80,3 +95,4 @@ for i in range(len(df)):
   vfuente = df['descrip'][i]
   vurl = df['fuente'][i]
   st.write(df['nuri'][i])
+  scrap()  
