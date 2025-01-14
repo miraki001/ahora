@@ -27,6 +27,20 @@ with col42:
 
 st.subheader("Plataforma de Vigilancia Tecnólogica e Inteligencia Competitiva")
 
+st.markdown("""
+            <style>
+            div.stButton {text-align:center}
+            div.stButton > button:first-child {
+                background-color: #b579c2;
+                color:#000000;
+                font-weight: bold;
+            }
+            div.stButton > button:hover {
+                background-color: #79adc2;
+                color:#ff0000;
+                }
+            </style>""", unsafe_allow_html=True)
+
 
 col1, col2, col3,col4,col5,col6,col7 = st.columns(7)
 
