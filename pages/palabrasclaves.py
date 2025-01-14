@@ -69,7 +69,7 @@ colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 config = {
     'palabra' : st.column_config.TextColumn('palabra', required=True),
     'peso' : st.column_config.NumberColumn('peso',),
-,
+
 
     
 }
