@@ -113,8 +113,8 @@ def scrap():
         st.write(ptitulo)
         conn = st.connection("postgresql", type="sql")
         with conn.session as session:
-            ingresar = "insert into novedades (nuri,fuente,titulo,detalle,link,tipo,imagen,fecha,proyecto_nuri,fuente_nuri,eje_nuri)"
-            ingresar = ingresar + " values (nextval('novedades_seq'),:fuente,:titulo,:detalle,:link,'P',:imagen,current_date,1,:fuente_nuri,1); "
+            ingresar = "insert into novedades (nuri,fuente,titulo,detalle,link,tipo,imagen,fecha,proyecto_nuri,fuente_nuri,eje_nuri) "
+            ingresar = ingresar + " values (nextval('novedades_seq'),:fuente,:titulo,:detalle,:link,'P',:imagen,current_date,1,:fuente_nuri,1) ; "
             session.execute(text(ingresar), {"fuente": vfuente,"titulo": ptitulo,"detalle": pdet,"link": plink, "imagen": pimg,"fuente_nuri": vnuri})
             #ingresar = "insert into prueba (nuri, otro) "
             #ingresar = ingresar + "values ( nextval('prueba_seq') , :valor)  ;"
