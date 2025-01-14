@@ -116,7 +116,7 @@ def scrap():
         conn = st.connection("postgresql", type="sql")
         qq = "select nextval('prueba_seq') as nuri  ;"
         df5 = conn.query(qq, ttl="0")
-
+        st.write(df5)
         df3 = df5[0]
         st.write(df3)
         vnuri = df3.to_string(columns=['nuri'], header=False, index=False)
