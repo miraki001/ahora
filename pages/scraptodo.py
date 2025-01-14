@@ -54,7 +54,7 @@ def insertar():
     with conn.session as session:
         ingresar = "insert into novedades (nuri,fuente,titulo,detalle,link,tipo,imagen,fecha,proyecto_nuri,fuente_nuri,eje_nuri)"
         ingresar = ingresar + " values (nextval('novedades_seq'),:fuente,:titulo,:detalle,:link,'P',:imagen,current_date,1,:fuente_nuri,:eje_nuri); "
-        session.execute(text(ingresar), {"fuente": vfuente,"titulo": name,"detalle": det,"link": link, "imagen": img,"fuente_nuri": vnuri, "eje_nuri": 1})
+        session.execute(text(ingresar), {"fuente": vfuente,"titulo": titulo,"detalle": det,"link": link, "imagen": img,"fuente_nuri": vnuri, "eje_nuri": 1})
         session.commit()
         
 
@@ -80,7 +80,7 @@ def scrap():
     noticias = driver.find_elements(By.XPATH, vsepa)
     #st.write(noticias)
     for noticias in noticias:
-        name = noticias.find_element(By.XPATH, vtitu).get_attribute("text")
+        titulo = noticias.find_element(By.XPATH, vtitu).get_attribute("text")
         if vimag == '//img':
             img = noticias.find_element(By.XPATH, vimag).get_attribute("src")
             st.write(img)
@@ -92,7 +92,7 @@ def scrap():
         link = noticias.find_element(By.XPATH, vlink).get_attribute("href")
         detalle = noticias.find_element(By.XPATH, vdeta).text
         #link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("href")
-        st.write(name)
+        st.write(titulo)
         #st.write(img)
         st.write(link)
         insertar()
