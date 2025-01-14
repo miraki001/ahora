@@ -114,6 +114,11 @@ def scrap():
         st.write(ptitulo)
         tnuri = int(vnuri)
         conn = st.connection("postgresql", type="sql")
+# vamos a bucar si ya existe la noticias
+        vquery = 'select count(nuri) as cnt from novedades where proyecto_nuri = 1 and  fuente_nuri = ' + tnuri + ' and titulo = ' + ptitulo + '  ;'
+        df2 = conn.query(vquery, ttl="0"),
+
+        
         with conn.session as session:
             ingresar = "insert into novedades (nuri,fuente,titulo,detalle,link,tipo,imagen,fecha,proyecto_nuri,fuente_nuri,eje_nuri,select_web.selec_alerta,selec) "
             ingresar = ingresar + " values (nextval('novedades_seq'),:fuente,:titulo,:detalle,:link,'P',:imagen,current_date,1,:fuente_nuri,1,'N','N','N') ; "
