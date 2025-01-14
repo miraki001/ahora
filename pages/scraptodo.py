@@ -114,8 +114,8 @@ def scrap():
 #            ingresar = ingresar + " values (nextval('novedades_seq'),:fuente,:titulo,:detalle,:link,'P',:imagen,current_date,1,:fuente_nuri,1); "
 #            session.execute(text(ingresar), {"fuente": vfuente,"titulo": ptitulo,"detalle": pdet,"link": plink, "imagen": pimg,"fuente_nuri": vnuri})
             ingresar = "insert into prueba (nuri) "
-            ingresar = ingresar + "values (1)  ;"
-            session.execute(text(ingresar))
+            ingresar = ingresar + "values (:valor)  ;"
+            session.execute(text(ingresar),{"valor": 1})
             session.commit()
 
 
