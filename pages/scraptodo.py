@@ -29,4 +29,5 @@ st.write(df)
 st.write(len(df))
 
 for i in range(len(df)):
+  sepa = df['nuri'][i])
   st.write(df['nuri'][i])
