@@ -57,7 +57,7 @@ df = df1[0]
 
 
 
-ppalabra = st.text_input("ingrese el nombre de la sector")
+ppalabra = st.text_input("ingrese el nombre del sector")
 
 if ppalabra:
     mask = df.applymap(lambda x: ppalabra in str(x).lower()).any(axis=1)
