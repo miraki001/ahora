@@ -17,4 +17,5 @@ from streamlit_extras.image_in_tables import table_with_images
 import streamlit.components.v1 as components
 from streamlit_echarts import st_echarts
 import base64
-
+import psycopg2
+from sqlalchemy import text
