@@ -22,8 +22,26 @@ from sqlalchemy import text
 
 my_user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
 
+def get_driver():
+    options = webdriver.ChromeOptions()
+    
+    options.add_argument('--disable-gpu')
+    options.add_argument('--headless')
+    #options.add_argument(f"--window-size={width}x{height}")
+    options.add_argument(f"--user-agent={my_user_agent}")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--disable-features=NetworkService")
+    options.add_argument("--window-size=1920x1080")
+    options.add_argument("--disable-features=VizDisplayCompositor")
+    
+    service = Service()
+    driver = webdriver.Chrome(service=service, options=options)
+    
+    return webdriver.Chrome(service=service, options=options)
 
-def scrap()
+
+def scrap():
 
 
 
