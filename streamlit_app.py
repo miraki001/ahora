@@ -18,6 +18,16 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"
     }
 )
+
+col41, mid, col42 = st.columns([1,1,20])
+with col41:
+    st.image('ic_launcher44.png', width=60)
+with col42:
+    st.title('Miraki')
+
+st.subheader("Plataforma de Vigilancia Tecnólogica e Inteligencia Competitiva")
+
+
 col1, col2, col3,col4,col5,col6,col7 = st.columns(7)
 
 vnuri = 500
