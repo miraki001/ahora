@@ -80,18 +80,22 @@ def scrap():
     noticias = driver.find_elements(By.XPATH, vsepa)
     #st.write(noticias)
     for noticias in noticias:
-        name = noticias.find_element(By.XPATH, vtitu).text
-        #img = noticias.find_element(By.XPATH, ".//img").get_attribute("src")
-        link = noticias.find_element(By.XPATH, vlink).get_attribute("href")
-        det = noticias.find_element(By.XPATH, vdeta).text
-        #link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("text")
-        #name1 = noticias.find_element(By.CLASS_NAME, "excerpt mt-2").text
-        st.write('Nombre ' + name)
-        #st.write('imagen '+  img)
-        st.write('link ' + link)
-        #st.write('link 1 ' + link1)
-        st.write(det)
-        #st.write(name1)
+        name = noticias.find_element(By.XPATH, xtitulo).get_attribute("text")
+        if ximage == '//img':
+            img = noticias.find_element(By.XPATH, ximage).get_attribute("src")
+            st.write(img)
+    
+        if ximage == 'background':
+            img = noticias.value_of_css_property("background") 
+            img = re.split('[()]',img)[3]
+            st.write(img)
+        link = noticias.find_element(By.XPATH, xlink).get_attribute("href")
+        detalle = noticias.find_element(By.XPATH, xdetalle).text
+        #link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("href")
+        st.write(name)
+        #st.write(img)
+        st.write(link)
+        insertar()
 
 
 
