@@ -103,7 +103,7 @@ def scrap():
         #st.write(img)
         st.write(link)
         ptitulo = titulo
-        pdet = det
+        pdet = detalle
         plink = link
         pimg = img
         insertar()
