@@ -21,7 +21,8 @@ vtitulo= ''
 vdetalle = ''
 vlink = ''
 vimagen = ''
-
+button1_color = "#00FF00"  # Green color for Button 1
+button2_color = "#FF0000"  # Red color for Button 2
 
 #st.query_params.from_dict({"foo": "bar", "baz": [1, 2, 3]})
 
