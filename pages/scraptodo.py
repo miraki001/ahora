@@ -55,9 +55,8 @@ def insertar():
         ingresar = "insert into novedades (nuri,fuente,titulo,detalle,link,tipo,imagen,fecha,proyecto_nuri,fuente_nuri,eje_nuri)"
         ingresar = ingresar + " values (nextval('novedades_seq'),:fuente,:titulo,:detalle,:link,'P',:imagen,current_date,1,:fuente_nuri,:eje_nuri); "
         session.execute(text(ingresar), {"fuente": vfuente,"titulo": name,"detalle": det,"link": link, "imagen": img,"fuente_nuri": vnuri, "eje_nuri": 1})
-                        
-    session.commit()
-    st.success("Data sent")
+        session.commit()
+        
 
 
 def scrap():
