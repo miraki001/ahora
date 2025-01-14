@@ -39,10 +39,10 @@ st.markdown("""
 
 
 
-if col1.button("Home" ,  type='primary'):
+if col1.button("Volver" ,  type='primary'):
     st.switch_page("streamlit_app.py")
 if col2.button("Palabras Claves"):
-    st.switch_page("./pages/insertar_fuente.py")
+    st.switch_page("./pages/palabrasclaves.py")
 if col3.button("Excluidas"):
     st.switch_page("./pages/editar_fuentes.py")
 if col4.button("Sectores"):
