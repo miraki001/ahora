@@ -120,7 +120,7 @@ def scrap():
 # vamos a bucar si ya existe la noticias
         vquery = "select count(nuri) as cnt from novedades where proyecto_nuri = 1 and  fuente_nuri = " + snuri + " and titulo =  '" + ptitulo +  "'  ;"
         df2 = conn.query(vquery, ttl="0")
-        cnt = dfd.to_string(columns=['cnt'], header=False, index=False)
+        cnt = df2.to_string(columns=['cnt'], header=False, index=False)
         pcnt = int(cnt)
         if pcnt == 0:       
             with conn.session as session:
