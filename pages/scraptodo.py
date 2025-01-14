@@ -58,6 +58,10 @@ def insertar():
     st.write('este el titulo')
     st.write(ptitulo)
     conn = st.connection("postgresql", type="sql")
+
+    qq = " select nextval('prueba_seq')  ;"
+    df5 = conn.query(qq, ttl="0")
+    
     with conn.session as session:
         ingresar = "insert into novedades (nuri,fuente,titulo,detalle,link,tipo,imagen,fecha,proyecto_nuri,fuente_nuri,eje_nuri)"
         ingresar = ingresar + " values (nextval('novedades_seq'),:fuente,:titulo,:detalle,:link,'P',:imagen,current_date,1,:fuente_nuri,1); "
