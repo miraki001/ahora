@@ -28,6 +28,13 @@ df = df1[0]
 st.write(df)
 st.write(len(df))
 
+
+
 for i in range(len(df)):
-  sepa = df['nuri'][i])
+  vsepa = df['separador'][i])
+  vtitu = df['xpath_titulo'][i])
+  vdeta = df['xpath_detalle'][i])
+  vlink = df['xpath_link'][i])
+  vimag = df['xpath_image'][i])
+  pnuri = df['nuri'][i]
   st.write(df['nuri'][i])
