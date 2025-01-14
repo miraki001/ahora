@@ -111,11 +111,12 @@ def scrap():
         pdet = detalle
         plink = link
         #st.write('titulo1')
-        st.write(ptitulo)
+        #st.write(ptitulo)
         tnuri = int(vnuri)
         snuri = str(tnuri)
         conn = st.connection("postgresql", type="sql")
-        titulo = titulo.replace("'"," ")
+        ptitulo = ptitulo.replace("'"," ")
+        st.write(ptitulo)
 # vamos a bucar si ya existe la noticias
         vquery = "select count(nuri) as cnt from novedades where proyecto_nuri = 1 and  fuente_nuri = " + snuri + " and titulo =  '" + ptitulo +  "'  ;"
         df2 = conn.query(vquery, ttl="0")
