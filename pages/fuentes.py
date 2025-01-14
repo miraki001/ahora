@@ -1,6 +1,7 @@
 import streamlit as st
 import psycopg2
 from sqlalchemy import text
+from streamlit_extras.stylable_container import stylable_container
 
 st.set_page_config(
     page_title="Miraki",
@@ -21,8 +22,10 @@ vtitulo= ''
 vdetalle = ''
 vlink = ''
 vimagen = ''
+
 button1_color = "#00FF00"  # Green color for Button 1
 button2_color = "#FF0000"  # Red color for Button 2
+
 button_style = f"""
     <style>
         div[data-baseweb="button"] div:nth-child(1) button {{
@@ -36,6 +39,24 @@ button_style = f"""
     </style>
 """
 st.markdown(button_style, unsafe_allow_html=True)
+
+with stylable_container(
+    "green",
+    css_styles="""
+    button {
+        background-color: #00FF00;
+        color: black;
+    }""",
+):
+    button1_clicked = st.button("Button 1", key="button1")
+with stylable_container(
+    "red",
+    css_styles="""
+    button {
+        background-color: #FF0000;
+
+    }""",
+):
 
 
 #st.query_params.from_dict({"foo": "bar", "baz": [1, 2, 3]})
