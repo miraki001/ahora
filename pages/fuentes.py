@@ -15,6 +15,8 @@ st.set_page_config(
     }
 )
 
+st.title("Miraki")
+
 col1, col2, col3,col4,col5,col6 = st.columns(6)
 
 tnuri = 0
