@@ -1,4 +1,4 @@
-timport streamlit as st
+import streamlit as st
 import psycopg2
 from sqlalchemy import text
 from streamlit_extras.stylable_container import stylable_container
