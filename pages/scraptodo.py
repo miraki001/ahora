@@ -57,6 +57,7 @@ def scrap():
     options.add_argument('--headless')
 
     driver = get_driver()
+    st.write(vfuente)
     driver.get(vfuente)
 
 
