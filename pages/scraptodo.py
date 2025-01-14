@@ -42,6 +42,11 @@ def get_driver():
 
 
 def scrap():
+    options = Options()
+    options.add_argument('--disable-gpu')
+    options.add_argument('--headless')
+
+    driver = get_driver()
 
 
 
