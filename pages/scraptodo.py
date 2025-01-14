@@ -29,4 +29,4 @@ st.write(df)
 st.write(len(df))
 
 for i in range(len(df)):
-  st.write(df[i])
+  st.write(df['nuri'][i])
