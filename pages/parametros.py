@@ -1,4 +1,4 @@
-import streamlit as st
+timport streamlit as st
 import psycopg2
 from sqlalchemy import text
 from streamlit_extras.stylable_container import stylable_container
@@ -46,7 +46,7 @@ if col2.button("Palabras Claves"):
 if col3.button("Excluidas"):
     st.switch_page("./pages/editar_fuentes.py")
 if col4.button("Sectores"):
-    st.switch_page("./pages/borrarfuente.py")   
+    st.switch_page("./pages/sectores.py")   
 if col5.button("Ejes"):
     st.switch_page("./pages/verifica_pag.py")
 if col6.button("Palabras por Sector"):
