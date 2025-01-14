@@ -2,7 +2,7 @@ import streamlit as st
 import psycopg2
 from sqlalchemy import text
 from streamlit_extras.stylable_container import stylable_container
-
+"""
 st.set_page_config(
     page_title="Miraki",
     page_icon="🧊",
@@ -14,6 +14,7 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"
     }
 )
+"""
 col11, col12 = st.columns(2)
 if col11:
     st.image("ic_launcher44.png", width=60,)
