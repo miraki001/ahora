@@ -80,17 +80,17 @@ def scrap():
     noticias = driver.find_elements(By.XPATH, vsepa)
     #st.write(noticias)
     for noticias in noticias:
-        name = noticias.find_element(By.XPATH, xtitulo).get_attribute("text")
-        if ximage == '//img':
-            img = noticias.find_element(By.XPATH, ximage).get_attribute("src")
+        name = noticias.find_element(By.XPATH, vtitu).get_attribute("text")
+        if vimag == '//img':
+            img = noticias.find_element(By.XPATH, vimag).get_attribute("src")
             st.write(img)
     
-        if ximage == 'background':
+        if vimag == 'background':
             img = noticias.value_of_css_property("background") 
             img = re.split('[()]',img)[3]
             st.write(img)
-        link = noticias.find_element(By.XPATH, xlink).get_attribute("href")
-        detalle = noticias.find_element(By.XPATH, xdetalle).text
+        link = noticias.find_element(By.XPATH, vlink).get_attribute("href")
+        detalle = noticias.find_element(By.XPATH, vdeta).text
         #link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("href")
         st.write(name)
         #st.write(img)
