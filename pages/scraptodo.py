@@ -91,11 +91,13 @@ def scrap():
         if vimag == '//img':
             img = noticias.find_element(By.XPATH, vimag).get_attribute("src")
             st.write(img)
+            pimg = img
     
         if vimag == 'background':
             img = noticias.value_of_css_property("background") 
             img = re.split('[()]',img)[3]
             st.write(img)
+            pimg = img
         link = noticias.find_element(By.XPATH, vlink).get_attribute("href")
         detalle = noticias.find_element(By.XPATH, vdeta).text
         #link1 = noticias.find_element(By.XPATH, ".//a/following::a").get_attribute("href")
@@ -105,7 +107,6 @@ def scrap():
         ptitulo = titulo
         pdet = detalle
         plink = link
-        pimg = img
         st.write('titulo1')
         st.write(ptitulo)
         conn = st.connection("postgresql", type="sql")
@@ -113,8 +114,8 @@ def scrap():
 #            ingresar = "insert into novedades (nuri,fuente,titulo,detalle,link,tipo,imagen,fecha,proyecto_nuri,fuente_nuri,eje_nuri)"
 #            ingresar = ingresar + " values (nextval('novedades_seq'),:fuente,:titulo,:detalle,:link,'P',:imagen,current_date,1,:fuente_nuri,1); "
 #            session.execute(text(ingresar), {"fuente": vfuente,"titulo": ptitulo,"detalle": pdet,"link": plink, "imagen": pimg,"fuente_nuri": vnuri})
-            ingresar = "insert into prueba (nuri) "
-            ingresar = ingresar + "values (:valor)  ;"
+            ingresar = "insert into prueba (nuri,otro) "
+            ingresar = ingresar + "values ( nextval('prueba_seq'), :valor)  ;"
             session.execute(text(ingresar),{"valor": 1})
             session.commit()
 
