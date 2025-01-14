@@ -98,6 +98,7 @@ for noticias in noticias:
 
     if ximage == 'background':
         img = noticias.value_of_css_property("background") 
+        st.write(img)
         img = re.split('[()]',img)[3]
         st.write(img)
     link = noticias.find_element(By.XPATH, xlink).get_attribute("href")
