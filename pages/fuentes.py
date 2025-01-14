@@ -4,16 +4,12 @@ from sqlalchemy import text
 from streamlit_extras.stylable_container import stylable_container
 
 
-title_container = st.beta_container()
-col1, col2 = st.beta_columns([1, 20])
-image = Image.open('ic_launcher44.png')
-with title_container:
-    with col1:
-        st.image(image, width=64)
-    with col2:
-        st.markdown('<h1 style="color: purple;">Suzieq</h1>',
-                unsafe_allow_html=True)
-
+st.write("a logo and text next to eachother")
+col41, mid, col42 = st.beta_columns([1,1,20])
+with col41:
+    st.image('ic_launcher44.png', width=60)
+with col42:
+    st.write('A Name')
 
 col11, col12 = st.columns(2)
 if col11:
