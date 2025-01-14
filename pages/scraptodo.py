@@ -28,10 +28,10 @@ vimag = ''
 vnuri = 0
 vfuente = ''
 vurl = ''
-titulo = ''
-det = ''
-link = ''
-img = ''
+ptitulo = ''
+pdet = ''
+plink = ''
+pimg = ''
 
 
 my_user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
@@ -56,11 +56,12 @@ def get_driver():
 
 def insertar():
     st.write('este el titulo')
-    st.write(titulo)
+    st.write(ptitulo)
+    conn = st.connection("postgresql", type="sql")
     with conn.session as session:
         ingresar = "insert into novedades (nuri,fuente,titulo,detalle,link,tipo,imagen,fecha,proyecto_nuri,fuente_nuri,eje_nuri)"
         ingresar = ingresar + " values (nextval('novedades_seq'),:fuente,:titulo,:detalle,:link,'P',:imagen,current_date,1,:fuente_nuri,1); "
-        session.execute(text(ingresar), {"fuente": vfuente,"titulo": titulo,"detalle": det,"link": link, "imagen": img,"fuente_nuri": vnuri})
+        session.execute(text(ingresar), {"fuente": vfuente,"titulo": ptitulo,"detalle": pdet,"link": plink, "imagen": pimg,"fuente_nuri": vnuri})
         session.commit()
         
 
@@ -101,6 +102,10 @@ def scrap():
         st.write(titulo)
         #st.write(img)
         st.write(link)
+        ptitulo = titulo
+        pdet = det
+        plink = link
+        pimg = img
         insertar()
 
 
