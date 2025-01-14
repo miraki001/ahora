@@ -40,7 +40,7 @@ st.markdown("""
 
 
 if col1.button("Volver" ,  type='primary'):
-    st.switch_page("streamlit_app.py")
+    st.switch_page("parametros.py")
 if col2.button("Insertar"):
     st.switch_page("./pages/insertar_fuente.py")
 if col3.button("Editar"):
