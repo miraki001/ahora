@@ -55,6 +55,8 @@ def get_driver():
     return webdriver.Chrome(service=service, options=options)
 
 def insertar():
+    st.write('este el titulo')
+    st.write(titulo)
     with conn.session as session:
         ingresar = "insert into novedades (nuri,fuente,titulo,detalle,link,tipo,imagen,fecha,proyecto_nuri,fuente_nuri,eje_nuri)"
         ingresar = ingresar + " values (nextval('novedades_seq'),:fuente,:titulo,:detalle,:link,'P',:imagen,current_date,1,:fuente_nuri,1); "
