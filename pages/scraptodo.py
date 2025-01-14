@@ -19,3 +19,9 @@ from streamlit_echarts import st_echarts
 import base64
 import psycopg2
 from sqlalchemy import text
+
+
+conn = st.connection("postgresql", type="sql")
+qq = "select * from fuentes_py where proyecto_nuri = 1 and activa = 'S'  ;"
+df1 = conn.query(qq, ttl="0"),
+df = df1[0]
