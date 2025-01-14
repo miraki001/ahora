@@ -2,19 +2,19 @@ import streamlit as st
 import psycopg2
 from sqlalchemy import text
 from streamlit_extras.stylable_container import stylable_container
-"""
-st.set_page_config(
-    page_title="Miraki",
-    page_icon="🧊",
-    layout="wide",
-    initial_sidebar_state="expanded",
-    menu_items={
-        'Get Help': 'https://www.extremelycoolapp.com/help',
-        'Report a bug': "https://www.extremelycoolapp.com/bug",
-        'About': "# This is a header. This is an *extremely* cool app!"
-    }
-)
-"""
+
+
+title_container = st.beta_container()
+col1, col2 = st.beta_columns([1, 20])
+image = Image.open('ic_launcher44.png')
+with title_container:
+    with col1:
+        st.image(image, width=64)
+    with col2:
+        st.markdown('<h1 style="color: purple;">Suzieq</h1>',
+                unsafe_allow_html=True)
+
+
 col11, col12 = st.columns(2)
 if col11:
     st.image("ic_launcher44.png", width=60,)
