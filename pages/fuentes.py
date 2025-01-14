@@ -14,9 +14,11 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"
     }
 )
-
-st.image("ic_launcher44.png", width=60,)
-st.title("Miraki")
+col11, col12 = st.columns(2)
+if col11:
+    st.image("ic_launcher44.png", width=60,)
+if col12:    
+    st.title("Miraki")
 st.subheader("Plataforma de Vigilancia Tecnólogica e Inteligencia Competitiva")
 
 
