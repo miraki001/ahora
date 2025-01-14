@@ -27,11 +27,11 @@ button_style = f"""
     <style>
         div[data-baseweb="button"] div:nth-child(1) button {{
             background-color: {button1_color} !important;
-            color: white !important;
+            color: "#FF0000" !important;
         }}
         div[data-baseweb="button"] div:nth-child(2) button {{
             background-color: {button2_color} !important;
-            color: white !important;
+            color: "#FF0000" !important;
         }}
     </style>
 """
