@@ -50,6 +50,8 @@ def get_driver():
     
     return webdriver.Chrome(service=service, options=options)
 
+def insertar():
+
 
 def scrap():
     options = Options()
