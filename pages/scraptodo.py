@@ -124,7 +124,7 @@ def scrap():
         pcnt = int(cnt)
         if pcnt == 0:       
             with conn.session as session:
-                ingresar = "insert into novedades (nuri,fuente,titulo,detalle,link,tipo,imagen,fecha,proyecto_nuri,fuente_nuri,eje_nuri,select_web.selec_alerta,selec) "
+                ingresar = "insert into novedades (nuri,fuente,titulo,detalle,link,tipo,imagen,fecha,proyecto_nuri,fuente_nuri,eje_nuri,select_web,selec_alerta,selec) "
                 ingresar = ingresar + " values (nextval('novedades_seq'),:fuente,:titulo,:detalle,:link,'P',:imagen,current_date,1,:fuente_nuri,1,'N','N','N') ; "
                 session.execute(text(ingresar), {"fuente": vfuente,"titulo": ptitulo,"detalle": pdet,"link": plink, "imagen": pimg,"fuente_nuri": tnuri})
                 #ingresar = "insert into prueba (nuri, otro) "
