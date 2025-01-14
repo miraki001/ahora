@@ -51,7 +51,7 @@ if col4.button("Borrar"):
     st.switch_page("./pages/borrarfuente.py")   
 if col5.button("Verificar"):
     st.switch_page("./pages/verifica_pag.py")
-if col6.button("neuvo"):
+if col6.button("Ejecutar"):
     st.switch_page("./pages/scraptodo.py")
 
 
@@ -65,19 +65,7 @@ agree = st.checkbox("Solo Activas")
 
 pfuente = st.text_input("ingrese el nombre de la fuente")
 
-if st.button("Aplicar"):
-    if agree:    
-       pactiva = 'S'
-    else:
-        pactiva = 'N'
-    #df[df['activa'] == pactiva ]
-    st.write(pactiva)
-    st.write(pfuente)
-    #qq = 'select nuri,fuente as url,activa,fecha_act,descrip as fuente,pais from fuentes_py where proyecto_nuri = 1 and activa = :pactiva  and descrip = :pfuente  ;'
-    #df5 = conn.query(qq, ttl="0",params={"pactiva": pactiva, "pfuente": pfuente} )
-    #df1 = conn.query(qq, ttl="0")
-    #st.write(df5)    
-    #df = df5[0]
+
 if pfuente:
     mask = df.applymap(lambda x: pfuente in str(x).lower()).any(axis=1)
     df = df[mask]
