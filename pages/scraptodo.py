@@ -113,9 +113,10 @@ def scrap():
         #st.write('titulo1')
         st.write(ptitulo)
         tnuri = int(vnuri)
+        snuri = str(tnuri)
         conn = st.connection("postgresql", type="sql")
 # vamos a bucar si ya existe la noticias
-        vquery = "select count(nuri) as cnt from novedades where proyecto_nuri = 1 and  fuente_nuri = " + vnuri + " and titulo =  '" + ptitulo +  "'  ;"
+        vquery = "select count(nuri) as cnt from novedades where proyecto_nuri = 1 and  fuente_nuri = " + snuri + " and titulo =  '" + ptitulo +  "'  ;"
         df2 = conn.query(vquery, ttl="0")
         cnt = dfd.to_string(columns=['cnt'], header=False, index=False)
         pcnt = int(cnt)
