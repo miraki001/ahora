@@ -20,6 +20,9 @@ import base64
 import psycopg2
 from sqlalchemy import text
 
+def scrap
+
+
 
 conn = st.connection("postgresql", type="sql")
 qq = "select * from fuentes_py where proyecto_nuri = 1 and activa = 'S'  ;"
@@ -36,5 +39,7 @@ for i in range(len(df)):
   vdeta = df['xpath_detalle'][i])
   vlink = df['xpath_link'][i])
   vimag = df['xpath_image'][i])
-  pnuri = df['nuri'][i]
+  vnuri = df['nuri'][i]
+  vfuente = df['descrip'][i]
+  vurl = df['fuente'][i]
   st.write(df['nuri'][i])
