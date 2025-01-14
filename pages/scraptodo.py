@@ -106,6 +106,8 @@ def scrap():
         pdet = detalle
         plink = link
         pimg = img
+        st.write('titulo1')
+        st.write(ptitulo)
         insertar()
 
 
