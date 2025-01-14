@@ -47,6 +47,17 @@ def scrap():
     options.add_argument('--headless')
 
     driver = get_driver()
+    driver.get('https://www.observatoriova.com/')
+
+
+    driver.implicitly_wait(10) 
+    WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, "//button | //a | //div"))
+    )
+    accept_text_variations = [
+            "accept", "agree", "allow", "consent", "continue", "ok", "I agree", "got it"
+    ]
+    sleep(1)
 
 
 
