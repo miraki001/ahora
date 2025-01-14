@@ -51,7 +51,7 @@ if col4.button("Borrar"):
 
 
 conn = st.connection("postgresql", type="sql")
-qq = 'select e.* ,s.sector from ejestemas e,sectores s where s.nuri = e.sector_nuri and   s.proyecto_nuri = :nuri ;'
+qq = 'select e.* ,s.sector from ejestemas e,sectores s where s.nuri = e.sector_nuri ;'
 df1 = conn.query(qq, ttl="0"),
 df = df1[0]
 
