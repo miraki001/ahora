@@ -26,3 +26,6 @@ qq = "select * from fuentes_py where proyecto_nuri = 1 and activa = 'S'  ;"
 df1 = conn.query(qq, ttl="0"),
 df = df1[0]
 st.write(df)
+
+for i in range(len(df)):
+  st.write(df[i])
