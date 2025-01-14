@@ -121,6 +121,9 @@ def scrap():
 
 
 
+
+
+
 conn = st.connection("postgresql", type="sql")
 qq = "select * from fuentes_py where proyecto_nuri = 1 and activa = 'S'  ;"
 df1 = conn.query(qq, ttl="0"),
