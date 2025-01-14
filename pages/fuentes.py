@@ -36,7 +36,7 @@ if col4.button("Borrar"):
 if col5.button("Verificar"):
     st.switch_page("./pages/verifica_pag.py")
 if col6.button("neuvo"):
-    st.switch_page("./pages/nuevoscrap.py")
+    st.switch_page("./pages/scraptodo.py")
 
 
 
