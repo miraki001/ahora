@@ -86,11 +86,11 @@ st.write(len(df))
 
 
 for i in range(len(df)):
-  vsepa = df['separador'][i])
-  vtitu = df['xpath_titulo'][i])
-  vdeta = df['xpath_detalle'][i])
-  vlink = df['xpath_link'][i])
-  vimag = df['xpath_image'][i])
+  vsepa = df['separador'][i]
+  vtitu = df['xpath_titulo'][i]
+  vdeta = df['xpath_detalle'][i]
+  vlink = df['xpath_link'][i]
+  vimag = df['xpath_image'][i]
   vnuri = df['nuri'][i]
   vfuente = df['descrip'][i]
   vurl = df['fuente'][i]
