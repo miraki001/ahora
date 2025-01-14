@@ -39,7 +39,7 @@ button {
 
 
 
-if col1.button("Home"):
+if col1.button("Home" ,key='b1'):
     st.switch_page("streamlit_app.py")
 if col2.button("Insertar"):
     st.switch_page("./pages/insertar_fuente.py")
