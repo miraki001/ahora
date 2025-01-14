@@ -23,23 +23,25 @@ vdetalle = ''
 vlink = ''
 vimagen = ''
 
+
+
 st.markdown("""
-<style>
-button {
-    background-color: #4CAF50; /* Green */
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
-</style>
-""", unsafe_allow_html=True)
+            <style>
+            div.stButton {text-align:center}
+            div.stButton > button:first-child {
+                background-color: #ffa500;
+                color:#000000;
+                font-weight: bold;
+            }
+            div.stButton > button:hover {
+                background-color: #ffff00;
+                color:#ff0000;
+                }
+            </style>""", unsafe_allow_html=True)
 
 
 
-if col1.button("Home" ,key='b1'):
+if col1.button("Home" ,  type='primary'):
     st.switch_page("streamlit_app.py")
 if col2.button("Insertar"):
     st.switch_page("./pages/insertar_fuente.py")
