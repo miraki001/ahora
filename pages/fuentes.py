@@ -4,18 +4,12 @@ from sqlalchemy import text
 from streamlit_extras.stylable_container import stylable_container
 
 
-st.write("a logo and text next to eachother")
 col41, mid, col42 = st.columns([1,1,20])
 with col41:
     st.image('ic_launcher44.png', width=60)
 with col42:
-    st.write('A Name')
+    st.write('Miraki')
 
-col11, col12 = st.columns(2)
-if col11:
-    st.image("ic_launcher44.png", width=60,)
-if col12:    
-    st.title("Miraki")
 st.subheader("Plataforma de Vigilancia Tecnólogica e Inteligencia Competitiva")
 
 
