@@ -35,6 +35,7 @@ response = requests.get(url)
 html_content = response.content
 tree = html.fromstring(html_content)
 soup = BeautifulSoup(html_content, 'lxml')
+st.write('aca')
 
 noticias = soup.find_all(separador)
 for p in noticias:
