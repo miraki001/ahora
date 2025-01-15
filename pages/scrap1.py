@@ -102,6 +102,7 @@ for datos in datos:
         st.write(link)
         #st.write(img)
         st.write(det)
+        st.write('el valor de x')
         st.write(x)
 
 #    finally:
