@@ -4,7 +4,7 @@ from sqlalchemy import text
 from streamlit_extras.stylable_container import stylable_container
 
 
-
+""
 st.set_page_config(page_title='First app', page_icon="📊", initial_sidebar_state="expanded", layout='wide')
 from streamlit.components.v1 import html
 #st.sidebar.image("https://picsum.photos/200")
@@ -26,6 +26,7 @@ with st.container():
         decoration.style.height = "3.0rem";
         decoration.style.right = "45px";
         // Adjust text decorations
+        decoration.style.font-family = "Roboto" 
         decoration.innerText = "Mirake - Plataforma de Vigilancia Tecnologica e Inteligencia Competitiva"; // Replace with your desired text
         decoration.style.fontWeight = "bold";
         decoration.style.display = "flex";
