@@ -23,6 +23,7 @@ xlink = st.session_state['vlink']
 ximage = st.session_state['vimagen'] 
 xdetalle = st.session_state['vdet'] 
 pag = st.session_state['vfuente'] 
+xtitulo = "'" + xtitulo + "'"
 
 tnuri = st.session_state['vnuri']
 vurl = st.session_state['vfuente']
@@ -41,7 +42,7 @@ noticias = soup.find_all('div', class_='col-md-4 mb-4')
 for p in noticias:
     title = p.find(xlink)
     href = title.get("href")
-    title = p.find('h2').get_text()
+    title = p.find(xtitulo).get_text()
     #det = p.find(xdetalle).get_text()
 
     st.write(href)
