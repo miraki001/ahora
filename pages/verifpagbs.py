@@ -16,20 +16,33 @@ if col2.button("Fuentes"):
     st.switch_page("./pages/fuentes.py")
 
 
-url = 'https://www.thedrinksbusiness.com/tag/wine/'
+separador = st.session_state['vsepa'] 
+st.write(separador)
+xtitulo = st.session_state['vtit'] 
+xlink = st.session_state['vlink'] 
+ximage = st.session_state['vimagen'] 
+xdetalle = st.session_state['vdet'] 
+pag = st.session_state['vfuente'] 
+
+tnuri = st.session_state['vnuri']
+vurl = st.session_state['vfuente']
+st.write(url)
+st.write(ximage)
+st.write(xdetalle)
+
+url = vurl
 response = requests.get(url)
 html_content = response.content
 tree = html.fromstring(html_content)
 soup = BeautifulSoup(html_content, 'lxml')
 
-noticias = soup.find_all('div', class_='col-md-4 mb-4')
+noticias = soup.find_all(separador)
 for p in noticias:
-    title = p.find('a')
+    title = p.find(xlink)
     href = title.get("href")
-    tite = p.find('h2').get_text()
-    det = p.find('h2').get_text()
+    title = p.find(xtitulo).get_text()
+    det = p.find(xdetalle).get_text()
 
-    #p.attrs['a']
-    print(href)
-    print(tite)
-    print(det)
+    st.write(href)
+    st.write(title)
+    st.write(det)
