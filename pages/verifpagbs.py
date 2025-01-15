@@ -23,7 +23,7 @@ xlink = st.session_state['vlink']
 ximage = st.session_state['vimagen'] 
 xdetalle = st.session_state['vdet'] 
 pag = st.session_state['vfuente'] 
-xtitulo = "'" + xtitulo + "'"
+#xtitulo = "'" + xtitulo + "'"
 
 tnuri = st.session_state['vnuri']
 vurl = st.session_state['vfuente']
