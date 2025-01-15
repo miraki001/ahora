@@ -25,6 +25,7 @@ ximage = st.session_state['vimagen']
 xdetalle = st.session_state['vdet'] 
 pag = st.session_state['vfuente'] 
 separador = "attrs={class_='col-md-4 mb-4'}"
+separador = '<class_="col-md-4 mb-4">'
 #separdor = str(separador)
 st.write(separador)
 
