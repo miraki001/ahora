@@ -33,7 +33,7 @@ html("""<script>
         decoration.style.right = "45px";
 
         // Adjust text decorations
-        decoration.innerText = "Welcome, Streamlit App!";
+        decoration.innerText = "Miraki - Plataforma de Vigilancia Tecnologica e Inteligencia Competitiva";
         decoration.style.fontWeight = "bold";
         decoration.style.display = "flex";
         decoration.style.justifyContent = "center";
