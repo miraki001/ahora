@@ -29,7 +29,7 @@ separador = "attrs={'class':'col-md-4 mb-4'}"
 #separdor = str(separador)
 st.write(separador)
 p1 = 'class_='
-p2 = 'col-md-4 mb-4'
+p2 = "'col-md-4 mb-4'"
 
 tnuri = st.session_state['vnuri']
 vurl = st.session_state['vfuente']
