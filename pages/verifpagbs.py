@@ -38,7 +38,7 @@ tree = html.fromstring(html_content)
 soup = BeautifulSoup(html_content, 'lxml')
 st.write('aca')
 
-noticias = soup.find_all(separador)
+noticias = soup.find_all('div', class_='col-md-4 mb-4')
 for p in noticias:
     title = p.find(xlink)
     href = title.get("href")
