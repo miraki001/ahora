@@ -4,6 +4,40 @@ from sqlalchemy import text
 from streamlit_extras.stylable_container import stylable_container
 
 
+
+st.set_page_config(page_title='First app', page_icon="📊", initial_sidebar_state="expanded", layout='wide')
+from streamlit.components.v1 import html
+st.sidebar.image("https://picsum.photos/200")
+with st.container():
+    st.text("This is paragraph :)") 
+    html("""
+    <script>
+        // Locate elements
+        var decoration = window.parent.document.querySelectorAll('[data-testid="stDecoration"]')[0];
+        var sidebar = window.parent.document.querySelectorAll('[data-testid="stSidebar"]')[0];
+        // Observe sidebar size
+        function outputsize() {
+            decoration.style.left = `${sidebar.offsetWidth}px`;
+        }
+        new ResizeObserver(outputsize).observe(sidebar);
+        // Adjust sizes
+        outputsize();
+        decoration.style.height = "3.0rem";
+        decoration.style.right = "45px";
+        // Adjust text decorations
+        decoration.innerText = "Welcome, Streamlit App!"; // Replace with your desired text
+        decoration.style.fontWeight = "bold";
+        decoration.style.display = "flex";
+        decoration.style.justifyContent = "center";
+        decoration.style.alignItems = "center";
+        //decoration.style.fontWeight = "bold";
+        //decoration.style.backgroundImage = "none"; // Remove background image
+        //decoration.style.backgroundSize = "unset"; // Remove background size
+    </script>
+""", width=0, height=0)
+
+
+
 col41, mid, col42 = st.columns([1,1,20])
 with col41:
     st.image('ic_launcher44.png', width=60)
