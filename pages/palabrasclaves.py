@@ -5,6 +5,7 @@ from streamlit_extras.stylable_container import stylable_container
 
 
 ""
+
 st.set_page_config(page_title='First app', page_icon="📊", initial_sidebar_state="expanded", layout='wide')
 from streamlit.components.v1 import html
 #st.sidebar.image("https://picsum.photos/200")
