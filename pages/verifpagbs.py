@@ -30,7 +30,7 @@ vurl = st.session_state['vfuente']
 st.write(vurl)
 st.write(xtitulo)
 st.write(xdetalle)
-st.write(wrap(separador))
+
 
 url = vurl
 response = requests.get(url)
