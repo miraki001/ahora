@@ -90,7 +90,7 @@ for datos in datos:
 #        img = datos.find_element(By.XPATH, "li").value_of_css_property("background")
         
         img = datos.value_of_css_property("background")
-        det = datos.find_element(By.XPATH, ".//div[@class='post-content']/p").et_attribute("text")
+        det = datos.find_element(By.XPATH, ".//div[@class='post-content']/p").get_attribute("text")
         st.write(img)
 #        img = re.split('[()]',img)[3]
 #        image_url = getCssValue('background')
