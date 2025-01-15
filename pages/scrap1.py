@@ -33,7 +33,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-#response = requests.get('https://www.vinetur.com/marketing/')
+#response = requests.get('https://www.tecnovino.com/categorias/actualidad/')
 #soup = BeautifulSoup(response.text, 'html.parser')
 #data = soup.find('div').text
 
@@ -63,7 +63,7 @@ options.add_argument('--disable-gpu')
 options.add_argument('--headless')
 
 driver = get_driver()
-driver.get('https://www.vinetur.com/marketing/')
+driver.get('https://www.tecnovino.com/categorias/actualidad/')
 driver.implicitly_wait(40) 
 WebDriverWait(driver, 40).until(
             EC.presence_of_element_located((By.XPATH, "//button | //a | //div"))
@@ -76,7 +76,7 @@ accept_text_variations = [
 #sleep(1)
 
 #datos = driver.find_elements(By.XPATH, "/html/body/div[1]/div[2]/div[1]/div/ul/li [not(contains(class, 'adsbygoogle'))]")
-datos = driver.find_elements(By.XPATH, "//li/div")
+datos = driver.find_elements(By.XPATH, "//article")
 #not [@class='adsbygoogle']")
 #datos = driver.find_elements(By.XPATH, "[contains(text(), 'background')]")
 #datos =  driver.find_elements(By.tagName ,"li")
@@ -90,16 +90,13 @@ for datos in datos:
 #        img = datos.find_element(By.XPATH, "li").value_of_css_property("background")
         
         img = datos.value_of_css_property("background")
+        det = datos.find_element(By.XPATH, ".//h2").text
         st.write(img)
-        img = re.split('[()]',img)[3]
+#        img = re.split('[()]',img)[3]
 #        image_url = getCssValue('background')
 #        img = datos.find_elements(By.CSS_SELECTOR, "background").value_of_css_property("background")
 #         img = datos.find_element(By.XPATH, ximage).get_attribute("src")
 
-#        soup = BeautifulSoup(datos)
-#        div_style = soup.find('div')['style']
-#        style = cssutils.parseStyle(div_style)
-        url = ['background-image']
         st.write(name)
         st.write(link)
         st.write(img)
