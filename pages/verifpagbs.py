@@ -24,8 +24,8 @@ xlink = st.session_state['vlink']
 ximage = st.session_state['vimagen'] 
 xdetalle = st.session_state['vdet'] 
 pag = st.session_state['vfuente'] 
-separador = 'class_="col-md-4 mb-4"'
-separador = "attrs={'class':'col-md-4 mb-4'}"
+#separador = 'class_="col-md-4 mb-4"'
+#separador = "attrs={'class':'col-md-4 mb-4'}"
 #separdor = str(separador)
 st.write(separador)
 p1 = 'class_='
@@ -46,7 +46,7 @@ soup = BeautifulSoup(html_content, 'lxml')
 st.write('aca')
 
 #noticias = soup.find_all(class_='col-md-4 mb-4')
-noticias = soup.find_all(p1+p2)
+noticias = soup.find_all(separador)
 for p in noticias:
     title = p.find(xlink)
     href = title.get("href")
