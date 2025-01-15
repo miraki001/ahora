@@ -23,6 +23,7 @@ xlink = st.session_state['vlink']
 ximage = st.session_state['vimagen'] 
 xdetalle = st.session_state['vdet'] 
 pag = st.session_state['vfuente'] 
+separador = '"div", class_="\$col-\$md-\44 mb-\54"'
 #separdor = str(separador)
 st.write(separador)
 
