@@ -28,6 +28,8 @@ separador = 'class_="col-md-4 mb-4"'
 separador = "attrs={'class':'col-md-4 mb-4'}"
 #separdor = str(separador)
 st.write(separador)
+p1 = 'class_='
+p2 = 'col-md-4 mb-4'
 
 tnuri = st.session_state['vnuri']
 vurl = st.session_state['vfuente']
@@ -44,7 +46,7 @@ soup = BeautifulSoup(html_content, 'lxml')
 st.write('aca')
 
 #noticias = soup.find_all(class_='col-md-4 mb-4')
-noticias = soup.find_all(separador)
+noticias = soup.find_all(p1+p2)
 for p in noticias:
     title = p.find(xlink)
     href = title.get("href")
