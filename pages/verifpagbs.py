@@ -55,4 +55,4 @@ for p in noticias:
 
     st.write(href)
     st.write(title)
-    #st.write(det)
+    st.write(det)
