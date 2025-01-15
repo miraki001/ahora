@@ -24,6 +24,7 @@ ximage = st.session_state['vimagen']
 xdetalle = st.session_state['vdet'] 
 pag = st.session_state['vfuente'] 
 separdor = str(separador)
+st.write(separador)
 
 tnuri = st.session_state['vnuri']
 vurl = st.session_state['vfuente']
