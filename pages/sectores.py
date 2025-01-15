@@ -103,3 +103,4 @@ cnt = len(selection)
 vnuri = selection.to_string(columns=['sector'], header=False, index=False)
 st.write(vnuri)
 tnuri = vnuri
+st.session_state['vnuri'] = tnuri
