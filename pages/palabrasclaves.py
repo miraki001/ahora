@@ -26,7 +26,6 @@ with st.container():
         decoration.style.height = "3.0rem";
         decoration.style.right = "45px";
         // Adjust text decorations
-        decoration.style.font = "Roboto"; 
         decoration.innerText = "Mirake - Plataforma de Vigilancia Tecnologica e Inteligencia Competitiva"; // Replace with your desired text
         decoration.style.fontWeight = "bold";
         decoration.style.display = "flex";
