@@ -77,11 +77,12 @@ accept_text_variations = [
 
 #datos = driver.find_elements(By.XPATH, "/html/body/div[1]/div[2]/div[1]/div/ul/li [not(contains(class, 'adsbygoogle'))]")
 datos = driver.find_elements(By.XPATH, "//article")
+pp =  driver.find_elements(By.XPATH, "//article").get_attribute("outerHTML")
 #not [@class='adsbygoogle']")
 #datos = driver.find_elements(By.XPATH, "[contains(text(), 'background')]")
 #datos =  driver.find_elements(By.tagName ,"li")
 
-pp = datos.get_attribute('innerHTML')
+#pp = datos.get_attribute('innerHTML')
 st.write(pp)
 
 #st.write(datos)
