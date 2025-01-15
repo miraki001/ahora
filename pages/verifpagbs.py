@@ -6,6 +6,14 @@ import requests
 from bs4 import BeautifulSoup
 from lxml import html
 
+col1, col2 = st.columns(2)
+
+
+
+if col1.button("Home"):
+    st.switch_page("streamlit_app.py")
+if col2.button("Fuentes"):
+    st.switch_page("./pages/fuentes.py")
 
 
 url = 'https://www.thedrinksbusiness.com/tag/wine/'
