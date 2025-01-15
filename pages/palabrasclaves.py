@@ -8,9 +8,9 @@ from streamlit_extras.stylable_container import stylable_container
 st.set_page_config(page_title='First app', page_icon="📊", initial_sidebar_state="expanded", layout='wide')
 from streamlit.components.v1 import html
 #st.sidebar.image("https://picsum.photos/200")
-st.sidebar.image('ic_launcher44.png', width=60)
+#st.sidebar.image('ic_launcher44.png', width=60)
 with st.container():
-    st.text("This is paragraph :)") 
+    #st.text("This is paragraph :)") 
     html("""
     <script>
         // Locate elements
