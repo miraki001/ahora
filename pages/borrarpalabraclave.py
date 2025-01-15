@@ -8,7 +8,7 @@ conn = st.connection("postgresql", type="sql")
 tnuri = st.session_state['vnuri']
 
 with conn.session as session:
-  actualiza = 'delete from fuentes_py where nuri = ' +  tnuri
+  actualiza = 'delete from palabras_a_buscar   where palabra = ' +  tnuri
   session.execute(text(actualiza) )
   session.commit()
 st.switch_page("./pages/palabrasclaves.py")
