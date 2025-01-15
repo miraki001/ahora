@@ -77,13 +77,13 @@ accept_text_variations = [
 
 #datos = driver.find_elements(By.XPATH, "/html/body/div[1]/div[2]/div[1]/div/ul/li [not(contains(class, 'adsbygoogle'))]")
 datos = driver.find_elements(By.XPATH, "//article")
-pp =  driver.find_elements(By.XPATH, "//article").get_attribute("outerHTML")
+#pp =  driver.find_elements(By.XPATH, "//article").get_attribute("outerHTML")
 #not [@class='adsbygoogle']")
 #datos = driver.find_elements(By.XPATH, "[contains(text(), 'background')]")
 #datos =  driver.find_elements(By.tagName ,"li")
 
 #pp = datos.get_attribute('innerHTML')
-st.write(pp)
+#st.write(pp)
 
 #st.write(datos)
 for datos in datos:
@@ -94,7 +94,7 @@ for datos in datos:
         
         img = datos.value_of_css_property("background")
         det = datos.find_element(By.XPATH, ".//div[@class='post-content']/p").get_attribute("text")
-        det1 = datos.find_element(By.XPATH, ".//p").text
+        det1 = datos.find_element(By.XPATH, ".//div/div/div/p").text
         x = datos.find_element(By.TAG_NAME, 'p').text
         st.write(img)
 #        img = re.split('[()]',img)[3]
