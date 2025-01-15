@@ -23,13 +23,14 @@ xlink = st.session_state['vlink']
 ximage = st.session_state['vimagen'] 
 xdetalle = st.session_state['vdet'] 
 pag = st.session_state['vfuente'] 
-separdor = "'" + separador + "'"
+#separdor = "'" + separador + "'"
 
 tnuri = st.session_state['vnuri']
 vurl = st.session_state['vfuente']
 st.write(vurl)
 st.write(xtitulo)
 st.write(xdetalle)
+st.write(wrap(separador))
 
 url = vurl
 response = requests.get(url)
