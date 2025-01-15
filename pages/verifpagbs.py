@@ -41,8 +41,8 @@ noticias = soup.find_all('div', class_='col-md-4 mb-4')
 for p in noticias:
     title = p.find(xlink)
     href = title.get("href")
-    title = p.find(xtitulo).get_text()
-    det = p.find(xdetalle).get_text()
+    title = p.find(xtitulo).get("text"))
+    det = p.find(xdetalle).get("text"))
 
     st.write(href)
     st.write(title)
