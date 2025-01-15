@@ -81,6 +81,8 @@ datos = driver.find_elements(By.XPATH, "//article")
 #not [@class='adsbygoogle']")
 #datos = driver.find_elements(By.XPATH, "[contains(text(), 'background')]")
 #datos =  driver.find_elements(By.tagName ,"li")
+pp = datos.find_element(By.XPATH, "//*[@id="post-202928"]/div/div[2]/div[2]/p").text 
+st.write(pp)
 
 #pp = datos.get_attribute('innerHTML')
 #st.write(pp)
