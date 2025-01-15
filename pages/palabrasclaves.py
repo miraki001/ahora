@@ -46,13 +46,13 @@ html("""<script>
 
 
 
-col41, mid, col42 = st.columns([1,1,20])
-with col41:
-    st.image('ic_launcher44.png', width=60)
-with col42:
-    st.title('Miraki')
+#col41, mid, col42 = st.columns([1,1,20])
+#with col41:
+st.image('ic_launcher44.png', width=60)
+#with col42:
+#    st.title('Miraki')
 
-st.subheader("Plataforma de Vigilancia Tecnólogica e Inteligencia Competitiva")
+#st.subheader("Plataforma de Vigilancia Tecnólogica e Inteligencia Competitiva")
 
 
 col1, col2, col3,col4 = st.columns(4)
