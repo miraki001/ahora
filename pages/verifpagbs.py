@@ -26,7 +26,7 @@ pag = st.session_state['vfuente']
 
 tnuri = st.session_state['vnuri']
 vurl = st.session_state['vfuente']
-st.write(url)
+st.write(vurl)
 st.write(ximage)
 st.write(xdetalle)
 
