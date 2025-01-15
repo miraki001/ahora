@@ -91,6 +91,7 @@ for datos in datos:
         
         img = datos.value_of_css_property("background")
         det = datos.find_element(By.XPATH, ".//div[@class='post-content']/p").get_attribute("text")
+        det1 = datos.find_element(By.XPATH, ".//p").text
         x = datos.find_element(By.TAG_NAME, 'p').text
         st.write(img)
 #        img = re.split('[()]',img)[3]
@@ -102,6 +103,7 @@ for datos in datos:
         st.write(link)
         #st.write(img)
         st.write(det)
+        st.write(det1)
         st.write('el valor de x')
         st.write(x)
 
