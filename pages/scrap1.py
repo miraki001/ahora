@@ -100,6 +100,8 @@ for datos in datos:
         st.write(name)
         st.write(link)
         st.write(img)
+        st.write(det)
+
 #    finally:
 #        st.write('none')
 
