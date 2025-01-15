@@ -98,7 +98,7 @@ selection = dataframe_with_selections(df)
 cnt = len(selection)
 #st.write(f'selected row index: {selection.selected_row_index}')
 
-vnuri = selection.to_string(columns=['palabra'], header=False, index=False)
-st.write(vnuri)
-tnuri = vnuri
+vpalabra = selection.to_string(columns=['palabra'], header=False, index=False)
+st.write(vpalabra)
+
 
