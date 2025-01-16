@@ -3,7 +3,7 @@ import psycopg2
 from sqlalchemy import text
 
 
-tipo = st.session_state['vtipo'] 
+tipo = st.session_state['vTipo'] 
 if tipo == 'Editat':
     tpalabras = st.session_state['vpalabra'] 
     tpeso = st.session_state['vpeso'] 
