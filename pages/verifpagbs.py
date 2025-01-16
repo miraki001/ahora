@@ -43,7 +43,7 @@ st.write(xdetalle)
 st.write(vatrib)
 vatrib = "{'" + vatrib1 + "':'" + vatrib2 + "'}"
 
-st.write(vatrib)
+#st.write(vatrib)
 
 
 conn = st.connection("postgresql", type="sql")
