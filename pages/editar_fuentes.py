@@ -48,7 +48,8 @@ col = st.columns((6.5, 4.5, 2), gap='medium')
 
 with col[0]:
     separador = st.text_input("Separador", st.session_state['vsepa'])
-    atributo = st.text_input("Atributo", st.session_state['vatributo'])
+    atributo1 = st.text_input("Atributo 1", st.session_state['vatributo1'])
+    atributo2 = st.text_input("Atributo 2", st.session_state['vatributo2'])
     xpath_tit = st.text_input("xpath titulo", st.session_state['vtit'])
     xpath_det = st.text_input("xpath detalle", st.session_state['vdet'])
     xpath_link = st.text_input("xpath link", st.session_state['vlink'])
@@ -71,7 +72,8 @@ if col10.button(":red[**Grabar**]"):
         actualiza = actualiza + "descrip = :desc, "
         actualiza = actualiza + "pais = :pais, "
         actualiza = actualiza + "separador = :separador, "
-        actualiza = actualiza + "atributo = :atributo, "
+        actualiza = actualiza + "atributo1 = :atributo1, "
+        actualiza = actualiza + "atributo2 = :atributo2, "
         actualiza = actualiza + "xpath_detalle = :det, "
         actualiza = actualiza + "xpath_link = :link, "
         actualiza = actualiza + "xpath_image = :image, "
@@ -80,7 +82,7 @@ if col10.button(":red[**Grabar**]"):
         actualiza = actualiza + "idioma = :idioma, "
         actualiza = actualiza + "cod_pais = :cod "
         actualiza = actualiza + " WHERE nuri= :nuri"        
-        session.execute(text(actualiza), {"url": vurl,"activa": activa,"tit": xpath_tit,"desc": vtitle, "pais": pais,"separador": separador,"atributo": atributo, "det": xpath_det, "link": xpath_link,"image": xpath_image, "tipo": tipo,"busq": busqueda, "idioma": idioma,"cod": codigo, "nuri": tnuri})
+        session.execute(text(actualiza), {"url": vurl,"activa": activa,"tit": xpath_tit,"desc": vtitle, "pais": pais,"separador": separador,"atributo1": atributo1,"atributo2": atributo2 "det": xpath_det, "link": xpath_link,"image": xpath_image, "tipo": tipo,"busq": busqueda, "idioma": idioma,"cod": codigo, "nuri": tnuri})
                         
         session.commit()
         st.success("Data sent")
