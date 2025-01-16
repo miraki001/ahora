@@ -48,7 +48,7 @@ st.write(vatrib)
 
 
 conn = st.connection("postgresql", type="sql")
-vquery = 'select * from fuentes_py where nuri = ' + vnuri + ';'
+vquery = 'select * from fuentes_py where nuri = ' + tnuri + ';'
 df2 = conn.query(vquery, ttl="0"),
 df3 = df2[0]
 st.write(df3['atributo'])
