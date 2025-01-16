@@ -98,9 +98,9 @@ def dataframe_with_selections(df):
 selection = dataframe_with_selections(df)
 
 cnt = len(selection)
-#st.write(f'selected row index: {selection.selected_row_index}')
 
-vnuri = selection.to_string(columns=['sector'], header=False, index=False)
-st.write(vnuri)
-tnuri = vnuri
-st.session_state['vnuri'] = tnuri
+if cnt>0:
+    vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
+    st.write(vnuri)
+    tnuri = vnuri
+    st.session_state['vnuri'] = tnuri
