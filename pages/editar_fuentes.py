@@ -11,7 +11,6 @@ vtitulo1 = "eeeeee"
 fuente = st.session_state['vdescrip'] 
 pais = st.session_state['vpais'] 
 activa = st.session_state['vactiva'] 
-atributo = st.session_state['vatributo'] 
 
 tnuri = st.session_state['vnuri']
 url = st.session_state['vfuente']
@@ -49,7 +48,7 @@ col = st.columns((6.5, 4.5, 2), gap='medium')
 
 with col[0]:
     separador = st.text_input("Separador", st.session_state['vsepa'])
-    atributo = st.text_input("Separador", st.session_state['vatributo'])
+    atributo = st.text_input("Atributo", st.session_state['vatributo'])
     xpath_tit = st.text_input("xpath titulo", st.session_state['vtit'])
     xpath_det = st.text_input("xpath detalle", st.session_state['vdet'])
     xpath_link = st.text_input("xpath link", st.session_state['vlink'])
