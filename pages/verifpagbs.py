@@ -6,6 +6,8 @@ import psutil
 import requests
 from bs4 import BeautifulSoup
 from lxml import html
+import psycopg2
+from sqlalchemy import text
 
 col1, col2 = st.columns(2)
 
@@ -49,6 +51,7 @@ conn = st.connection("postgresql", type="sql")
 vquery = 'select * from fuentes_py where nuri = ' + vnuri + ';'
 df2 = conn.query(vquery, ttl="0"),
 df3 = df2[0]
+st.write(df3['atributo'])
 
 url = vurl
 response = requests.get(url)
