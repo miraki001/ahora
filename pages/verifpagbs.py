@@ -20,7 +20,8 @@ if col2.button("Fuentes"):
 
 
 separador = st.session_state['vsepa'] 
-vatrib = st.session_state['vatributo'] 
+vatrib1 = st.session_state['vatributo1'] 
+vatrib2 = st.session_state['vatributo2'] 
 st.write(separador)
 xtitulo = st.session_state['vtit'] 
 xlink = st.session_state['vlink'] 
@@ -40,9 +41,7 @@ st.write(vurl)
 st.write(xtitulo)
 st.write(xdetalle)
 st.write(vatrib)
-vatrib = '["class":"col-md-4 mb-4"]'
-vatrib = vatrib.replace('[', '{')
-vatrib = vatrib.replace(']', '}')
+vatrib = "{'" + vatrib1 + "':'" + vatrib2 + "'}"
 
 st.write(vatrib)
 
