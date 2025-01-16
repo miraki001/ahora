@@ -37,6 +37,7 @@ vurl = st.session_state['vfuente']
 st.write(vurl)
 st.write(xtitulo)
 st.write(xdetalle)
+st.write(vatrib)
 
 
 url = vurl
@@ -48,6 +49,7 @@ st.write('aca')
 
 #noticias = soup.find_all(class_='col-md-4 mb-4')
 if vatrib != '':
+    st.write(vatrib)
     noticias = soup.find_all(separador,vatrib)
 if vatrib == '':    
     noticias = soup.find_all(separador)
