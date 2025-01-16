@@ -10,7 +10,7 @@ def actualizar():
         actualiza = actualiza + " ,sector = :sector "
         actualiza = actualiza + " ,color = :color "
         actualiza = actualiza + " WHERE nuri = :nuri ;"
-        session.execute(text(actualiza), {"pro_nuri": vpro_nuri,"sector": vsector,"color": vcolor})
+        session.execute(text(actualiza), {"pro_nuri": vpro_nuri,"sector": vsector,"color": vcolor,"nuri": vnuri})
         session.commit()
 
 def ingresar():
