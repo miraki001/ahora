@@ -52,4 +52,4 @@ if col5.button("Ejes"):
 if col6.button("Palabras por Sector"):
     st.switch_page("./pages/scraptodo.py")
 if col7.button("Proyectos"):
-    st.switch_page("./pages/scraptodo.py")
+    st.switch_page("./pages/proyectos.py")
