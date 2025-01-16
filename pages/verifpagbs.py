@@ -42,8 +42,9 @@ st.write(xtitulo)
 st.write(xdetalle)
 #st.write(vatrib)
 vv =  "'" + vatrib1 + "': '" + vatrib2 + "'" 
+vv = vv.replace('"','')
 vatrib = {  vv }
-vatrib = vatrib.replace('"','')
+
 #vatrib ={"class": "col-md-4 mb-4"}
 
 st.write(vatrib)
