@@ -104,4 +104,5 @@ if cnt > 0:
             vpeso = selection.to_string(columns=['peso'], header=False, index=False)
             st.write(vpalabra)
             st.session_state['vpalabra'] = vpalabra
+            st.session_state['vpeso'] = vpeso
 
