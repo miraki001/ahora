@@ -96,9 +96,10 @@ def dataframe_with_selections(df):
                     selected_rows = edited_df[edited_df.Selec]
                     return selected_rows.drop('Selec', axis=1)
                   
-if selection = dataframe_with_selections(df):
+ selection = dataframe_with_selections(df)
 
-            cnt = len(selection)
+cnt = len(selection)
+if cnt > 0:
             vpalabra = selection.to_string(columns=['palabra'], header=False, index=False)
             vppeso = selection.to_string(columns=['peso'], header=False, index=False)
             st.write(vpalabra)
