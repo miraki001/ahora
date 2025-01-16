@@ -7,7 +7,7 @@ def actualizar():
     conn = st.connection("postgresql", type="sql")
     with conn.session as session:
         actualiza = "UPDATE palabras_a_buscar SET palabra = :palabra"
-        actualiza = actualiza + " ,peso = :peso, "
+        actualiza = actualiza + " ,peso = :peso "
         actualiza = actualiza + " WHERE palabra= :palabra ;"
         session.execute(text(actualiza), {"palabra": vpalabra,"peso": vpeso})
         session.commit()
