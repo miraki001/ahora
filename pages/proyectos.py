@@ -53,7 +53,7 @@ if col4.button("Borrar"):
 
 
 conn = st.connection("postgresql", type="sql")
-qq = 'select * from proyectos  ;'
+qq = 'select nuri,proyecto from proyectos  ;'
 df1 = conn.query(qq, ttl="0"),
 df = df1[0]
 
