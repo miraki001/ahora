@@ -42,8 +42,10 @@ st.markdown("""
 if col1.button("Volver" ,  type='primary'):
     st.switch_page("./pages/parametros.py")
 if col2.button("Insertar"):
+    st.session_state['vTipo'] = 'Ingresar'
     st.switch_page("./pages/ingsectores.py")
 if col3.button("Editar"):
+    st.session_state['vTipo'] = 'Editar'
     st.switch_page("./pages/ingsectores.py")
 if col4.button("Borrar"):
     st.switch_page("./pages/borrarsectores.py")   
