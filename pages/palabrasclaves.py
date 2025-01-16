@@ -43,8 +43,10 @@ st.markdown("""
 if col1.button("Volver" ,  type='primary'):
     st.switch_page("./pages/parametros.py")
 if col2.button("Insertar"):
+    st.session_state['vTipo'] = 'Ingresar'
     st.switch_page("./pages/insertar_fuente.py")
 if col3.button("Editar"):
+    st.session_state['vTipo'] = 'Ingresar'            
     st.switch_page("./pages/editar_fuentes.py")
 if col4.button("Borrar"):
     st.switch_page("./pages/borrarpalabraclave.py")   
@@ -94,12 +96,11 @@ def dataframe_with_selections(df):
                     selected_rows = edited_df[edited_df.Selec]
                     return selected_rows.drop('Selec', axis=1)
                   
-selection = dataframe_with_selections(df)
+if selection = dataframe_with_selections(df):
 
-cnt = len(selection)
-#st.write(f'selected row index: {selection.selected_row_index}')
-
-vpalabra = selection.to_string(columns=['palabra'], header=False, index=False)
-st.write(vpalabra)
-st.session_state['vpalabra'] = vpalabra
+            cnt = len(selection)
+            vpalabra = selection.to_string(columns=['palabra'], header=False, index=False)
+            vppeso = selection.to_string(columns=['peso'], header=False, index=False)
+            st.write(vpalabra)
+            st.session_state['vpalabra'] = vpalabra
 
