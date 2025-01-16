@@ -42,7 +42,7 @@ col1, col2, = st.columns(2)
 if col1.button("Grabar" ,  type='primary'):
     if tipo == 'Editar':
         actualizar()
-    else
+    if tipo == 'Ingresar':
         ingresar()
     st.switch_page("./pages/palabrasclaves.py")
 if col2.button("Cancelar"):
