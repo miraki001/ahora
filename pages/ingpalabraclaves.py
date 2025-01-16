@@ -3,7 +3,7 @@ import psycopg2
 from sqlalchemy import text
 
 
-def actualizar:
+def actualizar():
     conn = st.connection("postgresql", type="sql")
     with conn.session as session:
         actualiza = "UPDATE palabras_a_buscar SET palabra = :palabra"
@@ -12,7 +12,7 @@ def actualizar:
         session.execute(text(actualiza), {"palabra": vpalabra,"peso": vpeso})
         session.commit()
 
-def ingresar:
+def ingresar():
     conn = st.connection("postgresql", type="sql")
     with conn.session as session:
         actualiza = "insert into palabras_a_buscar (palabra,peso"
