@@ -82,7 +82,7 @@ for p in noticias:
     title = p.find(xtitulo).get_text()
     det = p.find(xdetalle).get_text()
     if ximage !='none':
-        img = p.find(ximage).get('src')
+        img = p.find(ximage).get('data-src')
         st.write(img)
 
     st.write(href)
