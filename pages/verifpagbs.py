@@ -44,6 +44,12 @@ vatrib = vatrib.replace(']', '}')
 vatrib = vatrib.replace('''', '"')
 #st.write(vatrib)
 
+
+
+vquery = 'select * from fuentes_py where nuri = ' + vnuri + ';'
+df2 = conn.query(vquery, ttl="0"),
+df3 = df2[0]
+
 url = vurl
 response = requests.get(url)
 html_content = response.content
