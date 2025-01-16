@@ -15,9 +15,8 @@ def actualizar():
 def ingresar():
     conn = st.connection("postgresql", type="sql")
     with conn.session as session:
-        actualiza = "insert into palabras_a_buscar (palabra,peso"
+        actualiza = "insert into palabras_a_buscar (palabra,peso)"
         actualiza = actualiza + " values (:palabra,:peso) ;"
-        actualiza = actualiza + " WHERE palabra= :palabra"
         session.execute(text(actualiza), {"palabra": vpalabra,"peso": vpeso})
         session.commit()
 
