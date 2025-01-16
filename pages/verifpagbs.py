@@ -42,6 +42,7 @@ st.write(xtitulo)
 st.write(xdetalle)
 #st.write(vatrib)
 vv =  "'" + vatrib1 + "': '" + vatrib2 + "'" 
+st.write(vv)
 vv = vv.replace('"','')
 vatrib = {  vv }
 
