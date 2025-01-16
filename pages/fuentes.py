@@ -128,6 +128,7 @@ if cnt>0:
     st.session_state['vobserva'] = df3.to_string(columns=['observa'], header=False, index=False)
     st.session_state['vimagen'] = df3.to_string(columns=['xpath_image'], header=False, index=False)
     st.session_state['vdet'] = df3.to_string(columns=['xpath_detalle'], header=False, index=False)
+    st.session_state['vatributo'] = df3.to_string(columns=['atributo'], header=False, index=False)
 
 
     st.session_state['vfuente'] = selection.to_string(columns=['url'], header=False, index=False)
