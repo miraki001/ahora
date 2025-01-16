@@ -107,12 +107,11 @@ def dataframe_with_selections(df):
 selection = dataframe_with_selections(df)
 
 cnt = len(selection)
-#st.write(f'selected row index: {selection.selected_row_index}')
+if cnt>0:
 
-vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
-st.write(vnuri)
-tnuri = vnuri
-if  cnt>0:
+    vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
+    st.write(vnuri)
+    tnuri = vnuri
     vquery = 'select * from fuentes_py where nuri = ' + vnuri + ';'
     df2 = conn.query(vquery, ttl="0"),
     df3 = df2[0]
@@ -131,14 +130,14 @@ if  cnt>0:
     st.session_state['vdet'] = df3.to_string(columns=['xpath_detalle'], header=False, index=False)
 
 
-st.session_state['vfuente'] = selection.to_string(columns=['url'], header=False, index=False)
-st.session_state['vdescrip'] = selection.to_string(columns=['fuente'], header=False, index=False)
-st.session_state['vnuri'] = selection.to_string(columns=['nuri'], header=False, index=False)
-st.session_state['vpais'] = selection.to_string(columns=['pais'], header=False, index=False)
-st.session_state['vactiva'] = selection.to_string(columns=['activa'], header=False, index=False)
+    st.session_state['vfuente'] = selection.to_string(columns=['url'], header=False, index=False)
+    st.session_state['vdescrip'] = selection.to_string(columns=['fuente'], header=False, index=False)
+    st.session_state['vnuri'] = selection.to_string(columns=['nuri'], header=False, index=False)
+    st.session_state['vpais'] = selection.to_string(columns=['pais'], header=False, index=False)
+    st.session_state['vactiva'] = selection.to_string(columns=['activa'], header=False, index=False)
 
-tnuri = st.session_state['vnuri']
-st.write(tnuri)
+    tnuri = st.session_state['vnuri']
+    st.write(tnuri)
 
 
 
