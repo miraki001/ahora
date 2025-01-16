@@ -81,6 +81,9 @@ for p in noticias:
     href = title.get("href")
     title = p.find(xtitulo).get_text()
     det = p.find(xdetalle).get_text()
+    if ximage !='none':
+        img = p.find(ximage).get_scr()
+        st.write(img)
 
     st.write(href)
     st.write(title)
