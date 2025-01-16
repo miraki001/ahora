@@ -72,7 +72,7 @@ st.write('aca')
 #noticias = soup.find_all(class_='col-md-4 mb-4')
 if vatrib != '':
     st.write(vatrib)
-    noticias = soup.find_all(separador,vatrib)
+    noticias = soup.find_all(separador,newv)
 if vatrib == '':    
     noticias = soup.find_all(separador)
 for p in noticias:
