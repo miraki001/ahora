@@ -15,6 +15,10 @@ if tipo == 'Ingresar':
 
 vpalabra = st.text_input("Palabra", tpalabra)
 
+vpeso = st.number_input("Peso", tpeso)
+
+
+
 col1, col2, = st.columns(2)
 if col1.button("Grabar" ,  type='primary'):
     st.switch_page("./pages/palabrasclaves.py")
