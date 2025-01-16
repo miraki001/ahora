@@ -4,9 +4,14 @@ from sqlalchemy import text
 
 
 tipo = st.session_state['vTipo'] 
-if tipo == 'Editat':
-    tpalabras = st.session_state['vpalabra'] 
+if tipo == 'Editar':
+    tpalabra = st.session_state['vpalabra'] 
     tpeso = st.session_state['vpeso'] 
+
+if tipo == 'Ingresar':
+    tpalabra = ''
+    tpeso = 0
+
 
 vpalabra = st.text_input("Palabra", tpalabra)
 
