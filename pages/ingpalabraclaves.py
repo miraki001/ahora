@@ -25,6 +25,7 @@ tipo = st.session_state['vTipo']
 if tipo == 'Editar':
     tpalabra = st.session_state['vpalabra'] 
     tpeso = st.session_state['vpeso'] 
+    tpeso = int(tpeso)
 
 if tipo == 'Ingresar':
     tpalabra = ''
