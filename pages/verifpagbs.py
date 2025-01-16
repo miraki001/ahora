@@ -45,7 +45,7 @@ vatrib = vatrib.replace('''', '"')
 #st.write(vatrib)
 
 
-
+conn = st.connection("postgresql", type="sql")
 vquery = 'select * from fuentes_py where nuri = ' + vnuri + ';'
 df2 = conn.query(vquery, ttl="0"),
 df3 = df2[0]
