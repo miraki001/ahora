@@ -40,11 +40,11 @@ st.write(vurl)
 st.write(xtitulo)
 st.write(xdetalle)
 st.write(vatrib)
-#vatrib = {'class':'col-md-4 mb-4'}
+vatrib = '['class':'col-md-4 mb-4']'
 vatrib = vatrib.replace('[', '{')
 vatrib = vatrib.replace(']', '}')
 
-#st.write(vatrib)
+st.write(vatrib)
 
 
 conn = st.connection("postgresql", type="sql")
