@@ -44,10 +44,10 @@ if col1.button("Volver" ,  type='primary'):
     st.switch_page("./pages/parametros.py")
 if col2.button("Insertar"):
     st.session_state['vTipo'] = 'Ingresar'
-    st.switch_page("./pages/insertar_fuente.py")
+    st.switch_page("./pages/ingpalabraclaves.py")
 if col3.button("Editar"):
-    st.session_state['vTipo'] = 'Ingresar'            
-    st.switch_page("./pages/editar_fuentes.py")
+    st.session_state['vTipo'] = 'Editar'            
+    st.switch_page("./pages/ingpalabraclaves.py")
 if col4.button("Borrar"):
     st.switch_page("./pages/borrarpalabraclave.py")   
 
