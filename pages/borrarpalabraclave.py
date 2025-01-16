@@ -9,6 +9,6 @@ tpalabra = st.session_state['vpalabra']
 
 with conn.session as session:
   actualiza = "delete from palabras_a_buscar   where palabra = :palabra ;"
-  session.execute(text(actualiza) )
+  session.execute(text(actualiza), {"palabra": tpalabra} )
   session.commit()
 st.switch_page("./pages/palabrasclaves.py")
