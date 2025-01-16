@@ -43,7 +43,7 @@ st.write(vatrib)
 #vatrib = {'class':'col-md-4 mb-4'}
 vatrib = vatrib.replace('[', '{')
 vatrib = vatrib.replace(']', '}')
-vatrib = vatrib.replace('''', '"')
+
 #st.write(vatrib)
 
 
