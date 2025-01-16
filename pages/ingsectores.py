@@ -6,7 +6,7 @@ from sqlalchemy import text
 def actualizar():
     conn = st.connection("postgresql", type="sql")
     with conn.session as session:
-        actualiza = "UPDATE sectores SET proyecto_nuei = :pro_nuri"
+        actualiza = "UPDATE sectores SET proyecto_nuri = :pro_nuri"
         actualiza = actualiza + " ,sector = :sector "
         actualiza = actualiza + " ,color = :color "
         actualiza = actualiza + " WHERE nuri = :nuri ;"
