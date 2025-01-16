@@ -11,6 +11,7 @@ vtitulo1 = "eeeeee"
 fuente = st.session_state['vdescrip'] 
 pais = st.session_state['vpais'] 
 activa = st.session_state['vactiva'] 
+atributo = st.session_state['vatributo'] 
 
 tnuri = st.session_state['vnuri']
 url = st.session_state['vfuente']
@@ -48,6 +49,7 @@ col = st.columns((6.5, 4.5, 2), gap='medium')
 
 with col[0]:
     separador = st.text_input("Separador", st.session_state['vsepa'])
+    atributo = st.text_input("Separador", st.session_state['vatributo'])
     xpath_tit = st.text_input("xpath titulo", st.session_state['vtit'])
     xpath_det = st.text_input("xpath detalle", st.session_state['vdet'])
     xpath_link = st.text_input("xpath link", st.session_state['vlink'])
@@ -70,6 +72,7 @@ if col10.button(":red[**Grabar**]"):
         actualiza = actualiza + "descrip = :desc, "
         actualiza = actualiza + "pais = :pais, "
         actualiza = actualiza + "separador = :separador, "
+        actualiza = actualiza + "atributo = :atributo, "
         actualiza = actualiza + "xpath_detalle = :det, "
         actualiza = actualiza + "xpath_link = :link, "
         actualiza = actualiza + "xpath_image = :image, "
@@ -79,7 +82,7 @@ if col10.button(":red[**Grabar**]"):
         actualiza = actualiza + "cod_pais = :cod "
         actualiza = actualiza + " WHERE nuri= :nuri"
         #"desc": vtitle, "fuente": vurl, "pais": pais,"activa": activa, "separador": separador, "det": xpath_det, "link": xpath_link,"image": xpath_image, "tipo": tipo,"busq": busqueda, "idioma": idioma,"cod": codigo
-        session.execute(text(actualiza), {"url": vurl,"activa": activa,"tit": xpath_tit,"desc": vtitle, "pais": pais,"separador": separador, "det": xpath_det, "link": xpath_link,"image": xpath_image, "tipo": tipo,"busq": busqueda, "idioma": idioma,"cod": codigo, "nuri": tnuri})
+        session.execute(text(actualiza), {"url": vurl,"activa": activa,"tit": xpath_tit,"desc": vtitle, "pais": pais,"separador": separador,"atributo": atributo,  "det": xpath_det, "link": xpath_link,"image": xpath_image, "tipo": tipo,"busq": busqueda, "idioma": idioma,"cod": codigo, "nuri": tnuri})
         #session.execute(text("UPDATE fuentes_py SET fuente = :url, activa = :activa, xpath_titulo = :tit    WHERE nuri= :nuri"), {"url": vurl,"activa": activa,"tit": xpath_tit, "desc": vtitle, "fuente": vurl, "pais": pais,"activa": activa, "separador": separador, "det": xpath_det, "link": xpath_link, "tipo": tipo,"busq": busqueda, "idioma": idioma,"cod": codigo,"nuri": tnuri})
                         
         session.commit()
