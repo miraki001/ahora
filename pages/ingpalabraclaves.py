@@ -3,7 +3,10 @@ import psycopg2
 from sqlalchemy import text
 
 
-
+tipo = st.session_state['vtipo'] 
+if tipo == 'Editat':
+    tpalabras = st.session_state['vpalabra'] 
+    tpeso = st.session_state['vpeso'] 
 
 col1, col2, = st.columns(2)
 if col1.button("Grabar" ,  type='primary'):
