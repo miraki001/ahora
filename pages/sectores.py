@@ -42,9 +42,9 @@ st.markdown("""
 if col1.button("Volver" ,  type='primary'):
     st.switch_page("./pages/parametros.py")
 if col2.button("Insertar"):
-    st.switch_page("./pages/insertar_fuente.py")
+    st.switch_page("./pages/ingsectores.py")
 if col3.button("Editar"):
-    st.switch_page("./pages/editar_fuentes.py")
+    st.switch_page("./pages/ingsectores.py")
 if col4.button("Borrar"):
     st.switch_page("./pages/borrarsectores.py")   
 
@@ -104,3 +104,6 @@ if cnt>0:
     st.write(vnuri)
     tnuri = vnuri
     st.session_state['vnuri'] = tnuri
+    st.session_state['vpro_nuri'] = selection.to_string(columns=['proyecto_nuri'], header=False, index=False)
+    st.session_state['vsector'] = selection.to_string(columns=['sector'], header=False, index=False)
+    st.session_state['vcolor'] = selection.to_string(columns=['color'], header=False, index=False)
