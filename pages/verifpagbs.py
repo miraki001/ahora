@@ -40,7 +40,7 @@ vurl = st.session_state['vfuente']
 st.write(vurl)
 st.write(xtitulo)
 st.write(xdetalle)
-st.write(vatrib)
+#st.write(vatrib)
 vatrib = "{'" + vatrib1 + "':'" + vatrib2 + "'}"
 
 #st.write(vatrib)
