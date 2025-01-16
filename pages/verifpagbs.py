@@ -44,6 +44,7 @@ st.write(xdetalle)
 vv =  "'" + vatrib1 + "': '" + vatrib2 + "'" 
 st.write(vv)
 newv = {vatrib1:vatrib2}
+separador = 'div'
 st.write(newv)
         
 
