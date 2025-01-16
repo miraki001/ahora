@@ -18,6 +18,7 @@ if col2.button("Fuentes"):
 
 
 separador = st.session_state['vsepa'] 
+vatrib = st.session_state['vatributo'] 
 st.write(separador)
 xtitulo = st.session_state['vtit'] 
 xlink = st.session_state['vlink'] 
@@ -46,7 +47,10 @@ soup = BeautifulSoup(html_content, 'lxml')
 st.write('aca')
 
 #noticias = soup.find_all(class_='col-md-4 mb-4')
-noticias = soup.find_all(separador)
+if vatrib != '':
+    noticias = soup.find_all(separador,vatrib)
+if vatrib == '':    
+    noticias = soup.find_all(separador)
 for p in noticias:
     title = p.find(xlink)
     href = title.get("href")
