@@ -41,7 +41,7 @@ st.write(vurl)
 st.write(xtitulo)
 st.write(xdetalle)
 #st.write(vatrib)
-vv =  "' + vatrib1 + ': ' + vatrib2 + '"' 
+vv =  "' + vatrib1 + ': ' + vatrib2 + "'" 
 vatrib = {  vv }
 #vatrib ={"class": "col-md-4 mb-4"}
 
