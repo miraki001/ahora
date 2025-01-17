@@ -59,8 +59,8 @@ if tipobusq== 'json':
     data = page_soup.select("[type='application/json']")[4]
     #data = page_soup.select(separador)[vpos]
     st.write(data)
-    ojson = json.loads(data)
-    for product in ojson:
+    #ojson = json.loads(data)
+    for product in data:
         st.write(product[xtitulo])
 
     
