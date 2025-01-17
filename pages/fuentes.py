@@ -132,7 +132,7 @@ if cnt>0:
     st.session_state['vatributo2'] = df3.to_string(columns=['atributo2'], header=False, index=False)
     st.session_state['vtipobus'] = df3.to_string(columns=['tipo_busq'], header=False, index=False)
     st.session_state['vfuenteorg'] = df3.to_string(columns=['fuente_org'], header=False, index=False)
-    st.session_state['vurlling'] = df3.to_string(columns=['urllink'], header=False, index=False)
+    st.session_state['vurllink'] = df3.to_string(columns=['urllink'], header=False, index=False)
     st.session_state['vposjson'] = df3.to_string(columns=['posjson'], header=False, index=False)
 
 
