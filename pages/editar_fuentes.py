@@ -46,7 +46,9 @@ observa = st.text_input("Observaciones ",  st.session_state['vobserva'])
 
 col = st.columns((6.5, 4.5, 2), gap='medium')
 
+
 with col[0]:
+    tipobus = st.text_input("Tipo de Busqueda", st.session_state['vtipobus'])
     separador = st.text_input("Separador", st.session_state['vsepa'])
     atributo1 = st.text_input("Atributo 1", st.session_state['vatributo1'])
     atributo2 = st.text_input("Atributo 2", st.session_state['vatributo2'])
@@ -55,6 +57,8 @@ with col[0]:
     xpath_link = st.text_input("xpath link", st.session_state['vlink'])
     xpath_image = st.text_input("xpath imagen", st.session_state['vimagen'])
 with col[1]:
+    fuenteorg = st.text_input("Tipo de Busqueda", st.session_state['vfuenteorg'])
+    urllink = st.text_input("Tipo de Busqueda", st.session_state['urllink'])
     pais =  st.text_input("pais", st.session_state['vpais'])
     activa = st.text_input("Activa", st.session_state['vactiva'])
     tipo =  st.text_input("Tipo", st.session_state['vtipo'])
@@ -80,9 +84,12 @@ if col10.button(":red[**Grabar**]"):
         actualiza = actualiza + "tipo = :tipo, "
         actualiza = actualiza + "busqueda_pers = :busq, "
         actualiza = actualiza + "idioma = :idioma, "
-        actualiza = actualiza + "cod_pais = :cod "
+        actualiza = actualiza + "cod_pais = :cod, "
+        actualiza = actualiza + "tipo_busq = :tipo_busq, "
+        actualiza = actualiza + "fuente_org = :fuente_org, "
+        actualiza = actualiza + "urllink = :urllink  "
         actualiza = actualiza + " WHERE nuri= :nuri"        
-        session.execute(text(actualiza), {"url": vurl,"activa": activa,"tit": xpath_tit,"desc": vtitle, "pais": pais,"separador": separador,"atributo1": atributo1,"atributo2": atributo2, "det": xpath_det, "link": xpath_link,"image": xpath_image, "tipo": tipo,"busq": busqueda, "idioma": idioma,"cod": codigo, "nuri": tnuri})
+        session.execute(text(actualiza), {"url": vurl,"activa": activa,"tit": xpath_tit,"desc": vtitle, "pais": pais,"separador": separador,"atributo1": atributo1,"atributo2": atributo2, "det": xpath_det, "link": xpath_link,"image": xpath_image, "tipo": tipo,"busq": busqueda, "idioma": idioma,"cod": codigo,"tipo_busq" : tipobus ,"fuente_org": fuenteorg,"urllink": urllink,  "nuri": tnuri})
                         
         session.commit()
         st.success("Data sent")
