@@ -59,7 +59,7 @@ if tipobusq== 'json':
     data = page_soup.select("[type='application/json']")[4]
     #data = page_soup.select(separador)[vpos]
     st.write(data)
-    ojson = json.dumps(data)
+    ojson = json.dumps(data.text)
     for product in ojson:
         st.write(product["title"])
 
