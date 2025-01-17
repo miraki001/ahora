@@ -61,7 +61,7 @@ if tipobusq== 'json':
     st.write(data)
     ojson = json.dumps(data.text)
     for product in ojson:
-        st.write(product["title"])
+        st.write(product['title'])
 
     
 
