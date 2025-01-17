@@ -60,6 +60,7 @@ if tipobusq== 'json':
     #data = page_soup.select(separador)[vpos]
     st.write(data)
     pos1 = data.find('[')
+    st.write('pos1')
     st.write(pos1)
     pos2 = data.find(']')
     st.write(pos2)
