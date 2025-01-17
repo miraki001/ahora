@@ -51,7 +51,7 @@ if tipobusq== 'json':
         "x5sec":"7b22617365727665722d6c617a6164613b32223a223832333339343739626466613939303562613535386138333266383365326132434c4b516e65494645495474764a322b706f6d6f6941453d227d", }
 
     ret = requests.get(my_url, cookies=cookies)
-    page_soup = soup(ret.text, 'lxml')
+    page_soup = BeautifulSoup(ret.text, 'lxml')
     data = page_soup.select(separador)[posjson]
     ojson = json.loads(data.text)
     for product in ojson:
