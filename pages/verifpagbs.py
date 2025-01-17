@@ -55,7 +55,7 @@ if tipobusq== 'json':
     data = page_soup.select(separador)[posjson]
     ojson = json.loads(data.text)
     for product in ojson:
-        st.write(product[xtitulo]
+        st.write(product[xtitulo])
 
     
 
