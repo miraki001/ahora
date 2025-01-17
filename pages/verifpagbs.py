@@ -7,6 +7,7 @@ import requests
 from bs4 import BeautifulSoup
 from lxml import html
 import psycopg2
+import json
 from sqlalchemy import text
 
 col1, col2 = st.columns(2)
