@@ -61,7 +61,7 @@ with col[0]:
     xpath_image = st.text_input("xpath imagen", st.session_state['vimagen'])
 with col[1]:
     fuenteorg = st.text_input("Fuente Original", st.session_state['vfuenteorg'])
-    urllink = st.text_input("Url Link", st.session_state['urllink'])
+    urllink = st.text_input("Url Link", st.session_state['vurllink'])
     pais =  st.text_input("pais", st.session_state['vpais'])
     activa = st.text_input("Activa", st.session_state['vactiva'])
     tipo =  st.text_input("Tipo", st.session_state['vtipo'])
