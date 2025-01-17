@@ -65,11 +65,11 @@ if tipobusq== 'json':
     #json.parse(data)
     #data = page_soup.select(separador)[vpos]
     #st.write(data)
-    pos1 = data.str.find('[')
-    st.write('pos1')
-    st.write(pos1)
-    pos2 = data.find(']')
-    st.write(pos2)
+    #pos1 = data.str.find('[')
+    #st.write('pos1')
+    #st.write(pos1)
+    #pos2 = data.find(']')
+    #st.write(pos2)
 
     ojson = json.loads(data.text)
     #st.write(ojson)
