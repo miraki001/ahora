@@ -57,15 +57,15 @@ if tipobusq== 'json':
 
     ret = requests.get(my_url, cookies=cookies)
     page_soup = BeautifulSoup(ret.text, 'lxml')
-    #r = requests.get(my_url)
-    #soup1 = BeautifulSoup(r.content, 'html.parser')
+    r = requests.get(my_url)
+    soup1 = BeautifulSoup(r.content, 'html.parser')
     #pp = soup1.find_all('script')[14].text.strip()[48:-1]
-    #pp = soup1.find_all('script')[14].text.strip()
+    pp = soup1.find_all('script')[14].text.strip()
     #pp = soup1.find_all('script')[14]
     #st.write(pp)
-    st.write('fffffff')
+    #st.write('fffffff')
     #data = page_soup.select("[type='application/json']")[vpos]
-    data = page_soup.select(separador,newv)[vpos]
+    #data = page_soup.select(separador,newv)[vpos]
     #json.parse(data)
     #data = page_soup.select(separador)[vpos]
     #st.write(data)
@@ -75,7 +75,7 @@ if tipobusq== 'json':
     #pos2 = data.find(']')
     #st.write(pos2)
 
-    ojson = json.loads(data.string)
+    ojson = json.loads(pp.string)
     #st.write(ojson)
     for product in ojson:
         st.write(product[xtitulo])
