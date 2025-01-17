@@ -55,7 +55,7 @@ if col6.button("Ejecutar"):
 
 
 conn = st.connection("postgresql", type="sql")
-qq = 'select nuri,fuente as url,activa,fecha_act,descrip as fuente,pais,fuente_org,urllink,tipo_busq from fuentes_py where proyecto_nuri = 1  ;'
+qq = 'select nuri,fuente as url,activa,fecha_act,descrip as fuente,pais,fuente_org,urllink,tipo_busq,posjson from fuentes_py where proyecto_nuri = 1  ;'
 df1 = conn.query(qq, ttl="0"),
 df = df1[0]
 
@@ -133,6 +133,7 @@ if cnt>0:
     st.session_state['vtipobus'] = df3.to_string(columns=['tipo_busq'], header=False, index=False)
     st.session_state['vfuenteorg'] = df3.to_string(columns=['fuente_org'], header=False, index=False)
     st.session_state['vurlling'] = df3.to_string(columns=['urllink'], header=False, index=False)
+    st.session_state['vposjson'] = df3.to_string(columns=['posjson'], header=False, index=False)
 
 
     st.session_state['vfuente'] = selection.to_string(columns=['url'], header=False, index=False)
