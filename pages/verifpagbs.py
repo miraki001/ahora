@@ -31,9 +31,9 @@ pag = st.session_state['vfuente']
 #separador = 'class_="col-md-4 mb-4"'
 #separador = "attrs={'class':'col-md-4 mb-4'}"
 #separdor = str(separador)
-st.write(separador)
-p1 = 'class_='
-p2 = "'col-md-4 mb-4'"
+#st.write(separador)
+#p1 = 'class_='
+#p2 = "'col-md-4 mb-4'"
 
 tnuri = st.session_state['vnuri']
 vurl = st.session_state['vfuente']
@@ -42,7 +42,7 @@ st.write(xtitulo)
 st.write(xdetalle)
 #st.write(vatrib)
 vv =  "'" + vatrib1 + "': '" + vatrib2 + "'" 
-st.write(vv)
+#st.write(vv)
 newv = {vatrib1:vatrib2}
 #separador = 'div'
 #st.write(newv)
