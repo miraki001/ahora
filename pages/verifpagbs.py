@@ -45,6 +45,7 @@ st.write(vurl)
 st.write(xtitulo)
 st.write(xdetalle)
 newv = {vatrib1:vatrib2}
+st.write(newv)
         
 if tipobusq== 'json':
     my_url = vurl
