@@ -28,20 +28,13 @@ xlink = st.session_state['vlink']
 ximage = st.session_state['vimagen'] 
 xdetalle = st.session_state['vdet'] 
 pag = st.session_state['vfuente'] 
-#separador = 'class_="col-md-4 mb-4"'
-#separador = "attrs={'class':'col-md-4 mb-4'}"
-#separdor = str(separador)
-#st.write(separador)
-#p1 = 'class_='
-#p2 = "'col-md-4 mb-4'"
 
 tnuri = st.session_state['vnuri']
 vurl = st.session_state['vfuente']
 st.write(vurl)
 st.write(xtitulo)
 st.write(xdetalle)
-#st.write(vatrib)
-vv =  "'" + vatrib1 + "': '" + vatrib2 + "'" 
+#vv =  "'" + vatrib1 + "': '" + vatrib2 + "'" 
 #st.write(vv)
 newv = {vatrib1:vatrib2}
 #separador = 'div'
@@ -49,8 +42,8 @@ newv = {vatrib1:vatrib2}
         
 
 
-vv = vv.replace('"','')
-vatrib = {  vv }
+#vv = vv.replace('"','')
+#vatrib = {  vv }
 
 #vatrib ={"class": "col-md-4 mb-4"}
 
@@ -72,7 +65,6 @@ soup = BeautifulSoup(html_content, 'lxml')
 
 #noticias = soup.find_all(class_='col-md-4 mb-4')
 if vatrib != '':
-    st.write(vatrib)
     noticias = soup.find_all(separador,newv)
 if vatrib == '':    
     noticias = soup.find_all(separador)
