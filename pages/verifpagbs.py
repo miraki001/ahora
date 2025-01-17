@@ -28,6 +28,7 @@ xlink = st.session_state['vlink']
 ximage = st.session_state['vimagen'] 
 xdetalle = st.session_state['vdet'] 
 pag = st.session_state['vfuente'] 
+tipobusq = st.session_state['vfuente'] 
 
 tnuri = st.session_state['vnuri']
 vurl = st.session_state['vfuente']
