@@ -28,56 +28,38 @@ xlink = st.session_state['vlink']
 ximage = st.session_state['vimagen'] 
 xdetalle = st.session_state['vdet'] 
 pag = st.session_state['vfuente'] 
-tipobusq = st.session_state['vfuente'] 
+tipobusq = st.session_state['vtipobus'] 
 
 tnuri = st.session_state['vnuri']
 vurl = st.session_state['vfuente']
 st.write(vurl)
 st.write(xtitulo)
 st.write(xdetalle)
-#vv =  "'" + vatrib1 + "': '" + vatrib2 + "'" 
-#st.write(vv)
 newv = {vatrib1:vatrib2}
-#separador = 'div'
-#st.write(newv)
         
+if tipobusq== 'json':
 
 
-#vv = vv.replace('"','')
-#vatrib = {  vv }
+    
 
-#vatrib ={"class": "col-md-4 mb-4"}
-
-#st.write(vatrib)
-
-
-conn = st.connection("postgresql", type="sql")
-vquery = 'select * from fuentes_py where nuri = ' + tnuri + ';'
-df2 = conn.query(vquery, ttl="0"),
-df3 = df2[0]
-#st.write(df3['atributo1'])
-
-url = vurl
-response = requests.get(url)
-html_content = response.content
-tree = html.fromstring(html_content)
-soup = BeautifulSoup(html_content, 'lxml')
-#st.write('aca')
-
-#noticias = soup.find_all(class_='col-md-4 mb-4')
-if vatrib1 != '':
-    noticias = soup.find_all(separador,newv)
-if vatrib1 == '':    
-    noticias = soup.find_all(separador)
-for p in noticias:
-    title = p.find(xlink)
-    href = title.get("href")
-    title = p.find(xtitulo).get_text()
-    det = p.find(xdetalle).get_text()
-    if ximage !='none':
-        img = p.find(ximage).get('data-src')
-        st.write(img)
-
-    st.write(href)
-    st.write(title)
-    st.write(det)
+if tipobus != 'json':
+    url = vurl
+    response = requests.get(url)
+    html_content = response.content
+    tree = html.fromstring(html_content)
+    soup = BeautifulSoup(html_content, 'lxml')
+    if vatrib1 != '':
+        noticias = soup.find_all(separador,newv)
+    if vatrib1 == '':    
+        noticias = soup.find_all(separador)
+    for p in noticias:
+        title = p.find(xlink)
+        href = title.get("href")
+        title = p.find(xtitulo).get_text()
+        det = p.find(xdetalle).get_text()
+        if ximage !='none':
+            img = p.find(ximage).get('data-src')
+            st.write(img)
+        st.write(href)
+        st.write(title)
+        st.write(det)
