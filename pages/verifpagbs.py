@@ -73,7 +73,7 @@ if tipobusq== 'json':
     #pos2 = data.find(']')
     #st.write(pos2)
 
-    ojson = json.loads(pp.text.strip())
+    ojson = json.loads(pp.string)
     #st.write(ojson)
     for product in ojson:
         st.write(product['title'])
