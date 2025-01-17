@@ -56,7 +56,7 @@ if tipobusq== 'json':
 
     ret = requests.get(my_url, cookies=cookies)
     page_soup = BeautifulSoup(ret.text, 'lxml')
-    data = page_soup.select("[type='application/json']")[4]
+    data = page_soup.select("[type='application/json']")[4].text.strip[48:]
     json.parse(data)
     #data = page_soup.select(separador)[vpos]
     st.write(data)
