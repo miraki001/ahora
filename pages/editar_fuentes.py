@@ -14,6 +14,8 @@ activa = st.session_state['vactiva']
 
 tnuri = st.session_state['vnuri']
 url = st.session_state['vfuente']
+vpos = st.session_state['vposjon']
+vpos = int(vpos)
 
 st.markdown("""
 <style>
@@ -49,7 +51,7 @@ col = st.columns((6.5, 4.5, 2), gap='medium')
 
 with col[0]:
     tipobus = st.text_input("Tipo de Busqueda", st.session_state['vtipobus'])
-    posjsons = st.number_input("Posición del Json", st.session_state['vposjson'])
+    posjsons = st.number_input("Posición del Json",vpos)
     separador = st.text_input("Separador", st.session_state['vsepa'])
     atributo1 = st.text_input("Atributo 1", st.session_state['vatributo1'])
     atributo2 = st.text_input("Atributo 2", st.session_state['vatributo2'])
