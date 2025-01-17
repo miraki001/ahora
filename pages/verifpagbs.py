@@ -61,7 +61,7 @@ if tipobusq== 'json':
     pp = soup1.find_all('script')[14].text.strip()[48:-1]
     #pp = soup1.find_all('script')[14].text.strip()
     st.write(pp)
-    data = page_soup.select("[type='application/json']")[4].text.strip[48:]
+    data = page_soup.select("[type='application/json']")[4]
     json.parse(data)
     #data = page_soup.select(separador)[vpos]
     st.write(data)
