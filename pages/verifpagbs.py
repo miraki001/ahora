@@ -56,8 +56,8 @@ if tipobusq== 'json':
 
     ret = requests.get(my_url, cookies=cookies)
     page_soup = BeautifulSoup(ret.text, 'lxml')
-    #data = page_soup.select("[type='application/json']")[4]
-    data = page_soup.select(separador)[vpos]
+    data = page_soup.select("[type='application/json']")[4]
+    #data = page_soup.select(separador)[vpos]
     st.write(data)
     ojson = json.loads(data)
     for product in ojson:
