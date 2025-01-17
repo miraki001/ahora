@@ -29,6 +29,11 @@ ximage = st.session_state['vimagen']
 xdetalle = st.session_state['vdet'] 
 pag = st.session_state['vfuente'] 
 tipobusq = st.session_state['vtipobus'] 
+fuenteorg = st.session_state['vfuenteorg'] 
+urllink = st.session_state['vurllink'] 
+posjson = st.session_state['vposjosn'] 
+
+
 
 tnuri = st.session_state['vnuri']
 vurl = st.session_state['vfuente']
