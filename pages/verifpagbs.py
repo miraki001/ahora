@@ -9,6 +9,7 @@ from lxml import html
 import psycopg2
 import json
 import requests
+import pandas as pd
 from sqlalchemy import text
 
 col1, col2 = st.columns(2)
