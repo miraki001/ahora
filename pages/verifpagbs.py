@@ -31,7 +31,7 @@ pag = st.session_state['vfuente']
 tipobusq = st.session_state['vtipobus'] 
 fuenteorg = st.session_state['vfuenteorg'] 
 urllink = st.session_state['vurllink'] 
-posjson = st.session_state['vposjosn'] 
+posjson = st.session_state['vposjson'] 
 
 
 
