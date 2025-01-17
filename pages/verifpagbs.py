@@ -45,7 +45,7 @@ vv =  "'" + vatrib1 + "': '" + vatrib2 + "'"
 st.write(vv)
 newv = {vatrib1:vatrib2}
 #separador = 'div'
-st.write(newv)
+#st.write(newv)
         
 
 
@@ -54,21 +54,21 @@ vatrib = {  vv }
 
 #vatrib ={"class": "col-md-4 mb-4"}
 
-st.write(vatrib)
+#st.write(vatrib)
 
 
 conn = st.connection("postgresql", type="sql")
 vquery = 'select * from fuentes_py where nuri = ' + tnuri + ';'
 df2 = conn.query(vquery, ttl="0"),
 df3 = df2[0]
-st.write(df3['atributo1'])
+#st.write(df3['atributo1'])
 
 url = vurl
 response = requests.get(url)
 html_content = response.content
 tree = html.fromstring(html_content)
 soup = BeautifulSoup(html_content, 'lxml')
-st.write('aca')
+#st.write('aca')
 
 #noticias = soup.find_all(class_='col-md-4 mb-4')
 if vatrib != '':
