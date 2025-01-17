@@ -64,7 +64,7 @@ if tipobusq== 'json':
     #st.write(pp)
     st.write('fffffff')
     #data = page_soup.select("[type='application/json']")[vpos]
-    data = page_soup.select(separdor)[vpos]
+    data = page_soup.select(separador)[vpos]
     #json.parse(data)
     #data = page_soup.select(separador)[vpos]
     #st.write(data)
