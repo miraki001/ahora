@@ -4,8 +4,10 @@ import itables.options as it_op
 from itables.streamlit import interactive_table
 from streamlit_multipage import MultiPage
 import re
-
-
+from streamlit_server_state import server_state, server_state_lock
+with server_state_lock["count"]:  # Lock the "count" state for thread-safety
+    if "count" not in server_state:
+        server_state.count = 0
  
 st.set_page_config(
     page_title="Miraki",
@@ -58,6 +60,7 @@ if col2.button("Editar"):
     st.switch_page("./pages/editar.py")
 if col3.button("Seleccionar"):
     st.write(st.session_state.vnuri)
+    st.write("Count = ", server_state.count)
     #st.switch_page("./pages/seleccionar.py")
 if col4.button("Desmarcar"):
     st.switch_page("./pages/desmarcar.py")
@@ -145,6 +148,8 @@ ss = st.dataframe(selection, hide_index=True)
 st.write(selection['nuri'])
 vnuri= selection.to_string(columns=['nuri'], header=False, index=False)
 st.session_state.vnuri = vnuri
+with server_state_lock.count:
+ server_state.count = vnuri
 #st.write('vnuri valor')
 #st.write(selection.nuri)
 #st.write(selection.to_string(columns=['nuri'], header=False, index=False))
