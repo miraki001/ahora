@@ -4,7 +4,7 @@ from sqlalchemy import text
 from streamlit_extras.stylable_container import stylable_container
 
 
-st.session_state.running = False
+st.session_state.running = True
 
 
 col41, mid, col42 = st.columns([1,1,20])
