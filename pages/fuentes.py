@@ -3,10 +3,8 @@ import psycopg2
 from sqlalchemy import text
 from streamlit_extras.stylable_container import stylable_container
 
-if 'run_button' in st.session_state and st.session_state.run_button == True:
-    st.session_state.running = False
-else:
-    st.session_state.running = True
+
+st.session_state.running = False
 
 
 col41, mid, col42 = st.columns([1,1,20])
@@ -51,7 +49,7 @@ if col1.button("Home" ,  type='primary'):
 if col2.button("Insertar"):
     st.session_state['vTipo'] = 'Ingresar'
     st.switch_page("./pages/editar_fuentes.py")
-if col3.button("Editar", disabled=st.session_state.running, key='run_button'):
+if col3.button("Editar", disabled=st.session_state.running):
     st.session_state['vTipo'] = 'Editar'
     st.switch_page("./pages/editar_fuentes.py")
 if col4.button("Borrar", ):
