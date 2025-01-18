@@ -3,7 +3,7 @@ import psycopg2
 from sqlalchemy import text
 from streamlit_extras.stylable_container import stylable_container
 
-st.session_state.disabled = False
+st.session_state.disabled = True
 
 def disable():
     st.session_state.disabled = True
