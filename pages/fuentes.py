@@ -40,7 +40,7 @@ st.markdown("""
 
 if "Editar" not in st.session_state:
     st.session_state["Editar"] = False
-
+st.session_state["Editar"] = False
 
 if col1.button("Home" ,  type='primary'):
     st.switch_page("streamlit_app.py")
