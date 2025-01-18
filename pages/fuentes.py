@@ -3,7 +3,13 @@ import psycopg2
 from sqlalchemy import text
 from streamlit_extras.stylable_container import stylable_container
 
-st.session_state.button_clicked = True
+def disable():
+    st.session_state.disabled = True
+
+def enable():
+    if "disabled" in st.session_state and st.session_state.disabled == True:
+        st.session_state.disabled = False
+
 
 col41, mid, col42 = st.columns([1,1,20])
 with col41:
@@ -45,7 +51,7 @@ if col1.button("Home" ,  type='primary'):
 if col2.button("Insertar"):
     st.session_state['vTipo'] = 'Ingresar'
     st.switch_page("./pages/editar_fuentes.py")
-if col3.button("Editar", disabled=st.session_state.button_clicked ):
+if col3.button("Editar", on_click=disable, disabled=st.session_state.disabled):
     st.session_state['vTipo'] = 'Editar'
     st.switch_page("./pages/editar_fuentes.py")
 if col4.button("Borrar", disabled=st.session_state.button_clicked):
@@ -114,8 +120,7 @@ selection = dataframe_with_selections(df)
 cnt = len(selection)
 if cnt>0:
 
-    submitted = st.form_submit_button(
-        "Submit", on_click=disable, disabled=st.session_state.disabled)
+    enable()
 
     st.session_state.button_clicked = False
     vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
