@@ -123,7 +123,7 @@ if cnt>0:
     st.session_state['vtit'] = df3.to_string(columns=['xpath_titulo'], header=False, index=False)
     st.session_state['vdet'] = df3.to_string(columns=['xpath_detalle'], header=False, index=False)
     st.session_state['vlink'] = df3.to_string(columns=['xpath_link'], header=False, index=False)
-    st.write(df3.to_string(columns=['separador'], header=False, index=False))
+    #st.write(df3.to_string(columns=['separador'], header=False, index=False))
     st.session_state['vtipo'] = df3.to_string(columns=['tipo'], header=False, index=False)
     st.session_state['vbus'] = df3.to_string(columns=['busqueda_pers'], header=False, index=False)
     st.session_state['vidioma'] = df3.to_string(columns=['idioma'], header=False, index=False)
@@ -146,7 +146,8 @@ if cnt>0:
     st.session_state['vactiva'] = selection.to_string(columns=['activa'], header=False, index=False)
 
     tnuri = st.session_state['vnuri']
-    st.write(tnuri)
+    
+    #st.write(tnuri)
 
 col1, col2, col3,col4,col5,col6,col7 = st.columns(7)
 if col1.button("Home" ,  type='primary'):
