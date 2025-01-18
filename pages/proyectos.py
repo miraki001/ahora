@@ -43,12 +43,12 @@ if col1.button("Volver" ,  type='primary'):
     st.switch_page("./pages/parametros.py")
 if col2.button("Insertar"):
     st.session_state['vTipo'] = 'Ingresar'
-    st.switch_page("./pages/ingsectores.py")
+    st.switch_page("./pages/ingproyectos.py")
 if col3.button("Editar"):
     st.session_state['vTipo'] = 'Editar'
-    st.switch_page("./pages/ingsectores.py")
+    st.switch_page("./pages/ingproyectos.py")
 if col4.button("Borrar"):
-    st.switch_page("./pages/borrarsectores.py")   
+    st.switch_page("./pages/borrarproyectos.py")   
 
 
 
@@ -105,6 +105,6 @@ if cnt>0:
     st.write(vnuri)
     tnuri = vnuri
     st.session_state['vnuri'] = tnuri    
-    st.session_state['vproyecto'] = selection.to_string(columns=['proyecto'], header=False, index=False)
+    st.session_state['vpro'] = selection.to_string(columns=['proyecto'], header=False, index=False)
     
 
