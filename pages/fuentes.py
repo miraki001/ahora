@@ -6,7 +6,7 @@ from streamlit_extras.stylable_container import stylable_container
 st.session_state.vcnt = 0
 st.session_state.cnt = 0
 def cambiarcnt():
-    st.session_state.cnt = st.session_state.vcnt
+    psjson = st.session_state.vcnt
 
 col41, mid, col42 = st.columns([1,1,20])
 with col41:
