@@ -33,7 +33,7 @@ vdetalle = ''
 vlink = ''
 vimagen = ''
 
-
+disable()
 
 st.markdown("""
             <style>
@@ -125,7 +125,7 @@ selection = dataframe_with_selections(df)
 cnt = len(selection)
 if cnt>0:
 
-    disable()
+    enable()
 
     st.session_state.button_clicked = False
     vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
