@@ -13,3 +13,5 @@ with conn.session as session:
     actualiza = actualiza + " from fuentes_py where nuri = :nuri ;"
     session.execute(text(actualiza), {"nuri": tnuri})
     session.commit()
+    
+st.switch_page("./pages/fuentes.py")
