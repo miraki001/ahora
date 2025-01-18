@@ -39,7 +39,7 @@ st.markdown("""
             </style>""", unsafe_allow_html=True)
 
 
-st.session_state["Editar"] = False
+st.session_state["Editar"] = True
 
 if col1.button("Home" ,  type='primary'):
     st.switch_page("streamlit_app.py")
