@@ -8,7 +8,7 @@ st.session_state.cnt = 0
 def cambiarcnt():
     st.write('aca')
     st.write(cnt)
-    posjson  = cnr
+    posjson  = cnt
 
 col41, mid, col42 = st.columns([1,1,20])
 with col41:
