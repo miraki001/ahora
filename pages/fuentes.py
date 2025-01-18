@@ -123,6 +123,7 @@ if cnt>0:
     
     vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
     st.write(vnuri)
+    st.write(cnt)
     tnuri = vnuri
     vquery = 'select * from fuentes_py where nuri = ' + vnuri + ';'
     df2 = conn.query(vquery, ttl="0"),
