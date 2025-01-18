@@ -123,7 +123,7 @@ if cnt>0:
 
     #st.session_state["Editar"] = False
     change_button_status("Editar")
-    
+    st.set_page_config(page_title="Enable Buttons", layout="wide")    
       
     vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
     st.write(vnuri)
