@@ -119,7 +119,7 @@ cnt = len(selection)
 if cnt>0:
 
     st.session_state.running = False
-    st.experimental_rerun()
+
 
        
       
