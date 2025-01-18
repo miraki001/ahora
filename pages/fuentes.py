@@ -3,7 +3,7 @@ import psycopg2
 from sqlalchemy import text
 from streamlit_extras.stylable_container import stylable_container
 
-st.session_state.button_clicked = True
+st.session_state.button_clicked = False
 
 col41, mid, col42 = st.columns([1,1,20])
 with col41:
