@@ -6,6 +6,10 @@ cnt = 0
 st.session_state['vcnt'] = 0
 pcnt = st.session_state['vcnt']
 
+def setcnt():
+    pcnt = st.session_state['v
+    return pcnt
+    
 col41, mid, col42 = st.columns([1,1,20])
 with col41:
     st.image('ic_launcher44.png', width=60)
@@ -123,6 +127,7 @@ cnt = len(selection)
 if cnt>0:
     st.session_state['vcnt'] = cnt
     pcnt = st.session_state['vcnt']
+    setcnt()
     vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
     st.write(vnuri)
     st.write(cnt)
