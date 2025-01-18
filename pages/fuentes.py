@@ -56,6 +56,7 @@ if col2.button("Insertar"):
 if col3.button("Editar"):   
     st.write(st.session_state.vcnt)
     st.write(st.session_state.cnt)
+    st.write(cnt)
     if st.session_state.cnt==0:
         st.error('Debe seleccionar una fuente', icon="🚨")
     else:
