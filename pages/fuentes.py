@@ -127,6 +127,10 @@ if cnt>0:
 
     enable()
 
+    if "disabled" not in st.session_state:
+        st.write('acafff')
+        st.session_state.disabled = True
+
     st.session_state.button_clicked = False
     vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
     st.write(vnuri)
