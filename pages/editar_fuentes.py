@@ -15,6 +15,7 @@ activa = st.session_state['vactiva']
 tnuri = st.session_state['vnuri']
 url = st.session_state['vfuente']
 vpos = st.session_state['vposjson']
+st.write(vpos)
 vpos = int(vpos)
 
 st.markdown("""
