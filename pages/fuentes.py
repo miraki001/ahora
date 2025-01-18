@@ -2,15 +2,13 @@ import streamlit as st
 import psycopg2
 from sqlalchemy import text
 from streamlit_extras.stylable_container import stylable_container
-cnt = 0
-st.session_state['vcnt'] = 0
-pcnt = st.session_state['vcnt']
+from streamlit_server_state import server_state, server_state_lock
+with server_state_lock["cnt"]:  # Lock the "count" state for thread-safety
+    if "cnt" not in server_state:
+        server_state.cnt = 0
 
-def setcnt():
-    pcnt = st.session_state['vcnt']
-    st.write(pcnt)
-    st.write('def')
-    return pcnt
+
+
     
 col41, mid, col42 = st.columns([1,1,20])
 with col41:
@@ -47,7 +45,26 @@ st.markdown("""
             </style>""", unsafe_allow_html=True)
 
 
-
+col1, col2, col3,col4,col5,col6,col7 = st.columns(7)
+if col1.button("Home" ,  type='primary'):
+    st.switch_page("streamlit_app.py")
+if col2.button("Insertar"):
+    st.session_state['vTipo'] = 'Ingresar'
+    st.switch_page("./pages/editar_fuentes.py")
+if col3.button("Editar"):   
+    if server_state.cnt==0:
+        st.error('Debe seleccionar una fuente', icon="🚨")
+    else:
+        st.session_state['vTipo'] = 'Editar'
+        st.switch_page("./pages/editar_fuentes.py")
+if col4.button("Borrar", ):
+    st.switch_page("./pages/borrarfuente.py")   
+if col5.button("Verificar"):
+    st.switch_page("./pages/verifpagbs.py")
+if col6.button("Ejecutar"):
+    st.switch_page("./pages/scraptodo.py")
+if col7.button("Duplicar"):
+    st.switch_page("./pages/duplicarfuente.py")
 
 
 
@@ -107,9 +124,7 @@ selection = dataframe_with_selections(df)
 
 cnt = len(selection)
 if cnt>0:
-    st.session_state['vcnt'] = cnt
-    pcnt = st.session_state['vcnt']
-    #setcnt()
+    server_state.cnt = cnt
     vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
     #st.write(vnuri)
     #st.write(cnt)
@@ -149,28 +164,6 @@ if cnt>0:
     
     #st.write(tnuri)
 
-col1, col2, col3,col4,col5,col6,col7 = st.columns(7)
-if col1.button("Home" ,  type='primary'):
-    st.switch_page("streamlit_app.py")
-if col2.button("Insertar"):
-    st.session_state['vTipo'] = 'Ingresar'
-    st.switch_page("./pages/editar_fuentes.py")
-if col3.button("Editar"):   
-    st.write(cnt)
-    st.write(pcnt)
-    st.write(vnuri)
-    if pcnt==0:
-        st.error('Debe seleccionar una fuente', icon="🚨")
-    else:
-        st.session_state['vTipo'] = 'Editar'
-        st.switch_page("./pages/editar_fuentes.py")
-if col4.button("Borrar", ):
-    st.switch_page("./pages/borrarfuente.py")   
-if col5.button("Verificar"):
-    st.switch_page("./pages/verifpagbs.py")
-if col6.button("Ejecutar"):
-    st.switch_page("./pages/scraptodo.py")
-if col7.button("Duplicar"):
-    st.switch_page("./pages/duplicarfuente.py")
+
 
 
