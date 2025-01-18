@@ -17,7 +17,7 @@ with col42:
 
 #st.subheader("Plataforma de Vigilancia Tecnólogica e Inteligencia Competitiva")
 
-posjson = st.number_input("Posición del Json",min_value=0,max_value=100,value=0)
+posjson = st.number_input("Posición del Json",min_value=0,max_value=100,value=0,key='vcnt')
 
 
 tnuri = 0
