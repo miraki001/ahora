@@ -48,7 +48,8 @@ if col1.button("Home" ,  type='primary'):
 if col2.button("Insertar"):
     st.session_state['vTipo'] = 'Ingresar'
     st.switch_page("./pages/editar_fuentes.py")
-if col3.button("Editar"):    
+if col3.button("Editar"):   
+    st.write(cnt)
     if cnt==0:
         st.error('Debe seleccionar una fuente', icon="🚨")
     else:
@@ -119,12 +120,7 @@ selection = dataframe_with_selections(df)
 
 cnt = len(selection)
 if cnt>0:
-
-
-
-
-       
-      
+    
     vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
     st.write(vnuri)
     tnuri = vnuri
