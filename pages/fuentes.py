@@ -7,7 +7,7 @@ st.session_state['vcnt'] = 0
 pcnt = st.session_state['vcnt']
 
 def setcnt():
-    pcnt = st.session_state['v
+    pcnt = st.session_state['vcnt']
     return pcnt
     
 col41, mid, col42 = st.columns([1,1,20])
