@@ -3,8 +3,7 @@ import psycopg2
 from sqlalchemy import text
 from streamlit_extras.stylable_container import stylable_container
 
-if 'Editar' not in st.session_state:
-    st.session_state.disabled = True
+st.session_state.disabled = True
 
 col41, mid, col42 = st.columns([1,1,20])
 with col41:
@@ -48,7 +47,7 @@ if col1.button("Home" ,  type='primary'):
 if col2.button("Insertar"):
     st.session_state['vTipo'] = 'Ingresar'
     st.switch_page("./pages/editar_fuentes.py")
-if col3.button("Editar", key='Editar' ):
+if col3.button("Editar",disabled=st.session_state.disabled ):
     st.session_state['vTipo'] = 'Editar'
     st.switch_page("./pages/editar_fuentes.py")
 if col4.button("Borrar", ):
