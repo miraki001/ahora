@@ -18,7 +18,7 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"
     }
 )
-
+vnuri =0
 col41, mid, col42 = st.columns([1,1,20])
 with col41:
     st.image('ic_launcher44.png', width=60)
