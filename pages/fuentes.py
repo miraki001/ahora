@@ -2,7 +2,7 @@ import streamlit as st
 import psycopg2
 from sqlalchemy import text
 from streamlit_extras.stylable_container import stylable_container
-from streamlit_server_state import server_state, server_state_lock
+from streamlit_server_state import server_state, server_state_lock, no_rerun
 with server_state_lock["vcnt"]:  # Lock the "count" state for thread-safety
     if "vcnt" not in server_state:
         server_state.vcnt = 0
@@ -126,8 +126,10 @@ selection = dataframe_with_selections(df)
 cnt = len(selection)
 if cnt>0:
     #server_state.vcnt = cnt
-    with server_state_lock.vcnt:
-        server_state.vcnt -= 1
+    with no_rerun:
+        server_state["vcnt"] = cnt 
+    #with server_state_lock.vcnt:
+    #    server_state.vcnt -= 1
     vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
     tnuri = vnuri
     vquery = 'select * from fuentes_py where nuri = ' + vnuri + ';'
