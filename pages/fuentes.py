@@ -39,7 +39,7 @@ st.markdown("""
             </style>""", unsafe_allow_html=True)
 
 
-st.session_state["Editar"] = True
+st.session_state["Editar"] = False
 
 if col1.button("Home" ,  type='primary'):
     st.switch_page("streamlit_app.py")
@@ -115,7 +115,8 @@ selection = dataframe_with_selections(df)
 cnt = len(selection)
 if cnt>0:
 
-    st.session_state["Editar"] = True
+    st.session_state["Editar"] = False
+    
     vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
     st.write(vnuri)
     tnuri = vnuri
