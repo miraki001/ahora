@@ -21,6 +21,7 @@ vtitulo= ''
 vdetalle = ''
 vlink = ''
 vimagen = ''
+cnt = 0
 
 
 
@@ -44,8 +45,11 @@ def change_button_status(button_name: str):
     st.session_state["Editar"] = True
     st.write(f"{button_name} - {st.session_state[button_name]}")
 
+if cnt==0:
+    st.session_state["Editar"] = False
+if cnt !=0:
+    st.session_state["Editar"] = true
 
-st.session_state["Editar"] = False
 
 if col1.button("Home" ,  type='primary'):
     st.switch_page("streamlit_app.py")
