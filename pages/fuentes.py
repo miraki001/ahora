@@ -125,7 +125,7 @@ selection = dataframe_with_selections(df)
 
 cnt = len(selection)
 if cnt>0:
-    server_state.vcnt = cnt
+    #server_state.vcnt = cnt
     vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
     tnuri = vnuri
     vquery = 'select * from fuentes_py where nuri = ' + vnuri + ';'
