@@ -4,7 +4,7 @@ from sqlalchemy import text
 from streamlit_extras.stylable_container import stylable_container
 cnt = 0
 st.session_state['vcnt'] = 0
-
+pcnt = st.session_state['vcnt']
 
 col41, mid, col42 = st.columns([1,1,20])
 with col41:
@@ -50,7 +50,7 @@ if col2.button("Insertar"):
     st.switch_page("./pages/editar_fuentes.py")
 if col3.button("Editar"):   
     st.write(cnt)
-    st.write(vcnt)
+    st.write(pcnt)
     if cnt==0:
         st.error('Debe seleccionar una fuente', icon="🚨")
     else:
@@ -122,6 +122,7 @@ selection = dataframe_with_selections(df)
 cnt = len(selection)
 if cnt>0:
     st.session_state['vcnt'] = cnt
+    pcnt = st.session_state['vcnt']
     vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
     st.write(vnuri)
     st.write(cnt)
