@@ -93,7 +93,7 @@ col = st.columns((6.5, 4.5, 2), gap='medium')
 
 with col[0]:
     tipobus = st.text_input("Tipo de Busqueda", tipobus )
-    posjson = st.number_input("Posición del Json",vpos, min_value=0,step=1, max_value=100)
+    posjson = st.number_input("Posición del Json",vpos, min_value=0, max_value=50)
     separador = st.text_input("Separador", separador)
     atributo1 = st.text_input("Atributo 1", atributo1)
     atributo2 = st.text_input("Atributo 2", atributo2)
