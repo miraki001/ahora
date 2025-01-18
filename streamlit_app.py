@@ -56,7 +56,7 @@ if col1.button("Home"):
 if col2.button("Editar"):
     st.switch_page("./pages/editar.py")
 if col3.button("Seleccionar"):
-    st.write(self.vnuri)
+    st.write(vnuri)
     #st.switch_page("./pages/seleccionar.py")
 if col4.button("Desmarcar"):
     st.switch_page("./pages/desmarcar.py")
