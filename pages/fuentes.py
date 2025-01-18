@@ -51,7 +51,7 @@ if col1.button("Home" ,  type='primary'):
 if col2.button("Insertar"):
     st.session_state['vTipo'] = 'Ingresar'
     st.switch_page("./pages/editar_fuentes.py")
-if col3.button("Editar", on_click=disable, disabled=st.session_state.disabled):
+if col3.button("Editar", on_click=disable, disabled=st.session_state.disabled()):
     st.session_state['vTipo'] = 'Editar'
     st.switch_page("./pages/editar_fuentes.py")
 if col4.button("Borrar", disabled=st.session_state.button_clicked):
