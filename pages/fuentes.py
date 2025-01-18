@@ -2,7 +2,7 @@ import streamlit as st
 import psycopg2
 from sqlalchemy import text
 from streamlit_extras.stylable_container import stylable_container
-from streamlit_server_state import server_state, server_state_lock, no_rerun
+
 with server_state_lock["vcnt"]:  # Lock the "count" state for thread-safety
     if "vcnt" not in server_state:
         server_state.vcnt = 0
