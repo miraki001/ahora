@@ -57,6 +57,7 @@ if col2.button("Insertar"):
 if col3.button("Editar"):   
     st.write(cnt)
     st.write(pcnt)
+    st.write(vnuri
     if pcnt==0:
         st.error('Debe seleccionar una fuente', icon="🚨")
     else:
