@@ -8,7 +8,8 @@ tnuri = st.session_state['vnuri']
 
 
 with conn.session as session:
-    actualiza = "insert into sectores (nuri,proyecto_nuri,sector,color)"
-    actualiza = actualiza + " values (nextval('sectores_seq'),:proyecto_nuri,:sector,:color) ;"
-    session.execute(text(actualiza), {"proyecto_nuri": vpro_nuri,"sector": vsector,"color": vcolor})
+    actualiza = "INSERT INTO public.fuentes_py( nuri, fuente, fecha_act, activa, tipo, descrip, proyecto_nuri, limite, tema, busqueda_pers, pais, idioma, separador, xpath_titulo, xpath_detalle, xpath_autores, sep_autores, cnt_noticias, utfdecode, xpath_publica, act_url_fecha, urlencode, cnt_encontradas, baja_def, observa, cod_pais, xpath_link, xpath_image, atributo1, atributo2, tipo_busq, fuente_org, urllink, posjson)"
+    actualiza = actualiza  + " select nextval('fuente_py_seq')  , fuente, fecha_act, activa, tipo, descrip, proyecto_nuri, limite, tema, busqueda_pers, pais, idioma, separador, xpath_titulo, xpath_detalle, xpath_autores, sep_autores, cnt_noticias, utfdecode, xpath_publica, act_url_fecha, urlencode, cnt_encontradas, baja_def, observa, cod_pais, xpath_link, xpath_image, atributo1, atributo2, tipo_busq, fuente_org, urllink, posjson  " 
+    actualiza = actualiza + " from fuentes_py where nuri = :nuri ;"
+    session.execute(text(actualiza), {"nuri": tnuri})
     session.commit()
