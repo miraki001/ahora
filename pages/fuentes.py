@@ -38,6 +38,8 @@ st.markdown("""
                 }
             </style>""", unsafe_allow_html=True)
 
+if "Editar" not in st.session_state:
+    st.session_state["Editar"] = False
 
 
 if col1.button("Home" ,  type='primary'):
