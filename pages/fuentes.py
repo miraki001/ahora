@@ -111,14 +111,14 @@ if cnt>0:
     pcnt = st.session_state['vcnt']
     setcnt()
     vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
-    st.write(vnuri)
-    st.write(cnt)
-    st.write(pcnt)
+    #st.write(vnuri)
+    #st.write(cnt)
+    #st.write(pcnt)
     tnuri = vnuri
     vquery = 'select * from fuentes_py where nuri = ' + vnuri + ';'
     df2 = conn.query(vquery, ttl="0"),
     df3 = df2[0]
-    st.write(df3)
+    #st.write(df3)
     st.session_state['vsepa'] = df3.to_string(columns=['separador'], header=False, index=False)
     st.session_state['vtit'] = df3.to_string(columns=['xpath_titulo'], header=False, index=False)
     st.session_state['vdet'] = df3.to_string(columns=['xpath_detalle'], header=False, index=False)
