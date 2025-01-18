@@ -5,6 +5,7 @@ from streamlit_extras.stylable_container import stylable_container
 
 st.session_state.vcnt = 0
 st.session_state.cnt = 0
+cnt = 0
 def cambiarcnt():
     st.write('aca')
     st.write(cnt)
