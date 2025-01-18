@@ -50,6 +50,7 @@ if col2.button("Insertar"):
     st.session_state['vTipo'] = 'Ingresar'
     st.switch_page("./pages/editar_fuentes.py")
 if col3.button("Editar"):   
+    st.write(vcnt)
     if vcnt==0:
         st.error('Debe seleccionar una fuente', icon="🚨")
     else:
@@ -123,6 +124,7 @@ selection = dataframe_with_selections(df)
 cnt = len(selection)
 if cnt>0:
     vcnt = cnt
+    t.rerun()
     vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
     tnuri = vnuri
     vquery = 'select * from fuentes_py where nuri = ' + vnuri + ';'
