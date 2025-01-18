@@ -19,6 +19,7 @@ st.set_page_config(
     }
 )
 vnuri =0
+st.session_state.vnuri = 0
 col41, mid, col42 = st.columns([1,1,20])
 with col41:
     st.image('ic_launcher44.png', width=60)
@@ -56,7 +57,7 @@ if col1.button("Home"):
 if col2.button("Editar"):
     st.switch_page("./pages/editar.py")
 if col3.button("Seleccionar"):
-    st.write(vnuri)
+    st.write(st.session_state.vnuri)
     #st.switch_page("./pages/seleccionar.py")
 if col4.button("Desmarcar"):
     st.switch_page("./pages/desmarcar.py")
@@ -143,6 +144,7 @@ ss = st.dataframe(selection, hide_index=True)
 #st.write(selection[0])
 st.write(selection['nuri'])
 vnuri= selection.to_string(columns=['nuri'], header=False, index=False)
+st.session_state.vnuri = vnuri
 #st.write('vnuri valor')
 #st.write(selection.nuri)
 #st.write(selection.to_string(columns=['nuri'], header=False, index=False))
