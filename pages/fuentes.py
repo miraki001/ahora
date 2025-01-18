@@ -3,9 +3,9 @@ import psycopg2
 from sqlalchemy import text
 from streamlit_extras.stylable_container import stylable_container
 from streamlit_server_state import server_state, server_state_lock
-with server_state_lock["cnt"]:  # Lock the "count" state for thread-safety
-    if "cnt" not in server_state:
-        server_state.cnt = 0
+with server_state_lock["vcnt"]:  # Lock the "count" state for thread-safety
+    if "vcnt" not in server_state:
+        server_state.vcnt = 0
 
 
 
@@ -46,13 +46,14 @@ st.markdown("""
 
 
 col1, col2, col3,col4,col5,col6,col7 = st.columns(7)
+
 if col1.button("Home" ,  type='primary'):
     st.switch_page("streamlit_app.py")
 if col2.button("Insertar"):
     st.session_state['vTipo'] = 'Ingresar'
     st.switch_page("./pages/editar_fuentes.py")
 if col3.button("Editar"):   
-    if server_state.cnt==0:
+    if server_state.vcnt==0:
         st.error('Debe seleccionar una fuente', icon="🚨")
     else:
         st.session_state['vTipo'] = 'Editar'
@@ -124,11 +125,8 @@ selection = dataframe_with_selections(df)
 
 cnt = len(selection)
 if cnt>0:
-    server_state.cnt = cnt
+    server_state.vcnt = cnt
     vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
-    #st.write(vnuri)
-    #st.write(cnt)
-    #st.write(pcnt)
     tnuri = vnuri
     vquery = 'select * from fuentes_py where nuri = ' + vnuri + ';'
     df2 = conn.query(vquery, ttl="0"),
