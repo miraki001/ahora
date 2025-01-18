@@ -4,9 +4,9 @@ from sqlalchemy import text
 from streamlit_extras.stylable_container import stylable_container
 
 if 'run_button' in st.session_state and st.session_state.run_button == True:
-    st.session_state.running = True
-else:
     st.session_state.running = False
+else:
+    st.session_state.running = True
 
 
 col41, mid, col42 = st.columns([1,1,20])
