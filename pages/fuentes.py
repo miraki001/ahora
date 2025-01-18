@@ -116,8 +116,7 @@ selection = dataframe_with_selections(df)
 cnt = len(selection)
 if cnt>0:
 
-    st.session_state["Editar"] = True
-    change_button_status("Editar")
+    st.session_state.disabled = False
       
       
     vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
