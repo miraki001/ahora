@@ -22,7 +22,7 @@ vtitulo= ''
 vdetalle = ''
 vlink = ''
 vimagen = ''
-vcnt = 0
+#vcnt = 0
 
 
 
