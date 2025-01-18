@@ -109,7 +109,7 @@ cnt = len(selection)
 if cnt>0:
     st.session_state['vcnt'] = cnt
     pcnt = st.session_state['vcnt']
-    setcnt()
+    #setcnt()
     vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
     #st.write(vnuri)
     #st.write(cnt)
