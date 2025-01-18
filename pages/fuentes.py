@@ -114,13 +114,7 @@ selection = dataframe_with_selections(df)
 cnt = len(selection)
 if cnt>0:
 
-    enable()
 
-    if "disabled" not in st.session_state:
-        st.write('disble')
-        st.session_state.disabled = False
-
-    st.session_state.button_clicked = False
     vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
     st.write(vnuri)
     tnuri = vnuri
