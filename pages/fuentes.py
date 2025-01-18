@@ -52,7 +52,7 @@ if col5.button("Verificar"):
 if col6.button("Ejecutar"):
     st.switch_page("./pages/scraptodo.py")
 if col7.button("Duplicar"):
-    st.switch_page("./pages/scraptodo.py")
+    st.switch_page("./pages/duplicarfuente.py")
 
 
 
