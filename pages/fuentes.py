@@ -7,7 +7,7 @@ st.session_state.vcnt = 0
 st.session_state.cnt = 0
 def cambiarcnt():
     st.write('aca')
-    psjson = st.session_state.vcnt
+    vcnt1 = st.session_state.vcnt
 
 col41, mid, col42 = st.columns([1,1,20])
 with col41:
@@ -17,7 +17,7 @@ with col42:
 
 #st.subheader("Plataforma de Vigilancia Tecnólogica e Inteligencia Competitiva")
 
-posjson = st.number_input("Posición del Json",min_value=0,max_value=100,value=0,key='vcnt')
+posjson = st.number_input("Posición del Json",min_value=0,max_value=100,value=0,key='vcnt1')
 
 
 tnuri = 0
