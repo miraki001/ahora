@@ -3,7 +3,7 @@ import psycopg2
 from sqlalchemy import text
 from streamlit_extras.stylable_container import stylable_container
 
-st.session_state.button_clicked = False
+st.session_state.button_clicked = True
 
 col41, mid, col42 = st.columns([1,1,20])
 with col41:
@@ -113,6 +113,10 @@ selection = dataframe_with_selections(df)
 
 cnt = len(selection)
 if cnt>0:
+
+    submitted = st.form_submit_button(
+        "Submit", on_click=disable, disabled=st.session_state.disabled)
+
     st.session_state.button_clicked = False
     vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
     st.write(vnuri)
