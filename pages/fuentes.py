@@ -43,7 +43,7 @@ st.markdown("""
 if col1.button("Home" ,  type='primary'):
     st.switch_page("streamlit_app.py")
 if col2.button("Insertar"):
-    st.switch_page("./pages/insertar_fuente.py")
+    st.switch_page("./pages/editar_fuentes.py")
 if col3.button("Editar", disabled=st.session_state.button_clicked ):
     st.switch_page("./pages/editar_fuentes.py")
 if col4.button("Borrar", disabled=st.session_state.button_clicked):
