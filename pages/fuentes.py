@@ -124,9 +124,7 @@ if cnt>0:
     #st.session_state["Editar"] = False
     change_button_status("Editar")
     
-    if st.button("Editar", disabled=not st.session_state["Button2"]):
-        change_button_status("Insertar")
-    
+      
     vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
     st.write(vnuri)
     tnuri = vnuri
