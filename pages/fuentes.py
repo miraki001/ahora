@@ -3,13 +3,9 @@ import psycopg2
 from sqlalchemy import text
 from streamlit_extras.stylable_container import stylable_container
 
-with server_state_lock["vcnt"]:  # Lock the "count" state for thread-safety
-    if "vcnt" not in server_state:
-        server_state.vcnt = 0
 
 
 
-server_state.vcnt = 0   
 col41, mid, col42 = st.columns([1,1,20])
 with col41:
     st.image('ic_launcher44.png', width=60)
@@ -26,6 +22,7 @@ vtitulo= ''
 vdetalle = ''
 vlink = ''
 vimagen = ''
+vcnt = 0
 
 
 
@@ -53,7 +50,7 @@ if col2.button("Insertar"):
     st.session_state['vTipo'] = 'Ingresar'
     st.switch_page("./pages/editar_fuentes.py")
 if col3.button("Editar"):   
-    if server_state.vcnt==0:
+    if vcnt==0:
         st.error('Debe seleccionar una fuente', icon="🚨")
     else:
         st.session_state['vTipo'] = 'Editar'
@@ -125,11 +122,7 @@ selection = dataframe_with_selections(df)
 
 cnt = len(selection)
 if cnt>0:
-    #server_state.vcnt = cnt
-    with no_rerun:
-        server_state["vcnt"] = cnt 
-    #with server_state_lock.vcnt:
-    #    server_state.vcnt -= 1
+    vcnt = cnt
     vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
     tnuri = vnuri
     vquery = 'select * from fuentes_py where nuri = ' + vnuri + ';'
