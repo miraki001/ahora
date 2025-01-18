@@ -8,6 +8,8 @@ pcnt = st.session_state['vcnt']
 
 def setcnt():
     pcnt = st.session_state['vcnt']
+    st.write(pcnt)
+    st.write('def')
     return pcnt
     
 col41, mid, col42 = st.columns([1,1,20])
@@ -55,7 +57,7 @@ if col2.button("Insertar"):
 if col3.button("Editar"):   
     st.write(cnt)
     st.write(pcnt)
-    if cnt==0:
+    if pcnt==0:
         st.error('Debe seleccionar una fuente', icon="🚨")
     else:
         st.session_state['vTipo'] = 'Editar'
