@@ -4,7 +4,9 @@ from sqlalchemy import text
 from streamlit_extras.stylable_container import stylable_container
 
 st.session_state.vcnt = 0
-
+st.session_state.cnt = 0
+def cambiarcnt():
+    st.session_state.cnt = st.session_state.vcnt
 
 col41, mid, col42 = st.columns([1,1,20])
 with col41:
@@ -124,6 +126,7 @@ selection = dataframe_with_selections(df)
 cnt = len(selection)
 if cnt>0:
     st.session_state.vcnt = cnt
+    cambiarcnt()
     vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
     tnuri = vnuri
     vquery = 'select * from fuentes_py where nuri = ' + vnuri + ';'
