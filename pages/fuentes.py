@@ -13,7 +13,7 @@ with col42:
 st.subheader("Plataforma de Vigilancia Tecnólogica e Inteligencia Competitiva")
 
 
-col1, col2, col3,col4,col5,col6 = st.columns(6)
+col1, col2, col3,col4,col5,col6,col7 = st.columns(7)
 
 tnuri = 0
 vtitulo= ''
@@ -50,6 +50,8 @@ if col4.button("Borrar"):
 if col5.button("Verificar"):
     st.switch_page("./pages/verifpagbs.py")
 if col6.button("Ejecutar"):
+    st.switch_page("./pages/scraptodo.py")
+if col7.button("Duplicar"):
     st.switch_page("./pages/scraptodo.py")
 
 
