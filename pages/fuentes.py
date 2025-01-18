@@ -18,7 +18,7 @@ with col41:
 with col42:
     st.title('Miraki')
 
-st.subheader("Plataforma de Vigilancia Tecnólogica e Inteligencia Competitiva")
+#st.subheader("Plataforma de Vigilancia Tecnólogica e Inteligencia Competitiva")
 
 
 
