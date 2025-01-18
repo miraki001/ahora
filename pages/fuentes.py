@@ -8,12 +8,12 @@ def disable():
     st.session_state.disabled = True
 
 def enable():
-    st.write('aca1')
+    st.write('enable')
     if "disabled" in st.session_state and st.session_state.disabled == True:
         st.session_state.disabled = False
 
 if "disabled" not in st.session_state:
-    st.write('aca')
+    st.write('disable 1')
     st.session_state.disabled = True
 
 col41, mid, col42 = st.columns([1,1,20])
@@ -128,8 +128,8 @@ if cnt>0:
     enable()
 
     if "disabled" not in st.session_state:
-        st.write('acafff')
-        st.session_state.disabled = True
+        st.write('disble')
+        st.session_state.disabled = False
 
     st.session_state.button_clicked = False
     vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
