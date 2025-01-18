@@ -6,7 +6,13 @@ st.set_page_config(layout="wide")
 conn = st.connection("postgresql", type="sql")
 
 def ingresar():
-    
+    conn = st.connection("postgresql", type="sql")
+    with conn.session as session:
+        actualiza = "insert into fuentes_py (nuri, fuente,, activa, xpath_titulo, descrip, proyecto_nuri,pais,separador,atributo1,atributo2,xpath_detalle,xpath_link,xpath_image,tipo,busqueda_pers,idioma,cod_pais,tipo_busq,fuente_org,posjson,urllink )"
+        actualiza = actualiza + " values (nextval('fuente_py_seq'),:fuente, :activa, :xpath_titulo , :descrip, 1,:pais,:separador,:atributo1,:atributo2,:xpath_detalle,:xpath_link,:xpath_image,:tipo,busqueda_pers,:idioma,:cod_pais,:tipo_busq,:fuente_org,:posjson,:urllink  );"
+        session.execute(text(actualiza), {"fuente": vurl,"activa": activa,"tit": xpath_tit,"desc": vtitle, "pais": pais,"separador": separador,"atributo1": atributo1,"atributo2": atributo2, "det": xpath_det, "link": xpath_link,"image": xpath_image, "tipo": tipo,"busq": busqueda, "idioma": idioma,"cod": codigo,"tipo_busq" : tipobus ,"fuente_org": fuenteorg,"posjson": posjson, "urllink": urllink})
+        
+        session.commit()    
 
 #vtitulo = st.session_state['vtitulo']
 vtitulo1 = "eeeeee"
