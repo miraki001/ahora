@@ -3,7 +3,7 @@ import psycopg2
 from sqlalchemy import text
 from streamlit_extras.stylable_container import stylable_container
 
-
+st.session_state.vcnt = 0
 
 
 col41, mid, col42 = st.columns([1,1,20])
@@ -50,8 +50,8 @@ if col2.button("Insertar"):
     st.session_state['vTipo'] = 'Ingresar'
     st.switch_page("./pages/editar_fuentes.py")
 if col3.button("Editar"):   
-    st.write(vcnt)
-    if vcnt==0:
+    st.write(st.session_state.vcnt)
+    if st.session_state.vcnt==0:
         st.error('Debe seleccionar una fuente', icon="🚨")
     else:
         st.session_state['vTipo'] = 'Editar'
@@ -123,8 +123,7 @@ selection = dataframe_with_selections(df)
 
 cnt = len(selection)
 if cnt>0:
-    vcnt = cnt
-    t.rerun()
+    st.session_state.vcnt = cnt
     vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
     tnuri = vnuri
     vquery = 'select * from fuentes_py where nuri = ' + vnuri + ';'
