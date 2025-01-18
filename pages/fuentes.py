@@ -12,6 +12,7 @@ def enable():
         st.session_state.disabled = False
 
 if "disabled" not in st.session_state:
+    st.write('aca')
     st.session_state.disabled = True
 
 col41, mid, col42 = st.columns([1,1,20])
