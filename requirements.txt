@@ -19,4 +19,5 @@ requests
 beautifulsoup4==4.9.0
 langchain
 langchain_ollama
+streamlit_server_state 
 
