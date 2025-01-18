@@ -9,7 +9,7 @@ with server_state_lock["vcnt"]:  # Lock the "count" state for thread-safety
 
 
 
-    
+server_state.vcnt = 0   
 col41, mid, col42 = st.columns([1,1,20])
 with col41:
     st.image('ic_launcher44.png', width=60)
