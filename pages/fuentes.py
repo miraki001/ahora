@@ -38,6 +38,10 @@ st.markdown("""
                 }
             </style>""", unsafe_allow_html=True)
 
+def change_button_status(button_name: str):
+    # st.write(f"{button_name} - {st.session_state[button_name]}")
+    st.session_state[button_name] = not st.session_state[button_name]
+
 
 st.session_state["Editar"] = False
 
@@ -115,7 +119,8 @@ selection = dataframe_with_selections(df)
 cnt = len(selection)
 if cnt>0:
 
-    st.session_state["Editar"] = False
+    #st.session_state["Editar"] = False
+    change_button_status("Editar")
     
     vnuri = selection.to_string(columns=['nuri'], header=False, index=False)
     st.write(vnuri)
