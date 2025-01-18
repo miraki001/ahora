@@ -40,7 +40,8 @@ st.markdown("""
 
 def change_button_status(button_name: str):
     st.write(f"{button_name} - {st.session_state[button_name]}")
-    st.session_state[button_name] = not st.session_state[button_name]
+    st.session_state[button_name] =  st.session_state[button_name]
+    st.write(f"{button_name} - {st.session_state[button_name]}")
 
 
 st.session_state["Editar"] = False
