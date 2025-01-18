@@ -58,7 +58,7 @@ qq = 'select nuri,fuente as url,activa,fecha_act,descrip as fuente,pais,fuente_o
 df1 = conn.query(qq, ttl="0"),
 df = df1[0]
 
-agree = st.checkbox("Solo Activas")
+#agree = st.checkbox("Solo Activas")
 
 pfuente = st.text_input("ingrese el nombre de la fuente")
 
