@@ -40,7 +40,7 @@ st.markdown(
 st.markdown(
     r"""
     <style>
-    .stDeployButton {
+    .stSidebarNavButton {
             visibility: hidden;
         }
     </style>
