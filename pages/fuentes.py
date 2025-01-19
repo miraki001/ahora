@@ -45,7 +45,7 @@ page = st_navbar(
 )
 
 functions = {
-    "Home": pg.show_home,
+    "Home": pg.show_streamlit_app,
     "Install": pg.show_install,
     "User Guide": pg.show_user_guide,
     "API": pg.show_api,
