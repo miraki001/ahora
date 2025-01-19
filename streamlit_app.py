@@ -52,7 +52,7 @@ st.markdown("""
 
 
 
-pages = ["Install", "User Guide", "API", "Examples", "Community", "GitHub"]
+pages = ["Home","Install", "User Guide", "API", "Examples", "Community", "GitHub"]
 parent_dir = os.path.dirname(os.path.abspath(__file__))
 logo_path = os.path.join(parent_dir, "ic_launcher44.pn")
 urls = {"GitHub": "https://github.com/gabrieltempass/streamlit-navigation-bar"}
