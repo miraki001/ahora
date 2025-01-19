@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import pages as pg
+#import pages as pg
 import os
 import itables.options as it_op
 from itables.streamlit import interactive_table
@@ -97,7 +97,7 @@ if col3.button("Seleccionar"):
 if col4.button("Desmarcar"):
     st.switch_page("./pages/desmarcar.py")
 if col5.button("Informes"):
-    st.switch_page("./pages/informes.py")
+    st.switch_page("./pages/nuevomenu.py")
 if col6.button("Parametros"):
     st.switch_page("./pages/parametros.py")
 if col7.button("Fuentes"):
