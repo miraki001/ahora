@@ -49,6 +49,56 @@ st.markdown("""
 
 """, unsafe_allow_html=True)
 
+
+
+pages = ["Install", "User Guide", "API", "Examples", "Community", "GitHub"]
+parent_dir = os.path.dirname(os.path.abspath(__file__))
+logo_path = os.path.join(parent_dir, "ic_launcher44.pn")
+urls = {"GitHub": "https://github.com/gabrieltempass/streamlit-navigation-bar"}
+styles = {
+    "nav": {
+        "background-color": "royalblue",
+        "justify-content": "left",
+    },
+    "img": {
+        "padding-right": "14px",
+    },
+    "span": {
+        "color": "white",
+        "padding": "14px",
+    },
+    "active": {
+        "background-color": "white",
+        "color": "var(--text-color)",
+        "font-weight": "normal",
+        "padding": "14px",
+    }
+}
+options = {
+    "show_menu": False,
+    "show_sidebar": False,
+}
+
+page = st_navbar(
+    pages,
+    #logo_path=logo_path,
+    urls=urls,
+    styles=styles,
+    options=options,
+)
+
+functions = {
+    "Home": pg.show_editar_fuente,
+    "Install": pg.show_editar_fuente,
+    "User Guide": pg.show_editar_fuente,
+    "API": pg.show_editar_fuente,
+    "Examples": pg.show_editar_fuente,
+    "Community": pg.show_editar_fuente,
+}
+go_to = functions.get(page)
+if go_to:
+    go_to()
+
 vnuri =0
 st.session_state.vnuri = 0
 col41, mid, col42 = st.columns([1,1,20])
