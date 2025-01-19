@@ -4,10 +4,7 @@ import itables.options as it_op
 from itables.streamlit import interactive_table
 from streamlit_multipage import MultiPage
 import re
-from streamlit_server_state import server_state, server_state_lock
-with server_state_lock["vnuri"]:  # Lock the "count" state for thread-safety
-    if "vnuri" not in server_state:
-        server_state.vnuri = 0
+
 
 st.set_page_config(
     page_title="Miraki",
