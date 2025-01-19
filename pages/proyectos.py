@@ -4,16 +4,16 @@ from sqlalchemy import text
 from streamlit_extras.stylable_container import stylable_container
 
 
-col41, mid, col42 = st.columns([1,1,20])
-with col41:
-    st.image('ic_launcher44.png', width=60)
-with col42:
-    st.title('Miraki')
+#col41, mid, col42 = st.columns([1,1,20])
+#with col41:
+st.image('ic_launcher44.png', width=40)
+#with col42:
+#    st.title('Miraki')
 
-st.subheader("Plataforma de Vigilancia Tecnólogica e Inteligencia Competitiva")
+#st.subheader("Plataforma de Vigilancia Tecnólogica e Inteligencia Competitiva")
 
 
-col1, col2, col3,col4 = st.columns(4)
+
 
 tnuri = 0
 vtitulo= ''
@@ -39,16 +39,7 @@ st.markdown("""
 
 
 
-if col1.button("Volver" ,  type='primary'):
-    st.switch_page("./pages/parametros.py")
-if col2.button("Insertar"):
-    st.session_state['vTipo'] = 'Ingresar'
-    st.switch_page("./pages/ingproyectos.py")
-if col3.button("Editar"):
-    st.session_state['vTipo'] = 'Editar'
-    st.switch_page("./pages/ingproyectos.py")
-if col4.button("Borrar"):
-    st.switch_page("./pages/borrarproyectos.py")   
+  
 
 
 
@@ -59,7 +50,7 @@ df = df1[0]
 
 
 
-ppalabra = st.text_input("ingrese el nombre del proyecto")
+
 
 if ppalabra:
     mask = df.applymap(lambda x: ppalabra in str(x).lower()).any(axis=1)
@@ -97,6 +88,21 @@ def dataframe_with_selections(df):
                     return selected_rows.drop('Selec', axis=1)
                   
 selection = dataframe_with_selections(df)
+
+
+col1, col2, col3,col4 = st.columns(4)
+ppalabra = st.text_input("ingrese el nombre del proyecto")
+
+if col1.button("Volver" ,  type='primary'):
+    st.switch_page("./pages/parametros.py")
+if col2.button("Insertar"):
+    st.session_state['vTipo'] = 'Ingresar'
+    st.switch_page("./pages/ingproyectos.py")
+if col3.button("Editar"):
+    st.session_state['vTipo'] = 'Editar'
+    st.switch_page("./pages/ingproyectos.py")
+if col4.button("Borrar"):
+    st.switch_page("./pages/borrarproyectos.py") 
 
 cnt = len(selection)
 
