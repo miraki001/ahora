@@ -30,13 +30,12 @@ st.markdown(no_sidebar_style, unsafe_allow_html=True)
 
 st.markdown(
     """
-<style>
-    [data-testid="collapsedControl"] {
-        display: none
-    }
-</style>
-""",
-    unsafe_allow_html=True,
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    </style>
+    """,
+    unsafe_allow_html=True
 )
 
 
