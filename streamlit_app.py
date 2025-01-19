@@ -21,7 +21,14 @@ st.set_page_config(
     }
 )
 
-st.set_page_config(initial_sidebar_state="collapsed")
+no_sidebar_style = """
+    <style>
+        div[data-testid="stSidebarNav"] {display: none;}
+    </style>
+"""
+st.markdown(no_sidebar_style, unsafe_allow_html=True)
+
+
 vnuri =0
 st.session_state.vnuri = 0
 col41, mid, col42 = st.columns([1,1,20])
