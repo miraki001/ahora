@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import pages as pg
 import itables.options as it_op
 from itables.streamlit import interactive_table
 from streamlit_multipage import MultiPage
