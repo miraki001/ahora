@@ -11,10 +11,9 @@ with server_state_lock["vnuri"]:  # Lock the "count" state for thread-safety
 
 st.set_page_config(
     page_title="Miraki",
-    initial_sidebar_state="collapsed",
     page_icon="🧊",
     layout="wide",
-    initial_sidebar_state="expanded",
+    initial_sidebar_state="collapsed",
     menu_items={
         'Get Help': 'https://www.extremelycoolapp.com/help',
         'Report a bug': "https://www.extremelycoolapp.com/bug",
