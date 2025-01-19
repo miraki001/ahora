@@ -20,6 +20,8 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"
     }
 )
+
+st.set_page_config(initial_sidebar_state="collapsed")
 vnuri =0
 st.session_state.vnuri = 0
 col41, mid, col42 = st.columns([1,1,20])
