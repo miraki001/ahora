@@ -51,7 +51,12 @@ df = df1[0]
 
 
 
+ppalabra = st.text_input("ingrese el nombre del proyecto")
 
+
+if ppalabra:
+    mask = df.applymap(lambda x: ppalabra in str(x).lower()).any(axis=1)
+    df = df[mask]
 
 
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
@@ -87,12 +92,7 @@ selection = dataframe_with_selections(df)
 
 
 col1, col2, col3,col4 = st.columns(4)
-ppalabra = st.text_input("ingrese el nombre del proyecto")
 
-
-if ppalabra:
-    mask = df.applymap(lambda x: ppalabra in str(x).lower()).any(axis=1)
-    df = df[mask]
 
 if col1.button("Volver" ,  type='primary'):
     st.switch_page("./pages/parametros.py")
