@@ -1,3 +1,13 @@
+import os
+
+import streamlit as st
+from streamlit_navigation_bar import st_navbar
+
+import pages as pg
+
+
+st.set_page_config(initial_sidebar_state="collapsed")
+
 pages = ["Home","Install", "User Guide", "API", "Examples", "Community", "GitHub"]
 parent_dir = os.path.dirname(os.path.abspath(__file__))
 logo_path = os.path.join(parent_dir, "ic_launcher44.pn")
