@@ -1,7 +1,7 @@
-from pages.informers import show_editar_fuente
-from pages.informers import show_editar_fuente
-from pages.informers import show_editar_fuente
-from pages.informers import show_editar_fuente
-from pages.informers import show_editar_fuente
-from pages.informers import show_editar_fuente
+from pages.fuentes import show_editar_fuente
+from pages.fuentes import show_editar_fuente
+from pages.fuentes import show_editar_fuente
+from pages.fuentes import show_editar_fuente
+from pages.fuentes import show_editar_fuente
+from pages.fuentes import show_editar_fuente
 
