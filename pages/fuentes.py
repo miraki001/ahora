@@ -58,11 +58,8 @@ if col3.button("Editar"):
     st.write(st.session_state.vcnt)
     st.write(st.session_state.cnt)
     st.write(cnt)
-    if st.session_state.cnt==0:
-        st.error('Debe seleccionar una fuente', icon="🚨")
-    else:
-        st.session_state['vTipo'] = 'Editar'
-        st.switch_page("./pages/editar_fuentes.py")
+    st.session_state['vTipo'] = 'Editar'
+    st.switch_page("./pages/editar_fuentes.py")
 if col4.button("Borrar", ):
     st.switch_page("./pages/borrarfuente.py")   
 if col5.button("Verificar"):
