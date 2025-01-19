@@ -4,6 +4,7 @@ import pages as pg
 import itables.options as it_op
 from itables.streamlit import interactive_table
 from streamlit_multipage import MultiPage
+from streamlit_navigation_bar import st_navbar
 import re
 
 
