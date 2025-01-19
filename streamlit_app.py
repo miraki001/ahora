@@ -48,7 +48,7 @@ st.markdown("""
 
 </style>
 
-"", unsafe_allow_html=True).
+""", unsafe_allow_html=True).
 
 vnuri =0
 st.session_state.vnuri = 0
