@@ -24,7 +24,7 @@ tipo = st.session_state['vTipo']
 if tipo == 'Editar':
     tpro = st.session_state['vpro'] 
     tnuri = st.session_state['vnuri'] 
-    tpro_nuri = int(tpro_nuri)
+
 
 if tipo == 'Ingresar':
     tpro = ''
