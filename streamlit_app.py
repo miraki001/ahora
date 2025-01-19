@@ -8,9 +8,10 @@ from streamlit_server_state import server_state, server_state_lock
 with server_state_lock["vnuri"]:  # Lock the "count" state for thread-safety
     if "vnuri" not in server_state:
         server_state.vnuri = 0
- 
+
 st.set_page_config(
     page_title="Miraki",
+    initial_sidebar_state="collapsed",
     page_icon="🧊",
     layout="wide",
     initial_sidebar_state="expanded",
