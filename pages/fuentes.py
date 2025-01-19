@@ -20,6 +20,7 @@ with col42:
 
 #st.subheader("Plataforma de Vigilancia Tecnólogica e Inteligencia Competitiva")
 page = st_navbar(["Home", "Documentation", "Examples", "Community", "About"])
+st.write(page)
 posjson = st.number_input("Posición del Json",min_value=0,max_value=100,value=0,key='vcnt1')
 
 
