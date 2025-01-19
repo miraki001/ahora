@@ -19,5 +19,5 @@ requests
 beautifulsoup4==4.9.0
 langchain
 langchain_ollama
-st_navbar
+streamlit_navigation_bar 
 
