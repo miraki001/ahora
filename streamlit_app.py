@@ -37,15 +37,18 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-st.markdown(
-    r"""
-    <style>
-    .stSidebarNavButton {
-            visibility: hidden;
-        }
-    </style>
-    """, unsafe_allow_html=True
-)
+st.markdown("""
+
+<style>
+
+
+ .css-1iyw2u1 {
+        display: none;
+    }
+
+</style>
+
+"", unsafe_allow_html=True).
 
 vnuri =0
 st.session_state.vnuri = 0
