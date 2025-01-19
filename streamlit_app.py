@@ -28,6 +28,17 @@ no_sidebar_style = """
 """
 st.markdown(no_sidebar_style, unsafe_allow_html=True)
 
+st.markdown(
+    """
+<style>
+    [data-testid="collapsedControl"] {
+        display: none
+    }
+</style>
+""",
+    unsafe_allow_html=True,
+)
+
 
 vnuri =0
 st.session_state.vnuri = 0
