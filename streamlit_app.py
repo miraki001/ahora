@@ -89,7 +89,7 @@ page = st_navbar(
 )
 
 functions = {
-    "Home": pg.show_editar_fuente,
+    #"Home": pg.show_editar_fuente,
     "Install": pg.show_editar_fuente,
     "User Guide": pg.show_editar_fuente,
     "API": pg.show_editar_fuente,
