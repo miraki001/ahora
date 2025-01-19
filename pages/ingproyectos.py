@@ -16,7 +16,7 @@ def ingresar():
     with conn.session as session:
         actualiza = "insert into proyectos (nuri,proyecto)"
         actualiza = actualiza + " values (nextval('proyecto_seq'),:proyecto) ;"
-        session.execute(text(actualiza), {"proyecto": vpro)
+        session.execute(text(actualiza), {"proyecto": vpro})
         session.commit()
 
 
