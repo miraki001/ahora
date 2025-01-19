@@ -37,7 +37,15 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
+st.markdown(
+    r"""
+    <style>
+    .stDeployButton {
+            visibility: hidden;
+        }
+    </style>
+    """, unsafe_allow_html=True
+)
 
 vnuri =0
 st.session_state.vnuri = 0
