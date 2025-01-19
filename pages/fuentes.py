@@ -11,7 +11,7 @@ from streamlit_navigation_bar import st_navbar
 pages = ["Install", "User Guide", "API", "Examples", "Community", "GitHub"]
 parent_dir = os.path.dirname(os.path.abspath(__file__))
 logo_path = os.path.join(parent_dir, "ic_launcher44.pn")
-#urls = {"GitHub": "https://github.com/gabrieltempass/streamlit-navigation-bar"}
+urls = {"GitHub": "https://github.com/gabrieltempass/streamlit-navigation-bar"}
 styles = {
     "nav": {
         "background-color": "royalblue",
