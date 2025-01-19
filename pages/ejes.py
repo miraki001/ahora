@@ -88,7 +88,7 @@ def dataframe_with_selections(df):
                         'url' : st.column_config.LinkColumn('eje'),      
                         },
                         disabled=df.columns,
-#                        num_rows="dynamic",
+                        num_rows=10,
                     )
 
                     # Filter the dataframe using the temporary column, then drop the column
