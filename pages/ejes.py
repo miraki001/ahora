@@ -1,19 +1,8 @@
 import streamlit as st
 import psycopg2
 from sqlalchemy import text
-from streamlit_extras.stylable_container import stylable_container
+from streamlit_navigation_bar import st_navbar
 
-
-col41, mid, col42 = st.columns([1,1,20])
-with col41:
-    st.image('ic_launcher44.png', width=60)
-with col42:
-    st.title('Miraki')
-
-st.subheader("Plataforma de Vigilancia Tecnólogica e Inteligencia Competitiva")
-
-
-col1, col2, col3,col4 = st.columns(4)
 
 tnuri = 0
 vtitulo= ''
