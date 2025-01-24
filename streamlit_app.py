@@ -164,13 +164,13 @@ def dataframe_with_selections(df):
                   
 selection = dataframe_with_selections(df)
 
-#st.dataframe(selection, use_container_width=False)
-#selection.drop(selection.columns[-1],axis=1, inplace = True)
-#st.write(selection)
+st.dataframe(selection, use_container_width=False)
+selection.drop(selection.columns[-1],axis=1, inplace = True)
+st.write(selection)
 #selection.drop(columns=[1], axis=1) 
-ss = st.dataframe(selection, hide_index=True)
-st.write(ss)
-#st.dataframe(selection.style.hide(axis="index"))
+#ss = st.dataframe(selection, hide_index=True)
+#st.write(ss)
+st.dataframe(selection.style.hide(axis="index"))
 #st.write("Your selection:")
 #st.write(ss[nuri])
 #st.write(selection)
@@ -182,7 +182,7 @@ vnuri= selection.to_string(columns=['nuri'], header=False, index=False)
 #st.session_state.vnuri = vnuri
 #with server_state_lock.count:
 # server_state.count = vnuri
-server_state.vnuri = vnuri
+#server_state.vnuri = vnuri
 #st.write('vnuri valor')
 #st.write(selection.nuri)
 #st.write(selection.to_string(columns=['nuri'], header=False, index=False))
