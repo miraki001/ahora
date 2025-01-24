@@ -120,7 +120,7 @@ if col7.button("Fuentes"):
 
 
 conn = st.connection("postgresql", type="sql")
-df1 = conn.query('select nuri,fuente,fecha,titulo,select_web as sel,detalle,imagen,link,titulo_es,detalle_es,eje_nuri from novedades order by nuri desc limit 50;', ttl="0"),
+df1 = conn.query('select nuri,fuente,fecha,titulo,select_web as sel,selec,detalle,imagen,link,titulo_es,detalle_es,eje_nuri from novedades order by nuri desc limit 50;', ttl="0"),
 df = df1[0]
 #st.write(df1[0])
 #st.dataframe(df, hide_index=True, column_config={"titulo_es": None})
@@ -141,7 +141,7 @@ config = {
 #result = st.data_editor(df, column_config = config, num_rows='dynamic')
 def dataframe_with_selections(df):
                     df_with_selections = df.copy()
-                    df_with_selections.insert(0, "Selec", False)
+                    #df_with_selections.insert(0, "Selec", False)
                     # Get dataframe row-selections from user with st.data_editor
                     edited_df = st.data_editor(
                         df_with_selections,
