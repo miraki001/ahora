@@ -96,7 +96,9 @@ pp = (element.get_attribute("outerHTML"))
 #st.write(soup1)
 noticias = driver.find_elements(By.XPATH, "//*[@class='issue-item clearfix']")
 st.write(noticias)
-                       
+
+
+
 
 #noticias = driver.find_elements(By.XPATH, separador)
 #st.write(noticias)
