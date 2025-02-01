@@ -87,7 +87,7 @@ accept_text_variations = [
         
 
 sleep(1)
-
+st.write(driver)
 noticias = driver.find_elements(By.XPATH, separador)
 st.write(noticias)
 for noticias in noticias:
