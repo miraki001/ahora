@@ -59,6 +59,7 @@ def get_driver():
     options.add_argument("--disable-features=NetworkService")
     options.add_argument("--window-size=1920x1080")
     options.add_argument("--disable-features=VizDisplayCompositor")
+    options.add_argument("--enable-javascript")
     
     #options.add_argument(f"--window-size={width}x{height}")
     options.add_argument(f"--user-agent={my_user_agent}")
@@ -93,9 +94,10 @@ sleep(1)
 #st.write(driver)
 pp = (element.get_attribute("outerHTML"))
 st.write(element.get_attribute("outerHTML"))
-
+html = driver.page_source
+soup = BeautifulSoup(html,  "html.parser")
 #soup1 = BeautifulSoup(element.get_attribute("outerHTML"), 'lxml')
-#st.write(soup1)
+st.write(soup)
 noticias = driver.find_elements(By.XPATH, "//*[@class='issue-item clearfix']")
 st.write(noticias)
 
