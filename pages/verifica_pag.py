@@ -92,8 +92,8 @@ sleep(1)
 pp = (element.get_attribute("outerHTML"))
 #st.write(element.get_attribute("outerHTML"))
 
-soup1 = BeautifulSoup(element.get_attribute("outerHTML"), 'lxml')
-st.write(soup1)
+#soup1 = BeautifulSoup(element.get_attribute("outerHTML"), 'lxml')
+#st.write(soup1)
 noticias = driver.find_elements(By.XPATH, "//*[@class='issue-item clearfix']")
 st.write(noticias)
                        
