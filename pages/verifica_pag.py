@@ -79,7 +79,7 @@ driver.implicitly_wait(10)
 driver.get(url)
 driver.implicitly_wait(2) 
 
-WebDriverWait(driver, 2).until(
+element = WebDriverWait(driver, 2).until(
             EC.presence_of_element_located((By.XPATH, "//button | //a | //div"))
 )
 accept_text_variations = [
@@ -88,9 +88,11 @@ accept_text_variations = [
         
 
 sleep(1)
-st.write(driver)
+#st.write(driver)
+pp = (element.get_attribute("outerHTML")
+st.write(element.get_attribute("outerHTML"))
 
-soup1 = BeautifulSoup(driver.text, 'html.parser')
+soup1 = BeautifulSoup(pp, 'html.parser')
 st.write(soup1)
 
 noticias = driver.find_elements(By.XPATH, separador)
