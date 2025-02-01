@@ -120,5 +120,5 @@ for noticias in noticias:
     st.write(name)
     #st.write(img)
     st.write(link)
-    st.write(detalle)
+    #st.write(detalle)
 
