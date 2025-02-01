@@ -94,7 +94,7 @@ pp = (element.get_attribute("outerHTML"))
 
 #soup1 = BeautifulSoup(pp, 'lxml')
 #st.write(soup1)
-noticias = driver.find_all("div", {"class":"issue-item clearfix"})
+noticias = driver.find_elements("div", {"class":"issue-item clearfix"})
 st.write(noticias)
                        
 
