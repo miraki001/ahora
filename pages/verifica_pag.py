@@ -90,10 +90,10 @@ accept_text_variations = [
 sleep(1)
 #st.write(driver)
 pp = (element.get_attribute("innerHTML"))
-#st.write(element.get_attribute("outerHTML"))
+st.write(element.get_attribute("outerHTML"))
 
 soup1 = BeautifulSoup(pp, 'lxml')
-st.write(soup1)
+#st.write(soup1)
 
 noticias = driver.find_elements(By.XPATH, separador)
 st.write(noticias)
