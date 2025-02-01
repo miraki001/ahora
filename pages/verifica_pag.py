@@ -72,7 +72,7 @@ def get_driver():
 options = Options()
 options.add_argument('--disable-gpu')
 options.add_argument('--headless')
-options.add_argument("javascript.enabled", True)
+#options.add_argument("javascript.enabled", True)
 
 driver = get_driver()
 
