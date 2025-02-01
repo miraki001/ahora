@@ -92,7 +92,7 @@ sleep(1)
 pp = (element.get_attribute("innerHTML"))
 #st.write(element.get_attribute("outerHTML"))
 
-soup1 = BeautifulSoup(pp, 'html.parser')
+soup1 = BeautifulSoup(pp, 'lxml')
 st.write(soup1)
 
 noticias = driver.find_elements(By.XPATH, separador)
