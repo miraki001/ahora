@@ -90,7 +90,7 @@ accept_text_variations = [
 sleep(1)
 st.write(driver)
 
-soup1 = BeautifulSoup(driver.content, 'html.parser')
+soup1 = BeautifulSoup(driver, 'html.parser')
 st.write(soup1)
 
 noticias = driver.find_elements(By.XPATH, separador)
