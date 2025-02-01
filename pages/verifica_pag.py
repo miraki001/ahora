@@ -88,9 +88,11 @@ accept_text_variations = [
         
 
 sleep(1)
-st.write(driver)
+
+
+3st.write(driver)
 pp = (element.get_attribute("outerHTML"))
-#st.write(element.get_attribute("outerHTML"))
+st.write(element.get_attribute("outerHTML"))
 
 #soup1 = BeautifulSoup(element.get_attribute("outerHTML"), 'lxml')
 #st.write(soup1)
