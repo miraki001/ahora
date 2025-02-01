@@ -90,7 +90,7 @@ accept_text_variations = [
 sleep(1)
 #st.write(driver)
 pp = (element.get_attribute("outerHTML"))
-st.write(element.get_attribute("outerHTML"))
+#st.write(element.get_attribute("outerHTML"))
 
 soup1 = BeautifulSoup(pp, 'html.parser')
 st.write(soup1)
