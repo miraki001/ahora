@@ -104,6 +104,7 @@ for noticias in noticias:
     name1 = noticias.find_element(By.XPATH, xtitulo).text
     st.write(name1)
     name = noticias.find_element(By.XPATH, xtitulo).get_attribute("text")
+    st.write(name)
     if ximage == '//img':
         img = noticias.find_element(By.XPATH, ximage).get_attribute("src")
         st.write(img)
