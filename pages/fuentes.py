@@ -69,7 +69,7 @@ if col3.button("Editar"):
 if col4.button("Borrar", ):
     st.switch_page("./pages/borrarfuente.py")   
 if col5.button("Verificar"):
-    st.switch_page("./pages/verifpagbs.py")
+    st.switch_page("./pages/verifica_pag.py")
 if col6.button("Ejecutar"):
     st.switch_page("./pages/scraptodo.py")
 if col7.button("Duplicar"):
