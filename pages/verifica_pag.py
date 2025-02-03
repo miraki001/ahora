@@ -95,6 +95,7 @@ sleep(1)
 #st.write(driver)
 pp = (element.get_attribute("outerHTML"))
 st.write(element.get_attribute("outerHTML"))
+st.write(element.get_attribute("innerHTML"))
 html = driver.page_source
 soup = BeautifulSoup(html,  "html.parser")
 #soup1 = BeautifulSoup(element.get_attribute("outerHTML"), 'lxml')
