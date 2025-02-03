@@ -79,9 +79,9 @@ driver = get_driver()
 
 driver.implicitly_wait(10)
 driver.get(url)
-driver.implicitly_wait(2) 
+driver.implicitly_wait(12) 
 
-element = WebDriverWait(driver, 2).until(
+element = WebDriverWait(driver, 12).until(
             EC.presence_of_element_located((By.XPATH, "//button | //a | //div"))
 )
 accept_text_variations = [
@@ -89,7 +89,7 @@ accept_text_variations = [
     ]
         
 
-sleep(1)
+sleep(4)
 
 
 #st.write(driver)
