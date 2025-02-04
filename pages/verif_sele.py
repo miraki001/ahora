@@ -14,6 +14,8 @@ import os
 
 
 def get_driver():
+    options = webdriver.ChromeOptions()
+    service = Service()
     return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
 
