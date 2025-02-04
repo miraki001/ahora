@@ -21,6 +21,18 @@ options.add_argument('--disable-gpu')
 options.add_argument('--headless')
 
 
+url = 'https://pubs.acs.org/action/doSearch?field1=AllField&target=default&targetTab=std&text1=grape&startPage=&sortBy=Earliest'
+    
+browser = get_driver()
+
+browser.get(url)
+browser.execute_script("window.scrollTo(0,10000)")
+sleep(2)
+soup = BeautifulSoup(browser.page_source,"html.parser")
+st.write(soup)
+
+
+
 def extract_image_url(tag,num_images):
 
     image_url = []
