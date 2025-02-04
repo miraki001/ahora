@@ -25,13 +25,16 @@ def extract_image_url(tag,num_images):
 
     image_url = []
 
-    url = f'''https://in.pinterest.com/search/pins/?q={tag}'''
-
+    #url = f'''https://in.pinterest.com/search/pins/?q={tag}'''
+    url = 'https://pubs.acs.org/action/doSearch?field1=AllField&target=default&targetTab=std&text1=grape&startPage=&sortBy=Earliest'
     
     browser = get_driver()
 
     browser.get(url)
-
+    browser.execute_script("window.scrollTo(0,10000)")
+    sleep(2)
+    soup = BeautifulSoup(browser.page_source,"html.parser")
+    st.write(soup)
     for _ in range(1,5):
         browser.execute_script("window.scrollTo(0,10000)")
         sleep(2)
