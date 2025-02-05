@@ -53,7 +53,12 @@ options.add_argument('--headless')
 driver.get(url)
 #driver.execute_script("window.scrollTo(0,10000)")
 sleep(2)
-element = driver.find_element_by_id("articleNumber");
+
+element = WebDriverWait(driver, 12).until(
+            EC.presence_of_element_located((By.XPATH, "//button | //a | //div"))
+)
+
+
 st.write(element.get_attribute('innerHTML'))
 
 st.write(driver.get_attribute('innerHTML'))
