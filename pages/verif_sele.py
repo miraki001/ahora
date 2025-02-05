@@ -17,7 +17,7 @@ def get_driver():
     options = webdriver.ChromeOptions()
     service = Service()
     driver = webdriver.Chrome(service=service, options=options)
-    return webdriver.Chrome(service=service, options=option)
+    return webdriver.Chrome(service=service, options=options)
 
 
 
