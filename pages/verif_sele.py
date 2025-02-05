@@ -63,9 +63,10 @@ element = WebDriverWait(driver, 12).until(
 
 
 st.write(element.get_attribute('innerHTML'))
+st.write(element.get_attribute('outherHTML'))
 
-st.write(driver.get_attribute('innerHTML'))
-st.write(driver.get_attribute('outherHTML'))
+#st.write(driver.get_attribute('innerHTML'))
+#st.write(driver.get_attribute('outherHTML'))
 #st.write(driver.page_source)
 soup = BeautifulSoup(driver.page_source,"html.parser")
 #st.write(soup)
