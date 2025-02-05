@@ -46,8 +46,8 @@ url = 'https://www.sciencedirect.com/search/api?qs=grape&show=25&sortBy=date&t=b
 
 
 #options = Options()
-#options.add_argument('--disable-gpu')
-#options.add_argument('--headless')
+options.add_argument('--disable-gpu')
+options.add_argument('--headless')
 
 
 driver.get(url)
