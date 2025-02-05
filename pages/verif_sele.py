@@ -53,6 +53,9 @@ options.add_argument('--headless')
 driver.get(url)
 #driver.execute_script("window.scrollTo(0,10000)")
 sleep(2)
+element = driver.find_element_by_id("articleNumber");
+st.write(element.get_attribute('innerHTML'))
+
 st.write(driver.get_attribute('innerHTML'))
 st.write(driver.page_source)
 soup = BeautifulSoup(driver.page_source,"html.parser")
