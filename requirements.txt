@@ -20,4 +20,5 @@ beautifulsoup4==4.9.0
 langchain
 langchain_ollama
 streamlit_navigation_bar 
+undetected_chromedriver
 
