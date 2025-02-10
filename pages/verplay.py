@@ -16,10 +16,16 @@ async def run_automation():
         browser = await p.chromium.launch(headless=False)
         page = await browser.new_page()
         await page.goto('https://docs.streamlit.io/')
+        context = browser.new_context(viewport={"width": 1920, "height": 1080})
+        page = context.new_page()
+
+        page.goto("https://www.growingproduce.com/fruits/grapes/")  # go to url
+        parsed = []
+        soup = BeautifulSoup(page.content(), 'lxml' 
         title = await page.title()
         st.write(title)
         await browser.close()
-    return title
+    return soup
 
 def run_async_function():
     return asyncio.run(run_automation())
