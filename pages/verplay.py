@@ -10,21 +10,6 @@ sep = 'article'
 dictitu = {'class':'inline-post-section section-full'}
 
 
-async def main():
-    async with async_playwright() as p:
-        browser = await p.chromium.launch()
-        page = await browser.new_page()
-        await page.goto("http://playwright.dev")
-        title = await page.title()
-        st.write(title)
-        await browser.close()
-        return title
-
-if __name__ == '__main__':
-    loop = asyncio.ProactorEventLoop()
-    asyncio.set_event_loop(loop)
-    title = loop.run_until_complete(main())
-    print(title)
 
 
 with sync_playwright() as pw:
