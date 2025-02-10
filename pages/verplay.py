@@ -17,6 +17,7 @@ async def run_automation():
         page = await browser.new_page()
         await page.goto('https://docs.streamlit.io/')
         title = await page.title()
+        st.write(title)
         await browser.close()
     return title
 
