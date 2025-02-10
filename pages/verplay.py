@@ -6,28 +6,29 @@ import streamlit as st
 import asyncio
 from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.core.os_manager import ChromeType
 
-@st.cache_resource
-def get_driver():
-    return webdriver.Chrome(
-        service=Service(
-            ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()
-        ),
-        options=options,
-    )
-options = Options()
-options.add_argument("--disable-gpu")
-options.add_argument("--headless")
-
-driver = get_driver()
 sep = 'article'
 dictitu = {'class':'inline-post-section section-full'}
 
+
+async def run_automation():
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=False)
+        page = await browser.new_page()
+        await page.goto('https://docs.streamlit.io/')
+        title = await page.title()
+        await browser.close()
+    return title
+
+def run_async_function():
+    return asyncio.run(run_automation())
+
+if __name__ == "__main__":
+    if st.button('Run Automation'):
+        result_placeholder = st.empty()
+        result_placeholder.text("Running automation...")
+        result = run_async_function()
+        result_placeholder.text(result)
 
 
 
