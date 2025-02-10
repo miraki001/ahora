@@ -22,4 +22,4 @@ langchain_ollama
 streamlit_navigation_bar 
 undetected_chromedriver
 playwright
-webdriver-manage
+
