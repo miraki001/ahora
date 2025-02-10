@@ -7,6 +7,19 @@ import asyncio
 from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
 
+@st.cache_resource
+def get_driver():
+    return webdriver.Chrome(
+        service=Service(
+            ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()
+        ),
+        options=options,
+    )
+options = Options()
+options.add_argument("--disable-gpu")
+options.add_argument("--headless")
+
+driver = get_driver()
 sep = 'article'
 dictitu = {'class':'inline-post-section section-full'}
 
