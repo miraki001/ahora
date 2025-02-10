@@ -1,6 +1,7 @@
 import os
 os.system("playwright install")
 import streamlit as st
+import asyncio
 from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
 
@@ -10,7 +11,7 @@ dictitu = {'class':'inline-post-section section-full'}
 
 
 with sync_playwright() as pw:
-    browser = await pw.chromium.launch(headless=False)
+    browser = pw.chromium.launch(headless=False)
     context = browser.new_context(viewport={"width": 1920, "height": 1080})
     page = context.new_page()
 
