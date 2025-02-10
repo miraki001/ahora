@@ -1,5 +1,6 @@
 import os
 os.system("playwright install")
+os.system(“playwright install --with-deps chromium”)
 import streamlit as st
 import asyncio
 from playwright.sync_api import sync_playwright
