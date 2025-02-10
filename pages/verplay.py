@@ -21,7 +21,7 @@ async def run_automation():
 
         page.goto("https://www.growingproduce.com/fruits/grapes/")  # go to url
         parsed = []
-        soup = BeautifulSoup(page.content(), 'lxml' 
+        soup = BeautifulSoup(page.content(), 'lxml') 
         title = await page.title()
         st.write(title)
         await browser.close()
