@@ -29,7 +29,9 @@ if __name__ == "__main__":
         result_placeholder.text("Running automation...")
         #result = run_async_function()
         result = run_automation()
-        result_placeholder.text('pppp   ' + result.text )
+        st.write('pppp')
+        st.write(result)
+        result_placeholder.text(result)
 
 
 """
