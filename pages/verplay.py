@@ -35,8 +35,8 @@ if __name__ == "__main__":
     if st.button('Run Automation'):
         result_placeholder = st.empty()
         result_placeholder.text("Running automation...")
-        #result = run_async_function()
-        result = run_automation()
+        result = run_async_function()
+        #result = run_automation()
         st.write('pppp')
         st.write(result)
         result_placeholder.text(result)
