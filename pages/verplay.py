@@ -37,7 +37,7 @@ if __name__ == "__main__":
         #result = run_async_function()
         result = run_automation()
         st.write('pppp')
-        st.write(result)
+        st.write(result.text)
         result_placeholder.text(result)
 
 
