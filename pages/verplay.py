@@ -24,6 +24,7 @@ async def run_automation():
         soup = BeautifulSoup(page.content(), 'lxml') 
         title = await page.title()
         st.write(title)
+        print(soup)
         await browser.close()
     return soup
 
@@ -37,7 +38,7 @@ if __name__ == "__main__":
         #result = run_async_function()
         result = run_automation()
         st.write('pppp')
-        st.write(result.text)
+        st.write(result)
         result_placeholder.text(result)
 
 
